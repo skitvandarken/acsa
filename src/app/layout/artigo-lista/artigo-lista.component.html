@@ -10,11 +10,13 @@
               <div class="uk-margin-small-top">
               <span  style="font-size: 0.9rem; font-weight: 500;  margin-top: 6px; margin-bottom: -10px;" > {{ convertTimestamp(post.createdAt) | date }}</span>
             </div>
-            <div class="">
-              <h3  style="font-weight: 500; font-size: 1.3rem;"  class="uk-card-title">{{ post.title }}</h3>
+            <div class="uk-card-body">
+                         <div [innerHTML]="post.content | truncate:150"></div>
+
             </div>
-            <!--             <div class="uk-card-body">
-              <p style="word-break: break-word; white-space: pre-wrap;" >{{ post.content | truncate:150 }} </p>
+
+            <div class="uk-card-footer">
+              <span class="uk-text-meta">Publicado em {{ post.updatedAt | date }}</span>
             </div>
             -->
 

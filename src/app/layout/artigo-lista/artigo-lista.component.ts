@@ -31,6 +31,6 @@ export class ArtigoListaComponent {
         useLanguage(language: string): void {
           this.translate.use(language);
       }
+      }
       
   
-}
