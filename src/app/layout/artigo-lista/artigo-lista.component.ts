@@ -5,8 +5,7 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { RodapeComponent } from '../rodape/rodape.component';
 import { MenuComponent } from '../menu/menu.component';
 import { TruncatePipe } from '../../pipes/truncate.pipe';
-import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
-
+import { Timestamp } from '@angular/fire/firestore'; // or from 'firebase/firestore'
 
 
 
@@ -26,18 +25,17 @@ safeContent: SafeHtml = '';
   private blogService = inject(BlogService);
   posts$ = this.blogService.getPosts(); // Fetch all posts
 
-       constructor (private translate: TranslateService, private sanitizer: DomSanitizer) {}
+
+  convertTimestamp(timestamp: any): Date {
+  if (timestamp?.toDate) {
+    return timestamp.toDate(); // Firestore Timestamp has a toDate() method
+  }
+  return new Date(timestamp); // fallback
+}
+       constructor (private translate: TranslateService) {}
         useLanguage(language: string): void {
           this.translate.use(language);
       }
-
-ngOnInit() {
-  this.posts$.subscribe(posts => {
-    if (posts.length > 0) {
-      this.safeContent = this.sanitizer.bypassSecurityTrustHtml(posts[0].content);
-    }
-  });
-}
+      }
       
   
-}

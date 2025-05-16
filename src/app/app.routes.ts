@@ -46,7 +46,6 @@ export const routes: Routes = [
     {path: 'angonap2', component: Angonap2Component},
     {path:'eventos', component: EventosAcComponent},
     {path: 'blog', component: BlogComponent},
-    {path: 'artigo', component: ArtigoComponent},
     {path: 'servicos', component: ServicosComponent},
     {path: 'conectividade', component: ConectividadeComponent},
     {path: 'cloud', component: CloudservicesComponent},
@@ -68,13 +67,12 @@ export const routes: Routes = [
 
 
 
-    
   { 
     path: 'artigos', 
     loadComponent: () => import('./layout/artigo-lista/artigo-lista.component').then(m => m.ArtigoListaComponent) 
   },
   { 
-    path: 'post/:id', 
+    path: 'post', 
     loadComponent: () => import('./layout/artigo/artigo.component').then(m => m.ArtigoComponent) 
   },
   
