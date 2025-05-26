@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { AuthService } from '@auth0/auth0-angular';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
@@ -21,23 +20,13 @@ export class MenuComponent implements OnInit {
   }
 
   constructor(
-    public auth: AuthService,
     private router: Router,
     private translate: TranslateService,
     private cdr: ChangeDetectorRef
-    
   ) {}
 
   ngOnInit(): void {
     this.preloadFlags();
-    this.auth.isAuthenticated$.subscribe(isAuthenticated => {
-      if (isAuthenticated) {
-        this.router.navigate(['/painel']);
-        console.log('Usuário Autenticado');
-      } else {
-        console.log('Usuário Não Autenticado');
-      }
-    });
   }
 
   useLanguage(language: string): void {
@@ -50,8 +39,7 @@ export class MenuComponent implements OnInit {
     this.useLanguage(selectedValue);
   }
 
-
-    selectedFlag: string = 'img/bandeiras/ao.png'; // Default flag for PT
+  selectedFlag: string = 'img/bandeiras/ao.png'; // Default flag for PT
   selectedLanguage: string = 'PT'; // Default language text
   private updateLanguageDisplay(language: string): void {
     if (language === 'pt') {
@@ -64,16 +52,6 @@ export class MenuComponent implements OnInit {
         this.selectedFlag = 'img/bandeiras/fr.png';
         this.selectedLanguage = 'FR';
     }
-
-    
-
     this.cdr.detectChanges();
-  }
-  login(): void {
-    this.auth.loginWithRedirect();
-  }
-
-  logout(): void {
-    this.auth.logout();
   }
 }

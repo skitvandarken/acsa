@@ -1,6 +1,5 @@
 import { ApplicationConfig, provideZoneChangeDetection } from "@angular/core";
 import { provideRouter } from "@angular/router";
-import { provideAuth0 } from "@auth0/auth0-angular";
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { routes } from "./app.routes";
@@ -23,13 +22,7 @@ export const appConfig: ApplicationConfig = {
                 deps: [HttpClient]
             }
         }),
-        provideAuth0({
-            domain: 'dev-w75eqy38x7tfovk2.us.auth0.com',
-            clientId: 'QCtjjr4fUToPkTlXblQJvaAQb1rkLrTh',
-            authorizationParams: {
-                redirect_uri: window.location.origin
-            },
-        }),
+  
         provideFirebaseApp(() => initializeApp({
             apiKey: "AIzaSyBMBs9qU1vDwl4hYYFgd1tJk3rYSZ2qdnE",
             authDomain: "acsa-458213.firebaseapp.com",

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '@auth0/auth0-angular';
+// import { AuthService } from '@auth0/auth0-angular';
 import { MenuComponent } from '../../layout/menu/menu.component';
 import { AngolacablesComponent } from '../../layout/angolacables/angolacables.component';
 import { ServicosComponent } from '../../layout/servicos/servicos.component';
@@ -24,32 +24,29 @@ import { CertificacoesComponent } from '../../layout/certificacoes/certificacoes
 })
 export class InicioComponent implements OnInit {
 
-  
+  constructor(
+    // private auth: AuthService,
+    private router: Router
+  ) {}
 
-  constructor(private auth: AuthService, private router: Router) {
-
-  }
-
- ngOnInit(): void {
-
-  const videoElement = document.getElementById('promoVideo') as HTMLVideoElement;
+  ngOnInit(): void {
+    const videoElement = document.getElementById('promoVideo') as HTMLVideoElement;
     if (videoElement) {
       videoElement.muted = true; // Forçar o vídeo a ser mudo
     }
-   
-  this.auth.isAuthenticated$.subscribe(isAutheticated => {
-    if (isAutheticated) {
-      this.router.navigate(['/painel']);
-      console.log('Usuário Autenticado');
-    } else {
-      console.log('Usuário Não Autenticado');
-    }
-  })
- }
-
-  login(){
-    this.auth.loginWithRedirect();
-
+    // Remove OAuth authentication check
+    // this.auth.isAuthenticated$.subscribe(isAutheticated => {
+    //   if (isAutheticated) {
+    //     this.router.navigate(['/painel']);
+    //     console.log('Usuário Autenticado');
+    //   } else {
+    //     console.log('Usuário Não Autenticado');
+    //   }
+    // })
   }
 
+  // Remove login method
+  // login(){
+  //   this.auth.loginWithRedirect();
+  // }
 }

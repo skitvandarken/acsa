@@ -19,7 +19,6 @@
     "@angular/platform-browser": "^19.2.13",
     "@angular/platform-browser-dynamic": "^19.2.13",
     "@angular/router": "^19.2.13",
-    "@auth0/auth0-angular": "^2.2.3",
     "@colsen1991/ngx-translate-extract-marker": "^3.0.1",
     "@emailjs/browser": "^4.4.1",
     "@ngrx/effects": "^19.0.0",
