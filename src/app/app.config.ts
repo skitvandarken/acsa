@@ -6,6 +6,7 @@ import { routes } from "./app.routes";
 import { HttpClient, provideHttpClient } from "@angular/common/http";
 import { TranslateLoader, provideTranslateService } from "@ngx-translate/core";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
+import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
 
 const httpLoaderFactory: (http: HttpClient) => TranslateHttpLoader = (http: HttpClient) =>
     new TranslateHttpLoader(http, "./i18n/", ".json");
@@ -31,7 +32,7 @@ export const appConfig: ApplicationConfig = {
             messagingSenderId: "363516187651",
             appId: "1:363516187651:web:a5241923f5ecd265dbaa36"
         })),
-        provideFirestore(() => getFirestore())
+        provideFirestore(() => getFirestore()), provideClientHydration(withEventReplay())
 
     ],
 

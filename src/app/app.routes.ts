@@ -8,11 +8,9 @@ import { RevendedorComponent } from './paginas/revendedor/revendedor.component';
 import { DatacenterComponent } from './paginas/datacenter/datacenter.component';
 import { Angonap2Component } from './paginas/angonap2/angonap2.component';
 import { AcercaComponent } from './paginas/acerca/acerca.component';
-import { EventosComponent } from './layout/eventos/eventos.component';
 import { EventosAcComponent } from './paginas/eventos-ac/eventos-ac.component';
 import { BlogComponent } from './paginas/blog/blog.component';
 import { ArtigoComponent } from './templates/artigo/artigo.component';
-import { ServicosComponent } from './paginas/servicos/servicos.component';
 import { ConectividadeComponent } from './paginas/conectividade/conectividade.component';
 import { CloudservicesComponent } from './paginas/cloudservices/cloudservices.component';
 import { DatacentersevicesComponent } from './paginas/datacentersevices/datacentersevices.component';
@@ -27,7 +25,6 @@ import { IptransitComponent } from './dummy/artigos/iptransit/iptransit.componen
 import { CibersecComponent } from './dummy/artigos/cibersec/cibersec.component';
 import { Cloud2MontagemComponent } from './dummy/artigos/cloud2-montagem/cloud2-montagem.component';
 import { DashboardComponent } from './paginas/dashboard/dashboard.component';
-import { VagasCriarComponent } from './layout/vagas-criar/vagas-criar.component';
 
 
 export const routes: Routes = [
@@ -46,7 +43,6 @@ export const routes: Routes = [
     {path:'eventos', component: EventosAcComponent},
     {path: 'blog', component: BlogComponent},
     {path: 'artigo', component: ArtigoComponent},
-    {path: 'servicos', component: ServicosComponent},
     {path: 'conectividade', component: ConectividadeComponent},
     {path: 'cloud', component: CloudservicesComponent},
     {path: 'data-center', component: DatacentersevicesComponent},

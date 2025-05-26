@@ -1,4 +1,5 @@
-import { Component, Input, OnInit, ElementRef, AfterViewInit, OnDestroy } from '@angular/core';
+import { Component, Input, OnInit, ElementRef, AfterViewInit, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-contador',
@@ -6,30 +7,41 @@ import { Component, Input, OnInit, ElementRef, AfterViewInit, OnDestroy } from '
   templateUrl: './contador.component.html',
   styleUrl: './contador.component.css'
 })
-export class ContadorComponent implements AfterViewInit, OnDestroy {
+export class ContadorComponent implements OnInit, AfterViewInit, OnDestroy { // <--- Added OnInit
+
   @Input() startValue: number = 0;
   @Input() targetValue: number = 10;
-  @Input() interval: number = 1000; // Default: 1 second
-
+  @Input() interval: number = 1000;
 
   count: number = 0;
   intervalId: any;
   observer: IntersectionObserver | null = null;
 
-  constructor(private elementRef: ElementRef) {}
+  constructor(
+    private elementRef: ElementRef,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {}
+
+  // <--- NEW ngOnInit method
+  ngOnInit() {
+    // Initialize count here, before the view is checked
+    this.count = this.startValue;
+  }
 
   ngAfterViewInit() {
-    
-    this.count = this.startValue;
-    this.observer = new IntersectionObserver((entries) => {
-      if (entries[0].isIntersecting) {
-        this.startCounting();
-      } else {
-        this.stopCounting();
-      }
-    }, { threshold: 0.5 }); // Starts when at least 50% is visible
+    // Ensure this line is GONE from here: this.count = this.startValue;
 
-    this.observer.observe(this.elementRef.nativeElement);
+    if (isPlatformBrowser(this.platformId)) {
+      this.observer = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+          this.startCounting();
+        } else {
+          this.stopCounting();
+        }
+      }, { threshold: 0.5 });
+
+      this.observer.observe(this.elementRef.nativeElement);
+    }
   }
 
   startCounting() {
@@ -53,6 +65,8 @@ export class ContadorComponent implements AfterViewInit, OnDestroy {
 
   ngOnDestroy() {
     this.stopCounting();
-    this.observer?.disconnect();
+    if (isPlatformBrowser(this.platformId)) {
+      this.observer?.disconnect();
+    }
   }
 }

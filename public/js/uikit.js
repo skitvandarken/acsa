@@ -5613,7 +5613,7 @@
         group: String,
         threshold: Number,
         clsItem: String,
-        clsPlaceholder: String,
+        cls: String,
         clsDrag: String,
         clsDragState: String,
         clsBase: String,
@@ -5626,7 +5626,7 @@
         group: false,
         threshold: 5,
         clsItem: "uk-sortable-item",
-        clsPlaceholder: "uk-sortable-placeholder",
+        cls: "uk-sortable-",
         clsDrag: "uk-sortable-drag",
         clsDragState: "uk-drag",
         clsBase: "uk-sortable",
@@ -5666,13 +5666,13 @@
       },
       update: {
         write(data) {
-          if (!this.drag || !parent(this.placeholder)) {
+          if (!this.drag || !parent(this.)) {
             return;
           }
           const {
             pos: { x, y },
             origin: { offsetTop, offsetLeft },
-            placeholder
+            
           } = this;
           css(this.drag, {
             top: y - offsetTop,
@@ -5687,14 +5687,14 @@
             return;
           }
           const target = findTarget(items, { x, y });
-          if (items.length && (!target || target === placeholder)) {
+          if (items.length && (!target || target === )) {
             return;
           }
-          const previous = this.getSortable(placeholder);
+          const previous = this.getSortable();
           const insertTarget = findInsertTarget(
             sortable.target,
             target,
-            placeholder,
+            ,
             x,
             y,
             sortable === previous && data.moved !== target
@@ -5702,16 +5702,16 @@
           if (insertTarget === false) {
             return;
           }
-          if (insertTarget && placeholder === insertTarget) {
+          if (insertTarget &&  === insertTarget) {
             return;
           }
           if (sortable !== previous) {
-            previous.remove(placeholder);
+            previous.remove();
             data.moved = target;
           } else {
             delete data.moved;
           }
-          sortable.insert(placeholder, insertTarget);
+          sortable.insert(, insertTarget);
           this.touched.add(sortable);
         },
         events: ["move"]
@@ -5719,15 +5719,15 @@
       methods: {
         init(e) {
           const { target, button, defaultPrevented } = e;
-          const [placeholder] = this.items.filter((el) => el.contains(target));
-          if (!placeholder || defaultPrevented || button > 0 || isInput(target) || target.closest(`.${this.clsNoDrag}`) || this.handle && !target.closest(this.handle)) {
+          const [] = this.items.filter((el) => el.contains(target));
+          if (! || defaultPrevented || button > 0 || isInput(target) || target.closest(`.${this.clsNoDrag}`) || this.handle && !target.closest(this.handle)) {
             return;
           }
           e.preventDefault();
           this.pos = getEventPos(e);
           this.touched = /* @__PURE__ */ new Set([this]);
-          this.placeholder = placeholder;
-          this.origin = { target, index: index(placeholder), ...this.pos };
+          this. = ;
+          this.origin = { target, index: index(), ...this.pos };
           on(document, pointerMove$1, this.move);
           on(document, pointerUp$1, this.end);
           if (!this.threshold) {
@@ -5735,14 +5735,14 @@
           }
         },
         start(e) {
-          this.drag = appendDrag(this.$container, this.placeholder);
-          const { left, top } = dimensions$1(this.placeholder);
+          this.drag = appendDrag(this.$container, this.);
+          const { left, top } = dimensions$1(this.);
           assign(this.origin, { offsetLeft: this.pos.x - left, offsetTop: this.pos.y - top });
           addClass(this.drag, this.clsDrag, this.clsCustom);
-          addClass(this.placeholder, this.clsPlaceholder);
+          addClass(this., this.cls);
           addClass(this.items, this.clsItem);
           addClass(document.documentElement, this.clsDragState);
-          trigger(this.$el, "start", [this, this.placeholder]);
+          trigger(this.$el, "start", [this, this.]);
           trackScroll(this.pos);
           this.move(e);
         },
@@ -5760,21 +5760,21 @@
             return;
           }
           untrackScroll();
-          const sortable = this.getSortable(this.placeholder);
+          const sortable = this.getSortable(this.);
           if (this === sortable) {
-            if (this.origin.index !== index(this.placeholder)) {
-              trigger(this.$el, "moved", [this, this.placeholder]);
+            if (this.origin.index !== index(this.)) {
+              trigger(this.$el, "moved", [this, this.]);
             }
           } else {
-            trigger(sortable.$el, "added", [sortable, this.placeholder]);
-            trigger(this.$el, "removed", [this, this.placeholder]);
+            trigger(sortable.$el, "added", [sortable, this.]);
+            trigger(this.$el, "removed", [this, this.]);
           }
-          trigger(this.$el, "stop", [this, this.placeholder]);
+          trigger(this.$el, "stop", [this, this.]);
           remove$1(this.drag);
           this.drag = null;
-          for (const { clsPlaceholder, clsItem } of this.touched) {
+          for (const { cls, clsItem } of this.touched) {
             for (const sortable2 of this.touched) {
-              removeClass(sortable2.items, clsPlaceholder, clsItem);
+              removeClass(sortable2.items, cls, clsItem);
             }
           }
           this.touched = null;
@@ -5856,25 +5856,25 @@
     function findTarget(items, point) {
       return items[findIndex(items, (item) => pointInRect(point, dimensions$1(item)))];
     }
-    function findInsertTarget(list, target, placeholder, x, y, sameList) {
+    function findInsertTarget(list, target, , x, y, sameList) {
       if (!children(list).length) {
         return;
       }
       const rect = dimensions$1(target);
       if (!sameList) {
-        if (!isHorizontal(list, placeholder)) {
+        if (!isHorizontal(list, )) {
           return y < rect.top + rect.height / 2 ? target : target.nextElementSibling;
         }
         return target;
       }
-      const placeholderRect = dimensions$1(placeholder);
+      const Rect = dimensions$1();
       const sameRow = linesIntersect(
         [rect.top, rect.bottom],
-        [placeholderRect.top, placeholderRect.bottom]
+        [Rect.top, Rect.bottom]
       );
       const [pointerPos, lengthProp, startProp, endProp] = sameRow ? [x, "width", "left", "right"] : [y, "height", "top", "bottom"];
-      const diff = placeholderRect[lengthProp] < rect[lengthProp] ? rect[lengthProp] - placeholderRect[lengthProp] : 0;
-      if (placeholderRect[startProp] < rect[startProp]) {
+      const diff = Rect[lengthProp] < rect[lengthProp] ? rect[lengthProp] - Rect[lengthProp] : 0;
+      if (Rect[startProp] < rect[startProp]) {
         if (diff && pointerPos < rect[startProp] + diff) {
           return false;
         }
@@ -5885,10 +5885,10 @@
       }
       return target;
     }
-    function isHorizontal(list, placeholder) {
+    function isHorizontal(list, ) {
       const single = children(list).length === 1;
       if (single) {
-        append(list, placeholder);
+        append(list, );
       }
       const items = children(list);
       const isHorizontal2 = items.some((el, i) => {
@@ -5899,7 +5899,7 @@
         });
       });
       if (single) {
-        remove$1(placeholder);
+        remove$1();
       }
       return isHorizontal2;
     }
@@ -7694,7 +7694,7 @@
       return height;
     }
 
-    var heightPlaceholder = {
+    var height = {
       args: "target",
       props: {
         target: String
@@ -8988,7 +8988,7 @@
       connected() {
         this.start = coerce(this.start || this.top);
         this.end = coerce(this.end || this.bottom);
-        this.placeholder = $("+ .uk-sticky-placeholder", this.$el) || $('<div class="uk-sticky-placeholder"></div>');
+        this. = $("+ .uk-sticky-", this.$el) || $('<div class="uk-sticky-"></div>');
         this.isFixed = false;
         this.setActive(false);
       },
@@ -8998,8 +8998,8 @@
           removeClass(this.target, this.clsInactive);
         }
         reset(this.$el);
-        remove$1(this.placeholder);
-        this.placeholder = null;
+        remove$1(this.);
+        this. = null;
       },
       observe: [
         viewport(),
@@ -9029,7 +9029,7 @@
               const elOffset = offset(this.$el);
               if (this.isFixed && intersectRect(targetOffset, elOffset)) {
                 scrollingElement.scrollTop = Math.ceil(
-                  targetOffset.top - elOffset.height - toPx(this.targetOffset, "height", this.placeholder) - toPx(this.offset, "height", this.placeholder)
+                  targetOffset.top - elOffset.height - toPx(this.targetOffset, "height", this.) - toPx(this.offset, "height", this.)
                 );
               }
             });
@@ -9069,7 +9069,7 @@
             if (this.overflowFlip && height$1 > viewport2) {
               position = position === "top" ? "bottom" : "top";
             }
-            const referenceElement = this.isFixed ? this.placeholder : this.$el;
+            const referenceElement = this.isFixed ? this. : this.$el;
             let offset$1 = toPx(this.offset, "height", sticky ? this.$el : referenceElement);
             if (position === "bottom" && (height$1 < dynamicViewport || this.overflowFlip)) {
               offset$1 += dynamicViewport - height$1;
@@ -9113,11 +9113,11 @@
               height = width = margin = 0;
               css(this.$el, { position: "sticky", top: offset });
             }
-            const { placeholder } = this;
-            css(placeholder, { height, width, margin });
-            if (parent(placeholder) !== parent(this.$el) || sticky ^ index(placeholder) < index(this.$el)) {
-              (sticky ? before : after)(this.$el, placeholder);
-              placeholder.hidden = true;
+            const {  } = this;
+            css(, { height, width, margin });
+            if (parent() !== parent(this.$el) || sticky ^ index() < index(this.$el)) {
+              (sticky ? before : after)(this.$el, );
+              .hidden = true;
             }
           },
           events: ["resize"]
@@ -9137,7 +9137,7 @@
           }) {
             const scroll2 = Math.min(document.scrollingElement.scrollTop, maxScrollHeight);
             const dir = prevScroll <= scroll2 ? "down" : "up";
-            const referenceElement = this.isFixed ? this.placeholder : this.$el;
+            const referenceElement = this.isFixed ? this. : this.$el;
             return {
               dir,
               prevDir,
@@ -9208,7 +9208,7 @@
         show() {
           this.isFixed = true;
           this.update();
-          this.placeholder.hidden = false;
+          this..hidden = false;
         },
         hide() {
           const { offset, sticky } = this._data;
@@ -9224,7 +9224,7 @@
               marginTop: ""
             });
           }
-          this.placeholder.hidden = true;
+          this..hidden = true;
           this.isFixed = false;
         },
         update() {
@@ -9736,7 +9736,7 @@
         FormCustom: formCustom,
         Grid: grid,
         HeightMatch: heightMatch,
-        HeightPlaceholder: heightPlaceholder,
+        Height: height,
         HeightViewport: heightViewport,
         Icon: Icon,
         Img: img,

@@ -1394,10 +1394,10 @@ button.uk-icon:not(:disabled) {
   height: auto;
 }
 /*
- * Removes placeholder transparency in Firefox.
+ * Removes  transparency in Firefox.
  */
-.uk-input::-moz-placeholder,
-.uk-textarea::-moz-placeholder {
+.uk-input::-moz-,
+.uk-textarea::-moz- {
   opacity: 1;
 }
 /*
@@ -1503,12 +1503,12 @@ button.uk-icon:not(:disabled) {
   border-color: #e5e5e5;
 }
 /*
- * Placeholder
+ * 
  */
-.uk-input::placeholder {
+.uk-input:: {
   color: #999;
 }
-.uk-textarea::placeholder {
+.uk-textarea:: {
   color: #999;
 }
 /* Style modifier (`uk-input`, `uk-select` and `uk-textarea`)
@@ -3025,22 +3025,22 @@ select.uk-form-width-xsmall {
   text-decoration: underline;
 }
 /* ========================================================================
-   Component: Placeholder
+   Component: 
  ========================================================================== */
-.uk-placeholder {
+.uk- {
   margin-bottom: 20px;
   padding: 30px 30px;
   background: transparent;
   border: 1px dashed #e5e5e5;
 }
 /* Add margin if adjacent element */
-* + .uk-placeholder {
+* + .uk- {
   margin-top: 20px;
 }
 /*
  * Remove margin from the last-child
  */
-.uk-placeholder > :last-child {
+.uk- > :last-child {
   margin-bottom: 0;
 }
 /* ========================================================================
@@ -3284,9 +3284,9 @@ select.uk-form-width-xsmall {
   -webkit-appearance: none;
 }
 /*
- * Removes placeholder transparency in Firefox.
+ * Removes  transparency in Firefox.
  */
-.uk-search-input::-moz-placeholder {
+.uk-search-input::-moz- {
   opacity: 1;
 }
 /*
@@ -3324,8 +3324,8 @@ select.uk-form-width-xsmall {
 .uk-search-input:focus {
   outline: none;
 }
-/* Placeholder */
-.uk-search-input::placeholder {
+/*  */
+.uk-search-input:: {
   color: #999;
 }
 /* Icon (Adopts `uk-icon`)
@@ -4049,10 +4049,10 @@ select.uk-form-width-xsmall {
   animation-duration: 0.2s;
 }
 /*
- * Placeholder
+ * 
  * Make content clickable for sticky cover and reveal effects
  */
-.uk-sticky-placeholder {
+.uk-sticky- {
   pointer-events: none;
 }
 /* ========================================================================
@@ -4497,9 +4497,9 @@ select.uk-form-width-xsmall {
   z-index: 1050 !important;
   pointer-events: none;
 }
-/* Placeholder
+/* 
  ========================================================================== */
-.uk-sortable-placeholder {
+.uk-sortable- {
   opacity: 0;
   pointer-events: none;
 }
@@ -10901,30 +10901,30 @@ iframe[data-uk-cover] {
   color: rgba(255, 255, 255, 0.7);
   border-color: rgba(255, 255, 255, 0.7);
 }
-.uk-light .uk-input::placeholder,
-.uk-section-primary:not(.uk-preserve-color) .uk-input::placeholder,
-.uk-section-secondary:not(.uk-preserve-color) .uk-input::placeholder,
-.uk-tile-primary:not(.uk-preserve-color) .uk-input::placeholder,
-.uk-tile-secondary:not(.uk-preserve-color) .uk-input::placeholder,
-.uk-card-primary.uk-card-body .uk-input::placeholder,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-input::placeholder,
-.uk-card-secondary.uk-card-body .uk-input::placeholder,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-input::placeholder,
-.uk-overlay-primary .uk-input::placeholder,
-.uk-offcanvas-bar .uk-input::placeholder {
+.uk-light .uk-input::,
+.uk-section-primary:not(.uk-preserve-color) .uk-input::,
+.uk-section-secondary:not(.uk-preserve-color) .uk-input::,
+.uk-tile-primary:not(.uk-preserve-color) .uk-input::,
+.uk-tile-secondary:not(.uk-preserve-color) .uk-input::,
+.uk-card-primary.uk-card-body .uk-input::,
+.uk-card-primary > :not([class*="uk-card-media"]) .uk-input::,
+.uk-card-secondary.uk-card-body .uk-input::,
+.uk-card-secondary > :not([class*="uk-card-media"]) .uk-input::,
+.uk-overlay-primary .uk-input::,
+.uk-offcanvas-bar .uk-input:: {
   color: rgba(255, 255, 255, 0.5);
 }
-.uk-light .uk-textarea::placeholder,
-.uk-section-primary:not(.uk-preserve-color) .uk-textarea::placeholder,
-.uk-section-secondary:not(.uk-preserve-color) .uk-textarea::placeholder,
-.uk-tile-primary:not(.uk-preserve-color) .uk-textarea::placeholder,
-.uk-tile-secondary:not(.uk-preserve-color) .uk-textarea::placeholder,
-.uk-card-primary.uk-card-body .uk-textarea::placeholder,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-textarea::placeholder,
-.uk-card-secondary.uk-card-body .uk-textarea::placeholder,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-textarea::placeholder,
-.uk-overlay-primary .uk-textarea::placeholder,
-.uk-offcanvas-bar .uk-textarea::placeholder {
+.uk-light .uk-textarea::,
+.uk-section-primary:not(.uk-preserve-color) .uk-textarea::,
+.uk-section-secondary:not(.uk-preserve-color) .uk-textarea::,
+.uk-tile-primary:not(.uk-preserve-color) .uk-textarea::,
+.uk-tile-secondary:not(.uk-preserve-color) .uk-textarea::,
+.uk-card-primary.uk-card-body .uk-textarea::,
+.uk-card-primary > :not([class*="uk-card-media"]) .uk-textarea::,
+.uk-card-secondary.uk-card-body .uk-textarea::,
+.uk-card-secondary > :not([class*="uk-card-media"]) .uk-textarea::,
+.uk-overlay-primary .uk-textarea::,
+.uk-offcanvas-bar .uk-textarea:: {
   color: rgba(255, 255, 255, 0.5);
 }
 .uk-light .uk-select:not([multiple]):not([size]),
@@ -11563,17 +11563,17 @@ iframe[data-uk-cover] {
 .uk-offcanvas-bar .uk-search-input {
   color: rgba(255, 255, 255, 0.7);
 }
-.uk-light .uk-search-input::placeholder,
-.uk-section-primary:not(.uk-preserve-color) .uk-search-input::placeholder,
-.uk-section-secondary:not(.uk-preserve-color) .uk-search-input::placeholder,
-.uk-tile-primary:not(.uk-preserve-color) .uk-search-input::placeholder,
-.uk-tile-secondary:not(.uk-preserve-color) .uk-search-input::placeholder,
-.uk-card-primary.uk-card-body .uk-search-input::placeholder,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-search-input::placeholder,
-.uk-card-secondary.uk-card-body .uk-search-input::placeholder,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-search-input::placeholder,
-.uk-overlay-primary .uk-search-input::placeholder,
-.uk-offcanvas-bar .uk-search-input::placeholder {
+.uk-light .uk-search-input::,
+.uk-section-primary:not(.uk-preserve-color) .uk-search-input::,
+.uk-section-secondary:not(.uk-preserve-color) .uk-search-input::,
+.uk-tile-primary:not(.uk-preserve-color) .uk-search-input::,
+.uk-tile-secondary:not(.uk-preserve-color) .uk-search-input::,
+.uk-card-primary.uk-card-body .uk-search-input::,
+.uk-card-primary > :not([class*="uk-card-media"]) .uk-search-input::,
+.uk-card-secondary.uk-card-body .uk-search-input::,
+.uk-card-secondary > :not([class*="uk-card-media"]) .uk-search-input::,
+.uk-overlay-primary .uk-search-input::,
+.uk-offcanvas-bar .uk-search-input:: {
   color: rgba(255, 255, 255, 0.5);
 }
 .uk-light .uk-search .uk-search-icon,
