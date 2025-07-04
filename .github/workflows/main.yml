@@ -1,30 +1,108 @@
-name: Deploy Angular App to Web Disk
+name: 🚀 Build & Deploy Angular App
 on:
   push:
     branches:
-      - main  # Dispara ao fazer push na branch main
+      - mvp  # 🌿 Trigger on push to main branch
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
+      - name: 🛠️ Checkout Repository
         uses: actions/checkout@v3
-      - name: Setup Node.js
+        with:
+          fetch-depth: 0  # 🔍 Get full git history for debugging
+
+      - name: 📦 Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '22' # Versão compatível com Angular
-      - name: Install Dependencies
+          node-version: '22' # ⚙️ Version compatible with Angular
+          cache: 'npm'       # 🔄 Cache node_modules for faster builds
+
+      - name: 🔍 Debug - Show Environment
+        run: |
+          echo "📅 Date: $(date)"
+          echo "🏠 Home: $HOME"
+          echo "📂 PWD: $(pwd)"
+          echo "🐍 Node: $(node -v)"
+          echo "📦 npm: $(npm -v)"
+          echo "🔍 ls -la:"
+          ls -la
+
+      - name: 📌 Install Dependencies
         run: npm ci
-      - name: Build Angular App
+        env:
+          NODE_ENV: development  # 🔧 Install all devDependencies
+
+      - name: 🔍 Debug - Show Installed Packages
+        run: npm list --depth=0
+
+      - name: 🏗️ Build Angular App
         run: npm run build -- --configuration production
-      - name: Deploy via WebDAV
+        env:
+          NODE_OPTIONS: "--max_old_space_size=4096"  # 🐘 Increase memory for large apps
+
+      - name: 🔍 Debug - Show Build Output
+        run: |
+          echo "📂 Build directory contents:"
+          ls -la dist/part/browser
+          echo "📄 Size of built assets:"
+          du -sh dist/part/browser/*
+
+      - name: 🚀 Deploy via WebDAV
         env:
           WEBDISK_USERNAME: ${{ secrets.WEBDISK_USERNAME }}
           WEBDISK_PASSWORD: ${{ secrets.WEBDISK_PASSWORD }}
         run: |
           BUILD_DIR="dist/part/browser"
-          WEBDISK_URL="https://parceiros-demo-acsa.fluxo-host.com:2078"
-          for file in $(find $BUILD_DIR -type f); do
-            REMOTE_PATH="${WEBDISK_URL}/${file#"$BUILD_DIR/"}"
-            curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -T "$file" "$REMOTE_PATH"
+          WEBDISK_URL="https://angolacables.co.ao:2078"
+          
+          # 📋 List of protected files and folders
+          EXCLUDE_LIST=(
+            "cgi-bin"
+            ".well-known"
+            ".tmb"
+            "partners.angolacables.co.ao"
+            "old_angolacables.co.ao"
+            "angular.angolacables.co.ao"
+            "old2_angolacables.co.ao"
+            "site_update"
+            ".user.ini"
+            ".htaccess_bak"
+            "old_angolacables.co.ao.zip"
+          )
+          
+          echo "🛡️ Protected items:"
+          printf " - 🛡️ %s\n" "${EXCLUDE_LIST[@]}"
+          
+          echo "🔍 Finding files to upload..."
+          find $BUILD_DIR -type f | while read -r file; do
+            RELATIVE_PATH="${file#"$BUILD_DIR/"}"
+            
+            # 🚫 Check if file should be excluded
+            exclude=false
+            for item in "${EXCLUDE_LIST[@]}"; do
+              if [[ "$RELATIVE_PATH" == "$item"* ]]; then
+                echo "⏭️ Skipping protected: $RELATIVE_PATH (matches $item)"
+                exclude=true
+                break
+              fi
+            done
+            
+            if [ "$exclude" = false ]; then
+              REMOTE_PATH="${WEBDISK_URL}/${RELATIVE_PATH}"
+              echo "⬆️ Uploading: $RELATIVE_PATH"
+              if ! curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -T "$file" "$REMOTE_PATH" --fail --silent --show-error; then
+                echo "❌ Failed to upload $RELATIVE_PATH"
+                exit 1
+              fi
+            fi
           done
+          
+          echo "✅ Deployment complete! All non-protected files uploaded."
+
+      - name: 📝 Final Status
+        run: |
+          echo "🎉 Deployment workflow completed successfully!"
+          echo "🕒 $(date)"
+          echo "🌐 https://angolacables.co.ao should be updated"
