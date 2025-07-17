@@ -16,12 +16,13 @@ import { CaracteristicasComponent } from '../../layout/caracteristicas/caracteri
 import { Ad2Component } from "../../layout/ad2/ad2.component";
 import { CertificacoesComponent } from '../../layout/certificacoes/certificacoes.component';
 import { TestmenuComponent } from '../../testmenu/testmenu.component';
+import { ChatComponent } from '../../layout/chat/chat.component';
 
 @Component({
   selector: 'app-inicio',
-  imports: [MenuComponent, TestmenuComponent, NumerosComponent, CertificacoesComponent, ServicosComponent, EventosComponent, NumerosComponent, AdComponent, CaracteristicasComponent, BlogComponent, Ad2Component, AngolacablesComponent, ServicosComponent, RodapeComponent, SliderComponent, ParceirosComponent, TelcablesComponent, AdComponent ],
+  imports: [MenuComponent, TestmenuComponent, ChatComponent, NumerosComponent, CertificacoesComponent, ServicosComponent, EventosComponent, NumerosComponent, AdComponent, CaracteristicasComponent, BlogComponent, Ad2Component, AngolacablesComponent, ServicosComponent, RodapeComponent, SliderComponent, ParceirosComponent, TelcablesComponent, AdComponent ],
   templateUrl: './inicio.component.html',
-  styleUrl: './inicio.component.css'
+  styleUrl: './inicio.component.css',
 })
 export class InicioComponent implements OnInit {
 
