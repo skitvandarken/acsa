@@ -26,36 +26,37 @@ export class ChatComponent implements AfterViewInit {
   // Opcional: Se precisar acessar o elemento df-messenger diretamente no TS
   // @ViewChild('dfMessengerElement') dfMessengerElement: ElementRef<HTMLDfmessengerElement>;
 
-  ngAfterViewInit() {
-    // Certifica-se de que o elemento df-messenger está disponível no DOM.
-    // O ideal é que este código seja executado após o df-messenger ter sido totalmente inicializado.
-    // Pode haver um pequeno atraso, então um setTimeout pode ajudar a garantir.
+ngAfterViewInit() {
+  const dfMessenger = document.querySelector('df-messenger') as HTMLDfmessengerElement;
 
-    const dfMessenger = document.querySelector('df-messenger') as any; // 'as any' para evitar erro de tipo temporariamente
-
-    if (dfMessenger)  if (dfMessenger) {
+  if (dfMessenger) {
     dfMessenger.addEventListener('df-messenger-loaded', () => {
-      // Now render your card
       const payload = [
         {
-          "type": "list",
-          "title": "Bem-vindo à Angola Cables!",
-          "subtitle": "Estamos aqui para ajudar...",
+          type: "list",
+          title: "Bem-vindo à Angola Cables!",
+          subtitle: "Estamos aqui para ajudar...",
+          value: "Olá! ", // This will be returned
         }
       ];
-      (dfMessenger as any).renderCustomCard(payload);
+
+      const returnedValue = dfMessenger.renderCustomCard(payload);
+      console.log("Returned value:", returnedValue); // "Olá! "
     });
   } else {
-      console.error('df-messenger element not found in the DOM.');
-    }
+    console.error('df-messenger element not found in the DOM.');
   }
 }
+}
+interface CustomCard {
+  type: string;
+  title: string;
+  subtitle: string;
+  value: string; // This is what will be returned
+}
 
-// Interfaces TypeScript para ajudar com o autocompletar e tipagem
-// Se quiser tornar o 'as any' mais específico
 declare global {
   interface HTMLDfmessengerElement extends HTMLElement {
-    renderCustomCard: (payload: any[]) => void;
+    renderCustomCard: (payload: CustomCard[]) => string;
   }
-
 }
