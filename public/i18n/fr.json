@@ -338,11 +338,11 @@
   "email_label": "E-mail*",
   "mensagem_label": "Message",
   "enviar_botao": "Envoyer",
-   "procurement_option": "Approvisionnement",
+  "procurement_option": "Approvisionnement",
   "primeiro_nome_required": "Le prénom est obligatoire",
   "ultimo_nome_required": "Le nom de famille est obligatoire",
   "email_required": "L'e-mail est obligatoire",
-  "email_invalid": "L'e-mail est invalide",
+  "email_invalid": "Veuillez entrer une adresse e-mail valide",
   "pais_required": "Le pays est obligatoire",
   "regiao_required": "La région est obligatoire",
   "departamento_required": "Le département est obligatoire",
@@ -351,12 +351,12 @@
   "mensagem_required": "Le message est obligatoire et doit contenir au moins 10 caractères",
   "numero_telefone_required": "Le numéro de téléphone est obligatoire",
   "ok": "OK",
-  "success_title": "Succès !",
-  "success_message": "Votre message a été envoyé avec succès ! 🎉",
+  "success_title": "Message envoyé avec succès !",
   "error_title": "Erreur",
   "error_message": "Échec de l'envoi du message. Veuillez réessayer plus tard.",
-  "form_invalid_title": "Formulaire Invalide",
+  "form_invalid_title": "Formulaire invalide",
   "form_invalid_message": "Veuillez remplir correctement tous les champs obligatoires.",
-  "mensagem_min_length": "Le message doit contenir au moins 10 caractères."
-
+  "mensagem_min_length": "Le message doit contenir au moins 10 caractères.",
+  "phone_invalid": "Le numéro doit commencer par + et ne contenir que des chiffres, -, (, )",
+  "phone_minlength": "Entrez un numéro de téléphone avec au moins 10 chiffres commençant par + (par exemple, +1234567890)."
 }
