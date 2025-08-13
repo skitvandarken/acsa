@@ -4,6 +4,7 @@ import { TranslateService } from '@ngx-translate/core';
 import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
+declare var UIkit: any;
 
 @Component({
   selector: 'app-contacto',
@@ -12,6 +13,8 @@ import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angula
   styleUrl: './contacto.component.css'
 })
 export class ContactoComponent {
+
+  isSubmitting: boolean = false;
 
   useLanguage(language: string): void {
     this.translate.use(language);
@@ -40,15 +43,19 @@ export class ContactoComponent {
     this.contactForm.markAllAsTouched();
 
 
-    if (this.contactForm.invalid) {
-      window.alert('Por favor, preencha todos os campos obrigatórios.');
-      return;
-    }
+     if (this.contactForm.invalid) {
+    UIkit.modal('#validation-modal').show();
+    return;
+  }
+
+  this.isSubmitting = true;
+  UIkit.modal('#loading-modal').show();
+
 
     const formData = this.contactForm.value;
 
-    emailjs.send('service_hxge11t', 'template_k8beyqd', formData, {
-      publicKey: '8zvRzqg96H44z9txo'
+    emailjs.send('service_9il6xco', 'template_xzxuf3r', formData, {
+      publicKey: 'F-p5Ny3ufMaRfCSgR'
     })
       .then(() => {
         console.log('SUCESSO');

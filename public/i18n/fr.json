@@ -337,5 +337,26 @@
   "cargo_empresa_label": "Poste dans l'entreprise",
   "email_label": "E-mail*",
   "mensagem_label": "Message",
-  "enviar_botao": "Envoyer"
+  "enviar_botao": "Envoyer",
+   "procurement_option": "Approvisionnement",
+  "primeiro_nome_required": "Le prénom est obligatoire",
+  "ultimo_nome_required": "Le nom de famille est obligatoire",
+  "email_required": "L'e-mail est obligatoire",
+  "email_invalid": "L'e-mail est invalide",
+  "pais_required": "Le pays est obligatoire",
+  "regiao_required": "La région est obligatoire",
+  "departamento_required": "Le département est obligatoire",
+  "nome_empresa_required": "Le nom de l'entreprise est obligatoire",
+  "cargo_empresa_required": "Le poste dans l'entreprise est obligatoire",
+  "mensagem_required": "Le message est obligatoire et doit contenir au moins 10 caractères",
+  "numero_telefone_required": "Le numéro de téléphone est obligatoire",
+  "ok": "OK",
+  "success_title": "Succès !",
+  "success_message": "Votre message a été envoyé avec succès ! 🎉",
+  "error_title": "Erreur",
+  "error_message": "Échec de l'envoi du message. Veuillez réessayer plus tard.",
+  "form_invalid_title": "Formulaire Invalide",
+  "form_invalid_message": "Veuillez remplir correctement tous les champs obligatoires.",
+  "mensagem_min_length": "Le message doit contenir au moins 10 caractères."
+
 }
