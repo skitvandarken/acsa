@@ -129,7 +129,7 @@ export class ContactoComponent {
           phone: [
         '', 
         [
-         Validators.required,
+        
       Validators.pattern(/^\+[0-9()\-]+$/), // Must start with +
       Validators.minLength(6) // Minimum reasonable length including +
         ]

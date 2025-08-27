@@ -75,6 +75,7 @@ jobs:
             ".user.ini"
             ".htaccess_bak"
             "old_angolacables.co.ao.zip"
+            "routes-table"
           )
           # =========================
 
