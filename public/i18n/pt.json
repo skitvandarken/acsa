@@ -164,7 +164,7 @@
   "equipa.sergio_pozuelo.name": "SERGIO POZUELO",
   "equipa.sergio_pozuelo.position": "Director Comercial",
   "equipa.sergio_pozuelo.bio": "Sergio Pozuelo é executivo internacional com mais de 20 anos de experiência em Vendas e Marketing nos setores de Telecomunicações e TI, atuando em diversas regiões como Europa, Oriente Médio, África e América Latina. Graduado em Engenharia de Telecomunicações pela Universidade Politécnica de Madrid, com MBA e Mestrado em Marketing, é Diretor Comercial Global da Angola Cables. Ele é responsável pelas subsidiárias da empresa em Angola, Brasil, África do Sul, Europa e EUA, liderando estratégias comerciais e impulsionando o crescimento nos mercados internacionais. A Angola Cables é uma multinacional de telecomunicações presente em mais de 5 países",
- "equipa.julio_chilela.name": "JÚLIO CHILELA",
+  "equipa.julio_chilela.name": "JÚLIO CHILELA",
   "equipa.julio_chilela.position": "Director de Inovação Digital",
   "equipa.julio_chilela.bio": "Júlio Chilela é Diretor de Inovação Digital na Angola Cables e entusiasta da Cloud. Com vasta experiência, liderou o desenvolvimento de plataformas digitais e projetos globais, destacando-se pela implementação da primeira cloud pública angolana com self-onboard, abrangendo 6 regiões em 4 países (Angola, Nigéria, África do Sul e Brasil). Candidato ao doutoramento em Ciências da Computação pela Universidade do Porto e Universidade de Houston, sua pesquisa foca em 'entrega de internet via satélite com redes 5G e Core em Cloud'. Possui mestrado em Tecnologias de Informação Geográfica pela Universidade de Coimbra e experiência em diversas empresas internacionais.",
   "equipa.artur_mendes.name": "ARTUR MENDES",
@@ -174,8 +174,11 @@
   "equipa.frederico_oliveira.position": "Líder de Engenharia",
   "equipa.frederico_oliveira.bio": "Frederico Oliveira é Head de Engenharia na Angola Cables, destacando-se na administração e manutenção de redes IP e submarinas. Com experiência na gestão de equipes e colaboração com diversos fornecedores, lidera a entrega de soluções de alta qualidade. Ao longo de sua carreira, focou conhecimentos em redes corporativas, provedores de serviços e telecomunicações. Reconhecido por sua persistência, resiliência e adaptabilidade, soluções inovadoras e abordagens proativas para resolver desafios em ambientes dinâmicos e desafiadores.",
   "equipa.samuel_carvalho.name": "SAMUEL CARVALHO",
-  "equipa.samuel_carvalho.position": "Líder do Marketing",
+  "equipa.samuel_carvalho.position": "CEO TelCables Europe e Líder de Marketing",
   "equipa.samuel_carvalho.bio": "Samuel Carvalho é CMO da Angola Cables e possui mestrado em Comunicação Corporativa, BA em Relações Públicas e Marketing, além de certificação em Liderança Transformacional pelo Lisbon MBA Program. Com mais de 18 anos de experiência em consultoria operacional e de marketing para empresas do setor financeiro e FMCG, construiu uma carreira sólida em estratégias de marketing, mídia, publicidade, gestão de marca e comunicação. Sob sua liderança, a Angola Cables implementou a estratégia 'Global Deep Connection', promovendo produtos como CDN, IXP, Cloud Services, Data Centers e a rede submarina que conecta a África à América do Sul.",
+  "adriano-caldevilla-name": "ADRIANO CALDEVILLA",
+  "adriano-caldevilla-position": " Director Técnico",
+  "adriano-caldevilla-bio": " Adriano Caldevilla é Director Técnico da Angola Cables. Com mais de 20 anos de experiência internacional em redes, cabos submarinos, cloud e segurança, atuou em empresas globais como Zoom, Akamai, Verizon e Orange. Especialista em infraestrutura crítica e interconexão, sua missão é fortalecer o posicionamento da Angola Cables como referência mundial em conectividade por cabos submarinos e interconexão internacional.",
   "equipa.ariete_pereira.name": "ARIETE PEREIRA",
   "equipa.ariete_pereira.position": "Líder Comercial",
   "equipa.ariete_pereira.bio": "Ariete Pereira possui mais de 10 anos de experiência em cargos comerciais no setor de telecomunicações e atualmente é Líder de Vendas na Angola Cables. Destaca-se na construção de relacionamentos sólidos e duradouros com clientes ao redor do mundo, oferecendo valor consistente e confiança por meio de um serviço confiável e parcerias estratégicas.<br> Comprometida em gerar valor excepcional para os parceiros, busca garantir que sua equipe esteja motivada e empoderada para contribuir com o crescimento e sucesso da Angola Cables no cenário global de telecomunicações.",
@@ -191,11 +194,11 @@
   "equipa.sudhir_juggernath.name": "SUDHIR JUGGERNAUTH",
   "equipa.sudhir_juggernath.position": "CEO da TelCables South Africa",
   "equipa.sudhir_juggernath.bio": "Sudhir Juggernath é CEO da TelCables Southern & East Africa, subsidiária da Angola Cables, provedor global de soluções ICT e operadora de rede mais conectada da África. Ele é responsável pela gestão, desenvolvimento e expansão das operações da TelCables nas regiões da África Austral e Oriental.<br> Com 20 anos de experiência no setor de telecomunicações e tecnologia, Sudhir tem um histórico de posições estratégicas em empresas como Siemens, Neotel, BT Global Services e Orange, com foco em desenvolvimento de negócios. <br>Nomeado CEO em setembro de 2023, é conhecido por sua visão analítica e habilidade em negociar e gerar oportunidades de mercado.",
-  "equipa.mahen_mahido.name": "Mahen Naidu",
+  "equipa.mahen_mahido.name": "MAHEN NAIDU",
   "equipa.mahen_mahido.position": "Líder de Soluções de Negócios",
   "equipa.mahen_mahido.bio": "  Profissional de Telecomunicações com mais de 10 anos de experiência em Arquitetura de Soluções, Desenvolvimento de Produtos e Modelagem de Preços. Destaca-se pela comunicação eficaz e pela forte atuação com clientes e parceiros. Tem perfil inovador, sempre focado em agregar valor aos requisitos de negócios internos e externos. É organizado, confiável e capaz de gerenciar múltiplas prioridades com atitude positiva, demonstrando proatividade e compromisso com os objetivos da equipe.",
-  "equipa.guilherme_vieira.name": "Guilherme Viveira",
-  "equipa.guilherme_vieira.position": "Director de vendas",
+  "equipa.guilherme_vieira.name": "GUILHERME VIEIRA",
+  "equipa.guilherme_vieira.position": "Director de Vendas",
   "equipa.guilherme_vieira.bio": "Vinte e um anos de experiência em empresas nacionais e multinacionais do setor de Tecnologia de Informação e Comunicação (TIC), dezoito dos quais suportando mudanças organizacionais envolvendo processos de negócio complexos;\n\nSólida experiência comercial e em desenvolvimento de negócios adquirida através de ampla vivência em negociação de soluções de TIC (software, hardware e serviços) nas regiões sudeste, nordeste, sul e centro-oeste do Brasil;\n\nAtuação e conhecimento consistentes em todas as fases do ciclo de vendas para organizações públicas e privadas.<br> Proficiência nas principais modalidades e tipos de aquisições públicas e privadas como RFI, RFP, RFQ, concorrência, pregão, menor preço, técnica e preço, sistema de registro de preços, dentre outras;",
   "slideshow.video_alt_text": "Seu navegador não suporta o vídeo em falta",
   "slideshow.slide1.title": "Os nossos cabos submarinos são instalados nas profundezas do oceano, respeitando o habitat das tartarugas e preservando o ecossistema para as futuras gerações.",
@@ -347,7 +350,7 @@
   "cargo_empresa_required": "O cargo na empresa é obrigatório",
   "mensagem_required": "A mensagem é obrigatória e deve conter no mínimo 10 caracteres",
   "numero_telefone_required": "O número de telefone é obrigatório.",
-   "ok": "OK",
+  "ok": "OK",
   "success_title": "Mensagem enviada com sucesso!",
   "error_title": "Erro",
   "error_message": "Falha ao enviar a mensagem. Por favor, tente novamente mais tarde.",
@@ -355,11 +358,5 @@
   "form_invalid_message": "Por favor, preencha todos os campos obrigatórios corretamente.",
   "mensagem_min_length": "A mensagem deve ter pelo menos 10 caracteres.",
   "phone_invalid": "Insira um número de telefone válido (por exemplo, +1234567890123).",
-    "phone_minlength": "Insira o número de telefone com pelo menos 10 dígitos começando com + (por exemplo, +1234567890123).",
-    "adriano-caldevilla-name": "Adriano Caldevilla",
-    "adriano-caldevilla-position": " Director Técnico",
-    "adriano-caldevilla-bio": " Com mais de 20 anos de experiência internacional em redes, cabos submarinos, cloud e segurança, atuou em empresas globais como Zoom, Akamai, Verizon e Orange. Especialista em infraestrutura crítica e interconexão, sua missão é fortalecer o posicionamento da Angola Cables como referência mundial em conectividade por cabos submarinos e interconexão internacional."
-
-  
-
-}
+  "phone_minlength": "Insira o número de telefone com pelo menos 10 dígitos começando com + (por exemplo, +1234567890123)."
+  }
