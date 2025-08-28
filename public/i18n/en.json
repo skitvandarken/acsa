@@ -164,10 +164,7 @@
   "equipa.sergio_pozuelo.name": "SERGIO POZUELO",
   "equipa.sergio_pozuelo.position": "Commercial Director",
   "equipa.sergio_pozuelo.bio": "Sergio Pozuelo is an international executive with more than 20 years of experience in Sales and Marketing in the Telecommunications and IT sectors, working in various regions such as Europe, the Middle East, Africa and Latin America. Graduated in Telecommunications Engineering from the Polytechnic University of Madrid, with an MBA and a Master's degree in Marketing, he is Global Commercial Director of Angola Cables. He is responsible for the company's subsidiaries in Angola, Brazil, South Africa, Europe and the USA, leading commercial strategies and driving growth in international markets. Angola Cables is a multinational telecommunications company present in more than 5 countries",
-  "equipa.lucenildo_junior.name": "LUCENILDO JUNIOR",
-  "equipa.lucenildo_junior.position": "Technical Director",
-  "equipa.lucenildo_junior.bio": "Lucenildo Junior is Chief Technology Officer (CTO) of Angola Cables, with extensive experience in network development and management of complex global networks. Recognized for his deep knowledge and practical approach to solving network challenges, he is responsible for the company's IP/MPLS infrastructure and oversees the expansion of Angola Cables' global network. Lucenildo holds a master's degree in Computer Science and a doctorate in Electrical Engineering from the University of São Paulo. Before joining Angola Cables in 2019, he worked on research and development projects at NIC.br, RNP Brazil and G8 Networks. He is also an active member of NANOG and LACNIC.",
-  "equipa.julio_chilela.name": "JÚLIO CHILELA",
+"equipa.julio_chilela.name": "JÚLIO CHILELA",
   "equipa.julio_chilela.position": "Director of Digital Innovation",
   "equipa.julio_chilela.bio": "Júlio Chilela is Director of Digital Innovation at Angola Cables and a Cloud enthusiast. With extensive experience, he led the development of digital platforms and global projects, standing out for the implementation of the first Angolan public cloud with self-onboard, covering 6 regions in 4 countries (Angola, Nigeria, South Africa and Brazil). PhD candidate in Computer Science at the University of Porto and University of Houston, his research focuses on 'internet delivery via satellite with 5G networks and Cloud Core'. He holds a master's degree in Geographic Information Technologies from the University of Coimbra and experience in several international companies.",
   "equipa.artur_mendes.name": "ARTUR MENDES",
@@ -358,5 +355,9 @@
   "form_invalid_message": "Please fill all required fields correctly.",
   "mensagem_min_length": "Message must be at least 10 characters long.",
   "phone_invalid": "Number must start with + and contain only numbers, -, (, )",
-  "phone_minlength": "Enter phone number with at least 10 digits starting with + (e.g., +1234567890)."
+  "phone_minlength": "Enter phone number with at least 10 digits starting with + (e.g., +1234567890).",
+  "adriano-caldevilla-name": "Adriano Caldevilla",
+"adriano-caldevilla-position": " CTO",
+"adriano-caldevilla-bio": "With over 20 years of international experience in networks, submarine cables, cloud, and security, he has worked at global companies such as Zoom, Akamai, Verizon, and Orange. A specialist in critical infrastructure and interconnection, his mission is to strengthen Angola Cables' position as a global reference in submarine cable connectivity and international interconnection."
+
 }

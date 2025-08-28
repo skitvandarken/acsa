@@ -164,10 +164,7 @@
   "equipa.sergio_pozuelo.name": "SERGIO POZUELO",
   "equipa.sergio_pozuelo.position": "Director Comercial",
   "equipa.sergio_pozuelo.bio": "Sergio Pozuelo é executivo internacional com mais de 20 anos de experiência em Vendas e Marketing nos setores de Telecomunicações e TI, atuando em diversas regiões como Europa, Oriente Médio, África e América Latina. Graduado em Engenharia de Telecomunicações pela Universidade Politécnica de Madrid, com MBA e Mestrado em Marketing, é Diretor Comercial Global da Angola Cables. Ele é responsável pelas subsidiárias da empresa em Angola, Brasil, África do Sul, Europa e EUA, liderando estratégias comerciais e impulsionando o crescimento nos mercados internacionais. A Angola Cables é uma multinacional de telecomunicações presente em mais de 5 países",
-  "equipa.lucenildo_junior.name": "LUCENILDO JUNIOR",
-  "equipa.lucenildo_junior.position": "Director Técnico",
-  "equipa.lucenildo_junior.bio": "Lucenildo Junior é Chief Technology Officer (CTO) da Angola Cables, com vasta experiência no desenvolvimento de redes e gestão de redes globais complexas. Reconhecido por seu conhecimento profundo e abordagem prática para resolver desafios de rede, é responsável pela infraestrutura IP/MPLS da empresa e supervisiona a expansão da rede global da Angola Cables. Lucenildo possui mestrado em Ciência da Computação e doutorado em Engenharia Elétrica pela Universidade de São Paulo. Antes de ingressar na Angola Cables em 2019, trabalhou em projetos de pesquisa e desenvolvimento no NIC.br, RNP Brasil e G8 Networks. Ele também é membro ativo do NANOG e LACNIC.",
-  "equipa.julio_chilela.name": "JÚLIO CHILELA",
+ "equipa.julio_chilela.name": "JÚLIO CHILELA",
   "equipa.julio_chilela.position": "Director de Inovação Digital",
   "equipa.julio_chilela.bio": "Júlio Chilela é Diretor de Inovação Digital na Angola Cables e entusiasta da Cloud. Com vasta experiência, liderou o desenvolvimento de plataformas digitais e projetos globais, destacando-se pela implementação da primeira cloud pública angolana com self-onboard, abrangendo 6 regiões em 4 países (Angola, Nigéria, África do Sul e Brasil). Candidato ao doutoramento em Ciências da Computação pela Universidade do Porto e Universidade de Houston, sua pesquisa foca em 'entrega de internet via satélite com redes 5G e Core em Cloud'. Possui mestrado em Tecnologias de Informação Geográfica pela Universidade de Coimbra e experiência em diversas empresas internacionais.",
   "equipa.artur_mendes.name": "ARTUR MENDES",
@@ -358,7 +355,10 @@
   "form_invalid_message": "Por favor, preencha todos os campos obrigatórios corretamente.",
   "mensagem_min_length": "A mensagem deve ter pelo menos 10 caracteres.",
   "phone_invalid": "Insira um número de telefone válido (por exemplo, +1234567890123).",
-    "phone_minlength": "Insira o número de telefone com pelo menos 10 dígitos começando com + (por exemplo, +1234567890123)."
+    "phone_minlength": "Insira o número de telefone com pelo menos 10 dígitos começando com + (por exemplo, +1234567890123).",
+    "adriano-caldevilla-name": "Adriano Caldevilla",
+    "adriano-caldevilla-position": " Director Técnico",
+    "adriano-caldevilla-bio": " Com mais de 20 anos de experiência internacional em redes, cabos submarinos, cloud e segurança, atuou em empresas globais como Zoom, Akamai, Verizon e Orange. Especialista em infraestrutura crítica e interconexão, sua missão é fortalecer o posicionamento da Angola Cables como referência mundial em conectividade por cabos submarinos e interconexão internacional."
 
   
 

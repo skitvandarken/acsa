@@ -164,9 +164,6 @@
   "equipa.sergio_pozuelo.name": "SERGIO POZUELO",
   "equipa.sergio_pozuelo.position": "Directeur Commercial",
   "equipa.sergio_pozuelo.bio": "Sergio Pozuelo est un cadre international avec plus de 20 ans d'expérience en Ventes et Marketing dans les secteurs des Télécommunications et IT, opérant dans diverses régions comme l'Europe, le Moyen-Orient, l'Afrique et l'Amérique Latine. Diplômé en Ingénierie des Télécommunications de l'Université Polytechnique de Madrid, avec un MBA et un Master en Marketing, il est Directeur Commercial Global d'Angola Cables. Il est responsable des filiales de l'entreprise en Angola, Brésil, Afrique du Sud, Europe et USA, menant des stratégies commerciales et stimulant la croissance sur les marchés internationaux. Angola Cables est une multinationale de télécommunications présente dans plus de 5 pays",
-  "equipa.lucenildo_junior.name": "LUCENILDO JUNIOR",
-  "equipa.lucenildo_junior.position": "Directeur Technique",
-  "equipa.lucenildo_junior.bio": "Lucenildo Junior est Chief Technology Officer (CTO) d'Angola Cables, avec une vaste expérience dans le développement de réseaux et la gestion de réseaux globaux complexes. Reconnu pour sa connaissance approfondie et son approche pratique pour résoudre les défis réseau, il est responsable de l'infrastructure IP/MPLS de l'entreprise et supervise l'expansion du réseau global d'Angola Cables. Lucenildo possède un master en Informatique et un doctorat en Génie Électrique de l'Université de São Paulo. Avant de rejoindre Angola Cables en 2019, il a travaillé sur des projets de recherche et développement chez NIC.br, RNP Brésil et G8 Networks. Il est également membre actif du NANOG et LACNIC.",
   "equipa.julio_chilela.name": "JÚLIO CHILELA",
   "equipa.julio_chilela.position": "Directeur de l'Innovation Numérique",
   "equipa.julio_chilela.bio": "Júlio Chilela est Directeur de l'Innovation Numérique chez Angola Cables et passionné par le Cloud. Avec une vaste expérience, il a dirigé le développement de plateformes digitales et projets globaux, se distinguant par l'implémentation du premier cloud public angolais avec self-onboard, couvrant 6 régions dans 4 pays (Angola, Nigeria, Afrique du Sud et Brésil). Candidat au doctorat en Sciences Informatiques à l'Université de Porto et l'Université de Houston, sa recherche se concentre sur 'la livraison d'internet par satellite avec réseaux 5G et Core en Cloud'. Il possède un master en Technologies de l'Information Géographique de l'Université de Coimbra et de l'expérience dans diverses entreprises internationales.",
@@ -358,5 +355,9 @@
   "form_invalid_message": "Veuillez remplir correctement tous les champs obligatoires.",
   "mensagem_min_length": "Le message doit contenir au moins 10 caractères.",
   "phone_invalid": "Le numéro doit commencer par + et ne contenir que des chiffres, -, (, )",
-  "phone_minlength": "Entrez un numéro de téléphone avec au moins 10 chiffres commençant par + (par exemple, +1234567890)."
+  "phone_minlength": "Entrez un numéro de téléphone avec au moins 10 chiffres commençant par + (par exemple, +1234567890).",
+  "adriano-caldevilla-name": "Adriano Caldevilla",
+"adriano-caldevilla-position": " Directeur Technique",
+"adriano-caldevilla-bio": "Avec plus de 20 ans d’expérience internationale dans les réseaux, les câbles sous-marins, le cloud et la sécurité, il a travaillé dans des entreprises mondiales telles que Zoom, Akamai, Verizon et Orange. Spécialiste des infrastructures critiques et de l’interconnexion, sa mission est de renforcer le positionnement d’Angola Cables en tant que référence mondiale en connectivité par câbles sous-marins et interconnexion internationale."
+
 }
