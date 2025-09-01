@@ -313,7 +313,7 @@
   "contacto_titulo_pagina": "Contact",
   "contacto_subtitulo_pagina": "Get in touch with us",
   "pais_regiao": "Country/Region",
-  "somos_rapidos_responder": "We respond quickly!",
+  "somos_rapidos_responder": "We will respond to your message as soon as possible.",
   "primeiro_nome_label": "First name*",
   "ultimo_nome_label": "Last name*",
   "numero_telefone_label": "Phone number",
@@ -358,5 +358,16 @@
   "form_invalid_message": "Please fill all required fields correctly.",
   "mensagem_min_length": "Message must be at least 10 characters long.",
   "phone_invalid": "Number must start with + and contain only numbers, -, (, )",
-  "phone_minlength": "Enter phone number with at least 10 digits starting with + (e.g., +1234567890)."
+  "phone_minlength": "Enter phone number with at least 10 digits starting with + (e.g., +1234567890).",
+"ad.partner.program.headline": "AC Partner Global Program",
+"ad.partner.program.titulo": "We are your business partner",
+"ad.partner.program.desc": "Our program is the perfect opportunity for telecom companies, operators, and internet service providers looking to grow their business volume and expand their reach.",
+"parceiro.indicador": "Referral Partner",
+"parceiro.revendedor": "Reseller",
+"parceiro.agente": "Sales Agent",
+"parceiro.tornar.se": "Become a partner",
+"comecar": "Start Now"
+
+
+
  }

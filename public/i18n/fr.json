@@ -373,5 +373,14 @@
   "form_invalid_message": "Veuillez remplir correctement tous les champs obligatoires.",
   "mensagem_min_length": "Le message doit contenir au moins 10 caractères.",
   "phone_invalid": "Le numéro doit commencer par + et ne contenir que des chiffres, -, (, )",
-  "phone_minlength": "Entrez un numéro de téléphone avec au moins 10 chiffres commençant par + (par exemple, +1234567890)."
+  "phone_minlength": "Entrez un numéro de téléphone avec au moins 10 chiffres commençant par + (par exemple, +1234567890).",
+  "ad.partner.program.headline": "Programme Partenaire Global AC",
+"ad.partner.program.titulo": "Nous sommes votre partenaire commercial",
+"ad.partner.program.desc": "Notre programme est l’opportunité idéale pour les entreprises de télécommunications, les opérateurs et les fournisseurs de services Internet qui souhaitent accroître leur chiffre d’affaires et élargir leur portée.",
+"parceiro.indicador": "Partenaire Indicateur",
+"parceiro.revendedor": "Revendeur",
+"parceiro.agente": "Agent commercial",
+"parceiro.tornar.se": "Devenir partenaire"
+
+
 }

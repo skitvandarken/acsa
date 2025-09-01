@@ -1,19 +1,77 @@
-.uk-slidenav-previous,
-.uk-slidenav-next {
-    background-color: rgba(0, 0, 78, 0.231);
-    /* Dark gray background */
-    border-radius: 50%;
-    /* Makes it circular */
-    width: 40px;
-    /* Adjust size as needed */
-    height: 40px;
-    /* Adjust size as needed, should be same as width for a perfect circle */
-    display: flex;
-    /* For centering the icon */
-    justify-content: center;
-    /* For centering the icon */
-    align-items: center;
-    /* For centering the icon */
-    color: rgba(26, 184, 221, 1);
-    /* Icon color */
+/* Base gradient card */
+.gradient-card {
+  position: relative;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #022561 0%, #0f315e 50%, #02060b 100%);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: overlay; /* softens gradient over image */
+}
+
+/* Specific backgrounds */
+.gradient-clouds { background-image: url('/img/adslider/clouds2africa.png'); }
+.gradient-host2 { background-image: url('/img/adslider/host2africa.png'); }
+.gradient-partners { background-image: url('/img/adslider/2.png'); }
+.gradient-acelera { background-image: url('/img/adslider/aceleranet.png'); }
+.gradient-ecobizz { background-image: url('/img/adslider/ecobizz.png'); }
+
+/* Content */
+.gradient-card .uk-text-left {
+  max-width: 600px;
+  word-wrap: break-word;
+}
+
+/* Buttons */
+.uk-button {
+  white-space: nowrap;
+  font-size: 1rem;
+  padding: 8px 40px;
+  border-radius: 9999px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.uk-button.primary {
+  background-color: #FAA61A;
+  color: #002561;
+}
+
+.uk-button span {
+  font-size: inherit;
+}
+
+/* Images */
+.uk-panel img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 30px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Animations */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .gradient-card .uk-text-left { max-width: 90%; }
+  .uk-button { padding: 6px 30px; font-size: 0.9rem; }
+  h1 { font-size: 1.6rem; }
+}
+
+@media (max-width: 640px) {
+  .gradient-card .uk-text-left { max-width: 100%; padding-right: 20px; }
+  .uk-button { padding: 5px 20px; font-size: 0.8rem; }
+  h1 { font-size: 1.3rem; }
 }

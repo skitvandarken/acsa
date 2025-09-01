@@ -1,63 +1,125 @@
-<!-- 
-<div class=" uk-margin-large-top">
-   <div class="uk-container">
-      <div class=" uk-margin-medium-top uk-text-center ">
+<div class="uk-position-relative uk-visible-toggle uk-light uk-margin-medium-top uk-margin-large-bottom"
+     tabindex="-1"
+     uk-slider="center: true; autoplay: true; autoplay-interval: 4000; pause-on-hover: false; infinite: true">
 
-         <a href="https://partners.angolacables.co.ao/">
-            <img style="border-radius: 20px" class="border" src="img/ac-partner-banner.jpeg">
-         </a>
+  <div class="uk-slider-items uk-grid uk-grid-small uk-grid-collapse@s">
 
+    <!-- Clouds -->
+    <div class="uk-width-3-4">
+      <div class="gradient-card gradient-clouds uk-panel">
+        <div class="uk-grid-small uk-child-width-1-1 uk-child-width-1-2@m uk-flex-middle" uk-grid>
+          <div>
+            <div class="uk-text-left uk-padding uk-margin-small-left">
+              <p style="color:white">{{ 'ad.clouds-headline' | translate }}</p>
+              <h1 class="uk-text-left uk-margin-small-bottom uk-margin-small-top" style="font-weight: bolder; color:#fff">
+                <b>{{ 'ad.clouds-title' | translate }}</b>
+              </h1>
+              <p class="angola-cables-texto-parceiros" style="color:#fff">{{ 'ad.clouds-desc' | translate }}</p>
+              <a href="https://www.clouds2africa.com/" target="_blank">
+                <button class="uk-button primary uk-button-small uk-margin-small-top">
+                  <span>{{ 'comecar' | translate }}</span>
+                </button>
+              </a>
+            </div>
+          </div>
+          <div><img src="/img/clouds-banner.png" alt=""></div>
+        </div>
       </div>
-   </div>
-</div>
+    </div>
 
-Slideshow section -->
-
-<div class=" uk-container uk-margin-small-top">
-
-   <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="autoplay: true; autoplay-interval: 4000; pause-on-hover: true" >
-
-      <div class="uk-slideshow-items">
-         <div>
-            <a target="_blank" href="https://partners.angolacables.co.ao/">
-               <img style="border-radius: 20px" class="border" src="img/adslider/ac-partner-banner.jpeg">
-            </a>
-         </div>
-         <div>
-            <a target="_blank" href="https://ai.host2africa.com/" >
-               <img style="border-radius: 20px" class="border" src="img/adslider/hostia.png">
-            </a>
-         </div>
-         <div>
-            <a target="_blank" href="https://www.clouds2africa.com/" >
-
-               <img style="border-radius: 20px" class="border" src="img/adslider/clouds2.png">
-            </a>
-         </div>
-         <div>
-            <a target="_blank" href="https://vods2africa.com/" >
-
-               <img style="border-radius: 20px" class="border" src="img/adslider/vods2africa.png">
-            </a>
-         </div>
-         <div>
-            <a target="_blank" href="https://ecobizz.ao/">
-
-               <img style="border-radius: 20px" class="border" src="img/adslider/ecobizz.png">
-            </a>
-         </div>
-         <div>
-            <a target="_blank" href="https://aceleranet.ao/" >
-
-               <img style="border-radius: 20px" class="border" src="img/adslider/aceleranet.png">
-            </a>
-         </div>
+    <!-- Host2Africa -->
+    <div class="uk-width-3-4">
+      <div class="gradient-card gradient-host2 uk-panel">
+        <div class="uk-grid-small uk-child-width-1-1 uk-child-width-1-2@m uk-flex-middle" uk-grid>
+          <div>
+            <div class="uk-text-left uk-padding uk-margin-small-left">
+              <p style="color:white">{{ 'ad.host2-headline' | translate }}</p>
+              <h1 class="uk-text-left uk-margin-small-bottom uk-margin-small-top" style="font-weight: bolder; color:#fff">
+                <b>{{ 'ad.host2-title' | translate }}</b>
+              </h1>
+              <p class="angola-cables-texto-parceiros" style="color:#fff">{{ 'ad.host2-desc' | translate }}</p>
+              <a href="http://ai.host2africa.com/" target="_blank">
+                <button class="uk-button primary uk-button-small uk-margin-small-top">
+                  <span>{{ 'comecar' | translate }}</span>
+                </button>
+              </a>
+            </div>
+          </div>
+          <div><img src="/img/host2africa.png" alt=""></div>
+        </div>
       </div>
+    </div>
 
-      <a class="uk-position-center-left uk-position-small " href uk-slidenav-previous
-         uk-slideshow-item="previous"></a>
-      <a class="uk-position-center-right uk-position-small " href uk-slidenav-next
-         uk-slideshow-item="next"></a>
+    <!-- Partner Program -->
+    <div class="uk-width-3-4">
+      <div class="gradient-card gradient-partners uk-panel">
+        <div class="uk-grid-small uk-child-width-1-1 uk-child-width-1-2@m uk-flex-middle" uk-grid>
+          <div>
+            <div class="uk-text-left uk-padding uk-margin-small-left">
+              <p style="color:white">{{ 'ad.partner.program.headline' | translate }}</p>
+              <h1 class="uk-text-left uk-margin-small-bottom uk-margin-small-top" style="font-weight: bolder; color:#fff">
+                <b>{{ 'ad.partner.program.titulo' | translate }}</b>
+              </h1>
+              <p class="angola-cables-texto-parceiros" style="color:#fff">{{ 'ad.partner.program.desc' | translate }}</p>
+              <a href="https://partners.angolacables.co.ao/" target="_blank">
+                <button class="uk-button primary uk-button-small uk-margin-small-top">
+                  <span>{{ 'parceiro.tornar.se' | translate }}</span>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-   </div>
+    <!-- Acelera -->
+    <div class="uk-width-3-4">
+      <div class="gradient-card gradient-acelera uk-panel">
+        <div class="uk-grid-small uk-child-width-1-1 uk-child-width-1-2@m uk-flex-middle" uk-grid>
+          <div>
+            <div class="uk-text-left uk-padding uk-margin-small-left">
+              <p style="color:white">{{ 'ad.acelera-headline' | translate }}</p>
+              <h1 class="uk-text-left uk-margin-small-bottom uk-margin-small-top" style="font-weight: bolder; color:#fff">
+                <b>{{ 'ad.es.isp.titulo' | translate }}</b>
+              </h1>
+              <p style="color:white">{{ 'ad.acelera-desc' | translate }}</p>
+              <a href="https://aceleranet.ao/" target="_blank">
+                <button class="uk-button primary uk-button-small uk-margin-small-top">
+                  <span>{{ 'comecar' | translate }}</span>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ecobizz -->
+    <div class="uk-width-3-4">
+      <div class="gradient-card gradient-ecobizz uk-panel">
+        <div class="uk-grid-small uk-child-width-1-1 uk-child-width-1-2@m uk-flex-middle" uk-grid>
+          <div>
+            <div class="uk-text-left uk-padding uk-margin-small-left">
+              <p style="color:white">Ecobizz</p>
+              <h1 class="uk-text-left uk-margin-small-bottom uk-margin-small-top" style="font-weight: bolder; color:#fff">
+                <b>{{ 'ad.ecobizz.titulo' | translate }}</b>
+              </h1>
+              <p class="angola-cables-texto" style="color:#fff">{{ 'ad.ecobizz.desc' | translate }}</p>
+              <a href="https://ecobizz.ao/" target="_blank">
+                <button class="uk-button primary uk-button-small uk-margin-small-top">
+                  <span> {{ 'comecar' | translate }} </span>
+                </button>
+              </a>
+            </div>
+          </div>
+          <div><img src="/img/ecobizz.png" alt=""></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Slider arrows -->
+  <a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slider-item="previous"></a>
+  <a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next uk-slider-item="next"></a>
 </div>

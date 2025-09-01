@@ -358,5 +358,25 @@
   "form_invalid_message": "Por favor, preencha todos os campos obrigatórios corretamente.",
   "mensagem_min_length": "A mensagem deve ter pelo menos 10 caracteres.",
   "phone_invalid": "Insira um número de telefone válido (por exemplo, +1234567890123).",
-  "phone_minlength": "Insira o número de telefone com pelo menos 10 dígitos começando com + (por exemplo, +1234567890123)."
-  }
+  "phone_minlength": "Insira o número de telefone com pelo menos 10 dígitos começando com + (por exemplo, +1234567890123).",
+  "ad.partner.program.headline": "AC Partner Global Program",
+  "ad.partner.program.titulo": "Somos o seu parceiro de negócio",
+  "ad.partner.program.desc": " O nosso programa é a oportunidade perfeita para empresas de telecomunicações, operadoras e provedores de serviços de internet que desejam crescer em volume de negócios e expandir em alcance.",
+  "parceiro.indicador": "Indicador",
+  "parceiro.revendedor": "Revendedor",
+  "parceiro.agente": "Agente de vendas",
+  "parceiro.tornar.se": "Tornar-se parceiro",
+  "ad.clouds-headline": "Clouds2Africa",
+  "ad.clouds-title": "Máquinas virtuais em menos de 5 minutos", 
+  "ad.clouds-desc": "Servidores | Armazenamento | Backup | Calculadora de custos | Visual Network Designer",
+  "ad.es.isp.titulo": "És operador de internet ou start-up digital?",
+  "comecar": "Começar",
+  "ad.acelera-headline": "ACeleraNET",
+  "ad.acelera-desc": "O programa ACeleraNet é um programa de sustentabilidade digital da Angola Cables, com o apoio estratégico do MINTTICS e INACOM.",
+ "ad.host2-headline": "Host2Africa",
+  "ad.host2-title": "O seu Website online em minutos.",
+  "ad.host2-desc": "Cria com IA e escolha o melhor plano de alojamento na Host2Africa ",
+  "ad.ecobizz.titulo": "Plataforma de gestão empresarial",
+  "ad.ecobizz.desc": "para start-ups e pequenas empresas integrada na Clouds2Africa e paga em Kwanzas"
+
+}
