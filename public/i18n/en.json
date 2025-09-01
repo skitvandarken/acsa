@@ -97,6 +97,7 @@
   "menu-recrutamento": "Recruitment",
   "menu-talent": "Talents Seedz",
   "menu-latencias": "Latencies",
+    "menu-lg": "Looking Glass",
   "servicos.em": "SERVICES",
   "servicos.destaque": " FEATURED",
   "menu-angolacables": "Angola Cables is a multinational telecommunications company with offices in more than 7 cities, 5 countries and over 200 employees from various backgrounds and cultures. We have a network covering 4 continents of the Atlantic.",
@@ -359,15 +360,24 @@
   "mensagem_min_length": "Message must be at least 10 characters long.",
   "phone_invalid": "Number must start with + and contain only numbers, -, (, )",
   "phone_minlength": "Enter phone number with at least 10 digits starting with + (e.g., +1234567890).",
-"ad.partner.program.headline": "AC Partner Global Program",
-"ad.partner.program.titulo": "We are your business partner",
-"ad.partner.program.desc": "Our program is the perfect opportunity for telecom companies, operators, and internet service providers looking to grow their business volume and expand their reach.",
-"parceiro.indicador": "Referral Partner",
-"parceiro.revendedor": "Reseller",
-"parceiro.agente": "Sales Agent",
-"parceiro.tornar.se": "Become a partner",
-"comecar": "Start Now"
+   "ad.partner.program.headline": "AC Partner Global Program",
+  "ad.partner.program.titulo": "We are your business partner",
+  "ad.partner.program.desc": "Our program is the perfect opportunity for telecommunications companies, operators, and internet service providers who want to grow their business volume and expand their reach.",
+  "parceiro.indicador": "Referrer",
+  "parceiro.revendedor": "Reseller",
+  "parceiro.agente": "Sales Agent",
+  "parceiro.tornar.se": "Become a partner",
+  "ad.clouds-headline": "Clouds2Africa",
+  "ad.clouds-title": "Virtual machines in less than 5 minutes",
+  "ad.clouds-desc": "Servers | Storage | Backup | Cost Calculator | Visual Network Designer",
+  "ad.es.isp.titulo": "Are you an Internet operator or a digital start-up?",
+  "comecar": "Get started",
+  "ad.acelera-headline": "ACeleraNET",
+  "ad.acelera-desc": "The ACeleraNet program is a digital sustainability program by Angola Cables, with the strategic support of MINTTICS and INACOM.",
+  "ad.host2-headline": "Host2Africa",
+  "ad.host2-title": "Your website online in minutes.",
+  "ad.host2-desc": "Create with AI and choose the best hosting plan on Host2Africa",
+  "ad.ecobizz.titulo": "Business management platform",
+  "ad.ecobizz.desc": "for start-ups and small businesses integrated into Clouds2Africa and payable in Kwanzas"
 
-
-
- }
+}
