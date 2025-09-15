@@ -28,7 +28,19 @@
     background: #000;
     object-fit: cover;
     pointer-events: none;
+    filter: brightness(40%); /* quanto menor o valor, mais escuro */
 }
+
+.video-mapa2 {
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    background: #000;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+
 
 .uk-button {
     z-index: 2000;
@@ -119,6 +131,10 @@
     margin: 0 !important;
 }
 
+.uk-slideshow-items > div {
+    background-color: #000; /* fallback while video loads */
+}
+
 /* Mobile adjustments */
 @media (max-width: 768px) {
 
@@ -129,10 +145,10 @@
     }
 
     .uk-slideshow-items .uk-button {
-        font-size: 0.9rem;
+        font-size: 0.9rem !important;
         /* smaller buttons */
         min-width: 160px;
-        padding: 8px 25px;
+        padding: 4px 10px !important;
     }
 
 
@@ -143,8 +159,8 @@
     }
 
     .uk-slideshow-items .uk-button {
-        font-size: 0.1rem;
-        padding: 5px 15px;
+        font-size: 1rem;
+        padding: 5px 10px;
         border-radius: 50px;
         background-color: #FAA61A;
         color: #002561;
@@ -157,6 +173,22 @@
 
 }
 
+/* Large screen adjustments */
+@media (min-width: 1920px) {
+
+    .hero-title {
+        font-size: 3.2rem !important; /* maior tamanho para telas grandes */
+        max-width: 1270px; /* opcional: limite de largura */
+        line-height: 1.2;
+    }
+
+    .uk-slideshow-items .uk-button {
+        font-size: 1rem; /* botões maiores */
+        min-width: 220px;
+        padding: 12px 35px;
+        border-radius: 60px;
+    }
+}
 
 
 
