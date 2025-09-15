@@ -1,28 +1,64 @@
-<div id="inicio" style="margin-top: 67px"
-     class="uk-visible-toggle"
-     tabindex="-1"
-     uk-slideshow="animation: fade; autoplay: true; autoplay-interval: 4000; min-height: 300; max-height: 100%">
-
+<div id="inicio" style="margin-top: 67px" class="uk-visible-toggle" tabindex="-1"
+    uk-slideshow="animation: fade; autoplay: true; autoplay-interval: 5000; min-height: 300; max-height: 100%">
     <div class="uk-slideshow-items">
         <!-- Slide 1 -->
+        <div style="
+        width: 100%;
+        word-wrap: break-word; /* wrap long words */
+        overflow-wrap: break-word;
+        position: relative;
+      ">
+            <video #promoVideo class="video-mapa" autoplay muted loop playsinline poster="placeholder.jpg">
+                <source src="https://marketing.host2africa.com/drive/acsaweb/cloud2africacampaign.mp4"
+                    type="video/mp4" />
+                Seu navegador não suporta vídeo HTML5.
+            </video>
 
-        
-        
-        <div style="width: 100%; overflow: hidden;">
-            <video class="video-mapa"
-                autoplay
-                muted
-                loop
-                playsinline
-                id="promoVideo"
-                
-                poster="placeholder.jpg">
+            <!-- Overlay de texto -->
+            <div class="caixa-titulo uk-position-center uk-text-center">
+                <p class="hero-subtitle">
+                    Quem disse que somos todos iguais?.<br>
+                    Nós provamos o contrário!
+                </p>
+
+                <p class="hero-title" style="color: #fff">
+                    Servidores, Armazenamento, Backup,
+                    Máquinas Virtuais em 5 minutos
+                </p>
+                <div class="uk-flex uk-flex-wrap uk-margin-small-top uk-flex-center">
+                    <a target="_blank" href="https://console.clouds2africa.com/#!/user/register">
+                        <button style="
+                color: #002561;
+                background-color: #fff;
+                font-weight: 700;
+                padding: 8px 40px;
+              " class="uk-button uk-button-medium uk-border-pill">
+                            <span style="margin-left: 10px; margin-right: 10px">Começar agora</span>
+                        </button>
+                    </a>
+                    <a href="https://www.clouds2africa.com/#!/calculadora" target="_blank" class="uk-margin-left">
+                        <button style="
+                background-color: #28c1fd;
+                color: #002561;
+                font-weight: 700;
+                padding: 8px 40px;
+              " class="uk-button uk-button-medium uk-border-pill">
+                            <span style="margin-left: 10px; margin-right: 10px">Calcular o custo</span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div style="width: 100%; overflow: hidden; position: relative">
+            <video #promoVideo2 class="video-mapa" autoplay muted loop playsinline poster="placeholder.jpg">
                 <source src="https://marketing.host2africa.com/drive/acsaweb/mapaglobalacsa.mp4" type="video/mp4" />
                 Seu navegador não suporta vídeo HTML5.
             </video>
+
+            <!-- Overlay de texto -->
+            <div class="overlay-text uk-position-center uk-text-center uk-light"></div>
         </div>
-
     </div>
-
-    
 </div>

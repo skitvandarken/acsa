@@ -644,6 +644,7 @@
                 </div>
             </div>
 
+            
             <!-- Frederico Oliveira -->
             <div>
                 <div style="background-color: white; border-radius: 20px;"
@@ -685,6 +686,25 @@
         <!-- Third Row -->
         <div class="uk-child-width-expand@s uk-grid-match" uk-grid>
 
+
+                    <!-- Arlindo Alves  -->
+            <div>
+                <div style="background-color: white; border-radius: 20px;"
+                    class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
+                    data-src="img/equipa/arlindo-min.png" uk-img>
+                    <div style="border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;"
+                        class="uk-padding gradiente-nome-equipa uk-border-rounded">
+                        <b style="font-size: 18px; color: white; border-radius: 30px;">{{ "equipa.arlindo.name" |
+                            translate }}</b>
+                        <p style="color:rgba(40, 193, 253, 1); border-radius: 30px" class="uk-text-left">{{
+                            "equipa.arlindo.position" | translate }}</p>
+                        <button class="uk-button uk-button-default uk-margin-remove uk-button-small uk-border-rounded"
+                            type="button" uk-toggle="target: #modal-arlindo">{{ "equipa.bio_button" | translate
+                            }}</button>
+                    </div>
+                </div>
+            </div>
+
                          <!-- Virgílio Alves -->
             <div>
                 <div style="background-color: white;border-radius: 20px;"
@@ -702,6 +722,7 @@
                     </div>
                 </div>
             </div>
+
             
             <!-- Samuel Carvalho -->
             <div>
@@ -744,6 +765,15 @@
 
 
 
+            
+
+           
+        </div>
+
+        <!-- Fourth Row -->
+        <div class="uk-child-width-expand@s uk-grid-match" uk-grid>
+
+
             <!-- Fernando Fernandes -->
             <div>
                 <div style="background-color: white; border-radius: 20px;"
@@ -761,12 +791,6 @@
                     </div>
                 </div>
             </div>
-
-           
-        </div>
-
-        <!-- Fourth Row -->
-        <div class="uk-child-width-expand@s uk-grid-match" uk-grid>
             <!-- Sudhir Juggernath -->
             <div>
                 <div style="background-color: white; border-radius: 20px;"
@@ -823,8 +847,7 @@
 
 
 
-            <!-- Empty div for layout balance -->
-            <div></div>
+            
         </div>
     </div>
 
@@ -981,6 +1004,21 @@
                     <img src="img/social-icons/linkedin.png"> </a> </div>
         </div>
     </div>
+
+     <div id="modal-arlindo" uk-modal>
+        <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
+            <h2 class="uk-modal-title"><b>{{ "equipa.arlindo.name" | translate }}</b></h2>
+            <p class="uk-margin-small-top" style="text-align: justify;"
+                [innerHTML]="'equipa.arlindo.bio' | translate"></p>
+            <p class="uk-text-right">
+                <button class="uk-modal-close-default" type="button" uk-close></button>
+            </p>
+            <div class="uk-margin-medium-top">
+                {{ "conectar" | translate }} <a target="_blank" href="https://www.linkedin.com/in/arlindo-alves-8208891b"> <img
+                        src="img/social-icons/linkedin.png"> </a> </div>
+        </div>
+    </div>
+
 
     <div id="modal-virgilio" uk-modal>
         <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">

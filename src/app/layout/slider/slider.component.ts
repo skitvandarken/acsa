@@ -12,6 +12,7 @@ import { TranslateService } from '@ngx-translate/core';
 export class SliderComponent implements OnInit, AfterViewInit {
 
   @ViewChild('promoVideo') promoVideoRef!: ElementRef<HTMLVideoElement>;
+  @ViewChild('promoVideo2') promoVideo2Ref!: ElementRef<HTMLVideoElement>;
 
   constructor(private translate: TranslateService) {}
 
@@ -19,14 +20,14 @@ export class SliderComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     const video = this.promoVideoRef.nativeElement;
-    video.muted = true;
-    video.playsInline = true;
-    video.autoplay = true;
-    video.loop = true;
+    const video2 = this.promoVideo2Ref.nativeElement;
 
-    // Try to force play in modern browsers
-    video.play().catch((err) => {
-      console.warn('Autoplay failed:', err);
+    [video, video2].forEach(v => {
+      v.muted = true;
+      v.playsInline = true;
+      v.autoplay = true;
+      v.loop = true;
+      v.play().catch(err => console.warn('Autoplay failed:', err));
     });
   }
 
