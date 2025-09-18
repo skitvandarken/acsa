@@ -22,13 +22,20 @@ export class NoticiaService{
     });
   }
 
-  getNoticias(): Observable<Noticia[]> {
-    console.log('Fetching all noticias');
-    return collectionData(this.noticiasCollection, { idField: 'id' }).pipe(
-      map((noticias: any[]) => noticias.map(noticia => noticia as Noticia)),
-      tap(noticias => console.log('Posts from Firestore:', noticias))
-    ) as Observable<Noticia[]>;
-  }
+getNoticias(): Observable<Noticia[]> {
+  console.log('Fetching all noticias');
+  return collectionData(this.noticiasCollection, { idField: 'id' }).pipe(
+    map((noticias: any[]) => noticias
+      .map(noticia => noticia as Noticia)
+      .sort((a, b) => {
+        const dateA = a.createdAt?.toDate ? a.createdAt.toDate().getTime() : 0;
+        const dateB = b.createdAt?.toDate ? b.createdAt.toDate().getTime() : 0;
+        return dateB - dateA; // most recent first
+      })
+    ),
+    tap(noticias => console.log('Sorted noticias:', noticias))
+  ) as Observable<Noticia[]>;
+}
 
   getPostById(id: string): Observable<Noticia | undefined> {
     console.log('Fetching noticia with ID:', id);
