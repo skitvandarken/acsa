@@ -1,60 +1,41 @@
 <div class="uk-container uk-margin-top">
-    @if (noticias$ | async; as noticias) {
+  @if (noticias$ | async; as noticias) {
     <div class="uk-grid uk-child-width-1-3@m uk-grid-medium uk-grid-match" uk-grid>
-        @for (noticia of noticias; track noticia.id) {
+      @for (noticia of noticias; track noticia.id) {
         <div>
-            <div style="border-radius: 30px;" class="uk-card  uk-border-rounded uk-text-left">
+          <div class="uk-card uk-border-rounded uk-text-left card-noticia">
 
-                <!-- Featured Image -->
-                <div *ngIf="noticia.imageUrl" class="uk-card-media-top">
-                    <img [src]="noticia.imageUrl" class="" alt="Imagem de destaque"
-                        style="border-top-left-radius: 20px; border-top-right-radius: 20px; height: 150px; width: auto; object-fit: cover;" />
-                </div>
-
-                <div class=" "
-                    style="background-color: #1C1C45; padding: 25px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;">
-                    <p class="uk-text-meta uk-margin-remove-top uk-text-left"
-                        style="font-size: 0.9rem; margin-bottom: 5px;">
-                        {{ noticia.createdAt?.toDate() | date: 'dd/MM/yyyy ' }}
-                    </p>
-                    <a style="color: #1A1A1A;" href="{{ noticia.noticiaUrl }}" >
-                        <p style="color: white !important;" class="uk-light">{{ noticia.title }}</p>
-                    </a>
-                    <div class="uk-child-width-expand@s" uk-grid>
-                        <div>
-                            <div class=" ">
-                                <p style="font-size: .8rem; color: #C2C4D1;" class="uk-text-left">{{ noticia.author }}</p>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="">
-                                <a style="color:  #28C1FD; font-size: 0.95rem;"
-                                    href="{{ noticia.noticiaUrl }}" target="_blank">
-                                    <p class="uk-text-right">Ler Mais</p>
-                                </a>
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <!-- 
-        <div class="uk-card-body">
-          <div *ngIf="post.content" [innerHTML]="post.content | truncate:150"></div>
-        </div>
-       
-
-        <div class="uk-card-footer uk-flex uk-flex-between uk-flex-middle">
-          <a [routerLink]="['/artigo', post.id]" class="uk-button uk-button-text">Ler mais</a>
-        </div> -->
-
+            <!-- Featured Image -->
+            <div *ngIf="noticia.imageUrl" class="uk-card-media-top card-image-wrapper">
+              <img [src]="noticia.imageUrl" alt="Imagem de destaque" />
             </div>
+
+            <div class="card-content">
+              <p class="uk-text-meta uk-margin-remove-top">
+                {{ noticia.createdAt?.toDate() | date: 'dd/MM/yyyy ' }}
+              </p>
+              <a href="{{ noticia.noticiaUrl }}">
+                <p class="uk-light">{{ noticia.title }}</p>
+              </a>
+              <div class="uk-child-width-expand@s" uk-grid>
+                <div>
+                  <p class="uk-text-left card-author">{{ noticia.author }}</p>
+                </div>
+                <div>
+                  <a href="{{ noticia.noticiaUrl }}" target="_blank" class="card-readmore">
+                    Ler Mais
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
-        }
+      }
     </div>
-    } @else {
+  } @else {
     <div class="uk-flex uk-flex-center uk-margin-large-top">
-        <div uk-spinner></div>
+      <div uk-spinner></div>
     </div>
-    }
+  }
 </div>
