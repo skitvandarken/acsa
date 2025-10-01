@@ -37,7 +37,6 @@ export class ContactoComponent {
     { name: 'Nigéria', value: '2' },
     { name: 'Portugal', value: '3' },
     { name: 'Brasil', value: '4' },
-    { name: 'EUA', value: '5' },
   ];
 
   addresses: Record<string, Address[]> = {
@@ -89,13 +88,6 @@ export class ContactoComponent {
         phone: '+55 85 99645-4143'
 
       }
-    ],
-    'EUA': [
-      {
-        title: 'Bermuda',
-        address: 'Canon’s Court,22 Victoria Street, <br> HM 12, Bermuda',
-      },
-
     ],
     'Europa': [
       {
