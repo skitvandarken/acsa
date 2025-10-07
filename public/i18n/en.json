@@ -26,7 +26,7 @@
   "servicos.seguranca": "Security",
   "saiba.mais": "Learn more",
   "eventos": "EVENTS",
-  "em.destaque": "FEATURED",
+  "em.destaque": "FEATURED EVENTS",
   "ver.eventos": "View all events",
   "fique.atento": "Stay tuned to our agenda and know where the ",
   "onde.eventos": "Angola Cables Group ",
@@ -97,7 +97,7 @@
   "menu-recrutamento": "Recruitment",
   "menu-talent": "Talents Seedz",
   "menu-latencias": "Latencies",
-    "menu-lg": "Looking Glass",
+  "menu-lg": "Looking Glass",
   "servicos.em": "SERVICES",
   "servicos.destaque": " FEATURED",
   "menu-angolacables": "Angola Cables is a multinational telecommunications company with offices in more than 7 cities, 5 countries and over 200 employees from various backgrounds and cultures. We have a network covering 4 continents of the Atlantic.",
@@ -286,6 +286,8 @@
   "backups2africa_descricao": "Advanced storage, processing and database management services, guaranteeing security, agility, cost optimization and performance maximization. Customized solutions for companies looking for scalability, operational efficiency and specialized technical support, with cutting-edge infrastructure and high availability for critical operations.",
   "backups2brasil_titulo": "Backups2Brazil",
   "backups2brasil_descricao": "The best gaming experience with reduced latency, connecting directly to the main global servers and guaranteeing superior performance, stability, quality and a reliable connection for the most demanding players, with dedicated support, access to cutting-edge platforms and optimized routing for maximum efficiency.",
+  "kubernetes_descricao": "Efficient container orchestration with Kubernetes: automatic scalability, high availability, and simplified management in multi-cloud environments.",
+  "kubernetes_title": "Kubernetes",
   "vods2africa_titulo": "Vods2Africa",
   "vods2africa_descricao": "Efficient distribution of on-demand videos (VoD) with delivery optimized for the African public, through local routes and high-performance connections.",
   "seguranca_titulo_pagina": "Security",
@@ -360,7 +362,7 @@
   "mensagem_min_length": "Message must be at least 10 characters long.",
   "phone_invalid": "Number must start with + and contain only numbers, -, (, )",
   "phone_minlength": "Enter phone number with at least 10 digits starting with + (e.g., +1234567890).",
-   "ad.partner.program.headline": "AC Partner Global Program",
+  "ad.partner.program.headline": "AC Partner Global Program",
   "ad.partner.program.titulo": "We are your business partner",
   "ad.partner.program.desc": "Our program is the perfect opportunity for telecommunications companies, operators, and internet service providers who want to grow their business volume and expand their reach.",
   "parceiro.indicador": "Referrer",
@@ -379,5 +381,4 @@
   "ad.host2-desc": "Create with AI and choose the best hosting plan on Host2Africa",
   "ad.ecobizz.titulo": "Business management platform",
   "ad.ecobizz.desc": "for start-ups and small businesses integrated into Clouds2Africa and payable in Kwanzas"
-
 }

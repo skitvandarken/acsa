@@ -18,14 +18,28 @@ import { TranslateService, TranslatePipe } from '@ngx-translate/core'; // Inseri
 })
 export class CloudservicesComponent {
 
-  private translate = inject(TranslateService); // Inserido
+      useLanguage(language: string): void {
+            this.translate.use(language);
+        }
+        
+        constructor(private translate: TranslateService) {}
 
-  constructor() { // Construtor adicionado/modificado para incluir a lógica de tradução
-    this.translate.setDefaultLang('pt'); // Inserido
-    this.translate.use(this.translate.currentLang || 'pt'); // Inserido
-  }
-
-  useLanguage(language: string): void { // Inserido
-    this.translate.use(language); // Inserido
-  } // Inserido
+        languages = [
+          { code: 'pt', name: 'PT', flag: 'assets/flags/pt-flag.svg' },
+          { code: 'en', name: 'EN', flag: 'assets/flags/us-flag.svg' },
+          // Add more languages as needed
+          { code: 'fr', name: 'FR', flag: 'assets/flags/fr-flag.svg' },
+          { code: 'es', name: 'ES', flag: 'assets/flags/es-flag.svg' }
+        ];
+      
+        selectedLanguage = this.languages[0]; // Default to first language
+      
+        onLanguageChange(event: Event) {
+          const select = event.target as HTMLSelectElement;
+          const langCode = select.value;
+          const foundLang = this.languages.find(l => l.code === langCode);
+          if (foundLang) {
+            this.selectedLanguage = foundLang;
+          }
+        }
 }
