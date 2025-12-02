@@ -380,5 +380,12 @@
   "ad.host2-title": "Your website online in minutes.",
   "ad.host2-desc": "Create with AI and choose the best hosting plan on Host2Africa",
   "ad.ecobizz.titulo": "Business management platform",
-  "ad.ecobizz.desc": "for start-ups and small businesses integrated into Clouds2Africa and payable in Kwanzas"
+  "ad.ecobizz.desc": "for start-ups and small businesses integrated into Clouds2Africa and payable in Kwanzas",
+
+      "net_freeze_title": "Scheduled Annual Network Freeze:",
+  "net_period": "15 Dec 2025 – 10 Jan 2026",
+  "net_support": "Our NOC remains fully operational 24/7 ",
+    "net_support-2": "to support you throughout the freeze period."
+
+
 }

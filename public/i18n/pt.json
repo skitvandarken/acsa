@@ -383,5 +383,12 @@
   "ad.host2-title": "O seu Website online em minutos.",
   "ad.host2-desc": "Cria com IA e escolha o melhor plano de alojamento na Host2Africa ",
   "ad.ecobizz.titulo": "Plataforma de gestão empresarial",
-  "ad.ecobizz.desc": "para start-ups e pequenas empresas integrada na Clouds2Africa e paga em Kwanzas"
+  "ad.ecobizz.desc": "para start-ups e pequenas empresas integrada na Clouds2Africa e paga em Kwanzas",
+
+    "net_freeze_title": "Congelamento de rede anual agendado:",
+  "net_period": "15 Dez 2025 – 10 Jan 2026",
+  "net_support": "O nosso NOC permanece totalmente operacional 24/7 ",
+    "net_support-2": " para o apoiar durante o período de congelamento."
+
+
 }
