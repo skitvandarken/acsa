@@ -58,6 +58,7 @@ export const routes: Routes = [
     {path: 'artigos/cloud2-como-montar', component:Cloud2MontagemComponent},
 
         {path: 'mkt-proibido', component:DashboardComponent},
+        {path: 'privacy-policies', loadComponent: () => import('./paginas/privacy-policies/privacy-policies.component').then(m => m.PrivacyPoliciesComponent)},
 
 
 

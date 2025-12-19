@@ -1,0 +1,183 @@
+<!-- privacy-policy.component.html -->
+<app-menu></app-menu>
+
+<div class="fundo-cabecalho">
+  <div class="gradiente-texto-cabecalho">
+    <div class="conteudo-cabecalho uk-margin-medium-top">
+      <div class="uk-container uk-margin-large-bottom">
+        <h4 style="color:white">{{ 'company.name' | translate }}</h4>
+        <h1 style="color:rgba(39, 200, 227, 1); font-weight: bolder;">{{ 'privacy.policies.title' | translate }}</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="uk-container uk-margin-large-top uk-margin-large-bottom">
+    <section class="privacy-section">
+        <h2><span class="section-number">1</span> {{ 'privacy.policies.purpose.title' | translate }}</h2>
+        <p>{{ 'privacy.policies.purpose.paragraph1' | translate }}</p>
+        <p>{{ 'privacy.policies.purpose.paragraph2' | translate }}</p>
+    </section>
+
+    <section class="privacy-section">
+        <h2><span class="section-number">2</span> {{ 'privacy.policies.scope.title' | translate }}</h2>
+        <p>{{ 'privacy.policies.scope.intro' | translate }}</p>
+
+        <h3>{{ 'privacy.policies.scope.individuals.title' | translate }}</h3>
+        <ul>
+            <li>{{ 'privacy.policies.scope.individuals.item1' | translate }}</li>
+            <li>{{ 'privacy.policies.scope.individuals.item2' | translate }}</li>
+            <li>{{ 'privacy.policies.scope.individuals.item3' | translate }}</li>
+        </ul>
+
+        <h3> {{ 'privacy.policies.scope.dataTypes.title' | translate }}</h3>
+        <ul>
+            <li>{{ 'privacy.policies.scope.dataTypes.item1' | translate }}</li>
+            <li>{{ 'privacy.policies.scope.dataTypes.item2' | translate }}</li>
+            <li>{{ 'privacy.policies.scope.dataTypes.item3' | translate }}</li>
+        </ul>
+
+        <h3> {{ 'privacy.policies.scope.activities.title' | translate }}</h3>
+        <p>{{ 'privacy.policies.scope.activities.intro' | translate }}</p>
+        <ul>
+            <li>{{ 'privacy.policies.scope.activities.item1' | translate }}</li>
+            <li>{{ 'privacy.policies.scope.activities.item2' | translate }}</li>
+            <li>{{ 'privacy.policies.scope.activities.item3' | translate }}</li>
+            <li>{{ 'privacy.policies.scope.activities.item4' | translate }}</li>
+            <li>{{ 'privacy.policies.scope.activities.item5' | translate }}</li>
+            <li>{{ 'privacy.policies.scope.activities.item6' | translate }}</li>
+            <li>{{ 'privacy.policies.scope.activities.item7' | translate }}</li>
+        </ul>
+
+        <h3> {{ 'privacy.policies.scope.areas.title' | translate }}</h3>
+        <ul>
+            <li>{{ 'privacy.policies.scope.areas.item1' | translate }}</li>
+            <li>{{ 'privacy.policies.scope.areas.item2' | translate }}</li>
+        </ul>
+
+        <h3> {{ 'privacy.policies.scope.legislation.title' | translate }}</h3>
+        <p>{{ 'privacy.policies.scope.legislation.content' | translate }}</p>
+    </section>
+
+    <section class="privacy-section">
+        <h2><span class="section-number">3</span> {{ 'privacy.policies.personalData.title' | translate }}</h2>
+        <p>{{ 'privacy.policies.personalData.definition' | translate }}</p>
+        <p>{{ 'privacy.policies.personalData.commitment' | translate }}</p>
+        <p>{{ 'privacy.policies.personalData.collection' | translate }}</p>
+        <div class="note">
+            <p>{{ 'privacy.policies.personalData.jobApplicants' | translate }}</p>
+        </div>
+    </section>
+
+    <section class="privacy-section">
+        <h2><span class="section-number">4</span> {{ 'privacy.policies.otherInfo.title' | translate }}</h2>
+        <p>{{ 'privacy.policies.otherInfo.content' | translate }}</p>
+    </section>
+
+    <section class="privacy-section">
+        <h2><span class="section-number">5</span> {{ 'privacy.policies.dataUse.title' | translate }}</h2>
+        <p>{{ 'privacy.policies.dataUse.commitment' | translate }}</p>
+        <p>{{ 'privacy.policies.dataUse.rulesIntro' | translate }}</p>
+
+        <ul>
+            <li><strong></strong> {{ 'privacy.policies.dataUse.rule1' | translate }}</li>
+            <li><strong></strong> {{ 'privacy.policies.dataUse.rule2' | translate }}</li>
+            <li><strong></strong> {{ 'privacy.policies.dataUse.rule3' | translate }}</li>
+            <li><strong></strong> {{ 'privacy.policies.dataUse.rule4' | translate }}</li>
+        </ul>
+    </section>
+
+    <section class="privacy-section">
+        <h2><span class="section-number">6</span> {{ 'privacy.policies.analytics.title' | translate }}</h2>
+        <p>{{ 'privacy.policies.analytics.intro' | translate }}</p>
+        <ul>
+            <li>{{ 'privacy.policies.analytics.purpose1' | translate }}</li>
+            <li>{{ 'privacy.policies.analytics.purpose2' | translate }}</li>
+            <li>{{ 'privacy.policies.analytics.purpose3' | translate }}</li>
+        </ul>
+        <p [innerHTML]="'privacy.policies.analytics.moreInfo' | translate"></p>
+    </section>
+
+    <section class="privacy-section">
+        <h2><span class="section-number">7</span> {{ 'privacy.policies.consent.title' | translate }}</h2>
+        <p>{{ 'privacy.policies.consent.definition' | translate }}</p>
+        <p>{{ 'privacy.policies.consent.agreement' | translate }}</p>
+        <div class="highlight">
+            <p>{{ 'privacy.policies.consent.withdrawal' | translate }}</p>
+        </div>
+    </section>
+
+    <section class="privacy-section">
+        <h2><span class="section-number">8</span> {{ 'privacy.policies.retention.title' | translate }}</h2>
+        <p>{{ 'privacy.policies.retention.content' | translate }}</p>
+    </section>
+
+    <section class="privacy-section">
+        <h2><span class="section-number">9</span> {{ 'privacy.policies.sharing.title' | translate }}</h2>
+        <p>{{ 'privacy.policies.sharing.links' | translate }}</p>
+        <p>{{ 'privacy.policies.sharing.recipients' | translate }}</p>
+        <p>{{ 'privacy.policies.sharing.otherSituations' | translate }}</p>
+        <ul>
+            <li>{{ 'privacy.policies.sharing.situation1' | translate }}</li>
+            <li>{{ 'privacy.policies.sharing.situation2' | translate }}</li>
+            <li>{{ 'privacy.policies.sharing.situation3' | translate }}</li>
+        </ul>
+    </section>
+
+    <section class="privacy-section">
+        <h2><span class="section-number">10</span> {{ 'privacy.policies.cookies.title' | translate }}</h2>
+        <p>{{ 'privacy.policies.cookies.definition' | translate }}</p>
+        <p>{{ 'privacy.policies.cookies.acceptance' | translate }}</p>
+        <div class="note">
+            <p>{{ 'privacy.policies.cookies.control' | translate }}</p>
+        </div>
+    </section>
+
+    <section class="privacy-section">
+        <h2><span class="section-number">11</span> {{ 'privacy.policies.changes.title' | translate }}</h2>
+        <p>{{ 'privacy.policies.changes.right' | translate }}</p>
+        <p>{{ 'privacy.policies.changes.consent' | translate }}</p>
+    </section>
+
+    <section class="privacy-section">
+        <h2><span class="section-number">12</span> {{ 'privacy.policies.disclaimer.title' | translate }}</h2>
+        <p>{{ 'privacy.policies.disclaimer.intro' | translate }}</p>
+        <ul>
+            <li>{{ 'privacy.policies.disclaimer.responsibility1' | translate }}</li>
+            <li>{{ 'privacy.policies.disclaimer.responsibility2' | translate }}</li>
+        </ul>
+    </section>
+
+    <section class="privacy-section">
+        <h2><span class="section-number">13</span> {{ 'privacy.policies.dpo.title' | translate }}</h2>
+        <div class="contact-info">
+            <p [innerHTML]="'privacy.policies.dpo.content' | translate"></p>
+        </div>
+    </section>
+
+    <section class="privacy-section">
+        <h2><span class="section-number">14</span> {{ 'privacy.policies.final.title' | translate }}</h2>
+
+        <h3>14.1. {{ 'privacy.policies.final.monitoring.title' | translate }}</h3>
+        <p>{{ 'privacy.policies.final.monitoring.content' | translate }}</p>
+
+        <h3>14.2. {{ 'privacy.policies.final.nonCompliance.title' | translate }}</h3>
+        <p>{{ 'privacy.policies.final.nonCompliance.content' | translate }}</p>
+
+        <h3>14.3. {{ 'privacy.policies.final.review.title' | translate }}</h3>
+        <p>{{ 'privacy.policies.final.review.content' | translate }}</p>
+
+        <h3>14.4. {{ 'privacy.policies.final.disclosure.title' | translate }}</h3>
+        <p>{{ 'privacy.policies.final.disclosure.content' | translate }}</p>
+<!-- 
+        <div class="highlight">
+            <p>{{ 'privacy.policies.final.copies' | translate }}</p>
+        </div> -->
+    </section>
+
+    <footer>
+        <p class="last-updated">{{ 'privacy.policies.signature' | translate }}</p>
+    </footer>
+</div>
+
+<app-rodape></app-rodape>
