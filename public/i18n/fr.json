@@ -492,9 +492,77 @@
   "privacy.policies.final.copies": "Toutes les copies imprimées sont considérées comme des copies non contrôlées. Cette Politique entrera en vigueur à la date de sa publication.",
   
   "privacy.policies.signature": "Le Comité Exécutif",
-  "privacy.policies.disclaimerText": "Ce document est fourni à titre informatif uniquement et ne doit pas être considéré comme un conseil juridique."
+  "privacy.policies.disclaimerText": "Ce document est fourni à titre informatif uniquement et ne doit pas être considéré comme un conseil juridique.",
+  "politica.sgi": "Politique du Système de Gestion Intégré",
+  "politica.anti": "Politique Anti-Subornation",
+   "policies.sgi.title": "Politique du Système de Gestion Intégré",
+  "policies.sgi.scope.title": "Objectif et Portée",
+  "policies.sgi.scope.p1": "L'objectif de cette Politique est d'établir la finalité, la direction, les principes et les règles fondamentales de gestion pour la sécurité de l'information, la protection des données, la qualité, la gestion des services informatiques et l'anti-corruption chez Angola Cables (AC).",
+  "policies.sgi.scope.p2": "Cette politique s'applique à l'ensemble du Système de Gestion Intégré (SGI), tel que défini dans son document de portée, et sert de guide à tous les employés et parties prenantes d'AC concernant les engagements de conformité et d'amélioration continue de l'organisation.",
+  
+  "policies.sgi.certifications.title": "Certifications",
+  "policies.sgi.certifications.intro": "AC s'engage à opérer avec excellence, sécurité et intégrité dans ses services et processus.",
+  "policies.sgi.certifications.iso27001": "ISO 27001 – Gestion de la Sécurité de l'Information",
+  "policies.sgi.certifications.iso27018": "ISO 27018 – Protection des Données en Cloud",
+  "policies.sgi.certifications.iso27701": "ISO 27701 – Gestion de la Vie Privée",
+  "policies.sgi.certifications.iso20000": "ISO 20000 – Gestion des Services Informatiques",
+  "policies.sgi.certifications.iso9001": "ISO 9001 – Gestion de la Qualité",
+  "policies.sgi.certifications.iso37001": "ISO 37001 – Gestion Anti-Corruption",
+  "policies.sgi.certifications.soc2": "SOC 2 – Contrôles de Confiance et Sécurité",
 
-    
+  "policies.sgi.principles.title": "Principes de Gestion",
+  "policies.sgi.principles.p1": "AC gère ses activités conformément aux normes ISO et aux exigences légales applicables.",
+  "policies.sgi.principles.p2": "La satisfaction client est l’objectif principal d’AC, assurée par l’amélioration continue.",
+  "policies.sgi.principles.p3": "AC maintient des politiques et contrôles garantissant la continuité des services.",
+
+  "policies.sgi.security.title": "Sécurité de l'Information",
+  "policies.sgi.security.intro": "Cette approche respecte les exigences et contrôles de sécurité de l'information.",
+  "policies.sgi.security.confidentiality": "Protection de la confidentialité",
+  "policies.sgi.security.integrity": "Protection de l’intégrité",
+  "policies.sgi.security.availability": "Garantie de disponibilité",
+
+  "policies.sgi.serviceManagement.title": "Gestion des Services",
+  "policies.sgi.serviceManagement.p1": "La politique s'aligne également avec la gestion des services informatiques.",
+  "policies.sgi.serviceManagement.p2": "Elle garantit la performance et la continuité des services fournis.",
+
+  "policies.sgi.privacy.title": "Vie Privée et Protection des Données",
+  "policies.sgi.privacy.p1": "Protège les données personnelles et clients, y compris en environnements cloud.",
+  "policies.sgi.privacy.p2": "Respecte les exigences légales et les meilleures pratiques internationales.",
+
+  "policies.sgi.ethics.title": "Éthique et Anti-Corruption",
+  "policies.sgi.ethics.intro": "Ces principes reposent sur une culture d'éthique et de transparence.",
+  "policies.sgi.ethics.antibribery": "Engagement contre la corruption",
+  "policies.sgi.ethics.transparency": "Transparence dans les opérations",
+  "policies.sgi.ethics.integrity": "Intégrité dans les pratiques",
+
+  "policies.sgi.environment.title": "Responsabilité Environnementale",
+  "policies.sgi.environment.intro": "AC adopte des pratiques qui contribuent à la durabilité et à la lutte contre les changements climatiques.",
+
+  "policies.sgi.signature": "Angola Cables — Politique du Système de Gestion Intégré",
+        "canal.denuncias": "Canal de Dénonciation",
+         "policies.anti.title": "Politique Anti-Corruption",
+  "policies.anti.standards": "ISO 27001 – ISO 27018 – ISO 27701 – ISO 20000 – ISO 9001 – ISO 37001 – SOC 2",
+  
+  "policies.anti.section1.title": "Canal de Signalement",
+  "policies.anti.section1.description": "Le canal de signalement ou l'adresse électronique constitue le moyen officiel et confidentiel pour signaler des soupçons ou des indications de conduite inappropriée (whistleblowing), qu'il s'agisse d'employés, de fonctionnaires ou de tiers, tout en garantissant la protection des lanceurs d’alerte de bonne foi.",
+  "policies.anti.section1.link": "https://portal-de-denuncias.vercel.app/",
+  "policies.anti.section1.email": "denuncias@angolacables.com",
+  
+  "policies.anti.section2.title": "Interdictions Absolues",
+  "policies.anti.section2.intro": "Les employés ou tiers agissant au nom d’AC ne peuvent pas :",
+  "policies.anti.section2.itemA": "Promettre, offrir ou accorder, directement ou indirectement, tout avantage indu à un agent public ou à des tiers ;",
+  "policies.anti.section2.itemB": "Financer, soutenir, parrainer ou subventionner la pratique d’actes illicites ou corrompus ;",
+  "policies.anti.section2.itemC": "Utiliser des intermédiaires pour dissimuler ou masquer les véritables intérêts ou l'identité des bénéficiaires des actes commis.",
+  
+  "policies.anti.section3.title": "Cadeaux, Hospitalités et Dépenses",
+  "policies.anti.section3.conditions": "L’octroi ou la réception de cadeaux, d’hospitalités ou de dépenses n’est autorisé que si :",
+  "policies.anti.section3.itemA": "Ils sont raisonnables et de faible valeur ;",
+  "policies.anti.section3.itemB": "Ils sont effectués au nom d’AC, de manière transparente ;",
+  "policies.anti.section3.itemC": "Ils n’ont pas l’intention, ni l’apparence, d’influencer une décision commerciale ou de constituer un acte de corruption ;",
+  "policies.anti.section3.itemD": "Limite maximale : la valeur maximale autorisée pour la réception de cadeaux est de 40 USD et doit être enregistrée conformément aux procédures financières internes."
+
+
+
 
 
 }

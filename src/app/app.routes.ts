@@ -26,63 +26,82 @@ import { Cloud2MontagemComponent } from './dummy/artigos/cloud2-montagem/cloud2-
 import { DashboardComponent } from './paginas/dashboard/dashboard.component';
 import { VagasCriarComponent } from './layout/vagas-criar/vagas-criar.component';
 
-
 export const routes: Routes = [
-  
-    {path:'',component: InicioComponent},
-    {path: 'inicio', component: InicioComponent},
-    {path: 'sobre', component: AcercaComponent},
+  { path: '', component: InicioComponent },
+  { path: 'inicio', component: InicioComponent },
+  { path: 'sobre', component: AcercaComponent },
 
-    {path: 'conta', component: SignupComponent},
-    {path: 'indicador', component:IndicadorComponent},
-    {path: 'agente', component: AgenteComponent},
-    {path: 'datacenter', component: DatacenterComponent},
-    {path: 'angonap2', component: Angonap2Component},
-    {path:'eventos', component: EventosAcComponent},
-    {path: 'blog', component: BlogComponent},
-    {path: 'artigo', component: ArtigoComponent},
-    {path: 'conectividade', component: ConectividadeComponent},
-    {path: 'cloud', component: CloudservicesComponent},
-    {path: 'data-center', component: DatacentersevicesComponent},
-    {path: 'seguranca', component: SegurancaComponent},
-    {path: 'noticias', component: NoticiasComponent},
-    {path: 'contacto', component: ContactoComponent},
-    {path: 'recrutamento', component: RecrutamentoComponent},
-    {path: 'datacenter', component: DatacentersevicesComponent},
-    {path: 'virtualizacao', component: VirtualizacaoComponent},
-    {path: 'erp', component: ErpComponent},
-    {path: 'trust-center', component: TrustCenterComponent},
+  { path: 'conta', component: SignupComponent },
+  { path: 'indicador', component: IndicadorComponent },
+  { path: 'agente', component: AgenteComponent },
+  { path: 'datacenter', component: DatacenterComponent },
+  { path: 'angonap2', component: Angonap2Component },
+  { path: 'eventos', component: EventosAcComponent },
+  { path: 'blog', component: BlogComponent },
+  { path: 'artigo', component: ArtigoComponent },
+  { path: 'conectividade', component: ConectividadeComponent },
+  { path: 'cloud', component: CloudservicesComponent },
+  { path: 'data-center', component: DatacentersevicesComponent },
+  { path: 'seguranca', component: SegurancaComponent },
+  { path: 'noticias', component: NoticiasComponent },
+  { path: 'contacto', component: ContactoComponent },
+  { path: 'recrutamento', component: RecrutamentoComponent },
+  { path: 'datacenter', component: DatacentersevicesComponent },
+  { path: 'virtualizacao', component: VirtualizacaoComponent },
+  { path: 'erp', component: ErpComponent },
+  { path: 'trust-center', component: TrustCenterComponent },
 
-    {path: 'artigos/ip-transit-chave', component: IptransitComponent},
-    {path: 'artigos/ciberseguranca', component: CibersecComponent},
-    {path: 'artigos/cloud2-como-montar', component:Cloud2MontagemComponent},
+  { path: 'artigos/ip-transit-chave', component: IptransitComponent },
+  { path: 'artigos/ciberseguranca', component: CibersecComponent },
+  { path: 'artigos/cloud2-como-montar', component: Cloud2MontagemComponent },
 
-        {path: 'mkt-proibido', component:DashboardComponent},
-        {path: 'privacy-policies', loadComponent: () => import('./paginas/privacy-policies/privacy-policies.component').then(m => m.PrivacyPoliciesComponent)},
-
-
-
-    
-  { 
-    path: 'artigos', 
-    loadComponent: () => import('./layout/artigo-lista/artigo-lista.component').then(m => m.ArtigoListaComponent) 
-  },
-  { 
-    path: 'artigo/:id', 
-    loadComponent: () => import('./layout/artigo/artigo.component').then(m => m.ArtigoComponent) 
-  },
-  
-    { 
-    path: 'postar', 
-    loadComponent: () => import('./layout/artigo-postar/artigo-postar.component').then(m => m.ArtigoPostarComponent) 
-  },
-  
-      { 
-    path: 'postar-vaga', 
-    loadComponent: () => import('./layout/vagas-criar/vagas-criar.component').then(m => m.VagasCriarComponent) 
+  { path: 'mkt-proibido', component: DashboardComponent },
+  {
+    path: 'privacy-policies',
+    loadComponent: () =>
+      import('./paginas/privacy-policies/privacy-policies.component').then(
+        (m) => m.PrivacyPoliciesComponent
+      ),
   },
 
+  {
+    path: 'sgi',
+    loadComponent: () =>
+      import('./paginas/sgi/sgi.component').then((m) => m.SgiComponent),
+  },
 
-  
+  {
+    path: 'anti',
+    loadComponent: () =>
+      import('./paginas/anti/anti.component').then((m) => m.AntiComponent),
+  },
 
+  {
+    path: 'artigos',
+    loadComponent: () =>
+      import('./layout/artigo-lista/artigo-lista.component').then(
+        (m) => m.ArtigoListaComponent
+      ),
+  },
+  {
+    path: 'artigo/:id',
+    loadComponent: () =>
+      import('./layout/artigo/artigo.component').then((m) => m.ArtigoComponent),
+  },
+
+  {
+    path: 'postar',
+    loadComponent: () =>
+      import('./layout/artigo-postar/artigo-postar.component').then(
+        (m) => m.ArtigoPostarComponent
+      ),
+  },
+
+  {
+    path: 'postar-vaga',
+    loadComponent: () =>
+      import('./layout/vagas-criar/vagas-criar.component').then(
+        (m) => m.VagasCriarComponent
+      ),
+  },
 ];

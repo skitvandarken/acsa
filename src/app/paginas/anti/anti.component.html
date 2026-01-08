@@ -1,0 +1,79 @@
+<!-- integrated-management-policy.component.html -->
+<app-menu></app-menu>
+
+<div class="fundo-cabecalho">
+    <div class="gradiente-texto-cabecalho">
+        <div class="conteudo-cabecalho uk-margin-medium-top">
+            <div class="uk-container uk-margin-large-bottom">
+                <h4 style="color:white">{{ 'company.name' | translate }}</h4>
+                <h1 style="color:rgba(39, 200, 227, 1); font-weight: bolder;">
+                    {{ 'policies.sgi.title' | translate }}
+                </h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="uk-container uk-margin-large-top uk-margin-large-bottom">
+
+    <section class="policy anti-bribery uk-section uk-section-default">
+    <div class="uk-container">
+
+        <!-- Title -->
+        <h1>{{ 'policies.anti.title' | translate }}</h1>
+
+        <!-- Standards paragraph -->
+        <p class="uk-text-meta">{{ 'policies.anti.standards' | translate }}</p>
+
+        <hr class="uk-divider-small">
+
+        <!-- SECTION 1 -->
+        <h2>{{ 'policies.anti.section1.title' | translate }}</h2>
+        <p>{{ 'policies.anti.section1.description' | translate }}</p>
+
+        <ul class="uk-list uk-list-striped">
+            <li>
+                <strong>{{ 'policies.shared.portal' | translate }}</strong>:
+                <a [href]="'policies.anti.section1.link' | translate" target="_blank">
+                    {{ 'policies.anti.section1.link' | translate }}
+                </a>
+            </li>
+            <li>
+                <strong>{{ 'policies.shared.email' | translate }}</strong>:
+                <a [href]="'mailto:' + ('policies.anti.section1.email' | translate)">
+                    {{ 'policies.anti.section1.email' | translate }}
+                </a>
+            </li>
+        </ul>
+
+        <hr class="uk-divider-small">
+
+        <!-- SECTION 2 -->
+        <h2>{{ 'policies.anti.section2.title' | translate }}</h2>
+        <p>{{ 'policies.anti.section2.intro' | translate }}</p>
+
+        <ul class="uk-list uk-list-bullet">
+            <li>{{ 'policies.anti.section2.itemA' | translate }}</li>
+            <li>{{ 'policies.anti.section2.itemB' | translate }}</li>
+            <li>{{ 'policies.anti.section2.itemC' | translate }}</li>
+        </ul>
+
+        <hr class="uk-divider-small">
+
+        <!-- SECTION 3 -->
+        <h2>{{ 'policies.anti.section3.title' | translate }}</h2>
+        <p>{{ 'policies.anti.section3.conditions' | translate }}</p>
+
+        <ul class="uk-list uk-list-bullet">
+            <li>{{ 'policies.anti.section3.itemA' | translate }}</li>
+            <li>{{ 'policies.anti.section3.itemB' | translate }}</li>
+            <li>{{ 'policies.anti.section3.itemC' | translate }}</li>
+            <li>{{ 'policies.anti.section3.itemD' | translate }}</li>
+        </ul>
+
+    </div>
+</section>
+
+</div>
+
+<app-rodape></app-rodape>

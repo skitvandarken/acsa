@@ -1,0 +1,88 @@
+<!-- integrated-management-policy.component.html -->
+<app-menu></app-menu>
+
+<div class="fundo-cabecalho">
+  <div class="gradiente-texto-cabecalho">
+    <div class="conteudo-cabecalho uk-margin-medium-top">
+      <div class="uk-container uk-margin-large-bottom">
+        <h4 style="color:white">{{ 'company.name' | translate }}</h4>
+        <h1 style="color:rgba(39, 200, 227, 1); font-weight: bolder;">
+          {{ 'policies.sgi.title' | translate }}
+        </h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="uk-container uk-margin-large-top uk-margin-large-bottom">
+
+    <section class="privacy-section">
+        <h2><span class="section-number">1</span> {{ 'policies.sgi.scope.title' | translate }}</h2>
+        <p>{{ 'policies.sgi.scope.p1' | translate }}</p>
+        <p>{{ 'policies.sgi.scope.p2' | translate }}</p>
+    </section>
+
+    <section class="privacy-section">
+        <h2><span class="section-number">2</span> {{ 'policies.sgi.certifications.title' | translate }}</h2>
+        <p>{{ 'policies.sgi.certifications.intro' | translate }}</p>
+        <ul>
+            <li>{{ 'policies.sgi.certifications.iso27001' | translate }}</li>
+            <li>{{ 'policies.sgi.certifications.iso27018' | translate }}</li>
+            <li>{{ 'policies.sgi.certifications.iso27701' | translate }}</li>
+            <li>{{ 'policies.sgi.certifications.iso20000' | translate }}</li>
+            <li>{{ 'policies.sgi.certifications.iso9001' | translate }}</li>
+            <li>{{ 'policies.sgi.certifications.iso37001' | translate }}</li>
+            <li>{{ 'policies.sgi.certifications.soc2' | translate }}</li>
+        </ul>
+    </section>
+
+    <section class="privacy-section">
+        <h2><span class="section-number">3</span> {{ 'policies.sgi.principles.title' | translate }}</h2>
+        <p>{{ 'policies.sgi.principles.p1' | translate }}</p>
+        <p>{{ 'policies.sgi.principles.p2' | translate }}</p>
+        <p>{{ 'policies.sgi.principles.p3' | translate }}</p>
+    </section>
+
+    <section class="privacy-section">
+        <h2><span class="section-number">4</span> {{ 'policies.sgi.security.title' | translate }}</h2>
+        <p>{{ 'policies.sgi.security.intro' | translate }}</p>
+        <ul>
+            <li>{{ 'policies.sgi.security.confidentiality' | translate }}</li>
+            <li>{{ 'policies.sgi.security.integrity' | translate }}</li>
+            <li>{{ 'policies.sgi.security.availability' | translate }}</li>
+        </ul>
+    </section>
+
+    <section class="privacy-section">
+        <h2><span class="section-number">5</span> {{ 'policies.sgi.serviceManagement.title' | translate }}</h2>
+        <p>{{ 'policies.sgi.serviceManagement.p1' | translate }}</p>
+        <p>{{ 'policies.sgi.serviceManagement.p2' | translate }}</p>
+    </section>
+
+    <section class="privacy-section">
+        <h2><span class="section-number">6</span> {{ 'policies.sgi.privacy.title' | translate }}</h2>
+        <p>{{ 'policies.sgi.privacy.p1' | translate }}</p>
+        <p>{{ 'policies.sgi.privacy.p2' | translate }}</p>
+    </section>
+
+    <section class="privacy-section">
+        <h2><span class="section-number">7</span> {{ 'policies.sgi.ethics.title' | translate }}</h2>
+        <p>{{ 'policies.sgi.ethics.intro' | translate }}</p>
+        <ul>
+            <li>{{ 'policies.sgi.ethics.antibribery' | translate }}</li>
+            <li>{{ 'policies.sgi.ethics.transparency' | translate }}</li>
+            <li>{{ 'policies.sgi.ethics.integrity' | translate }}</li>
+        </ul>
+    </section>
+
+    <section class="privacy-section">
+        <h2><span class="section-number">8</span> {{ 'policies.sgi.environment.title' | translate }}</h2>
+        <p>{{ 'policies.sgi.environment.intro' | translate }}</p>
+    </section>
+
+    <footer>
+        <p class="last-updated">{{ 'policies.sgi.signature' | translate }}</p>
+    </footer>
+</div>
+
+<app-rodape></app-rodape>
