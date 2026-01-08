@@ -5,7 +5,12 @@ import { MenuComponent } from '../../layout/menu/menu.component';
 import { RodapeComponent } from '../../layout/rodape/rodape.component';
 import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {
+  ReactiveFormsModule,
+  FormBuilder,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 declare var UIkit: any;
 
 interface Address {
@@ -16,14 +21,18 @@ interface Address {
 
 @Component({
   selector: 'app-contacto',
-  imports: [TranslatePipe, ReactiveFormsModule, CommonModule, MenuComponent, RodapeComponent],
+  imports: [
+    TranslatePipe,
+    ReactiveFormsModule,
+    CommonModule,
+    MenuComponent,
+    RodapeComponent,
+  ],
   templateUrl: './contacto.component.html',
-  styleUrl: './contacto.component.css'
+  styleUrl: './contacto.component.css',
 })
 export class ContactoComponent {
-
   isSubmitting: boolean = false;
-
 
   useLanguage(language: string): void {
     this.translate.use(language);
@@ -40,62 +49,64 @@ export class ContactoComponent {
   ];
 
   addresses: Record<string, Address[]> = {
-    'Angola': [
+    Angola: [
       {
         title: 'Sede',
-        address: 'Edifício Cellwave, Via AL5 Zona, XR6B<br>Talatona, Luanda Sul, Angola',
-        phone: '+244 227 360 006'
+        address:
+          'Edifício Cellwave, Via AL5 Zona, XR6B<br>Talatona, Luanda Sul, Angola',
+        phone: '+244 227 360 006',
       },
       {
         title: 'Data Center - AngoNAP Luanda',
-        address: 'Avenida Pedro Castro Van Dúnem Loy<br>Talatona, Luanda Sul, Angola',
+        address:
+          'Avenida Pedro Castro Van Dúnem Loy<br>Talatona, Luanda Sul, Angola',
       },
       {
         title: 'Estação Sangano',
         address: 'Praia de Sangano, Município da Kissama, <br> Bengo, Angola',
-      }
+      },
     ],
     'África do Sul': [
       {
         title: 'Johannesburg',
-        address: 'Suite 1, The Pivot, Block E <br> 1 Montecasino Boulevard, Fourways<br> 2191 - Gauteng, South Africa',
-        phone: '+27 (0) 10 005 5865'
-
+        address:
+          'Suite 1, The Pivot, Block E <br> 1 Montecasino Boulevard, Fourways<br> 2191 - Gauteng, South Africa',
+        phone: '+27 (0) 10 005 5865',
       },
-
     ],
-    'Nigéria': [
+    Nigéria: [
       {
         title: 'Lagos Headquarters',
-        address: '5 Jeremiah Ugwu Street, Off Babatunde Anjous<br>Lekki Phase 1,<br>Lagos, Nigeria',
-      }
+        address:
+          '5 Jeremiah Ugwu Street, Off Babatunde Anjous<br>Lekki Phase 1,<br>Lagos, Nigeria',
+      },
     ],
-    'Portugal': [
+    Portugal: [
       {
         title: 'Lisboa',
         address: 'Avenida da Liberdade, 245, 5º <br> 1250-143 Lisboa, Portugal',
-      }
+      },
     ],
-    'Brasil': [
+    Brasil: [
       {
         title: 'São Paulo',
-        address: 'Rua Irmã Gabriela, 51 <br>Brooklin <br>CEP 04571-130 – São Paulo',
-
+        address:
+          'Rua Irmã Gabriela, 51 <br>Brooklin <br>CEP 04571-130 – São Paulo',
       },
       {
         title: 'Data Center  AngonaNAP Fortaleza',
-        address: 'Avenida Trajano de Medeiros, 1851 <br> Praia do Futuro I – Fortaleza – Ce <br>CEP 04571-130 – São Paulo <br> CEP 60.182-325',
-        phone: '+55 85 99645-4143'
-
-      }
+        address:
+          'Avenida Trajano de Medeiros, 1851 <br> Praia do Futuro I – Fortaleza – Ce <br>CEP 04571-130 – São Paulo <br> CEP 60.182-325',
+        phone: '+55 85 99645-4143',
+      },
     ],
-    'Europa': [
+    Europa: [
       {
         title: 'Escritório - Portugal',
-        address: 'Rua da Alfândega, n.º 64, 5.º andar,<br> 9000 059 FUNCHAL <br> Madeira – Portugal',
+        address:
+          'Rua da Alfândega, n.º 64, 5.º andar,<br> 9000 059 FUNCHAL <br> Madeira – Portugal',
       },
-
-    ]
+    ],
   };
 
   onCountryChange(event: Event) {
@@ -104,80 +115,94 @@ export class ContactoComponent {
   }
 
   getCountryAddresses(country: string): Address[] {
-    return this.addresses[country] || [{
-      title: 'Contact Support',
-      address: 'Please contact us for address information in this country',
-      phone: '+244 927 686 206'
-    }];
+    return (
+      this.addresses[country] || [
+        {
+          title: 'Contact Support',
+          address: 'Please contact us for address information in this country',
+          phone: '+244 927 686 206',
+        },
+      ]
+    );
   }
-
 
   contactForm: FormGroup;
   constructor(private translate: TranslateService, private fb: FormBuilder) {
-
     this.contactForm = this.fb.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
-          phone: [
-        '', 
-        [
-        
+    phone: [
+    '', 
+    [
+      Validators.required, // <-- make phone required
       Validators.pattern(/^\+[0-9()\-]+$/), // Must start with +
       Validators.minLength(6) // Minimum reasonable length including +
-        ]
-      ],region: ['', Validators.required],
+    ]
+  ],
+      region: ['', Validators.required],
       department: ['', Validators.required], // Added department field
       companyName: [''], // Added companyName field, not required
       companyPosition: [''], // Added companyPosition field, not required
-      email: ['', [Validators.required, Validators.email, Validators.pattern(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)]],
+      email: [
+        '',
+        [
+          Validators.required,
+          Validators.email,
+          Validators.pattern(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/),
+        ],
+      ],
       message: ['', [Validators.required, Validators.minLength(10)]],
     });
-
   }
 
+  // Updated character blocking
+  blockInvalidPhoneChars(event: KeyboardEvent) {
+    const phoneControl = this.contactForm.get('phone');
+    const currentValue = phoneControl?.value || '';
 
-// Updated character blocking
-blockInvalidPhoneChars(event: KeyboardEvent) {
-  const phoneControl = this.contactForm.get('phone');
-  const currentValue = phoneControl?.value || '';
-  
-  // Always allow navigation/control keys
-  const controlKeys = ['Backspace', 'ArrowLeft', 'ArrowRight', 'Delete', 'Tab'];
-  if (controlKeys.includes(event.key)) {
-    return;
+    // Always allow navigation/control keys
+    const controlKeys = [
+      'Backspace',
+      'ArrowLeft',
+      'ArrowRight',
+      'Delete',
+      'Tab',
+    ];
+    if (controlKeys.includes(event.key)) {
+      return;
+    }
+
+    // First character must be +
+    if (currentValue.length === 0 && event.key !== '+') {
+      event.preventDefault();
+      return;
+    }
+
+    // Subsequent characters must be 0-9, -, (, )
+    const allowedChars = /[0-9\-()]/;
+    if (currentValue.length > 0 && !allowedChars.test(event.key)) {
+      event.preventDefault();
+    }
   }
 
-  // First character must be +
-  if (currentValue.length === 0 && event.key !== '+') {
-    event.preventDefault();
-    return;
-  }
+  // Updated input sanitization
+  sanitizePhoneInput() {
+    const phoneControl = this.contactForm.get('phone');
+    if (!phoneControl) return;
 
-  // Subsequent characters must be 0-9, -, (, )
-  const allowedChars = /[0-9\-()]/;
-  if (currentValue.length > 0 && !allowedChars.test(event.key)) {
-    event.preventDefault();
-  }
-}
+    let value = phoneControl.value;
 
-// Updated input sanitization
-sanitizePhoneInput() {
-  const phoneControl = this.contactForm.get('phone');
-  if (!phoneControl) return;
+    // Ensure it starts with +
+    if (value.length > 0 && !value.startsWith('+')) {
+      value = '+' + value.replace(/[^0-9]/g, '');
+    }
 
-  let value = phoneControl.value;
-  
-  // Ensure it starts with +
-  if (value.length > 0 && !value.startsWith('+')) {
-    value = '+' + value.replace(/[^0-9]/g, '');
+    // Remove any remaining invalid characters
+    value = value.replace(/[^0-9+()-]/g, '');
+
+    // Update control value
+    phoneControl.setValue(value, { emitEvent: false });
   }
-  
-  // Remove any remaining invalid characters
-  value = value.replace(/[^0-9+()-]/g, '');
-  
-  // Update control value
-  phoneControl.setValue(value, { emitEvent: false });
-}
 
   submitForm(event: Event) {
     event.preventDefault();
@@ -194,9 +219,10 @@ sanitizePhoneInput() {
 
     const formData = this.contactForm.value;
 
-    emailjs.send('service_9il6xco', 'template_xzxuf3r', formData, {
-      publicKey: 'F-p5Ny3ufMaRfCSgR'
-    })
+    emailjs
+      .send('service_9il6xco', 'template_xzxuf3r', formData, {
+        publicKey: 'F-p5Ny3ufMaRfCSgR',
+      })
       .then(() => {
         console.log('SUCESSO');
         UIkit.modal('#loading-modal').hide();
@@ -211,5 +237,4 @@ sanitizePhoneInput() {
         this.isSubmitting = false;
       });
   }
-
 }
