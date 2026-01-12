@@ -540,7 +540,12 @@
   "policies.anti.section3.itemA": "Are reasonable and modest in value;",
   "policies.anti.section3.itemB": "Are made on behalf of AC, transparently;",
   "policies.anti.section3.itemC": "Do not intend to influence business decisions or constitute bribery;",
-  "policies.anti.section3.itemD": "Maximum limit: The maximum value allowed for receiving gifts is USD 40.00 and must be recorded in accordance with internal financial procedures."
+  "policies.anti.section3.itemD": "Maximum limit: The maximum value allowed for receiving gifts is USD 40.00 and must be recorded in accordance with internal financial procedures.",
+
+    "home_subtitulo": "Who said we're all the same? We prove the opposite!",
+  "home_titulo": "Servers, Storage, Backup, Virtual Machines in 5 minutes",
+  "home_botao_comecar": "Get started",
+  "home_botao_calcular": "Calculate cost"
 
       
 

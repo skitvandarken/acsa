@@ -559,7 +559,12 @@
   "policies.anti.section3.itemA": "Ils sont raisonnables et de faible valeur ;",
   "policies.anti.section3.itemB": "Ils sont effectués au nom d’AC, de manière transparente ;",
   "policies.anti.section3.itemC": "Ils n’ont pas l’intention, ni l’apparence, d’influencer une décision commerciale ou de constituer un acte de corruption ;",
-  "policies.anti.section3.itemD": "Limite maximale : la valeur maximale autorisée pour la réception de cadeaux est de 40 USD et doit être enregistrée conformément aux procédures financières internes."
+  "policies.anti.section3.itemD": "Limite maximale : la valeur maximale autorisée pour la réception de cadeaux est de 40 USD et doit être enregistrée conformément aux procédures financières internes.",
+
+    "home_subtitulo": "Qui a dit que nous sommes tous pareils ? Nous prouvons le contraire !",
+  "home_titulo": "Serveurs, Stockage, Sauvegarde, Machines Virtuelles en 5 minutes",
+  "home_botao_comecar": "Commencer maintenant",
+  "home_botao_calcular": "Calculer le coût"
 
 
 

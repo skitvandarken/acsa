@@ -533,5 +533,10 @@
   "policies.anti.section3.itemC": "Não terem a intenção ou a aparência de influenciar uma decisão de negócio ou suborno;",
   "policies.anti.section3.itemD": "Limite Máximo de Valor: O valor máximo permitido para recebimento de brindes é equivalente a USD 40,00, devendo ser registado em conformidade com os procedimentos internos de gestão financeira.",
   "policies.shared.portal": "Portal",
-  "policies.shared.email": "Email"
+  "policies.shared.email": "Email",
+
+  "home_subtitulo": "Quem disse que somos todos iguais?. Nós provamos o contrário!",
+  "home_titulo": "Servidores, Armazenamento, Backup, Máquinas Virtuais em 5 minutos",
+  "home_botao_comecar": "Começar agora",
+  "home_botao_calcular": "Calcular o custo"
 }
