@@ -63,6 +63,13 @@ export const routes: Routes = [
         (m) => m.PrivacyPoliciesComponent
       ),
   },
+  {
+    path: 'cookies-policies',
+    loadComponent: () =>
+      import('./paginas/politicas-cookies/politicas-cookies.component').then(
+        (m) => m.PoliticasCookiesComponent
+      ),
+  },
 
   {
     path: 'sgi',

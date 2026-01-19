@@ -22,6 +22,11 @@
 /* Footer Columns */
 .footer-column {
   margin-bottom: 20px;
+  
+}
+
+.footer-column li {
+  font-size: 12px;
 }
 
 /* Footer Links */
