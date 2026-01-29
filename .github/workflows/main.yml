@@ -19,8 +19,8 @@ jobs:
         run: |
           if [[ "${GITHUB_REF##*/}" == "stage" ]]; then
             echo "env_name=staging" >> $GITHUB_OUTPUT
-            echo "webdisk_url=https://staging.angolacables.co.ao:2078" >> $GITHUB_OUTPUT
-            echo "site_url=https://staging.angolacables.co.ao" >> $GITHUB_OUTPUT
+            echo "webdisk_url=https://acsastaging.marketing.host2africa.com:2078" >> $GITHUB_OUTPUT
+            echo "site_url=https:/acsastaging.marketing.host2africa.com" >> $GITHUB_OUTPUT
           else
             echo "env_name=production" >> $GITHUB_OUTPUT
             echo "webdisk_url=https://angolacables.co.ao:2078" >> $GITHUB_OUTPUT
