@@ -144,7 +144,7 @@ jobs:
             remote_dir=$(dirname "$remote_path")
             
             if [[ "$remote_dir" != "." ]]; then
-              curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -X MKCOL "$WEBDISK_URL/$remote_dir" --silent --show-error || true 
+              curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -X MKCOL "$WEBDISK_URL/$remote_dir" --silent --show-error || true
             fi
 
             for attempt in {1..3}; do
