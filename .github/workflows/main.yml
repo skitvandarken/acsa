@@ -1,5 +1,4 @@
 name: 🚀 Secure Angular Deploy with Firebase
-
 on:
   push:
     branches:
@@ -9,23 +8,25 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: 🛠️ Checkout Repository
         uses: actions/checkout@v3
 
-      - name: 🌍 Detect Environment
-        id: env
+      - name: 🏷️ Set Deployment Target
+        id: set-target
         run: |
-          if [[ "${GITHUB_REF##*/}" == "stage" ]]; then
-            echo "env_name=staging" >> $GITHUB_OUTPUT
-            echo "webdisk_url=https://acsastaging.marketing.host2africa.com:2078" >> $GITHUB_OUTPUT
-            echo "site_url=https:/acsastaging.marketing.host2africa.com" >> $GITHUB_OUTPUT
-          else
-            echo "env_name=production" >> $GITHUB_OUTPUT
-            echo "webdisk_url=https://angolacables.co.ao:2078" >> $GITHUB_OUTPUT
-            echo "site_url=https://angolacables.co.ao" >> $GITHUB_OUTPUT
+          if [[ ${{ github.ref }} == refs/heads/mvp ]]; then
+            echo "DOMAIN=angolacables.co.ao" >> $GITHUB_ENV
+            echo "WEBDISK_URL=https://angolacables.co.ao:2078" >> $GITHUB_ENV
+            echo "DEPLOY_ENV=production" >> $GITHUB_ENV
+          elif [[ ${{ github.ref }} == refs/heads/stage ]]; then
+            echo "DOMAIN=stage.angolacables.co.ao" >> $GITHUB_ENV
+            echo "WEBDISK_URL=https://acsastaging.marketing.host2africa.com:2078" >> $GITHUB_ENV
+            echo "DEPLOY_ENV=staging" >> $GITHUB_ENV
           fi
+          echo "Target Domain: $DOMAIN"
+          echo "WebDAV URL: $WEBDISK_URL"
+          echo "Environment: $DEPLOY_ENV"
 
       - name: 📦 Setup Node.js
         uses: actions/setup-node@v3
@@ -35,38 +36,23 @@ jobs:
 
       - name: 🔐 Inject Firebase Secrets
         run: |
+          # Create production environment file
           mkdir -p src/environments
-
-          if [[ "${{ steps.env.outputs.env_name }}" == "staging" ]]; then
-            API_KEY='${{ secrets.FIREBASE_API_KEY_STAGING }}'
-            AUTH_DOMAIN='${{ secrets.FIREBASE_AUTH_DOMAIN_STAGING }}'
-            PROJECT_ID='${{ secrets.FIREBASE_PROJECT_ID_STAGING }}'
-            STORAGE_BUCKET='${{ secrets.FIREBASE_STORAGE_BUCKET_STAGING }}'
-            MSG_SENDER='${{ secrets.FIREBASE_MESSAGING_SENDER_ID_STAGING }}'
-            APP_ID='${{ secrets.FIREBASE_APP_ID_STAGING }}'
-          else
-            API_KEY='${{ secrets.FIREBASE_API_KEY }}'
-            AUTH_DOMAIN='${{ secrets.FIREBASE_AUTH_DOMAIN }}'
-            PROJECT_ID='${{ secrets.FIREBASE_PROJECT_ID }}'
-            STORAGE_BUCKET='${{ secrets.FIREBASE_STORAGE_BUCKET }}'
-            MSG_SENDER='${{ secrets.FIREBASE_MESSAGING_SENDER_ID }}'
-            APP_ID='${{ secrets.FIREBASE_APP_ID }}'
-          fi
-
           cat > src/environments/environment.prod.ts <<EOF
           export const environment = {
             production: true,
             firebase: {
-              apiKey: '$API_KEY',
-              authDomain: '$AUTH_DOMAIN',
-              projectId: '$PROJECT_ID',
-              storageBucket: '$STORAGE_BUCKET',
-              messagingSenderId: '$MSG_SENDER',
-              appId: '$APP_ID'
+              apiKey: '${{ secrets.FIREBASE_API_KEY }}',
+              authDomain: '${{ secrets.FIREBASE_AUTH_DOMAIN }}',
+              projectId: '${{ secrets.FIREBASE_PROJECT_ID }}',
+              storageBucket: '${{ secrets.FIREBASE_STORAGE_BUCKET }}',
+              messagingSenderId: '${{ secrets.FIREBASE_MESSAGING_SENDER_ID }}',
+              appId: '${{ secrets.FIREBASE_APP_ID }}'
             }
           };
           EOF
-
+          
+          # Verify file was created (without exposing secrets)
           grep "production:" src/environments/environment.prod.ts
 
       - name: 📌 Install Dependencies
@@ -86,40 +72,58 @@ jobs:
 
       - name: 🧹 Secure Clean & Deploy via WebDAV
         env:
-          WEBDISK_USERNAME: ${{ steps.env.outputs.env_name == 'staging' && secrets.WEBDISK_USERNAME_STAGING || secrets.WEBDISK_USERNAME }}
-          WEBDISK_PASSWORD: ${{ steps.env.outputs.env_name == 'staging' && secrets.WEBDISK_PASSWORD_STAGING || secrets.WEBDISK_PASSWORD }}
+          WEBDISK_USERNAME: ${{ secrets.WEBDISK_USERNAME }}
+          WEBDISK_PASSWORD: ${{ secrets.WEBDISK_PASSWORD }}
         run: |
+          # ===== CONFIGURATION =====
           BUILD_DIR="dist/part/browser"
-          WEBDISK_URL="${{ steps.env.outputs.webdisk_url }}"
-          SITE_URL="${{ steps.env.outputs.site_url }}"
+          
+          # Define protected items per environment
+          if [[ "$DEPLOY_ENV" == "production" ]]; then
+            PROTECTED_ITEMS=(
+              "cgi-bin"
+              ".well-known"
+              ".tmb"
+              "partners.angolacables.co.ao"
+              "old_angolacables.co.ao"
+              "angular.angolacables.co.ao"
+              "old2_angolacables.co.ao"
+              "site_update"
+              ".user.ini"
+              ".htaccess_bak"
+              "old_angolacables.co.ao.zip"
+              "routes-table"
+            )
+          elif [[ "$DEPLOY_ENV" == "staging" ]]; then
+            PROTECTED_ITEMS=(
+              "cgi-bin"
+              ".well-known"
+              ".tmb"
+              ".user.ini"
+              ".htaccess_bak"
+            )
+          fi
+          
+          echo "🔧 Deploying to: $DOMAIN"
+          echo "🔧 Environment: $DEPLOY_ENV"
+          echo "🔧 WebDAV URL: $WEBDISK_URL"
+          # =========================
 
-          PROTECTED_ITEMS=(
-            "cgi-bin"
-            ".well-known"
-            ".tmb"
-            "partners.angolacables.co.ao"
-            "old_angolacables.co.ao"
-            "angular.angolacables.co.ao"
-            "old2_angolacables.co.ao"
-            "site_update"
-            ".user.ini"
-            ".htaccess_bak"
-            "old_angolacables.co.ao.zip"
-            "routes-table"
-          )
-
+          # 🔐 Verify WebDAV connection
           echo "🔐 Testing WebDAV connection..."
           if ! curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -X PROPFIND $WEBDISK_URL/ --fail --silent --show-error >/dev/null; then
-            echo "❌ FATAL: WebDAV authentication failed!"
+            echo "❌ FATAL: WebDAV authentication failed for $WEBDISK_URL!"
             exit 1
           fi
 
+          # 🗑️ Get remote items using xmlstarlet
           echo "📡 Fetching remote file list..."
           sudo apt-get update && sudo apt-get install -y xmlstarlet
           REMOTE_ITEMS=$(curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -X PROPFIND $WEBDISK_URL/ --silent | \
             xmlstarlet sel -t -v "//a:href" -n | \
             sed "s|$WEBDISK_URL||" | sed 's|^/||' | grep -v '^$' | sort -ur)
 
+          # 💣 Delete non-protected items
           echo "🧹 Starting cleanup..."
           for item in $REMOTE_ITEMS; do
             [[ -z "$item" ]] && continue
@@ -138,6 +142,7 @@ jobs:
             fi
           done
 
+          # 🚀 Deploy new build
           echo "🚀 Uploading build..."
           find $BUILD_DIR -type f | while read -r file; do
             remote_path="${file#$BUILD_DIR/}"
@@ -160,4 +165,4 @@ jobs:
           done
 
           echo "🎉 Deployment completed successfully!"
-          echo "🌐 Live at: $SITE_URL"
+          echo "🌐 Live at: https://$DOMAIN"
