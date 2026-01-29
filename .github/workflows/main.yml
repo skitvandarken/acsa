@@ -1,3 +1,89 @@
+name: 🚀 Secure Angular Deploy with Firebase
+
+on:
+  push:
+    branches:
+      - mvp
+      - stage
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🛠️ Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: 🌍 Detect Environment
+        id: env
+        run: |
+          if [[ "${GITHUB_REF##*/}" == "stage" ]]; then
+            echo "env_name=staging" >> $GITHUB_OUTPUT
+            echo "webdisk_url=https://acsastaging.marketing.host2africa.com:2078" >> $GITHUB_OUTPUT
+            echo "site_url=https:/acsastaging.marketing.host2africa.com" >> $GITHUB_OUTPUT
+          else
+            echo "env_name=production" >> $GITHUB_OUTPUT
+            echo "webdisk_url=https://angolacables.co.ao:2078" >> $GITHUB_OUTPUT
+            echo "site_url=https://angolacables.co.ao" >> $GITHUB_OUTPUT
+          fi
+
+      - name: 📦 Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: 🔐 Inject Firebase Secrets
+        run: |
+          mkdir -p src/environments
+
+          if [[ "${{ steps.env.outputs.env_name }}" == "staging" ]]; then
+            API_KEY='${{ secrets.FIREBASE_API_KEY_STAGING }}'
+            AUTH_DOMAIN='${{ secrets.FIREBASE_AUTH_DOMAIN_STAGING }}'
+            PROJECT_ID='${{ secrets.FIREBASE_PROJECT_ID_STAGING }}'
+            STORAGE_BUCKET='${{ secrets.FIREBASE_STORAGE_BUCKET_STAGING }}'
+            MSG_SENDER='${{ secrets.FIREBASE_MESSAGING_SENDER_ID_STAGING }}'
+            APP_ID='${{ secrets.FIREBASE_APP_ID_STAGING }}'
+          else
+            API_KEY='${{ secrets.FIREBASE_API_KEY }}'
+            AUTH_DOMAIN='${{ secrets.FIREBASE_AUTH_DOMAIN }}'
+            PROJECT_ID='${{ secrets.FIREBASE_PROJECT_ID }}'
+            STORAGE_BUCKET='${{ secrets.FIREBASE_STORAGE_BUCKET }}'
+            MSG_SENDER='${{ secrets.FIREBASE_MESSAGING_SENDER_ID }}'
+            APP_ID='${{ secrets.FIREBASE_APP_ID }}'
+          fi
+
+          cat > src/environments/environment.prod.ts <<EOF
+          export const environment = {
+            production: true,
+            firebase: {
+              apiKey: '$API_KEY',
+              authDomain: '$AUTH_DOMAIN',
+              projectId: '$PROJECT_ID',
+              storageBucket: '$STORAGE_BUCKET',
+              messagingSenderId: '$MSG_SENDER',
+              appId: '$APP_ID'
+            }
+          };
+          EOF
+
+          grep "production:" src/environments/environment.prod.ts
+
+      - name: 📌 Install Dependencies
+        run: npm ci
+
+      - name: 🏗️ Build Angular App
+        run: npm run build -- --configuration production
+        env:
+          NODE_OPTIONS: "--max_old_space_size=4096"
+
+      - name: 🐛 Verify Build Output
+        run: |
+          echo "Build directory contents:"
+          ls -la dist/part/browser
+          echo "Checking for Firebase config in main.js:"
+          grep -o "apiKey" dist/part/browser/main.js || echo "No API key found in build"
+
       - name: 🧹 Secure Clean & Deploy via WebDAV
         env:
           WEBDISK_USERNAME: ${{ steps.env.outputs.env_name == 'staging' && secrets.WEBDISK_USERNAME_STAGING || secrets.WEBDISK_USERNAME }}
@@ -57,11 +143,10 @@
             remote_path="${file#$BUILD_DIR/}"
             remote_dir=$(dirname "$remote_path")
             
-            # Create remote directories, ignore 409 conflict if already exists
             if [[ "$remote_dir" != "." ]]; then
-              curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -X MKCOL "$WEBDISK_URL/$remote_dir" --silent --show-error || true
+              curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -X MKCOL "$WEBDISK_URL/$remote_dir" --silent --show-error || true 
             fi
-            
+
             for attempt in {1..3}; do
               if curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -T "$file" "$WEBDISK_URL/$remote_path" --silent --show-error --fail; then
                 echo "✅ Uploaded: $remote_path"
