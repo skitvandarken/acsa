@@ -143,9 +143,16 @@ jobs:
             remote_path="${file#$BUILD_DIR/}"
             remote_dir=$(dirname "$remote_path")
             
-            if [[ "$remote_dir" != "." ]]; then
-              curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -X MKCOL "$WEBDISK_URL/$remote_dir" --silent --show-error || true
-            fi
+           if curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -T "$file" "$WEBDISK_URL/$remote_path" --silent --show-error || [[ $? -eq 22 ]]; then
+            # 409 Conflict returns exit code 22, ignore it
+            echo "✅ Uploaded or already exists: $remote_path"
+            break
+            elif [[ $attempt -eq 3 ]]; then
+            echo "❌ Failed to upload: $remote_path"
+            exit 1
+          else
+          sleep $((attempt * 2))
+          fi
 
             for attempt in {1..3}; do
               if curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -T "$file" "$WEBDISK_URL/$remote_path" --silent --show-error --fail; then
