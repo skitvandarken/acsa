@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - mvp
-      - stage
 
 jobs:
   build-and-deploy:
@@ -11,22 +10,6 @@ jobs:
     steps:
       - name: 🛠️ Checkout Repository
         uses: actions/checkout@v3
-
-      - name: 🏷️ Set Deployment Target
-        id: set-target
-        run: |
-          if [[ ${{ github.ref }} == refs/heads/mvp ]]; then
-            echo "DOMAIN=angolacables.co.ao" >> $GITHUB_ENV
-            echo "WEBDISK_URL=https://angolacables.co.ao:2078" >> $GITHUB_ENV
-            echo "DEPLOY_ENV=production" >> $GITHUB_ENV
-          elif [[ ${{ github.ref }} == refs/heads/stage ]]; then
-            echo "DOMAIN=stage.angolacables.co.ao" >> $GITHUB_ENV
-            echo "WEBDISK_URL=https://acsastaging.marketing.host2africa.com:2078" >> $GITHUB_ENV
-            echo "DEPLOY_ENV=staging" >> $GITHUB_ENV
-          fi
-          echo "Target Domain: $DOMAIN"
-          echo "WebDAV URL: $WEBDISK_URL"
-          echo "Environment: $DEPLOY_ENV"
 
       - name: 📦 Setup Node.js
         uses: actions/setup-node@v3
@@ -77,42 +60,29 @@ jobs:
         run: |
           # ===== CONFIGURATION =====
           BUILD_DIR="dist/part/browser"
+          WEBDISK_URL="https://angolacables.co.ao:2078"
           
-          # Define protected items per environment
-          if [[ "$DEPLOY_ENV" == "production" ]]; then
-            PROTECTED_ITEMS=(
-              "cgi-bin"
-              ".well-known"
-              ".tmb"
-              "partners.angolacables.co.ao"
-              "old_angolacables.co.ao"
-              "angular.angolacables.co.ao"
-              "old2_angolacables.co.ao"
-              "site_update"
-              ".user.ini"
-              ".htaccess_bak"
-              "old_angolacables.co.ao.zip"
-              "routes-table"
-            )
-          elif [[ "$DEPLOY_ENV" == "staging" ]]; then
-            PROTECTED_ITEMS=(
-              "cgi-bin"
-              ".well-known"
-              ".tmb"
-              ".user.ini"
-              ".htaccess_bak"
-            )
-          fi
-          
-          echo "🔧 Deploying to: $DOMAIN"
-          echo "🔧 Environment: $DEPLOY_ENV"
-          echo "🔧 WebDAV URL: $WEBDISK_URL"
+          # Protected items (won't be touched)
+          PROTECTED_ITEMS=(
+            "cgi-bin"
+            ".well-known"
+            ".tmb"
+            "partners.angolacables.co.ao"
+            "old_angolacables.co.ao"
+            "angular.angolacables.co.ao"
+            "old2_angolacables.co.ao"
+            "site_update"
+            ".user.ini"
+            ".htaccess_bak"
+            "old_angolacables.co.ao.zip"
+            "routes-table"
+          )
           # =========================
 
           # 🔐 Verify WebDAV connection
           echo "🔐 Testing WebDAV connection..."
           if ! curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -X PROPFIND $WEBDISK_URL/ --fail --silent --show-error >/dev/null; then
-            echo "❌ FATAL: WebDAV authentication failed for $WEBDISK_URL!"
+            echo "❌ FATAL: WebDAV authentication failed!"
             exit 1
           fi
 
@@ -165,4 +135,4 @@ jobs:
           done
 
           echo "🎉 Deployment completed successfully!"
-          echo "🌐 Live at: https://$DOMAIN"
+          echo "🌐 Live at: https://angolacables.co.ao"
