@@ -55,6 +55,7 @@
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
     padding: 20px;
+    display: none;
 }
 
 .uk-navbar-dropdown-nav {

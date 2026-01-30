@@ -97,6 +97,7 @@
   "menu-recrutamento": "Recrutamento",
   "menu-talent": "Talents Seedz",
   "menu-latencias": "Latências",
+  "menu-looking-glass": "Looking Glass",
   "menu-lg": "Looking Glass",
   "servicos.em": "SERVIÇOS",
   "servicos.destaque": " EM DESTAQUE",
@@ -539,7 +540,7 @@
   "home_titulo": "Servidores, Armazenamento, Backup, Máquinas Virtuais em 5 minutos",
   "home_botao_comecar": "Começar agora",
   "home_botao_calcular": "Calcular o custo",
-   "policies.cookies.title": "Política de Cookies",
+  "policies.cookies.title": "Política de Cookies",
   "policies.cookies.intro.title": "Introdução",
   "policies.cookies.intro.p1": "A Angola Cables S.A., sociedade de direito angolano, sediada em Luanda, juntamente com as suas subsidiárias, é responsável pelos Serviços digitais abrangidos por esta Política de Cookies.",
   "policies.cookies.intro.p2": "Esta Política regula a utilização dos Serviços digitais, gratuitos ou pagos, oferecidos em todas as Plataformas, Sites e Websites da Angola Cables.",
@@ -579,5 +580,4 @@
   "policies.cookies.updates.title": "Atualizações da Política",
   "policies.cookies.updates.p1": "A Política pode ser atualizada periodicamente. Mudanças significativas serão comunicadas.",
   "policies.cookies.lastUpdated": "Data da última atualização:"
-
 }
