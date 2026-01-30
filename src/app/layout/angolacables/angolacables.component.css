@@ -306,7 +306,12 @@
 
 }
 
+.uk-link-text{
+    font-weight: 700;
+    font-size: 1.55rem;
+        color: #022561;
 
+}
 
 .botao-azul:hover {
 

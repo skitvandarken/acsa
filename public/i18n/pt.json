@@ -4,7 +4,7 @@
   "nav.ip": "IP",
   "nav.conectividade": "Conectividade",
   "nav.empresa": "Empresa",
-  "ac.descricao": " é uma multinacional de telecomunicações que opera uma robusta rede global de backbone, proporcionando acesso a principais IXP, operadores Tier | e fornecedores de conteúdo globais.",
+  "ac.descricao": " é uma multinacional de telecomunicações que opera o backbone atlântico com cabos proprietário SACS, MONET e WACS, ligados ao principais IXPs, cabos de operadores TIER I e fornecedores de conteúdos locais.",
   "ac.presenca": "PRESENÇA LOCAL, NEGÓCIO GLOBAL",
   "ac.presencadescricao": "Oferecemos soluções de conectividade inovadoras para os mercados wholesale e corporativo, com presença global e foco em rotas submarinas no Atlântico. Conectamos data centers fornecendo serviços digitais personalizados — de IP Transit à nuvem — para telecom, CDNs, OTTs, finanças, petróleo, gás e outros setores com operações em Angola, Brasil, África do Sul, Nigéria, Europa e EUA.",
   "ver.videoinstitucional": "Ver vídeo institucional",
@@ -579,5 +579,8 @@
   "policies.cookies.management.mobile.p1": "Dispositivos móveis permitem gerir tecnologias de rastreamento através de configurações de privacidade ou permissões.",
   "policies.cookies.updates.title": "Atualizações da Política",
   "policies.cookies.updates.p1": "A Política pode ser atualizada periodicamente. Mudanças significativas serão comunicadas.",
-  "policies.cookies.lastUpdated": "Data da última atualização:"
+  "policies.cookies.lastUpdated": "Data da última atualização:",
+    "cabo.monet": "MONET",
+  "cabo.sacs": "SACS",
+  "cabo.wacs": "WACS"
 }

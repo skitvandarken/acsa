@@ -4,7 +4,7 @@
   "nav.ip": "IP",
   "nav.conectividade": "Connectivity",
   "nav.empresa": "Company",
-  "ac.descricao": " is a multinational telecommunications company operating a robust global backbone network, providing access to major IXPs, Tier 1 operators and global content providers.",
+"ac.descricao": "is a multinational telecommunications company that operates the Atlantic backbone through its proprietary SACS, MONET, and WACS submarine cables, connected to major IXPs, Tier I operator networks, and local content providers.",
   "ac.presenca": "LOCAL PRESENCE, GLOBAL BUSINESS",
   "ac.presencadescricao": "We offer innovative connectivity solutions for wholesale and corporate markets, with global presence and focus on transatlantic submarine routes. We connect data centers providing customized digital services - from IP Transit to cloud - for telecoms, CDNs, OTTs, finance, oil & gas and other sectors with operations in Angola, Brazil, South Africa, Nigeria, Europe and the USA.",
   "ver.videoinstitucional": "Watch corporate video",
@@ -574,5 +574,8 @@
   "policies.cookies.management.mobile.p1": "Mobile devices allow management via privacy settings or permissions.",
   "policies.cookies.updates.title": "Policy Updates",
   "policies.cookies.updates.p1": "This Policy may be updated periodically. Significant changes will be communicated.",
-  "policies.cookies.lastUpdated": "Last Updated:"
+  "policies.cookies.lastUpdated": "Last Updated:",
+  "cabo.monet": "MONET",
+  "cabo.sacs": "SACS",
+  "cabo.wacs": "WACS"
 }
