@@ -4,7 +4,44 @@
     <div class="conteudo-cabecalho uk-margin-medium-top">
       <div class="uk-container uk-margin-large-bottom">
         <h4 style="color:white">{{ 'cloud_titulo_pagina' | translate }}</h4>
-        <h1 style="color:rgba(39, 200, 227, 1); font-weight: bolder;">{{ 'cloud_subtitulo_pagina' | translate }}</h1>
+        <h1 style="color:#fff; font-weight: bolder;">
+          {{ 'cloud_subtitulo_pagina' | translate }}
+        </h1>
+
+        <!-- CLOUD CATEGORIES AS PILLS -->
+        <div class="uk-margin-medium-top uk-flex uk-flex-left uk-flex-wrap uk-grid-small" uk-grid>
+
+          <div>
+            <span class="uk-label uk-border-pill categoria-pill">
+              <span uk-icon="icon: database" class="uk-margin-small-right"></span>
+              Storage
+            </span>
+          </div>
+
+          <div>
+            <span class="uk-label uk-border-pill categoria-pill">
+              <span uk-icon="icon: refresh" class="uk-margin-small-right"></span>
+              Backup
+            </span>
+          </div>
+
+          <div>
+            <span class="uk-label uk-border-pill categoria-pill">
+              <span uk-icon="icon: nut" class="uk-margin-small-right"></span>
+              Managed Kubernetes
+            </span>
+          </div>
+
+          <div>
+            <span class="uk-label uk-border-pill categoria-pill">
+              <span uk-icon="icon: warning" class="uk-margin-small-right"></span>
+              Disaster Recovery
+            </span>
+          </div>
+
+        </div>
+        <!-- END CLOUD CATEGORIES -->
+
       </div>
     </div>
   </div>
@@ -76,7 +113,29 @@
       </div>
     </div>
 
-    <div class="">
+
+       <div class="">
+      <div class="uk-card uk-card-default uk-card-body border-2 uk-flex uk-flex-column uk-flex-stretch">
+        <div class="uk-card-media-top">
+          <img style="border-radius: 20px;" class="border-2 card-image" src="img/servicos/kubernetes.png" width="1800"
+            height="1200" alt="">
+          <div style="margin-top:15px;margin-bottom: 15px;">
+            <h2 style="color: rgba(9, 0, 67, 1); font-weight: bolder;"><b>{{ 'kubernetes_title' | translate }}</b>
+            </h2>
+          </div>
+          <p>{{ 'kubernetes_descricao' | translate }}</p>
+
+        </div>
+        <div class="uk-text-center uk-margin-auto-top">
+          <a style="font-weight: bold;" href="https://angolacables.rds.land/cloud">
+            <button class="botao-guia uk-margin-medium-top uk-button uk-border-pill uk-width-1-1">{{
+              'guia_produto_botao' | translate }}</button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="uk-margin-large-bottom">
       <div class="uk-card uk-card-default uk-card-body border-2 uk-flex uk-flex-column uk-flex-stretch">
         <div class="uk-card-media-top">
           <img style="border-radius: 20px;" class="border-2 card-image" src="img/servicos/vods2africa.png" width="1800"
@@ -98,26 +157,7 @@
     </div>
 
 
-    <div class="uk-margin-large-bottom">
-      <div class="uk-card uk-card-default uk-card-body border-2 uk-flex uk-flex-column uk-flex-stretch">
-        <div class="uk-card-media-top">
-          <img style="border-radius: 20px;" class="border-2 card-image" src="img/servicos/kubernetes.png" width="1800"
-            height="1200" alt="">
-          <div style="margin-top:15px;margin-bottom: 15px;">
-            <h2 style="color: rgba(9, 0, 67, 1); font-weight: bolder;"><b>{{ 'kubernetes_title' | translate }}</b>
-            </h2>
-          </div>
-          <p>{{ 'kubernetes_descricao' | translate }}</p>
-
-        </div>
-        <div class="uk-text-center uk-margin-auto-top">
-          <a style="font-weight: bold;" href="https://angolacables.rds.land/cloud">
-            <button class="botao-guia uk-margin-medium-top uk-button uk-border-pill uk-width-1-1">{{
-              'guia_produto_botao' | translate }}</button>
-          </a>
-        </div>
-      </div>
-    </div>
+ 
 
 
   </div>

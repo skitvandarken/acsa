@@ -66,3 +66,18 @@
 .fundo-imagem{
     background: linear-gradient(to top, rgba(0, 0, 78, 0.918), rgba(0, 0, 78, 0.918), rgb(0, 0, 0)); /* Blue to transparent */
 }
+
+.categoria-pill {
+  background: rgba(255,255,255,0.12);
+  color: white;
+  font-size: 0.85rem;
+  padding: 6px 14px;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: all 0.2s ease;
+}
+
+.categoria-pill:hover {
+  background: rgba(255,255,255,0.22);
+  transform: translateY(-2px);
+}

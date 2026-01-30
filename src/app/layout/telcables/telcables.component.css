@@ -6,6 +6,17 @@
 
 
 .logo-image{
-    height: 90px;
+    height: 55px;
     width: auto;
+}
+
+.logo-image-2{
+    height: 100px;
+    width: auto;
+}
+
+.logo-image,
+.logo-image-2 {
+  max-height: 120px;
+  width: auto;
 }
