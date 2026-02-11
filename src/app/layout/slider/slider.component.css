@@ -1,9 +1,8 @@
 /* Add these styles to your existing slider.component.css */
 /* Limita a altura do contêiner de slides */
 .uk-slideshow-items {
-    max-height: 650px !important; /* Ajuste para a altura desejada */
+    max-height: 650px !important;
 }
-
 
 /* Add box shadow to active thumbnail button */
 .uk-slideshow-nav .uk-active a .bt-img {
@@ -16,23 +15,20 @@
 /* Optional: Add hover effect */
 .uk-slideshow-nav li a .bt-img:hover {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-    transition: all 0.3s ease;
 }
 
 /* Modern neon-inspired overlay */
 .uk-overlay {
     padding: 20px 25px;
     border-radius: 20px;
-    opacity: 0.85 !important;
-    background: rgba(0, 0, 0, 0.85) !important;
+    opacity: 0.85;
+    background: rgba(0, 0, 0, 0.85);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 
         0 8px 32px rgba(0, 0, 0, 0.3),
         inset 0 1px 0 rgba(255, 255, 255, 0.1);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    transform: translateZ(0);
-    /* Center the overlay content */
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -40,33 +36,31 @@
 
 /* Neon glow effect on hover */
 .uk-overlay:hover {
-    opacity: 1 !important;
-    background: rgba(0, 0, 0, 0.9) !important;
-    border: 1px solid rgba(40, 193, 253, 0.6);
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.9);
+    border-color: rgba(40, 193, 253, 0.6);
     box-shadow: 
         0 0 20px rgba(40, 193, 253, 0.4),
         0 0 40px rgba(40, 193, 253, 0.2),
         0 8px 32px rgba(0, 0, 0, 0.4),
         inset 0 1px 0 rgba(255, 255, 255, 0.15);
-    transform: translateY(-2px) translateZ(0);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(-2px);
 }
 
 /* Search icon neon effects */
 .uk-overlay [uk-icon="search"] {
-    color: #fff !important;
+    color: #fff;
     filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    /* Ensure icon is properly sized */
-    width: 30px !important;
-    height: 30px !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .uk-overlay:hover [uk-icon="search"] {
-    color: #28c1fd !important;
+    color: #28c1fd;
     filter: 
         drop-shadow(0 0 10px rgba(40, 193, 253, 0.8))
         drop-shadow(0 0 20px rgba(40, 193, 253, 0.4));
@@ -110,15 +104,47 @@
     opacity: 1;
 }
 
-/* For mobile devices, reduce effects and ensure proper centering */
-@media (max-width: 640px) {
+.bt-img {
+    width: 100px;
+    height: 67px;
+    border-radius: 5px;
+}
+
+.uk-tab>* {
+    padding-left: 0;
+}
+
+/* Consolidated Media Queries for bt-img */
+@media (min-width: 1440px) {
+    .bt-img {
+        width: 110px;
+        height: 73px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .bt-img {
+        width: 90px;
+        height: 60px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .bt-img {
+        width: 75px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 767px) {
+    .bt-img {
+        width: 65px;
+        height: 43px;
+    }
+    
     .uk-overlay {
         padding: 15px 20px;
         backdrop-filter: blur(5px);
-        /* Ensure centering on mobile */
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
     }
     
     .uk-overlay:hover {
@@ -126,22 +152,36 @@
     }
     
     .uk-overlay [uk-icon="search"] {
-        width: 25px !important;
-        height: 25px !important;
+        width: 25px;
+        height: 25px;
     }
 }
 
-.bt-img {
-    width: 90px;
-    height: 58px;
-    border-radius: 5px;
+@media (max-width: 480px) {
+    .bt-img {
+        width: 60px;
+        height: 40px;
+    }
 }
 
-/* Glassmorphic Modal Styles */
+@media (max-width: 375px) {
+    .bt-img {
+        width: 55px;
+        height: 37px;
+    }
+}
+
+@media (max-width: 320px) {
+    .bt-img {
+        width: 45px;
+        height: 30px;
+    }
+}
+
+/* Glassmorphic Modal Styles - PRESERVED ALL GLASS CARD CLASSES */
 .glassmorphic-modal {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(20px) saturate(180%);
-    -webkit-backdrop-filter: blur(20px) saturate(180%);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 30px;
@@ -150,6 +190,7 @@
         inset 0 1px 0 rgba(255, 255, 255, 0.1);
     position: relative;
     overflow: hidden;
+    animation: modalFadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .glassmorphic-modal::before {
@@ -200,11 +241,10 @@
     }
 }
 
-/* Glass Cards */
+/* Glass Cards - ALL CLASSES PRESERVED */
 .glass-card {
     background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 25px;
@@ -283,7 +323,6 @@
 .tech-badge {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     padding: 8px 16px;
@@ -307,27 +346,6 @@
         rgba(10, 10, 30, 0.95) 100%);
 }
 
-/* Responsive adjustments */
-@media (max-width: 640px) {
-    .glassmorphic-modal {
-        padding: 20px;
-        margin: 15px;
-    }
-    
-    .modal-title {
-        font-size: 1.8rem;
-    }
-    
-    .card-value {
-        font-size: 1.5rem;
-    }
-    
-    .tech-badges {
-        justify-content: center;
-    }
-}
-
-/* Animation for modal entrance */
 @keyframes modalFadeIn {
     from {
         opacity: 0;
@@ -339,132 +357,7 @@
     }
 }
 
-.glassmorphic-modal {
-    animation: modalFadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Default/Desktop */
-.bt-img {
-    width: 100px;
-    height: 67px;
-}
-
-.uk-tab>*{
-    padding-left: 0px;
-}
-
-/* Large desktops (1440px and above) */
-@media (min-width: 1440px) {
-    .bt-img {
-        width: 110px;
-        height: 73px;
-    }
-}
-
-/* Laptops (1024px to 1439px) */
-@media (min-width: 1024px) and (max-width: 1439px) {
-    .bt-img {
-        width: 90px;
-        height: 60px;
-    }
-}
-
-/* Tablets (768px to 1023px) */
-@media (min-width: 768px) and (max-width: 1023px) {
-    .bt-img {
-        width: 75px;
-        height: 50px;
-    }
-}
-
-/* Large phones (481px to 767px) */
-@media (min-width: 481px) and (max-width: 767px) {
-    .bt-img {
-        width: 65px;
-        height: 43px;
-    }
-}
-
-/* Medium phones (376px to 480px) */
-@media (min-width: 376px) and (max-width: 480px) {
-    .bt-img {
-        width: 60px;
-        height: 40px;
-    }
-}
-
-/* Small phones (320px to 375px) */
-@media (min-width: 320px) and (max-width: 375px) {
-    .bt-img {
-        width: 55px;
-        height: 37px;
-    }
-}
-
-/* Extra small phones (below 320px) */
-@media (max-width: 319px) {
-    .bt-img {
-        width: 50px;
-        height: 33px;
-    }
-}
-
-/* For iPhone SE (1st gen - 320x568) and similar small phones */
-@media (max-width: 320px) and (max-height: 570px) {
-    .bt-img {
-        width: 45px;
-        height: 30px;
-    }
-    
-    /* Optional: Adjust spacing for very small screens */
-    .uk-slideshow-nav.uk-thumbnav.uk-flex-center {
-        gap: 8px !important;
-    }
-    
-    /* Optional: Reduce padding in container */
-    .uk-padding-small {
-        padding: 8px !important;
-    }
-}
-
-/* For iPhone SE (2nd gen - 375x667) */
-@media (min-width: 321px) and (max-width: 376px) and (max-height: 670px) {
-    .bt-img {
-        width: 50px;
-        height: 33px;
-    }
-}
-
-/* Specific for iPhone SE in portrait */
-@media (width: 320px) and (height: 568px) {
-    .bt-img {
-        width: 45px;
-        height: 30px;
-    }
-}
-
-@media (width: 375px) and (height: 667px) {
-    .bt-img {
-        width: 50px;
-        height: 33px;
-    }
-}
-
-/* iPhone SE landscape (when rotated) */
-@media (max-height: 320px) and (orientation: landscape) {
-    .bt-img {
-        width: 40px;
-        height: 27px;
-    }
-    
-    /* Stack thumbnails vertically in landscape on very small screens */
-    .uk-slideshow-nav.uk-thumbnav.uk-flex-center {
-        flex-direction: column !important;
-        gap: 6px !important;
-    }
-}
-
-/* Region Modal Specific Styles */
+/* Region Modal Specific Styles - ALL CLASSES PRESERVED */
 .modal-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -483,11 +376,13 @@
     gap: 20px;
 }
 
-.location-list, .capacity-list {
+.location-list,
+.capacity-list {
     margin-top: 15px;
 }
 
-.location-item, .capacity-item {
+.location-item,
+.capacity-item {
     padding: 10px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     display: flex;
@@ -495,7 +390,8 @@
     gap: 4px;
 }
 
-.location-item:last-child, .capacity-item:last-child {
+.location-item:last-child,
+.capacity-item:last-child {
     border-bottom: none;
 }
 
@@ -522,7 +418,7 @@
 }
 
 .capacity-item strong {
-    color: #4ade80; /* Green for capacities */
+    color: #4ade80;
     font-size: 0.9rem;
     min-width: 80px;
     text-align: right;
@@ -554,11 +450,10 @@
 }
 
 .total-capacity strong {
-    color: #fff; /* Blue for total */
+    color: #fff;
     font-size: 1.1rem;
 }
 
-/* Scrollable content for long lists */
 .glass-card .card-content {
     max-height: 400px;
     overflow-y: auto;
@@ -579,7 +474,7 @@
     border-radius: 3px;
 }
 
-/* Region Tabs Styles */
+/* Region Tabs Styles - ALL CLASSES PRESERVED */
 .region-tabs {
     margin-top: 15px;
 }
@@ -593,16 +488,16 @@
 }
 
 .tab-nav li {
-    margin: 0 !important;
+    margin: 0;
 }
 
 .tab-nav li a {
-    background: rgba(255, 255, 255, 0.05) !important;
+    background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    border-radius: 12px !important;
-    padding: 12px 24px !important;
-    color: rgba(255, 255, 255, 0.7) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 12px 24px;
+    color: rgba(255, 255, 255, 0.7);
     font-weight: 500;
     transition: all 0.3s ease;
     text-transform: uppercase;
@@ -611,14 +506,14 @@
 }
 
 .tab-nav li.uk-active a {
-    background: rgba(255, 255, 255, 0.12) !important;
-    border-color: rgba(255, 255, 255, 0.2) !important;
-    color: rgba(255, 255, 255, 0.95) !important;
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.95);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .tab-nav li a:hover {
-    background: rgba(255, 255, 255, 0.08) !important;
+    background: rgba(255, 255, 255, 0.08);
     transform: translateY(-1px);
 }
 
@@ -642,14 +537,46 @@
     }
 }
 
-/* Mobile adjustments for tabs */
+/* Additional responsive adjustments */
 @media (max-width: 767px) {
+    .glassmorphic-modal {
+        padding: 20px;
+        margin: 15px;
+    }
+    
+    .modal-title {
+        font-size: 1.8rem;
+    }
+    
+    .card-value {
+        font-size: 1.5rem;
+    }
+    
+    .tech-badges {
+        justify-content: center;
+    }
+    
+    .capacity-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+    
+    .capacity-item strong {
+        text-align: left;
+        width: 100%;
+    }
+    
+    .glass-card .card-content {
+        max-height: 300px;
+    }
+    
     .tab-nav {
         gap: 6px;
     }
     
     .tab-nav li a {
-        padding: 10px 16px !important;
+        padding: 10px 16px;
         font-size: 0.8rem;
     }
     
@@ -668,23 +595,5 @@
     .tab-nav li a {
         text-align: center;
         width: 100%;
-    }
-}
-
-/* Mobile adjustments */
-@media (max-width: 767px) {
-    .capacity-item {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 4px;
-    }
-    
-    .capacity-item strong {
-        text-align: left;
-        width: 100%;
-    }
-    
-    .glass-card .card-content {
-        max-height: 300px;
     }
 }
