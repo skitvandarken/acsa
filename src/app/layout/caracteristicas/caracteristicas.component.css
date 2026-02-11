@@ -44,6 +44,13 @@
     color: white !important;
 }
 
+.caida-link{
+    color: #ffffff6f;
+    transition: color 0.2s ease-in-out;
+}
+.caida-link:hover {
+    color: #28C1FD;
+}
 
 .linha {
     line-height: 25px;

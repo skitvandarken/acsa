@@ -1,285 +1,690 @@
-.uk-button-primary {
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-    /* Subtle shadow effect */
-    background: linear-gradient(125deg, rgb(0, 44, 110), rgba(0, 97, 187, 1), rgb(0, 63, 122)) !important;
-    color: #ffffff;
-    /* Ensure text is visible on the gradient */
-    border: none;
-    /* Remove any default border */
-    padding: 10px 20px;
-    /* Add padding for better appearance */
-    transition: all 0.3s ease-in-out;
-    /* Smooth transition for hover effects */
-}
-
-.uk-button-primary:hover {
-    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.4);
-    /* Stronger shadow on hover */
-    color: #e6f7ff;
-    /* Slightly lighter text color on hover */
-    cursor: pointer !important;
-
-}
-
-.video-mapa {
-    width: 100%;
-    height: auto;
-    min-height: 300px;
-    background: #000;
-    object-fit: cover;
-    pointer-events: none;
-    filter: brightness(40%); /* quanto menor o valor, mais escuro */
-}
-
-.video-mapa2 {
-    width: 100%;
-    height: auto;
-    min-height: 300px;
-    background: #000;
-    object-fit: cover;
-    pointer-events: none;
+/* Add these styles to your existing slider.component.css */
+/* Limita a altura do contêiner de slides */
+.uk-slideshow-items {
+    max-height: 650px !important; /* Ajuste para a altura desejada */
 }
 
 
+/* Add box shadow to active thumbnail button */
+.uk-slideshow-nav .uk-active a .bt-img {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
 
-.uk-button {
-    z-index: 2000;
-    /* Ensure the button is on top */
+/* Optional: Add hover effect */
+.uk-slideshow-nav li a .bt-img:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+}
+
+/* Modern neon-inspired overlay */
+.uk-overlay {
+    padding: 20px 25px;
+    border-radius: 20px;
+    opacity: 0.85 !important;
+    background: rgba(0, 0, 0, 0.85) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateZ(0);
+    /* Center the overlay content */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* Neon glow effect on hover */
+.uk-overlay:hover {
+    opacity: 1 !important;
+    background: rgba(0, 0, 0, 0.9) !important;
+    border: 1px solid rgba(40, 193, 253, 0.6);
+    box-shadow: 
+        0 0 20px rgba(40, 193, 253, 0.4),
+        0 0 40px rgba(40, 193, 253, 0.2),
+        0 8px 32px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px) translateZ(0);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Search icon neon effects */
+.uk-overlay [uk-icon="search"] {
+    color: #fff !important;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Ensure icon is properly sized */
+    width: 30px !important;
+    height: 30px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.uk-overlay:hover [uk-icon="search"] {
+    color: #28c1fd !important;
+    filter: 
+        drop-shadow(0 0 10px rgba(40, 193, 253, 0.8))
+        drop-shadow(0 0 20px rgba(40, 193, 253, 0.4));
+    transform: scale(1.1) rotate(5deg);
+    animation: searchPulse 2s infinite;
+}
+
+/* Pulse animation for search icon */
+@keyframes searchPulse {
+    0%, 100% {
+        filter: 
+            drop-shadow(0 0 10px rgba(40, 193, 253, 0.8))
+            drop-shadow(0 0 20px rgba(40, 193, 253, 0.4));
+    }
+    50% {
+        filter: 
+            drop-shadow(0 0 15px rgba(40, 193, 253, 1))
+            drop-shadow(0 0 30px rgba(40, 193, 253, 0.6));
+    }
+}
+
+/* Optional: Add a subtle glow to the overlay container */
+.uk-overlay::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 22px;
+    background: linear-gradient(45deg, 
+        rgba(40, 193, 253, 0.1), 
+        rgba(255, 255, 255, 0.05), 
+        rgba(40, 193, 253, 0.1));
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.uk-overlay:hover::before {
+    opacity: 1;
+}
+
+/* For mobile devices, reduce effects and ensure proper centering */
+@media (max-width: 640px) {
+    .uk-overlay {
+        padding: 15px 20px;
+        backdrop-filter: blur(5px);
+        /* Ensure centering on mobile */
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    .uk-overlay:hover {
+        transform: translateY(-1px);
+    }
+    
+    .uk-overlay [uk-icon="search"] {
+        width: 25px !important;
+        height: 25px !important;
+    }
+}
+
+.bt-img {
+    width: 90px;
+    height: 58px;
+    border-radius: 5px;
+}
+
+/* Glassmorphic Modal Styles */
+.glassmorphic-modal {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
     position: relative;
-    /* Establish stacking context */
+    overflow: hidden;
 }
 
-.teste {
-    background-color: #000;
+.glassmorphic-modal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.3), 
+        transparent);
 }
 
-
-
-
-/* Text container – consistent centering */
-.uk-slideshow-items .uk-text-center {
-    max-width: 700px;
-    margin: 10 auto;
-    padding: 0 20px;
+.modal-header {
     text-align: center;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+    margin-bottom: 30px;
 }
 
-/* Titles & text – smoother scaling */
-.uk-slideshow-items .hero-title {
-    font-size: clamp(1.2rem, 4vw, 2.5rem);
-    /* smaller minimum */
-    font-weight: 800;
-    color: white;
-    margin-bottom: 12px;
-    padding-left: 12px 12px;
-    margin: 12px 12px;
-    line-height: 1.2;
-
-}
-
-.uk-slideshow-items .hero-subtitle {
-    font-size: clamp(1.80rem, 2.8vw, 1.4rem);
-    color: white;
-    margin-bottom: 8px;
-    line-height: 1.25;
-
-}
-
-.uk-slideshow-items .hero-desc {
-    font-size: clamp(0.85rem, 2.5vw, 1.1rem);
-    color: #f1f1f1;
-    line-height: 1.3;
-    margin-bottom: 10px;
-}
-
-/* Button container */
-.uk-slideshow-items .uk-flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    /* equal gap */
-    flex-wrap: wrap;
-    margin: 20px auto 0;
-    max-width: 100%;
-    padding: 0;
-}
-
-/* Button styles */
-.uk-slideshow-items .uk-button {
-    font-size: 1rem;
-    padding: 10px 30px;
-    border-radius: 50px;
-    background-color: #FAA61A;
-    color: #002561;
+.modal-title {
+    font-size: 2rem;
     font-weight: 700;
-    min-width: 180px;
-    text-align: center;
-    white-space: nowrap;
+    background: linear-gradient(135deg, #fff 0%, #fff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.modal-subtitle {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    margin-top: 8px;
+    letter-spacing: 0.5px;
+}
+
+.modal-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 640px) {
+    .modal-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Glass Cards */
+.glass-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.glass-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.2), 
+        transparent);
+}
+
+.glass-card:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 
+        0 10px 40px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.card-icon {
+    width: 56px;
+    height: 56px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-icon svg {
+    width: 24px;
+    height: 24px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.card-content h4 {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+.card-value {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+    background: linear-gradient(135deg, #fff 0%, #fff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 1px;
+}
+
+.tech-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.tech-badge {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 8px 16px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
     transition: all 0.2s ease;
 }
 
-.uk-slideshow-items .uk-button:hover {
-    background-color: #ffb84d;
-    transform: scale(1.05);
+.tech-badge:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-1px);
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Remove UIkit auto margins */
-.uk-slideshow-items .uk-flex-center>a {
+/* Modal background overlay */
+.uk-modal-body {
+    background: radial-gradient(ellipse at center, 
+        rgba(30, 30, 60, 0.9) 0%,
+        rgba(10, 10, 30, 0.95) 100%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .glassmorphic-modal {
+        padding: 20px;
+        margin: 15px;
+    }
+    
+    .modal-title {
+        font-size: 1.8rem;
+    }
+    
+    .card-value {
+        font-size: 1.5rem;
+    }
+    
+    .tech-badges {
+        justify-content: center;
+    }
+}
+
+/* Animation for modal entrance */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.glassmorphic-modal {
+    animation: modalFadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Default/Desktop */
+.bt-img {
+    width: 100px;
+    height: 67px;
+}
+
+.uk-tab>*{
+    padding-left: 0px;
+}
+
+/* Large desktops (1440px and above) */
+@media (min-width: 1440px) {
+    .bt-img {
+        width: 110px;
+        height: 73px;
+    }
+}
+
+/* Laptops (1024px to 1439px) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .bt-img {
+        width: 90px;
+        height: 60px;
+    }
+}
+
+/* Tablets (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .bt-img {
+        width: 75px;
+        height: 50px;
+    }
+}
+
+/* Large phones (481px to 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+    .bt-img {
+        width: 65px;
+        height: 43px;
+    }
+}
+
+/* Medium phones (376px to 480px) */
+@media (min-width: 376px) and (max-width: 480px) {
+    .bt-img {
+        width: 60px;
+        height: 40px;
+    }
+}
+
+/* Small phones (320px to 375px) */
+@media (min-width: 320px) and (max-width: 375px) {
+    .bt-img {
+        width: 55px;
+        height: 37px;
+    }
+}
+
+/* Extra small phones (below 320px) */
+@media (max-width: 319px) {
+    .bt-img {
+        width: 50px;
+        height: 33px;
+    }
+}
+
+/* For iPhone SE (1st gen - 320x568) and similar small phones */
+@media (max-width: 320px) and (max-height: 570px) {
+    .bt-img {
+        width: 45px;
+        height: 30px;
+    }
+    
+    /* Optional: Adjust spacing for very small screens */
+    .uk-slideshow-nav.uk-thumbnav.uk-flex-center {
+        gap: 8px !important;
+    }
+    
+    /* Optional: Reduce padding in container */
+    .uk-padding-small {
+        padding: 8px !important;
+    }
+}
+
+/* For iPhone SE (2nd gen - 375x667) */
+@media (min-width: 321px) and (max-width: 376px) and (max-height: 670px) {
+    .bt-img {
+        width: 50px;
+        height: 33px;
+    }
+}
+
+/* Specific for iPhone SE in portrait */
+@media (width: 320px) and (height: 568px) {
+    .bt-img {
+        width: 45px;
+        height: 30px;
+    }
+}
+
+@media (width: 375px) and (height: 667px) {
+    .bt-img {
+        width: 50px;
+        height: 33px;
+    }
+}
+
+/* iPhone SE landscape (when rotated) */
+@media (max-height: 320px) and (orientation: landscape) {
+    .bt-img {
+        width: 40px;
+        height: 27px;
+    }
+    
+    /* Stack thumbnails vertically in landscape on very small screens */
+    .uk-slideshow-nav.uk-thumbnav.uk-flex-center {
+        flex-direction: column !important;
+        gap: 6px !important;
+    }
+}
+
+/* Region Modal Specific Styles */
+.modal-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .modal-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.modal-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.location-list, .capacity-list {
+    margin-top: 15px;
+}
+
+.location-item, .capacity-item {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.location-item:last-child, .capacity-item:last-child {
+    border-bottom: none;
+}
+
+.location-item strong {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+}
+
+.location-item span {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.85rem;
+}
+
+.capacity-item {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.capacity-item span {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    flex: 1;
+}
+
+.capacity-item strong {
+    color: #4ade80; /* Green for capacities */
+    font-size: 0.9rem;
+    min-width: 80px;
+    text-align: right;
+}
+
+.capacity-subtitle {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.capacity-subtitle:first-child {
+    margin-top: 0;
+}
+
+.total-capacity {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+}
+
+.total-capacity strong {
+    color: #fff; /* Blue for total */
+    font-size: 1.1rem;
+}
+
+/* Scrollable content for long lists */
+.glass-card .card-content {
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.glass-card .card-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.glass-card .card-content::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 3px;
+}
+
+.glass-card .card-content::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+}
+
+/* Region Tabs Styles */
+.region-tabs {
+    margin-top: 15px;
+}
+
+.tab-nav {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.tab-nav li {
     margin: 0 !important;
 }
 
-.uk-slideshow-items > div {
-    background-color: #000; /* fallback while video loads */
+.tab-nav li a {
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 12px !important;
+    padding: 12px 24px !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+.tab-nav li.uk-active a {
+    background: rgba(255, 255, 255, 0.12) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    color: rgba(255, 255, 255, 0.95) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.tab-nav li a:hover {
+    background: rgba(255, 255, 255, 0.08) !important;
+    transform: translateY(-1px);
+}
+
+.tab-content {
+    position: relative;
+    min-height: 400px;
+}
+
+.tab-pane {
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile adjustments for tabs */
+@media (max-width: 767px) {
+    .tab-nav {
+        gap: 6px;
+    }
+    
+    .tab-nav li a {
+        padding: 10px 16px !important;
+        font-size: 0.8rem;
+    }
+    
+    .tab-content {
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tab-nav {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+    
+    .tab-nav li a {
+        text-align: center;
+        width: 100%;
+    }
 }
 
 /* Mobile adjustments */
-@media (max-width: 768px) {
-
-  .uk-slideshow-items .hero-subtitle {
-    font-size: 1rem;
-
-
-}
-
-    .logo-freeze{
-
-        height: 100px;
-        width: auto;
-
-    }
-
-    .uk-slideshow-items .uk-flex-center {
+@media (max-width: 767px) {
+    .capacity-item {
         flex-direction: column;
-        /* stack vertically */
-        gap: 12px;
+        align-items: flex-start;
+        gap: 4px;
     }
-
-    .uk-slideshow-items .uk-button {
-        font-size: 0.9rem !important;
-        /* smaller buttons */
-        min-width: 160px;
-        padding: 4px 10px !important;
+    
+    .capacity-item strong {
+        text-align: left;
+        width: 100%;
     }
-
-
-    .hero-title {
-        max-width: 400px;
-        line-height: 1;
-
-    }
-
-    .uk-slideshow-items .uk-button {
-        font-size: 1rem;
-        padding: 5px 10px;
-        border-radius: 50px;
-        background-color: #FAA61A;
-        color: #002561;
-        font-weight: 700;
-        min-width: 180px;
-        text-align: center;
-        white-space: nowrap;
-        transition: all 0.2s ease;
-    }
-
-}
-
-/* Large screen adjustments */
-@media (min-width: 1920px) {
-
-    .hero-title {
-        font-size: 3.2rem !important; /* maior tamanho para telas grandes */
-        max-width: 1270px; /* opcional: limite de largura */
-        line-height: 1.2;
-    }
-
-    .uk-slideshow-items .uk-button {
-        font-size: 1rem; /* botões maiores */
-        min-width: 220px;
-        padding: 12px 35px;
-        border-radius: 60px;
-    }
-}
-
-
-
-
-
-
-
-/* Mobile overrides */
-@media (max-width: 768px) {
-    .uk-slideshow-items .hero-title {
-        font-size: 1.1rem;
-        /* smaller heading */
-        line-height: 1.75;
-        /* tighter spacing */
-    }
-
-    .uk-slideshow-items .hero-subtitle {
-        font-size: 0.9rem;
-        line-height: 1.5;
-    }
-
-    .uk-slideshow-items .hero-desc {
-        font-size: 1rem;
-        line-height: 1.2;
-    }
-}
-
-/* iPad Air – Portrait & Landscape (820px width breakpoint) */
-@media (min-width: 768px) and (max-width: 900px) {
-
-    /* Adjust titles */
-    .uk-slideshow-items .hero-title {
-        font-size: 2rem;            /* good readable scale */
-        max-width: 700px;
-        line-height: 1.25;
-        margin-bottom: 12px;
-    }
-
-    .uk-slideshow-items .hero-subtitle {
-        font-size: 1.2rem;
-        line-height: 1.3;
-    }
-
-    .uk-slideshow-items .hero-desc {
-        font-size: 1rem;
-        line-height: 1.35;
-        max-width: 650px;
-        margin: 0 auto;
-    }
-
-    /* Buttons */
-    .uk-slideshow-items .uk-button {
-        font-size: 1rem;
-        padding: 10px 28px;
-        min-width: 180px;
-        border-radius: 45px;
-    }
-
-    .uk-slideshow-items .uk-flex-center {
-        gap: 18px;
-        flex-wrap: wrap;
-    }
-
-    /* Video */
-    .video-mapa,
-    .video-mapa2 {
-        min-height: 380px; /* slightly taller for iPad layout */
-        filter: brightness(45%);
-    }
-
-    /* Centering block */
-    .uk-slideshow-items .uk-text-center {
-        max-width: 760px;
-    }
-
-    /* Freeze logo if used */
-    .logo-freeze {
-        height: 140px;
-        width: auto;
+    
+    .glass-card .card-content {
+        max-height: 300px;
     }
 }

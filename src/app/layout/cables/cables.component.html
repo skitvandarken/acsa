@@ -1,0 +1,84 @@
+<div class="container">
+  <header>
+    <div>
+      <h1>Angola Cables Global Network</h1>
+      <p>Visualizing submarine cable infrastructure connecting Africa to the world</p>
+    </div>
+  </header>
+
+  <div class="main-content">
+    <div id="map" #mapContainer></div>
+
+    <div class="sidebar">
+      <!-- Cable list card -->
+      <div class="card">
+        <div class="card-header">
+          <h2><i class="fas fa-network-wired"></i> Cable Systems</h2>
+          <button class="toggle-all-btn" (click)="toggleAll()">
+            {{ allVisible() ? 'Hide All' : 'Show All' }}
+          </button>
+        </div>
+
+        <div class="cable-list">
+          @for (cable of cables(); track cable.id) {
+            <div class="cable-item"
+                 [class.active]="cable.visible"
+                 [style.--cable-color]="cable.color"
+                 (click)="selectCable(cable.id)">
+              <div class="cable-info">
+                <div class="cable-color-dot" [style.backgroundColor]="cable.color"></div>
+                <span>{{ cable.name }}</span>
+              </div>
+
+              <div class="toggle-switch"
+                   [class.active]="cable.visible"
+                   (click)="$event.stopPropagation(); toggleCable(cable.id)">
+                <div class="toggle-knob"></div>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+
+      <!-- Details card -->
+      <div class="card details-card">
+        <div class="card-header">
+          <h2><i class="fas fa-info-circle"></i> Cable Details</h2>
+          <div class="active-cable-name" [style.color]="selectedCable()?.color">
+            {{ selectedCable()?.fullName || 'Select a cable' }}
+          </div>
+        </div>
+
+        <div class="details-content">
+          @if (selectedCable(); as cable) {
+            <div class="cable-detail">
+              <p class="description">{{ cable.description }}</p>
+
+              <ul class="info-list">
+                <li><span>Length:</span> {{ cable.length }}</li>
+                <li><span>Ownership:</span> {{ cable.owners }}</li>
+                <li><span>RFS:</span> {{ cable.rfs }}</li>
+                <li><span>Capacity:</span> {{ cable.capacity }}</li>
+              </ul>
+
+              <div class="landing-section">
+                <div class="section-title">Landing Points</div>
+                <div class="landing-points">
+                  @for (point of cable.landingPoints; track point.name) {
+                    <span class="point-tag" [style.borderColor]="cable.color + '60'">
+                      {{ point.name }}
+                    </span>
+                  }
+                </div>
+              </div>
+            </div>
+          } @else {
+            <div class="no-selection">
+              Click on a cable to view detailed information
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

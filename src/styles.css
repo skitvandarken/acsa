@@ -9,6 +9,13 @@ body, a, p, h1, h2, h3, h4, li, ul {
     padding: 0;
 }   
 
+@import "leaflet/dist/leaflet.css";
+
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+}
+
 
 .border {
     border-radius: 30px;

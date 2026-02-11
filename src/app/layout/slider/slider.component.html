@@ -1,3 +1,598 @@
+<div style="margin-top:47px" class="uk-position-relative"
+    uk-slideshow="animation: fade; autoplay: false; autoplay-interval: 3000; pause-on-hover: false; video-autoplay: true; min-height: 300; max-height: 100%;">
+
+    <div style="border: 0px 0px 15px 15px" class="uk-slideshow-items">
+        <!-- Slide 0 - GLOBAL -->
+        <div class="">
+            <img src="img/mapas/mapasite-GLOBAL.png" width="1800" height="1200" alt="" uk-cover>
+      <!--  <div class="uk-overlay uk-overlay-primary uk-position-center">
+                <a uk-icon="search" href="#modal-global-network" uk-toggle></a>
+            </div> --> 
+        </div>
+
+        <div>
+            <img src="img/mapas/mapa-site-MONET.png" alt="" uk-cover>
+            <!-- Remove inline style from here -->
+          <!--  <div class="uk-overlay uk-overlay-primary uk-position-center">
+                <a uk-icon="search" href="#modal-monet" uk-toggle></a>
+            </div>-->
+        </div>
+        <div class="">
+            <img src="img/mapas/mapa-site-SACS.png" alt="" uk-cover>
+            <!-- Remove inline style from here 
+            <div class="uk-overlay uk-overlay-primary uk-position-center">
+                <a uk-icon="search" href="#modal-sacs" uk-toggle></a>
+            </div>-->
+        </div>
+        <div>
+            <img src="img/mapas/mapa-site-WACS.png" alt="" uk-cover>
+            <!-- Remove inline style from here 
+            <div class="uk-overlay uk-overlay-primary uk-position-center">
+                <a uk-icon="search" href="#modal-wacs" uk-toggle></a>
+            </div>-->
+        </div>
+    </div>
+
+   <!-- Modal - MONET -->
+<div id="modal-monet" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical" style="max-width: 800px; background: transparent;">
+        <button class="uk-modal-close-default" type="button" uk-close style="color: white; background: rgba(0,0,0,0.5); border-radius: 50%; padding: 8px;"></button>
+        
+        <div class="glassmorphic-modal">
+            <!-- Header -->
+            <div class="modal-header">
+                <h3 class="modal-title">{{ 'MONET' | translate }}</h3>
+                <p class="modal-subtitle">{{ 'FIBER_NETWORK' | translate }}</p>
+            </div>
+            
+            <!-- Content -->
+            <div class="modal-content">
+                <!-- Fiber Card -->
+                <div class="glass-card">
+                    <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="card-content">
+                        <h4>{{ 'FIBER_CONFIGURATION' | translate }}</h4>
+                        <p class="card-value">{{ 'MONET_FIBER' | translate }}</p>
+                    </div>
+                </div>
+                
+                <!-- Technologies Card -->
+                <div class="glass-card">
+                    <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 4V20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="card-content">
+                        <h4>{{ 'TECHNOLOGIES' | translate }}</h4>
+                        <div class="tech-badges">
+                            <span class="tech-badge">{{ 'SDH' | translate }}</span>
+                            <span class="tech-badge">{{ 'EOSDH' | translate }}</span>
+                            <span class="tech-badge">{{ 'ETHERNET' | translate }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal - Global -->
+ <!-- Modal - GLOBAL NETWORK -->
+<div id="modal-global-network" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical" style="max-width: 1000px; background: transparent;">
+        <button class="uk-modal-close-default" type="button" uk-close style="color: white; background: rgba(0,0,0,0.5); border-radius: 50%; padding: 8px;"></button>
+        
+        <div class="glassmorphic-modal">
+            <!-- Header -->
+            <div class="modal-header">
+                <h3 class="modal-title">{{ 'GLOBAL_NETWORK_TITLE' | translate }}</h3>
+                <p class="modal-subtitle">{{ 'GLOBAL_DATA_CENTERS' | translate }} & {{ 'BACKHAUL_CAPACITIES' | translate }}</p>
+            </div>
+            
+            <!-- Region Tabs -->
+            <div class="region-tabs">
+                <ul class="tab-nav" uk-tab>
+                    <li class="uk-active"><a href="#">{{ 'USA_TITLE' | translate }}</a></li>
+                    <li><a href="#">{{ 'BRAZIL_TITLE' | translate }}</a></li>
+                    <li><a href="#">{{ 'EUROPE_TITLE' | translate }}</a></li>
+                    <li><a href="#">{{ 'AFRICA_TITLE' | translate }}</a></li>
+                </ul>
+                
+                <ul class="uk-switcher tab-content uk-margin-small-top">
+                    <!-- USA Tab -->
+                    <li class="tab-pane active">
+                        <div class="modal-grid">
+                            <!-- Data Centers Column -->
+                            <div class="modal-column">
+                                <div class="glass-card">
+                                    <div class="card-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 21V5C19 3.89543 18.1046 3 17 3H7C5.89543 3 5 3.89543 5 5V21M19 21H5M19 21H21M5 21H3M9 7H10M9 11H10M14 7H15M14 11H15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                            <rect x="8" y="15" width="8" height="4" rx="1" stroke="currentColor" stroke-width="2"/>
+                                        </svg>
+                                    </div>
+                                    <div class="card-content">
+                                        <h4>{{ 'DATA_CENTERS' | translate }}</h4>
+                                        <div class="location-list">
+                                            <div class="location-item">
+                                                <strong>Miami</strong>
+                                                <span>Equinix MIA1 & Equinix MIA3</span>
+                                            </div>
+                                            <div class="location-item">
+                                                <strong>New York</strong>
+                                                <span>Digital Realty NYC1</span>
+                                            </div>
+                                            <div class="location-item">
+                                                <strong>Los Angeles</strong>
+                                                <span>CoreSite LA1</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Backhaul Capacities Column -->
+                            <div class="modal-column">
+                                <div class="glass-card">
+                                    <div class="card-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2"/>
+                                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2"/>
+                                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2"/>
+                                        </svg>
+                                    </div>
+                                    <div class="card-content">
+                                        <h4>{{ 'BACKHAUL_CAPACITIES' | translate }}</h4>
+                                        <div class="capacity-list">
+                                            <div class="capacity-item">
+                                                <span>New York - Miami MI1</span>
+                                                <strong>300 Gbps</strong>
+                                            </div>
+                                            <div class="capacity-item">
+                                                <span>New York - Miami MI3</span>
+                                                <strong>200 Gbps</strong>
+                                            </div>
+                                            <div class="capacity-item">
+                                                <span>Miami MI1 - Miami MI3</span>
+                                                <strong>200 Gbps</strong>
+                                            </div>
+                                            <div class="capacity-item">
+                                                <span>New York - Los Angeles</span>
+                                                <strong>100 Gbps</strong>
+                                            </div>
+                                            <div class="capacity-item">
+                                                <span>Los Angeles - Miami MI3</span>
+                                                <strong>100 Gbps</strong>
+                                            </div>
+                                        </div>
+                                        <div class="total-capacity">
+                                            {{ 'TOTAL_BACKBONE' | translate }}: <strong>3.6 Tbps</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <!-- BRAZIL Tab -->
+                    <li class="tab-pane">
+                        <div class="modal-grid">
+                            <!-- Data Centers Column -->
+                            <div class="modal-column">
+                                <div class="glass-card">
+                                    <div class="card-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 21V5C19 3.89543 18.1046 3 17 3H7C5.89543 3 5 3.89543 5 5V21M19 21H5M19 21H21M5 21H3M9 7H10M9 11H10M14 7H15M14 11H15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                            <rect x="8" y="15" width="8" height="4" rx="1" stroke="currentColor" stroke-width="2"/>
+                                        </svg>
+                                    </div>
+                                    <div class="card-content">
+                                        <h4>{{ 'DATA_CENTERS' | translate }}</h4>
+                                        <div class="location-list">
+                                            <div class="location-item">
+                                                <strong>Fortaleza</strong>
+                                                <span>AngoNAP, Ascenty, V.TAL</span>
+                                            </div>
+                                            <div class="location-item">
+                                                <strong>São Paulo</strong>
+                                                <span>Ascenty SP2, Equinix SP2, SP3, SP4</span>
+                                            </div>
+                                            <div class="location-item">
+                                                <strong>Brasília</strong>
+                                                <span>Elea, BSB2</span>
+                                            </div>
+                                            <div class="location-item">
+                                                <strong>Belo Horizonte</strong>
+                                                <span>Sempre Telecom, CENTURY, SONDA</span>
+                                            </div>
+                                            <div class="location-item">
+                                                <strong>Rio de Janeiro</strong>
+                                                <span>Equinix RJ2</span>
+                                            </div>
+                                            <div class="location-item">
+                                                <strong>Goiânia</strong>
+                                                <span>Telgo, Telecom</span>
+                                            </div>
+                                            <div class="location-item">
+                                                <strong>Cuiabá</strong>
+                                                <span>Avato</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Backhaul Capacities Column -->
+                            <div class="modal-column">
+                                <div class="glass-card">
+                                    <div class="card-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2"/>
+                                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2"/>
+                                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2"/>
+                                        </svg>
+                                    </div>
+                                    <div class="card-content">
+                                        <h4>{{ 'BACKHAUL_CAPACITIES' | translate }}</h4>
+                                        <div class="capacity-list">
+                                            <div class="capacity-item">
+                                                <span>Cuiabá - Brasília</span>
+                                                <strong>100 Gbps</strong>
+                                            </div>
+                                            <div class="capacity-item">
+                                                <span>Cuiabá - Goiânia</span>
+                                                <strong>400 Gbps</strong>
+                                            </div>
+                                            <div class="capacity-item">
+                                                <span>Cuiabá - São Paulo</span>
+                                                <strong>100 Gbps</strong>
+                                            </div>
+                                            <div class="capacity-item">
+                                                <span>Goiânia - São Paulo</span>
+                                                <strong>100 Gbps</strong>
+                                            </div>
+                                            <div class="capacity-item">
+                                                <span>Goiânia - Brasília</span>
+                                                <strong>100 Gbps</strong>
+                                            </div>
+                                            <div class="capacity-item">
+                                                <span>Brasília - São Paulo</span>
+                                                <strong>200 Gbps</strong>
+                                            </div>
+                                            <div class="capacity-item">
+                                                <span>São Paulo - Rio de Janeiro</span>
+                                                <strong>200 Gbps</strong>
+                                            </div>
+                                            <div class="capacity-item">
+                                                <span>São Paulo - Belo Horizonte</span>
+                                                <strong>100 Gbps</strong>
+                                            </div>
+                                            <div class="capacity-item">
+                                                <span>Belo Horizonte - Rio de Janeiro</span>
+                                                <strong>100 Gbps</strong>
+                                            </div>
+                                        </div>
+                                        <div class="total-capacity">
+                                            {{ 'TOTAL_BACKBONE' | translate }}: <strong>3.6 Tbps</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <!-- EUROPE Tab -->
+                    <li class="tab-pane">
+                        <div class="modal-grid">
+                            <!-- Data Centers Column -->
+                            <div class="modal-column">
+                                <div class="glass-card">
+                                    <div class="card-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 21V5C19 3.89543 18.1046 3 17 3H7C5.89543 3 5 3.89543 5 5V21M19 21H5M19 21H21M5 21H3M9 7H10M9 11H10M14 7H15M14 11H15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                            <rect x="8" y="15" width="8" height="4" rx="1" stroke="currentColor" stroke-width="2"/>
+                                        </svg>
+                                    </div>
+                                    <div class="card-content">
+                                        <h4>{{ 'DATA_CENTERS' | translate }}</h4>
+                                        <div class="location-list">
+                                            <div class="location-item">
+                                                <strong>Lisbon</strong>
+                                                <span>Equinix LS1</span>
+                                            </div>
+                                            <div class="location-item">
+                                                <strong>London</strong>
+                                                <span>Equinix LD8, Digital Realty LON1</span>
+                                            </div>
+                                            <div class="location-item">
+                                                <strong>Marseille</strong>
+                                                <span>Digital Realty MRS1</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Backhaul Capacities Column -->
+                            <div class="modal-column">
+                                <div class="glass-card">
+                                    <div class="card-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2"/>
+                                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2"/>
+                                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2"/>
+                                        </svg>
+                                    </div>
+                                    <div class="card-content">
+                                        <h4>{{ 'BACKHAUL_CAPACITIES' | translate }}</h4>
+                                        <div class="capacity-list">
+                                            <div class="capacity-item">
+                                                <span>London - Lisbon</span>
+                                                <strong>200 Gbps</strong>
+                                            </div>
+                                            <div class="capacity-item">
+                                                <span>London - Marseille</span>
+                                                <strong>100 Gbps</strong>
+                                            </div>
+                                            <div class="capacity-item">
+                                                <span>Lisbon - Marseille</span>
+                                                <strong>100 Gbps</strong>
+                                            </div>
+                                        </div>
+                                        <div class="total-capacity">
+                                            {{ 'TOTAL_BACKBONE' | translate }}: <strong>3.6 Tbps</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <!-- AFRICA Tab -->
+                    <li class="tab-pane">
+                        <div class="modal-grid">
+                            <!-- Data Centers Column -->
+                            <div class="modal-column">
+                                <div class="glass-card">
+                                    <div class="card-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 21V5C19 3.89543 18.1046 3 17 3H7C5.89543 3 5 3.89543 5 5V21M19 21H5M19 21H21M5 21H3M9 7H10M9 11H10M14 7H15M14 11H15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                            <rect x="8" y="15" width="8" height="4" rx="1" stroke="currentColor" stroke-width="2"/>
+                                        </svg>
+                                    </div>
+                                    <div class="card-content">
+                                        <h4>{{ 'DATA_CENTERS' | translate }}</h4>
+                                        <div class="location-list">
+                                            <div class="location-item">
+                                                <strong>Luanda</strong>
+                                                <span>Teraco CT1</span>
+                                            </div>
+                                            <div class="location-item">
+                                                <strong>Cape Town</strong>
+                                                <span>Teraco CT1</span>
+                                            </div>
+                                            <div class="location-item">
+                                                <strong>Durban</strong>
+                                                <span>Teraco DB1</span>
+                                            </div>
+                                            <div class="location-item">
+                                                <strong>Accra</strong>
+                                                <span>PAIX DC</span>
+                                            </div>
+                                            <div class="location-item">
+                                                <strong>Johannesburg</strong>
+                                                <span>Teraco JB1, Digital Park Africa, NTT Parklands</span>
+                                            </div>
+                                            <div class="location-item">
+                                                <strong>Lagos, Nigeria</strong>
+                                                <span>RACKCENTER, 21ST CENTURY, MEDALLION, WACS CLS</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Backhaul Capacities Column -->
+                            <div class="modal-column">
+                                <div class="glass-card">
+                                    <div class="card-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2"/>
+                                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2"/>
+                                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2"/>
+                                        </svg>
+                                    </div>
+                                    <div class="card-content">
+                                        <h4>{{ 'BACKHAUL_CAPACITIES' | translate }}</h4>
+                                        <div class="capacity-list">
+                                            <div class="capacity-subtitle">Lagos:</div>
+                                            <div class="capacity-item">
+                                                <span>Rack Center - Medallion</span>
+                                                <strong>400 Gbps</strong>
+                                            </div>
+                                            <div class="capacity-item">
+                                                <span>Rack Center - 21st Century</span>
+                                                <strong>400 Gbps</strong>
+                                            </div>
+                                            <div class="capacity-item">
+                                                <span>21st Century - Equinix LG2</span>
+                                                <strong>400 Gbps</strong>
+                                            </div>
+                                            <div class="capacity-item">
+                                                <span>Medallion - WACS CLS</span>
+                                                <strong>400 Gbps</strong>
+                                            </div>
+                                            
+                                            <div class="capacity-subtitle">South Africa:</div>
+                                            <div class="capacity-item">
+                                                <span>Cape Town - Johannesburg (NTT Parklands)</span>
+                                                <strong>100 Gbps</strong>
+                                            </div>
+                                            <div class="capacity-item">
+                                                <span>Cape Town - Johannesburg (Teraco JB1)</span>
+                                                <strong>100 Gbps</strong>
+                                            </div>
+                                            <div class="capacity-item">
+                                                <span>Johannesburg (NTT Parklands) - Digital Park Africa</span>
+                                                <strong>10 Gbps</strong>
+                                            </div>
+                                            <div class="capacity-item">
+                                                <span>Johannesburg (NTT Parklands) - Teraco JB1</span>
+                                                <strong>10 Gbps</strong>
+                                            </div>
+                                            <div class="capacity-item">
+                                                <span>Digital Park Africa - Teraco JB1</span>
+                                                <strong>10 Gbps</strong>
+                                            </div>
+                                            <div class="capacity-item">
+                                                <span>Johannesburg (Teraco JB1) - Durban</span>
+                                                <strong>100 Gbps</strong>
+                                            </div>
+                                        </div>
+                                        <div class="total-capacity">
+                                            {{ 'TOTAL_BACKBONE' | translate }}: <strong>3.6 Tbps</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal - SACS -->
+<div id="modal-sacs" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical" style="max-width: 800px; background: transparent;">
+        <button class="uk-modal-close-default" type="button" uk-close style="color: white; background: rgba(0,0,0,0.5); border-radius: 50%; padding: 8px;"></button>
+        
+        <div class="glassmorphic-modal">
+            <!-- Header -->
+            <div class="modal-header">
+                <h3 class="modal-title">{{ 'SACS' | translate }}</h3>
+                <p class="modal-subtitle">{{ 'FIBER_NETWORK' | translate }}</p>
+            </div>
+            
+            <!-- Content -->
+            <div class="modal-content">
+                <!-- Fiber Card -->
+                <div class="glass-card">
+                    <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="card-content">
+                        <h4>{{ 'FIBER_CONFIGURATION' | translate }}</h4>
+                        <p class="card-value">{{ 'SACS_FIBER' | translate }}</p>
+                    </div>
+                </div>
+                
+                <!-- Technologies Card -->
+                <div class="glass-card">
+                    <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 4V20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="card-content">
+                        <h4>{{ 'TECHNOLOGIES' | translate }}</h4>
+                        <div class="tech-badges">
+                            <span class="tech-badge">{{ 'SDH' | translate }}</span>
+                            <span class="tech-badge">{{ 'EOSDH' | translate }}</span>
+                            <span class="tech-badge">{{ 'ETHERNET' | translate }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal - WACS -->
+<div id="modal-wacs" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical" style="max-width: 800px; background: transparent;">
+        <button class="uk-modal-close-default" type="button" uk-close style="color: white; background: rgba(0,0,0,0.5); border-radius: 50%; padding: 8px;"></button>
+        
+        <div class="glassmorphic-modal">
+            <!-- Header -->
+            <div class="modal-header">
+                <h3 class="modal-title">{{ 'WACS' | translate }}</h3>
+                <p class="modal-subtitle">{{ 'FIBER_NETWORK' | translate }}</p>
+            </div>
+            
+            <!-- Content -->
+            <div class="modal-content">
+                <!-- Fiber Card -->
+                <div class="glass-card">
+                    <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="card-content">
+                        <h4>{{ 'FIBER_CONFIGURATION' | translate }}</h4>
+                        <p class="card-value">{{ 'WACS_FIBER' | translate }}</p>
+                    </div>
+                </div>
+                
+                <!-- Technologies Card -->
+                <div class="glass-card">
+                    <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 4V20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="card-content">
+                        <h4>{{ 'TECHNOLOGIES' | translate }}</h4>
+                        <div class="tech-badges">
+                            <span class="tech-badge">{{ 'SDH' | translate }}</span>
+                            <span class="tech-badge">{{ 'EOSDH' | translate }}</span>
+                            <span class="tech-badge">{{ 'ETHERNET' | translate }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div  style="border-radius: 5px;  background: rgba(255, 255, 255, 0.05);   border: 1px solid rgba(255, 255, 255, 0.1); padding: 5px  ; transition: all 0.3s ease; position: relative; overflow: hidden;"
+        class="uk-position-bottom-center uk-text-center  uk-position-small">
+              <!--   <p style="font-size: 0.8rem !important "> {{ 'select.cable' | translate }}:</p> -->
+
+        <ul class="uk-slideshow-nav uk-thumbnav uk-flex-center">
+            <li uk-slideshow-item="0">
+                <a href="#"><img src="img/buttons/global.png" class="bt-img" alt=""></a>
+            </li>
+            <li uk-slideshow-item="1"><a href="#"><img class="bt-img" src="img/buttons/monet.png" alt=""></a></li>
+            <li uk-slideshow-item="2"><a href="#"><img class="bt-img" src="img/buttons/sacs.png" alt=""></a></li>
+            <li uk-slideshow-item="3"><a href="#"><img class="bt-img" src="img/buttons/wacs.png" alt=""></a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- 
+
 <div id="inicio" style="margin-top: 67px" class="uk-visible-toggle" tabindex="-1" uk-slideshow="
         autoplay: true;
         autoplay-interval: 8000;
@@ -10,21 +605,20 @@
     <div class="uk-slideshow-items">
 
 
-        <!-- Slide 1 -->
-        <div style="
+        
+    <div style="
         width: 100%;
         word-wrap: break-word; /* wrap long words */
         overflow-wrap: break-word;
-        position: relative;
-        
-      ">
+        position: relative;" >
+
             <video #promoVideo class="video-mapa2" autoplay muted loop playsinline poster="placeholder.jpg">
                 <source src="https://marketing.host2africa.com/drive/acsaweb/mapaglobalacsa.mp4" type="video/mp4" />
                 Seu navegador não suporta vídeo HTML5.
             </video>
 
 
-            <!-- 
+            
             <div class="caixa-titulo uk-position-center uk-text-center">
 
                 <img class="logo-freeze" src="/img/networkfreeze-logo.png">
@@ -71,19 +665,18 @@
 
                 
             </div>
--->
 
         </div>
 
-        <!-- Slide 2 -->
+      
         <div style="width: 100%; overflow: hidden; position: relative">
             <video #promoVideo2 class="video-mapa2" autoplay muted loop playsinline poster="placeholder.jpg">
                 <source src="https://marketing.host2africa.com/drive/acsaweb/mapaglobalacsa.mp4" type="video/mp4" />
                 Seu navegador não suporta vídeo HTML5.
             </video>
 
-            <!-- Overlay de texto -->
             <div class="overlay-text uk-position-center uk-text-center uk-light"></div>
         </div>
     </div>
 </div>
+-->

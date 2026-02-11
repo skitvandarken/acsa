@@ -1,12 +1,13 @@
-<div class="uk-child-width-1-5@m uk-grid-small uk-grid-match uk-padding-horizontal uk-margin-large-bottom uk-padding" uk-grid>
+<div class="uk-child-width-1-6@m uk-grid-small uk-grid-match uk-padding-horizontal uk-margin-large-bottom uk-padding" uk-grid>
     <div>
         <div class="uk-card fundo-numeros display-numeros uk-text-center">
-            <h1 style="color: white; font-size: 3.5rem;" class="uk-card-title">
-              <app-contador [startValue]="0" [targetValue]="4" [interval]="200"></app-contador>
+            <h1 style="color: white; font-size: 3rem; font-weight: bold;" class="uk-card-title">
+              4
             </h1>
-            <p class="uk-margin-remove" style="color: white;">{{ 'num.continentes' | translate }}</p>
+            <p class="uk-margin-remove" style="color: white;"> {{ 'num.cabos' | translate }}</p>
         </div>
     </div>
+
     <div>
       <div class="uk-card fundo-numeros display-numeros uk-text-center">
           <h1 style="color: white; font-size: 3.5rem;" class="uk-card-title">
@@ -15,6 +16,7 @@
           <p class="uk-margin-remove" style="color: white;">{{ 'num.ixp' | translate }}</p>
       </div>
     </div>
+
     <div>
       <div class="uk-card fundo-numeros display-numeros uk-text-center">
           <h1 style="color: white; font-size: 3.5rem;" class="uk-card-title">
@@ -23,6 +25,7 @@
           <p class="uk-margin-remove" style="color: white;">{{ 'num.datacenters' | translate }}</p>
       </div>
     </div>
+
     <div>
       <div class="uk-card fundo-numeros display-numeros uk-text-center">
           <h1 style="color: white; font-size: 3.5rem;" class="uk-card-title">
@@ -31,6 +34,7 @@
           <p class="uk-margin-remove" style="color: white;">{{ 'num.pops' | translate }}</p>
       </div>
     </div>
+
     <div>
       <div class="uk-card fundo-numeros display-numeros uk-text-center">
           <h1 style="color: white; font-size: 3.5rem;" class="uk-card-title">
@@ -39,6 +43,14 @@
           <p class="uk-margin-remove" style="color: white;">{{ 'num.peering' | translate }}</p>
       </div>
     </div>
-  </div>
-  
-  
+
+  <div>
+        <div class="uk-card fundo-numeros display-numeros uk-text-center">
+            <h1 style="color: white; font-size: 3.5rem;" class="uk-card-title">
+              <app-contador [startValue]="0" [targetValue]="4" [interval]="200"></app-contador>
+            </h1>
+            <p class="uk-margin-remove" style="color: white;">{{ 'num.continentes' | translate }}</p>
+        </div>
+    </div>
+
+</div>
