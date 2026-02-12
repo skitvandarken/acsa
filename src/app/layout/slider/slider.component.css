@@ -1,9 +1,9 @@
 /* Add these styles to your existing slider.component.css */
-/* Limita a altura do contêiner de slides */
+/* Limita a altura do contêiner de slides 
 .uk-slideshow-items {
-    max-height: 650px !important;
+    max-height: 100% !important;
 }
-
+*/
 /* Add box shadow to active thumbnail button */
 .uk-slideshow-nav .uk-active a .bt-img {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
