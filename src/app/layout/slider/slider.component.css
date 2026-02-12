@@ -3,7 +3,7 @@
 .uk-slideshow-items {
     max-height: 100% !important;
 }
-*/
+
 /* Add box shadow to active thumbnail button */
 .uk-slideshow-nav .uk-active a .bt-img {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
@@ -44,7 +44,6 @@
         0 0 40px rgba(40, 193, 253, 0.2),
         0 8px 32px rgba(0, 0, 0, 0.4),
         inset 0 1px 0 rgba(255, 255, 255, 0.15);
-    transform: translateY(-2px);
 }
 
 /* Search icon neon effects */
@@ -79,6 +78,219 @@
         filter: 
             drop-shadow(0 0 15px rgba(40, 193, 253, 1))
             drop-shadow(0 0 30px rgba(40, 193, 253, 0.6));
+    }
+}
+
+
+/* Fix for tabs alignment and remove white line */
+.region-tabs .uk-tab {
+    display: flex;
+    justify-content: flex-start; /* Changed from center to flex-start */
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 25px;
+    border-bottom: none; /* Remove the default white border line */
+    position: relative;
+}
+
+.region-tabs .uk-tab::before {
+    display: none; /* Remove the default tab border line */
+}
+
+.region-tabs .uk-tab > * {
+    flex: 0 0 auto; /* Prevent items from stretching */
+}
+
+.region-tabs .uk-tab > * > a {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 12px 24px;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    border-bottom: none; /* Remove any bottom border */
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+    .region-tabs .uk-tab {
+        justify-content: flex-start; /* Keep left-aligned on mobile */
+    }
+    
+    .region-tabs .uk-tab > * {
+        flex: 0 0 auto; /* Don't stretch on mobile either */
+    }
+    
+    .region-tabs .uk-tab > * > a {
+        padding: 10px 16px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .region-tabs .uk-tab {
+        flex-direction: row; /* Keep horizontal on very small screens */
+        flex-wrap: wrap;
+    }
+    
+    .region-tabs .uk-tab > * {
+        width: auto; /* Don't force full width */
+        flex: 0 0 auto;
+    }
+    
+    .region-tabs .uk-tab > * > a {
+        width: auto; /* Don't force full width */
+        white-space: nowrap; /* Prevent text wrapping */
+    }
+}
+
+/* Modern selected tab style with background shadow */
+.region-tabs .uk-tab > *.uk-active > a {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.08));
+    border-color: rgba(255, 255, 255, 0.25);
+    color: white;
+    box-shadow: 
+        0 4px 20px rgba(0, 0, 0, 0.3),
+        0 0 0 1px rgba(255, 255, 255, 0.1) inset,
+        0 0 30px rgba(40, 193, 253, 0.3);
+    transform: translateY(-2px);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animated gradient overlay */
+.region-tabs .uk-tab > *.uk-active > a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        45deg,
+        rgba(40, 193, 253, 0.2),
+        rgba(255, 255, 255, 0.1),
+        rgba(40, 193, 253, 0.2)
+    );
+    background-size: 200% 200%;
+    animation: gradientShift 4s ease infinite;
+    z-index: -1;
+}
+
+/* Glow effect */
+.region-tabs .uk-tab > *.uk-active > a::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, 
+        rgba(40, 193, 253, 0.5),
+        rgba(255, 255, 255, 0.2),
+        rgba(40, 193, 253, 0.5)
+    );
+    border-radius: 14px;
+    z-index: -2;
+    filter: blur(8px);
+    opacity: 0.6;
+    animation: glowPulse 3s ease infinite;
+}
+
+/* Subtle shine effect */
+.region-tabs .uk-tab > *.uk-active > a {
+    position: relative;
+    overflow: hidden;
+}
+
+.region-tabs .uk-tab > *.uk-active > a span {
+    position: relative;
+    z-index: 2;
+}
+
+/* Shine animation */
+.region-tabs .uk-tab > *.uk-active > a .shine {
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.1) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(25deg);
+    animation: shine 4s infinite;
+    pointer-events: none;
+}
+
+/* Animations */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        opacity: 0.5;
+        filter: blur(8px);
+    }
+    50% {
+        opacity: 0.8;
+        filter: blur(12px);
+    }
+}
+
+@keyframes shine {
+    0% { left: -60%; }
+    20% { left: 100%; }
+    100% { left: 100%; }
+}
+
+/* Alternative: Simplified modern shadow version */
+.region-tabs .uk-tab > *.uk-active > a.modern-shadow {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 
+        0 10px 30px -5px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(255, 255, 255, 0.15) inset,
+        0 0 20px rgba(40, 193, 253, 0.2);
+    backdrop-filter: blur(12px);
+    transform: translateY(-2px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* If you prefer a more subtle, shadow-only approach */
+.region-tabs .uk-tab > *.uk-active > a.shadow-only {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 
+        0 15px 35px -10px rgba(0, 0, 0, 0.4),
+        0 5px 15px rgba(0, 0, 0, 0.2),
+        0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .region-tabs .uk-tab > *.uk-active > a {
+        box-shadow: 
+            0 8px 20px -5px rgba(0, 0, 0, 0.4),
+            0 0 0 1px rgba(255, 255, 255, 0.15) inset,
+            0 0 20px rgba(40, 193, 253, 0.25);
+        transform: translateY(-1px);
+    }
+    
+    .region-tabs .uk-tab > *.uk-active > a::after {
+        filter: blur(6px);
     }
 }
 

@@ -605,5 +605,7 @@
   "DATA_CENTERS": "Data Centers",
   "BACKHAUL_CAPACITIES": "Capacidades de Backhaul",
   "TOTAL_BACKBONE": "Capacidade Total do Backbone", 
-  "num.cabos": "Cabos Proprietários"
+  "num.cabos": "Cabos Proprietários",
+     "AMERICA_TITLE": "AMERICAS"
+
 }

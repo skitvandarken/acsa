@@ -600,6 +600,7 @@
   "DATA_CENTERS": "Data Centers",
   "BACKHAUL_CAPACITIES": "Backhaul Capacities",
   "TOTAL_BACKBONE": "Total Backbone Capacity",
-   "num.cabos": "Proprietary Cables"
+   "num.cabos": "Proprietary Cables",
+   "AMERICA_TITLE": "AMERICAS"
 
 }

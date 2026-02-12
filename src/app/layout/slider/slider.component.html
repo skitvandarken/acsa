@@ -5,31 +5,31 @@
         <!-- Slide 0 - GLOBAL -->
         <div class="">
             <img src="img/mapas/mapasite-GLOBAL.png" width="1800" height="1200" alt="" uk-cover>
-      <!--  <div class="uk-overlay uk-overlay-primary uk-position-center">
+      <div class="uk-overlay uk-overlay-primary uk-position-center">
                 <a uk-icon="search" href="#modal-global-network" uk-toggle></a>
-            </div> --> 
+            </div>
         </div>
 
         <div>
             <img src="img/mapas/mapa-site-MONET.png" alt="" uk-cover>
             <!-- Remove inline style from here -->
-          <!--  <div class="uk-overlay uk-overlay-primary uk-position-center">
+          <div class="uk-overlay uk-overlay-primary uk-position-center">
                 <a uk-icon="search" href="#modal-monet" uk-toggle></a>
-            </div>-->
+            </div>
         </div>
         <div class="">
             <img src="img/mapas/mapa-site-SACS.png" alt="" uk-cover>
-            <!-- Remove inline style from here 
+           
             <div class="uk-overlay uk-overlay-primary uk-position-center">
                 <a uk-icon="search" href="#modal-sacs" uk-toggle></a>
-            </div>-->
+            </div>
         </div>
         <div>
             <img src="img/mapas/mapa-site-WACS.png" alt="" uk-cover>
-            <!-- Remove inline style from here 
+           
             <div class="uk-overlay uk-overlay-primary uk-position-center">
                 <a uk-icon="search" href="#modal-wacs" uk-toggle></a>
-            </div>-->
+            </div>
         </div>
     </div>
 
@@ -42,7 +42,7 @@
             <!-- Header -->
             <div class="modal-header">
                 <h3 class="modal-title">{{ 'MONET' | translate }}</h3>
-                <p class="modal-subtitle">{{ 'FIBER_NETWORK' | translate }}</p>
+              <!--  <p class="modal-subtitle">{{ 'FIBER_NETWORK' | translate }}</p> -->
             </div>
             
             <!-- Content -->
@@ -87,7 +87,7 @@
 
 
 <!-- Modal - Global -->
- <!-- Modal - GLOBAL NETWORK -->
+<!-- Modal - GLOBAL NETWORK -->
 <div id="modal-global-network" class="uk-flex-top" uk-modal>
     <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical" style="max-width: 1000px; background: transparent;">
         <button class="uk-modal-close-default" type="button" uk-close style="color: white; background: rgba(0,0,0,0.5); border-radius: 50%; padding: 8px;"></button>
@@ -102,18 +102,18 @@
             <!-- Region Tabs -->
             <div class="region-tabs">
                 <ul class="tab-nav" uk-tab>
-                    <li class="uk-active"><a href="#">{{ 'USA_TITLE' | translate }}</a></li>
-                    <li><a href="#">{{ 'BRAZIL_TITLE' | translate }}</a></li>
+                    <li class="uk-active"><a href="#">{{ 'AMERICA_TITLE' | translate }}</a></li>
                     <li><a href="#">{{ 'EUROPE_TITLE' | translate }}</a></li>
                     <li><a href="#">{{ 'AFRICA_TITLE' | translate }}</a></li>
                 </ul>
                 
                 <ul class="uk-switcher tab-content uk-margin-small-top">
-                    <!-- USA Tab -->
+                    <!-- AMERICA Tab (USA + Brazil) -->
                     <li class="tab-pane active">
                         <div class="modal-grid">
                             <!-- Data Centers Column -->
                             <div class="modal-column">
+                                <!-- USA Data Centers -->
                                 <div class="glass-card">
                                     <div class="card-icon">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -122,7 +122,7 @@
                                         </svg>
                                     </div>
                                     <div class="card-content">
-                                        <h4>{{ 'DATA_CENTERS' | translate }}</h4>
+                                        <h4>USA - {{ 'DATA_CENTERS' | translate }}</h4>
                                         <div class="location-list">
                                             <div class="location-item">
                                                 <strong>Miami</strong>
@@ -139,56 +139,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            
-                            <!-- Backhaul Capacities Column -->
-                            <div class="modal-column">
-                                <div class="glass-card">
-                                    <div class="card-icon">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2"/>
-                                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2"/>
-                                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2"/>
-                                        </svg>
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>{{ 'BACKHAUL_CAPACITIES' | translate }}</h4>
-                                        <div class="capacity-list">
-                                            <div class="capacity-item">
-                                                <span>New York - Miami MI1</span>
-                                                <strong>300 Gbps</strong>
-                                            </div>
-                                            <div class="capacity-item">
-                                                <span>New York - Miami MI3</span>
-                                                <strong>200 Gbps</strong>
-                                            </div>
-                                            <div class="capacity-item">
-                                                <span>Miami MI1 - Miami MI3</span>
-                                                <strong>200 Gbps</strong>
-                                            </div>
-                                            <div class="capacity-item">
-                                                <span>New York - Los Angeles</span>
-                                                <strong>100 Gbps</strong>
-                                            </div>
-                                            <div class="capacity-item">
-                                                <span>Los Angeles - Miami MI3</span>
-                                                <strong>100 Gbps</strong>
-                                            </div>
-                                        </div>
-                                        <div class="total-capacity">
-                                            {{ 'TOTAL_BACKBONE' | translate }}: <strong>3.6 Tbps</strong>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    
-                    <!-- BRAZIL Tab -->
-                    <li class="tab-pane">
-                        <div class="modal-grid">
-                            <!-- Data Centers Column -->
-                            <div class="modal-column">
+                                
+                                <!-- Brazil Data Centers -->
                                 <div class="glass-card">
                                     <div class="card-icon">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -197,7 +149,7 @@
                                         </svg>
                                     </div>
                                     <div class="card-content">
-                                        <h4>{{ 'DATA_CENTERS' | translate }}</h4>
+                                        <h4>Brazil - {{ 'DATA_CENTERS' | translate }}</h4>
                                         <div class="location-list">
                                             <div class="location-item">
                                                 <strong>Fortaleza</strong>
@@ -234,6 +186,7 @@
                             
                             <!-- Backhaul Capacities Column -->
                             <div class="modal-column">
+                                <!-- USA Backhaul -->
                                 <div class="glass-card">
                                     <div class="card-icon">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -243,7 +196,43 @@
                                         </svg>
                                     </div>
                                     <div class="card-content">
-                                        <h4>{{ 'BACKHAUL_CAPACITIES' | translate }}</h4>
+                                        <h4>USA - {{ 'BACKHAUL_CAPACITIES' | translate }}</h4>
+                                        <div class="capacity-list">
+                                            <div class="capacity-item">
+                                                <span>New York - Miami MI1</span>
+                                                <strong>300 Gbps</strong>
+                                            </div>
+                                            <div class="capacity-item">
+                                                <span>New York - Miami MI3</span>
+                                                <strong>200 Gbps</strong>
+                                            </div>
+                                            <div class="capacity-item">
+                                                <span>Miami MI1 - Miami MI3</span>
+                                                <strong>200 Gbps</strong>
+                                            </div>
+                                            <div class="capacity-item">
+                                                <span>New York - Los Angeles</span>
+                                                <strong>100 Gbps</strong>
+                                            </div>
+                                            <div class="capacity-item">
+                                                <span>Los Angeles - Miami MI3</span>
+                                                <strong>100 Gbps</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Brazil Backhaul -->
+                                <div class="glass-card">
+                                    <div class="card-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2"/>
+                                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2"/>
+                                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2"/>
+                                        </svg>
+                                    </div>
+                                    <div class="card-content">
+                                        <h4>Brazil - {{ 'BACKHAUL_CAPACITIES' | translate }}</h4>
                                         <div class="capacity-list">
                                             <div class="capacity-item">
                                                 <span>Cuiabá - Brasília</span>
@@ -282,8 +271,14 @@
                                                 <strong>100 Gbps</strong>
                                             </div>
                                         </div>
-                                        <div class="total-capacity">
-                                            {{ 'TOTAL_BACKBONE' | translate }}: <strong>3.6 Tbps</strong>
+                                    </div>
+                                </div>
+                                
+                                <!-- Total Backbone America -->
+                                <div class="glass-card">
+                                    <div class="card-content">
+                                        <div class="total-capacity" style="margin-top: 0;">
+                                            {{ 'TOTAL_BACKBONE' | translate }} AMERICA: <strong>3.6 Tbps</strong>
                                         </div>
                                     </div>
                                 </div>
@@ -375,7 +370,7 @@
                                         <div class="location-list">
                                             <div class="location-item">
                                                 <strong>Luanda</strong>
-                                                <span>Teraco CT1</span>
+                                                <span>Angonap I</span>
                                             </div>
                                             <div class="location-item">
                                                 <strong>Cape Town</strong>
@@ -472,7 +467,6 @@
         </div>
     </div>
 </div>
-
 <!-- Modal - SACS -->
 <div id="modal-sacs" class="uk-flex-top" uk-modal>
     <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical" style="max-width: 800px; background: transparent;">
@@ -482,7 +476,7 @@
             <!-- Header -->
             <div class="modal-header">
                 <h3 class="modal-title">{{ 'SACS' | translate }}</h3>
-                <p class="modal-subtitle">{{ 'FIBER_NETWORK' | translate }}</p>
+              <!--  <p class="modal-subtitle">{{ 'FIBER_NETWORK' | translate }}</p> --> 
             </div>
             
             <!-- Content -->
@@ -534,7 +528,7 @@
             <!-- Header -->
             <div class="modal-header">
                 <h3 class="modal-title">{{ 'WACS' | translate }}</h3>
-                <p class="modal-subtitle">{{ 'FIBER_NETWORK' | translate }}</p>
+             <!--    <p class="modal-subtitle">{{ 'FIBER_NETWORK' | translate }}</p> -->
             </div>
             
             <!-- Content -->

@@ -601,7 +601,9 @@
   "DATA_CENTERS": "Centres de Données",
   "BACKHAUL_CAPACITIES": "Capacités de Backhaul",
   "TOTAL_BACKBONE": "Capacité Totale du Backbone",
-    "num.cabos": "Câbles Propriétaires"
+    "num.cabos": "Câbles Propriétaires",
+       "AMERICA_TITLE": "AMERICAS"
+
 
   
 }
