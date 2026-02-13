@@ -19,11 +19,11 @@
 
 /* Modern neon-inspired overlay */
 .uk-overlay {
-    padding: 20px 25px;
-    border-radius: 20px;
+    padding: 10px 15px;
+    border-radius: 10px;
     opacity: 0.85;
-    background: rgba(0, 0, 0, 0.85);
-    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.34);
+    backdrop-filter: blur(1px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 
         0 8px 32px rgba(0, 0, 0, 0.3),
@@ -56,6 +56,17 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+}
+
+
+.uk-position-center {
+  top: calc(45% - var(--uk-position-margin-offset));
+  left: calc(50% - var(--uk-position-margin-offset));
+  --uk-position-translate-x: -50%;
+  --uk-position-translate-y: -50%;
+  transform: translate(var(--uk-position-translate-x), var(--uk-position-translate-y));
+  /* 1 */
+  width: max-content;
 }
 
 .uk-overlay:hover [uk-icon="search"] {
@@ -292,6 +303,12 @@
     .region-tabs .uk-tab > *.uk-active > a::after {
         filter: blur(6px);
     }
+
+    .uk-position-center {
+  top: calc(40% - var(--uk-position-margin-offset));
+ 
+}
+
 }
 
 /* Optional: Add a subtle glow to the overlay container */
@@ -355,8 +372,8 @@
     }
     
     .uk-overlay {
-        padding: 15px 20px;
-        backdrop-filter: blur(5px);
+ padding: 5px 10px;
+         backdrop-filter: blur(5px);
     }
     
     .uk-overlay:hover {
@@ -364,9 +381,13 @@
     }
     
     .uk-overlay [uk-icon="search"] {
-        width: 25px;
-        height: 25px;
+        width: 20px;
+        height: 20px;
     }
+        .uk-position-center {
+  top: calc(40% - var(--uk-position-margin-offset));
+ 
+}
 }
 
 @media (max-width: 480px) {
@@ -374,6 +395,10 @@
         width: 60px;
         height: 40px;
     }
+        .uk-position-center {
+  top: calc(40% - var(--uk-position-margin-offset));
+ 
+}
 }
 
 @media (max-width: 375px) {
@@ -381,6 +406,10 @@
         width: 55px;
         height: 37px;
     }
+        .uk-position-center {
+  top: calc(40% - var(--uk-position-margin-offset));
+ 
+}
 }
 
 @media (max-width: 320px) {
@@ -388,6 +417,10 @@
         width: 45px;
         height: 30px;
     }
+        .uk-position-center {
+  top: calc(40% - var(--uk-position-margin-offset));
+ 
+}
 }
 
 /* Glassmorphic Modal Styles - PRESERVED ALL GLASS CARD CLASSES */
@@ -451,6 +484,11 @@
     .modal-content {
         grid-template-columns: repeat(2, 1fr);
     }
+
+        .uk-position-center {
+  top: calc(40% - var(--uk-position-margin-offset));
+ 
+}
 }
 
 /* Glass Cards - ALL CLASSES PRESERVED */
@@ -580,6 +618,10 @@
     .modal-grid {
         grid-template-columns: 1fr 1fr;
     }
+        .uk-position-center {
+  top: calc(40% - var(--uk-position-margin-offset));
+ 
+}
 }
 
 .modal-column {
