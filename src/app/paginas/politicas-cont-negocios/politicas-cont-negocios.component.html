@@ -1,0 +1,59 @@
+<app-menu></app-menu>
+
+<div class="fundo-cabecalho">
+  <div class="gradiente-texto-cabecalho">
+    <div class="conteudo-cabecalho uk-margin-medium-top">
+      <div class="uk-container uk-margin-large-bottom">
+        <h4 style="color:white">{{ 'company.name' | translate }}</h4>
+        <h1 style="color:rgba(39, 200, 227, 1); font-weight: bolder;">
+          {{ 'policies.bcm.title' | translate }}
+        </h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="uk-container uk-margin-large-top uk-margin-large-bottom">
+
+    <!-- 1. Objectivo -->
+    <section class="privacy-section">
+        <h2><span class="section-number">1</span> {{ 'policies.bcm.objective.title' | translate }}</h2>
+
+        <p>{{ 'policies_bcm_objective_intro' | translate }}</p>
+
+        <ul>
+            <li>{{ 'policies_bcm_objective_a' | translate }}</li>
+            <li>{{ 'policies_bcm_objective_b' | translate }}</li>
+            <li>{{ 'policies_bcm_objective_c' | translate }}</li>
+            <li>{{ 'policies_bcm_objective_d' | translate }}</li>
+            <li>{{ 'policies_bcm_objective_e' | translate }}</li>
+            <li>{{ 'policies_bcm_objective_f' | translate }}</li>
+            <li>{{ 'policies_bcm_objective_g' | translate }}</li>
+        </ul>
+    </section>
+
+    <!-- 2. Âmbito -->
+    <section class="privacy-section">
+        <h2><span class="section-number">2</span> {{ 'policies_bcm_scope_title' | translate }}</h2>
+        <p>{{ 'policies_bcm_scope_p1' | translate }}</p>
+        <p>{{ 'policies_bcm_scope_p2' | translate }}</p>
+    </section>
+
+    <!-- 3. Princípios -->
+    <section class="privacy-section">
+        <h2><span class="section-number">3</span> {{ 'policies_bcm_principles_title' | translate }}</h2>
+        <p>{{ 'policies_bcm_principles_intro' | translate }}</p>
+        <ul>
+            <li>{{ 'policies_bcm_principles_a' | translate }}</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p class="last-updated">
+            {{ 'policies_bcm_lastUpdated' | translate }} {{ bcmUpdatedDate }}
+        </p>
+    </footer>
+
+</div>
+
+<app-rodape></app-rodape>

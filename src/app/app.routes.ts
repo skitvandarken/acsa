@@ -60,14 +60,22 @@ export const routes: Routes = [
     path: 'privacy-policies',
     loadComponent: () =>
       import('./paginas/privacy-policies/privacy-policies.component').then(
-        (m) => m.PrivacyPoliciesComponent
+        (m) => m.PrivacyPoliciesComponent,
       ),
   },
   {
     path: 'cookies-policies',
     loadComponent: () =>
       import('./paginas/politicas-cookies/politicas-cookies.component').then(
-        (m) => m.PoliticasCookiesComponent
+        (m) => m.PoliticasCookiesComponent,
+      ),
+  },
+
+  {
+    path: 'politicas-cont-negocios',
+    loadComponent: () =>
+      import('./paginas/politicas-cont-negocios/politicas-cont-negocios.component').then(
+        (m) => m.PoliticasContNegociosComponent,
       ),
   },
 
@@ -87,7 +95,7 @@ export const routes: Routes = [
     path: 'artigos',
     loadComponent: () =>
       import('./layout/artigo-lista/artigo-lista.component').then(
-        (m) => m.ArtigoListaComponent
+        (m) => m.ArtigoListaComponent,
       ),
   },
   {
@@ -100,7 +108,7 @@ export const routes: Routes = [
     path: 'postar',
     loadComponent: () =>
       import('./layout/artigo-postar/artigo-postar.component').then(
-        (m) => m.ArtigoPostarComponent
+        (m) => m.ArtigoPostarComponent,
       ),
   },
 
@@ -108,7 +116,7 @@ export const routes: Routes = [
     path: 'postar-vaga',
     loadComponent: () =>
       import('./layout/vagas-criar/vagas-criar.component').then(
-        (m) => m.VagasCriarComponent
+        (m) => m.VagasCriarComponent,
       ),
   },
 ];

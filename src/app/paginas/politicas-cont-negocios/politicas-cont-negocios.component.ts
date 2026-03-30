@@ -1,15 +1,16 @@
 import { Component } from '@angular/core';
-import { RodapeComponent } from '../../layout/rodape/rodape.component';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { MenuComponent } from '../../layout/menu/menu.component';
+import { RodapeComponent } from '../../layout/rodape/rodape.component';
 
 @Component({
-  selector: 'app-politicas-cookies',
-  imports: [RodapeComponent, TranslatePipe, MenuComponent],
-  templateUrl: './politicas-cookies.component.html',
-  styleUrl: './politicas-cookies.component.css',
+  selector: 'app-politicas-cont-negocios',
+  imports: [MenuComponent, RodapeComponent, TranslatePipe],
+  templateUrl: './politicas-cont-negocios.component.html',
+  styleUrl: './politicas-cont-negocios.component.css',
 })
-export class PoliticasCookiesComponent {
+export class PoliticasContNegociosComponent {
+  bcmUpdatedDate = 'Março 2026';
   cookiesUpdatedDate = '2025-01-15'; // January is 0, so this represents January 15, 2025
 
   useLanguage(language: string): void {

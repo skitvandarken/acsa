@@ -602,8 +602,29 @@
   "BACKHAUL_CAPACITIES": "Capacités de Backhaul",
   "TOTAL_BACKBONE": "Capacité Totale du Backbone",
     "num.cabos": "Câbles Propriétaires",
-       "AMERICA_TITLE": "AMERICAS"
+       "AMERICA_TITLE": "AMERICAS",
 
+"policies.bcm.title": "Politique de Continuité des Activités",
+"policies.bcm.objective.title": "Objectif",
+"policies_bcm_objective_intro": "La Politique de Gestion de la Continuité des Activités a pour objectifs :",
 
+"policies_bcm_objective_a": "Protéger les collaborateurs et les actifs en atténuant, en situation de sinistre, les risques pour la sécurité physique des personnes et des biens ;",
+"policies_bcm_objective_b": "Contrôler, prévenir, limiter l’impact et garantir la capacité de reprise face aux incidents perturbateurs et aux éventuelles catastrophes pouvant affecter les opérations, l’image et la réputation de AC ;",
+"policies_bcm_objective_c": "Assurer efficacement la protection de l’activité en mettant en place des mécanismes de reprise garantissant la continuité des processus métiers critiques de AC ;",
+"policies_bcm_objective_d": "Préserver les intérêts des parties prenantes, la qualité des services fournis ainsi que la satisfaction des clients et partenaires, en renforçant leur confiance ;",
+"policies_bcm_objective_e": "Se conformer en permanence aux bonnes pratiques internationales, aux recommandations et/ou aux exigences légales et réglementaires ;",
+"policies_bcm_objective_f": "Garantir que les risques liés à la Continuité des Activités sont identifiés, compris, surveillés et atténués à un niveau acceptable pour AC ;",
+"policies_bcm_objective_g": "Permettre à AC de gérer efficacement et de manière efficiente la Continuité des Activités dans ses processus, conformément aux meilleures pratiques et aux orientations stratégiques de l’entreprise ;",
+
+"policies_bcm_scope_title": "Portée / Champ d’application",
+"policies_bcm_scope_p1": "La présente politique définit les règles et principes généraux pour la mise en œuvre et le maintien du Système de Gestion de la Continuité des Activités (SGCA) de AC.",
+"policies_bcm_scope_p2": "Le périmètre couvre le SGCA et tous ses composants (règlements, plans) ainsi que ses actifs (infrastructures, processus, applications, services, personnes et technologies), afin d’assurer la continuité des opérations et la réduction des risques liés aux événements perturbateurs.",
+"policies_bcm_scope_p3": "Cette politique s’appuie également sur les bonnes pratiques internationales et les normes applicables en matière de Continuité des Activités.",
+
+"policies_bcm_principles_title": "Principes Directeurs",
+"policies_bcm_principles_intro": "Dans le cadre de la Gestion de la Continuité des Activités, et afin d’atteindre les objectifs définis, AC doit :",
+"policies_bcm_principles_a": "Analyser le contexte interne et externe afin d’assurer une compréhension adéquate de l’organisation, de l’activité, ainsi que des risques et opportunités associés.",
+
+"policies_bcm_lastUpdated": "Dernière mise à jour :"
   
 }

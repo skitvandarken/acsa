@@ -584,7 +584,7 @@
   "cabo.sacs": "SACS",
   "cabo.wacs": "WACS",
   "trust-center": "Trust Center",
-    "MONET": "MONET",
+  "MONET": "MONET",
   "SACS": "SACS",
   "WACS": "WACS",
   "FIBER_CONFIGURATION": "Configuração de Fibra",
@@ -599,13 +599,39 @@
   "GLOBAL_NETWORK_TITLE": "REDE GLOBAL",
   "GLOBAL_DATA_CENTERS": "Data Centers Globais",
   "USA_TITLE": "EUA",
-  "BRAZIL_TITLE": "BRASIL", 
+  "BRAZIL_TITLE": "BRASIL",
   "EUROPE_TITLE": "EUROPA",
   "AFRICA_TITLE": "ÁFRICA",
   "DATA_CENTERS": "Data Centers",
   "BACKHAUL_CAPACITIES": "Capacidades de Backhaul",
-  "TOTAL_BACKBONE": "Capacidade Total do Backbone", 
+  "TOTAL_BACKBONE": "Capacidade Total do Backbone",
   "num.cabos": "Cabos Proprietários",
-     "AMERICA_TITLE": "AMERICAS"
+  "AMERICA_TITLE": "AMERICAS",
+  
+  
+  "policies.bcm.title": "Política de Continuidade de Negócios",
+  "policies.bcm.objective.title": "Objectivo",
+  "policies_bcm_objective_intro": "A Política de Gestão de Continuidade de Negócio tem como objectivos:",
+
+  
+
+  "policies_bcm_objective_a": "Proteger os colaboradores e activos, mitigando, em situações de desastre, os riscos para a segurança física das pessoas e dos activos;",
+  "policies_bcm_objective_b": "Controlar, prevenir, limitar o impacto e garantir a capacidade de recuperação de incidentes disruptivos e eventuais desastres que possam pôr em causa a operação, imagem e reputação da AC;",
+  "policies_bcm_objective_c": "Salvaguardar de forma efectiva o negócio, estabelecendo mecanismos de recuperação que garantam a continuidade dos processos de negócio críticos da AC;",
+  "policies_bcm_objective_d": "Preservar os interesses das diferentes partes interessadas, a qualidade do serviço prestado e satisfação dos clientes e parceiros, aumentando a confiança por parte dos mesmos;",
+  "policies_bcm_objective_e": "Cumprir continuamente com as boas práticas internacionais, recomendações e/ou obrigações legais e regulatórias;",
+  "policies_bcm_objective_f": "Garantir que os riscos para a Continuidade de Negócio são acompanhados, compreendidos, monitorizados e mitigados até um nível aceitável para a AC;",
+  "policies_bcm_objective_g": "Capacitar a AC para gerir eficaz e eficientemente a Gestão da Continuidade de Negócio nos seus processos, de acordo com as melhores práticas, tendo presentes as orientações estratégicas do negócio.",
+
+  "policies_bcm_scope_title": "Âmbito / Escopo",
+  "policies_bcm_scope_p1": "A presente política fornece as regras e princípios gerais a aplicar para a implementação e manutenção adequada do Sistema de Gestão de Continuidade de Negócio (SGCN) da AC.",
+  "policies_bcm_scope_p2": "O âmbito abrange o SGCN e todos os seus componentes (regulamentos, planos) e activos (infraestruturas, processos, aplicações, serviços, pessoas e tecnologia), assegurando a continuidade da actividade operacional e mitigação dos riscos associados a eventos disruptivos.",
+  "policies_bcm_scope_p3": "A política tem ainda como referência as boas práticas internacionais e normas aplicáveis em matéria de Continuidade de Negócio.",
+
+  "policies_bcm_principles_title": "Princípios Orientadores",
+  "policies_bcm_principles_intro": "No âmbito da Gestão da Continuidade de Negócio, e de forma a atingir os objectivos definidos, a AC deverá:",
+  "policies_bcm_principles_a": "Analisar o contexto interno e externo, assegurando uma caracterização adequada da organização, do negócio, bem como dos respectivos riscos e oportunidades.",
+
+  "policies_bcm_lastUpdated": "Última actualização:"
 
 }
