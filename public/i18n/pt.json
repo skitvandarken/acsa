@@ -607,14 +607,9 @@
   "TOTAL_BACKBONE": "Capacidade Total do Backbone",
   "num.cabos": "Cabos Proprietários",
   "AMERICA_TITLE": "AMERICAS",
-  
-  
   "policies.bcm.title": "Política de Continuidade de Negócios",
   "policies.bcm.objective.title": "Objectivo",
   "policies_bcm_objective_intro": "A Política de Gestão de Continuidade de Negócio tem como objectivos:",
-
-  
-
   "policies_bcm_objective_a": "Proteger os colaboradores e activos, mitigando, em situações de desastre, os riscos para a segurança física das pessoas e dos activos;",
   "policies_bcm_objective_b": "Controlar, prevenir, limitar o impacto e garantir a capacidade de recuperação de incidentes disruptivos e eventuais desastres que possam pôr em causa a operação, imagem e reputação da AC;",
   "policies_bcm_objective_c": "Salvaguardar de forma efectiva o negócio, estabelecendo mecanismos de recuperação que garantam a continuidade dos processos de negócio críticos da AC;",
@@ -622,16 +617,25 @@
   "policies_bcm_objective_e": "Cumprir continuamente com as boas práticas internacionais, recomendações e/ou obrigações legais e regulatórias;",
   "policies_bcm_objective_f": "Garantir que os riscos para a Continuidade de Negócio são acompanhados, compreendidos, monitorizados e mitigados até um nível aceitável para a AC;",
   "policies_bcm_objective_g": "Capacitar a AC para gerir eficaz e eficientemente a Gestão da Continuidade de Negócio nos seus processos, de acordo com as melhores práticas, tendo presentes as orientações estratégicas do negócio.",
-
   "policies_bcm_scope_title": "Âmbito / Escopo",
   "policies_bcm_scope_p1": "A presente política fornece as regras e princípios gerais a aplicar para a implementação e manutenção adequada do Sistema de Gestão de Continuidade de Negócio (SGCN) da AC.",
   "policies_bcm_scope_p2": "O âmbito abrange o SGCN e todos os seus componentes (regulamentos, planos) e activos (infraestruturas, processos, aplicações, serviços, pessoas e tecnologia), assegurando a continuidade da actividade operacional e mitigação dos riscos associados a eventos disruptivos.",
   "policies_bcm_scope_p3": "A política tem ainda como referência as boas práticas internacionais e normas aplicáveis em matéria de Continuidade de Negócio.",
-
   "policies_bcm_principles_title": "Princípios Orientadores",
   "policies_bcm_principles_intro": "No âmbito da Gestão da Continuidade de Negócio, e de forma a atingir os objectivos definidos, a AC deverá:",
   "policies_bcm_principles_a": "Analisar o contexto interno e externo, assegurando uma caracterização adequada da organização, do negócio, bem como dos respectivos riscos e oportunidades.",
-
-  "policies_bcm_lastUpdated": "Última actualização:"
-
+  "policies_bcm_lastUpdated": "Última actualização:",
+  "policies_bcm_principles_b": "Definir uma estrutura hierárquica, com funções e responsabilidades definidas e atribuídas formalmente ao longo de todo o ciclo de vida do SGCN, considerando as fases de pré e pós-desastre;",
+  "policies_bcm_principles_c": "Garantir que os processos que suportam a sua operação e actividade estão identificados;",
+  "policies_bcm_principles_d": "Analisar o impacto da interrupção dos processos ao longo do tempo e determinar as prioridades de recuperação destes e dos recursos que os suportam (e.g. edifícios, colaboradores, aplicações, fornecedores);",
+  "policies_bcm_principles_e": "Avaliar a exposição dos processos críticos a riscos e eventos que possam comprometer a sua continuidade através da indisponibilidade dos recursos e meios que suportam a sua execução;",
+  "policies_bcm_principles_f": "Definir e implementar uma estratégia de Continuidade de Negócio (CN) que permita reduzir a probabilidade de ocorrência de incidentes disruptivos e eventuais desastres e, caso ocorram, recuperar os processos nos tempos definidos, assegurando a sua continuidade em níveis mínimos aceitáveis, através da implementação de planos, procedimentos e medidas de prevenção, resposta e recuperação (técnicas e organizacionais);",
+  "policies_bcm_principles_g": "Englobar e incorporar os prestadores de serviços críticos ou relevantes na estratégia de CN supramencionada, assim como monitorizar a capacidade de resiliência dos mesmos através da análise das medidas por estes implementadas para fazer face a um evento disruptivo;",
+  "policies_bcm_principles_h": "Integrar o processo de Gestão de Incidentes no âmbito do Sistema de Gestão de Continuidade de Negócio;",
+  "policies_bcm_principles_i": "Desenvolver, implementar e monitorizar a eficácia dos planos e das medidas implementadas, assegurando a sua melhoria contínua através de testes regulares, indicadores de desempenho, auditorias e revisões periódicas pelas equipas responsáveis e pela gestão de topo;",
+  "policies_bcm_principles_j": "Incorporar uma cultura de Continuidade de Negócio de forma transversal, através de acções de formação e sensibilização regulares, assegurando que todos os colaboradores compreendem as suas responsabilidades;",
+  "policies_bcm_principles_k": "Estabelecer, manter e melhorar, de forma contínua, o Sistema de Gestão de Continuidade de Negócio, garantindo a actualização periódica de toda a documentação de suporte ao SGCN e a adequação e pertinência da informação nela contida;",
+  "policies_bcm_principles_l": "Garantir, desde a fase inicial, que as preocupações com a Continuidade de Negócio são adequadamente endereçadas em todos os projectos relevantes e impactantes para a AC;",
+  "policies_bcm_principles_m": "Garantir que o SGCN endereça os requisitos de Continuidade da Segurança da Informação;",
+  "policies_bcm_principles_n": "Promover o cumprimento dos requisitos legais e regulamentares em matéria de Continuidade de Negócio;"
 }

@@ -625,6 +625,23 @@
 "policies_bcm_principles_intro": "Dans le cadre de la Gestion de la Continuité des Activités, et afin d’atteindre les objectifs définis, AC doit :",
 "policies_bcm_principles_a": "Analyser le contexte interne et externe afin d’assurer une compréhension adéquate de l’organisation, de l’activité, ainsi que des risques et opportunités associés.",
 
-"policies_bcm_lastUpdated": "Dernière mise à jour :"
+"policies_bcm_lastUpdated": "Dernière mise à jour :",
+
+
+"policies_bcm_principles_b": "Définir une structure hiérarchique avec des rôles et responsabilités clairement attribués tout au long du cycle de vie du SGCA, en tenant compte des phases pré et post-sinistre ;",
+"policies_bcm_principles_c": "Garantir que les processus soutenant les opérations et les activités sont identifiés ;",
+"policies_bcm_principles_d": "Analyser l’impact des interruptions des processus dans le temps et déterminer les priorités de reprise de ces processus ainsi que des ressources qui les soutiennent (ex. : infrastructures, collaborateurs, applications, fournisseurs) ;",
+"policies_bcm_principles_e": "Évaluer l’exposition des processus critiques aux risques et événements susceptibles de compromettre leur continuité en raison de l’indisponibilité des ressources et moyens nécessaires à leur exécution ;",
+"policies_bcm_principles_f": "Définir et mettre en œuvre une stratégie de Continuité des Activités permettant de réduire la probabilité d’occurrence d’incidents perturbateurs et d’éventuelles catastrophes et, le cas échéant, de rétablir les processus dans les délais définis, en assurant leur continuité à des niveaux minimaux acceptables grâce à la mise en place de plans, procédures et mesures de prévention, de réponse et de reprise (techniques et organisationnelles) ;",
+"policies_bcm_principles_g": "Intégrer les prestataires de services critiques ou pertinents dans la stratégie de Continuité des Activités susmentionnée, ainsi que surveiller leur capacité de résilience en évaluant les mesures qu’ils mettent en œuvre pour faire face à un événement perturbateur ;",
+"policies_bcm_principles_h": "Intégrer le processus de gestion des incidents dans le périmètre du Système de Gestion de la Continuité des Activités ;",
+"policies_bcm_principles_i": "Développer, mettre en œuvre et suivre l’efficacité des plans et mesures, en assurant une amélioration continue grâce à des tests réguliers, des indicateurs de performance, des audits et des revues périodiques par les équipes responsables et la direction ;",
+"policies_bcm_principles_j": "Instaurer une culture de Continuité des Activités à l’échelle de l’organisation par des actions régulières de formation et de sensibilisation, en veillant à ce que tous les collaborateurs comprennent leurs responsabilités ;",
+"policies_bcm_principles_k": "Établir, maintenir et améliorer en continu le Système de Gestion de la Continuité des Activités, en garantissant la mise à jour régulière de toute la documentation associée et la pertinence des informations qu’elle contient ;",
+"policies_bcm_principles_l": "Garantir, dès la phase initiale, que les exigences de Continuité des Activités sont correctement prises en compte dans tous les projets pertinents et impactants pour AC ;",
+"policies_bcm_principles_m": "Garantir que le SGCA prend en compte les exigences de Continuité de la Sécurité de l’Information ;",
+"policies_bcm_principles_n": "Promouvoir le respect des exigences légales et réglementaires en matière de Continuité des Activités.",
+
+
   
 }
