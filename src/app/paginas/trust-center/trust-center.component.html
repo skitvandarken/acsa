@@ -1,200 +1,355 @@
-<!--
-  Componente Trust Center
-  Esta página apresenta informações sobre o Centro de Confiança, incluindo certificações, parceiros e prêmios.
-  Utiliza o framework UIkit para layout responsivo e estilização.
--->
+<!-- Trust Center Component -->
 
-<!-- Menu de navegação principal -->
+<!-- Navigation -->
 <app-menu></app-menu>
 
-<!-- Cabeçalho com fundo e gradiente -->
+<!-- Header Section -->
 <div class="fundo-cabecalho">
   <div class="gradiente-texto-cabecalho">
     <div class="conteudo-cabecalho uk-margin-medium-top">
-      <!-- Título e subtítulo traduzidos dinamicamente -->
       <div class="uk-container uk-margin-large-bottom">
-        <h4 style="color:white">{{ 'centro_confianca_titulo_pagina' | translate }}</h4>
-        <h1 style="color:rgba(39, 200, 227, 1); font-weight: bolder;">{{ 'centro_confianca_subtitulo_pagina' | translate
-          }}</h1>
+        <h4 style="color: white">{{ 'centro_confianca_titulo_pagina' | translate }}</h4>
+        <h1 style="color: rgba(39, 200, 227, 1); font-weight: bolder;">
+          {{ 'centro_confianca_subtitulo_pagina' | translate }}
+        </h1>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Seção de características (provavelmente lista de diferenciais ou valores) -->
+<!-- Features Section -->
 <app-caracteristicas></app-caracteristicas>
 
-<!-- Seção de Certificações -->
+<!-- Certifications Section -->
 <div class="uk-container uk-margin-large-top">
   <div class="fundo-selos">
-    <!-- Grid responsivo para exibir selos de certificação agrupados por categoria -->
-    <div class="uk-grid-column-small uk-grid-row-small uk-grid-match uk-child-width-1-2@s uk-text-center" uk-grid>
-      <!-- Seção Qualidade -->
+
+
+    <div
+      class="uk-grid-column-small uk-grid-row-small uk-grid-match uk-grid-match-height uk-child-width-1-2@s uk-text-center"
+      uk-grid>
+
+      <!-- Quality -->
       <div>
-        <div class="uk-card  uk-card-body">
-          <h3 style="color: white;" class="uk-card-title"><b>{{ 'qualidade_titulo' | translate }}</b></h3>
+        <div class="uk-card uk-card-body">
+          <h3 style="color: white" class="uk-card-title">
+            <b>{{ 'qualidade_titulo' | translate }}</b>
+          </h3>
           <div class="uk-flex uk-flex-column uk-flex-middle">
             <div class="uk-text-center uk-grid-small uk-flex-nowrap" uk-grid>
               <div>
-                <img width="150px" class="uk-width-1-1 uk-width-auto@m" src="img/iso/iso3.png"
-                  alt="Certificação ISO 14064">
+                <img class="uk-width-1-1 uk-width-auto@m" src="img/iso/iso9001.png" alt="ISO 27001">
+                <a class="uk-button botao-azul" href="#modal-iso9001" uk-toggle>
+                  {{'saiba.mais' | translate}}
+                </a>
+                <div id="modal-iso9001" class="uk-flex-top" uk-modal>
+                  <div class="uk-modal-dialog uk-margin-auto-vertical uk-width-medium uk-position-relative"
+                    style="background: transparent; box-shadow: none;">
+                    <button class="uk-modal-close-default" type="button" uk-close></button>
+                    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow>
+                      <ul class="uk-slideshow-items" style="min-height: 85vh;">
+                        <li>
+                          <img src="img/iso/description/ISO-9001_01.png" alt="" class="selo-iso">
+                        </li>
+                        <li>
+                          <img src="img/iso/description/ISO-9001_02.png" alt="" class="selo-iso">
+                        </li>
+                      </ul>
+                      <a class="uk-position-center-left uk-position-small" href uk-slidenav-previous
+                        uk-slideshow-item="previous"></a>
+                      <a class="uk-position-center-right uk-position-small" href uk-slidenav-next
+                        uk-slideshow-item="next"></a>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div>
-                <img class="uk-width-1-1 uk-width-auto@m" src="img/iso/iso1.png" alt="Certificação ISO 26000">
+                <img class="uk-width-1-1 uk-width-auto@m" src="img/iso/iso37001.png" alt="ISO 20000">
+                <a class="uk-button botao-azul" href="#modal-iso37001" uk-toggle>
+                  {{'saiba.mais' | translate}}
+                </a>
+                <div id="modal-iso37001" class="uk-flex-top" uk-modal>
+                  <div class="uk-modal-dialog uk-margin-auto-vertical uk-width-medium uk-position-relative"
+                    style="background: transparent; box-shadow: none;">
+                    <button class="uk-modal-close-default" type="button" uk-close></button>
+                    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow>
+                      <ul class="uk-slideshow-items" style="min-height: 85vh;">
+                        <li>
+                          <img src="img/iso/description/ISO-37001_01.png" alt="" class="selo-iso">
+                        </li>
+                        <li>
+                          <img src="img/iso/description/ISO-37001_02.png" alt="" class="selo-iso">
+                        </li>
+                      </ul>
+                      <a class="uk-position-center-left uk-position-small" href uk-slidenav-previous
+                        uk-slideshow-item="previous"></a>
+                      <a class="uk-position-center-right uk-position-small" href uk-slidenav-next
+                        uk-slideshow-item="next"></a>
+                    </div>
+                  </div>
+                </div>
               </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div
+        class="uk-grid-column-small uk-grid-row-small uk-grid-match uk-grid-match-height uk-child-width-1-2@s uk-text-center"
+        uk-grid>
+
+        <div>
+          <div class="uk-card uk-card-body">
+            <h3 style="color: white" class="uk-card-title">
+              <b>{{ 'proteccao_dados' | translate }}</b>
+            </h3>
+            <div class="uk-flex uk-flex-column uk-flex-center uk-flex-middle">
+              <div class="uk-text-center uk-grid-small uk-flex-nowrap" uk-grid>
+                <div>
+                  <img class="uk-width-1-1 uk-width-auto@m" src="img/iso/iso27701.png" alt="ISO 27001">
+                  <a class="uk-button botao-azul" href="#modal-iso27701" uk-toggle>
+                    {{'saiba.mais' | translate}}
+                  </a>
+                  <div id="modal-iso27701" class="uk-flex-top" uk-modal>
+                    <div class="uk-modal-dialog uk-margin-auto-vertical uk-width-medium uk-position-relative"
+                      style="background: transparent; box-shadow: none;">
+                      <button class="uk-modal-close-default" type="button" uk-close></button>
+                      <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow>
+                        <ul class="uk-slideshow-items" style="min-height: 85vh;">
+                          <li>
+                            <img src="img/iso/description/ISO-27701_01.png" alt="" class="selo-iso">
+                          </li>
+                          <li>
+                            <img src="img/iso/description/ISO-27701_02.png" alt="" class="selo-iso">
+                          </li>
+                        </ul>
+                        <a class="uk-position-center-left uk-position-small" href uk-slidenav-previous
+                          uk-slideshow-item="previous"></a>
+                        <a class="uk-position-center-right uk-position-small" href uk-slidenav-next
+                          uk-slideshow-item="next"></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <img class="uk-width-1-1 uk-width-auto@m" src="img/iso/iso27018.png" alt="ISO 20000">
+                  <a class="uk-button botao-azul" href="#modal-iso27018" uk-toggle>
+                    {{'saiba.mais' | translate}}
+                  </a>
+                  <div id="modal-iso27018" class="uk-flex-top" uk-modal>
+                    <div class="uk-modal-dialog uk-margin-auto-vertical uk-width-medium uk-position-relative"
+                      style="background: transparent; box-shadow: none;">
+                      <button class="uk-modal-close-default" type="button" uk-close></button>
+                      <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow>
+                        <ul class="uk-slideshow-items" style="min-height: 85vh;">
+                          <li>
+                            <img src="img/iso/description/ISO-27018_01.png" alt="" class="selo-iso">
+                          </li>
+                          <li>
+                            <img src="img/iso/description/ISO-27018_02.png" alt="" class="selo-iso">
+                          </li>
+                        </ul>
+                        <a class="uk-position-center-left uk-position-small" href uk-slidenav-previous
+                          uk-slideshow-item="previous"></a>
+                        <a class="uk-position-center-right uk-position-small" href uk-slidenav-next
+                          uk-slideshow-item="next"></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- Protecção de Dados -->
+
+
+
+    </div>
+
+    <div class=" uk-child-width-1-3@m uk-child-width-1-1@s uk-text-center" uk-grid>
+
+      <div class="uk-width-1-1">
+        <h3 style="color: white" class="uk-card-title">
+          <b>{{ 'seguranca_titulo' | translate }}</b>
+        </h3>
+      </div>
+
+      <div class="uk-margin-large-bottom">
+        <div class="uk-flex uk-flex-column uk-flex-middle">
+          <img class="uk-width-auto uk-margin-small-bottom" src="img/iso/iso27001.png" alt="ISO 27001"
+            style="max-height: 150px;">
+          <a class="uk-button botao-azul" href="#modal-iso27001" uk-toggle>
+            {{'saiba.mais' | translate}}
+          </a>
+        </div>
+
+        <div id="modal-iso27001" class="uk-flex-top" uk-modal>
+          <div class="uk-modal-dialog uk-margin-auto-vertical uk-width-medium uk-position-relative"
+            style="background: transparent; box-shadow: none;">
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow>
+              <ul class="uk-slideshow-items" style="min-height: 85vh;">
+                <li><img src="img/iso/description/ISO-27001_01.png" alt="" class="selo-iso"></li>
+                <li><img src="img/iso/description/ISO-27001_02.png" alt="" class="selo-iso"></li>
+              </ul>
+              <a class="uk-position-center-left uk-position-small" href uk-slidenav-previous
+                uk-slideshow-item="previous"></a>
+              <a class="uk-position-center-right uk-position-small" href uk-slidenav-next uk-slideshow-item="next"></a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Seção Segurança -->
-      <div>
-        <div class="uk-card  uk-card-body">
-          <h3 style="color: white;" class="uk-card-title"><b>{{ 'seguranca_titulo' | translate }}</b></h3>
-          <div class="uk-flex uk-flex-column uk-flex-middle">
-            <div class="uk-text-center uk-grid-small uk-flex-nowrap" uk-grid>
-              <div>
-                <img class="uk-width-1-1 uk-width-auto@m" src="img/iso/iso2.png" alt="Certificação ISO 26000">
-              </div>
-              <div>
-                <img class="uk-width-1-1 uk-width-auto@m" src="img/iso/iso4.png" alt="Certificação ISO 14064">
-              </div>
+      <div class="uk-margin-large-bottom">
+        <div class="uk-flex uk-flex-column uk-flex-middle">
+          <img class="uk-width-auto uk-margin-small-bottom" src="img/iso/iso20000.png" alt="ISO 20000"
+            style="max-height: 150px;">
+          <a class="uk-button botao-azul" href="#modal-iso20000" uk-toggle>
+            {{'saiba.mais' | translate}}
+          </a>
+        </div>
+
+        <div id="modal-iso20000" class="uk-flex-top" uk-modal>
+          <div class="uk-modal-dialog uk-margin-auto-vertical uk-width-medium uk-position-relative"
+            style="background: transparent; box-shadow: none;">
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow>
+              <ul class="uk-slideshow-items" style="min-height: 85vh;">
+                <li><img src="img/iso/description/ISO-20000_01.png" alt="" class="selo-iso"></li>
+                <li><img src="img/iso/description/ISO-20000_02.png" alt="" class="selo-iso"></li>
+              </ul>
+              <a class="uk-position-center-left uk-position-small" href uk-slidenav-previous
+                uk-slideshow-item="previous"></a>
+              <a class="uk-position-center-right uk-position-small" href uk-slidenav-next uk-slideshow-item="next"></a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Seção Infraestrutura -->
-      <div>
-        <div class="uk-card  uk-card-body">
-          <h3 style="color: white;" class="uk-card-title"><b>{{ 'infraestrutura_titulo' | translate }}</b></h3>
-          <div class="uk-flex uk-flex-column uk-flex-middle">
-            <div class="uk-text-center uk-grid-small uk-flex-nowrap" uk-grid>
-              <div>
-              <!--   <img class="uk-width-1-1 uk-width-auto@m" src="img/iso/tier.png" alt="Certificação Tier"> -->
-              </div>
-              <div>
-                <img class="uk-width-1-1 uk-width-auto@m" src="img/iso/iso2.png" alt="Certificação ISO 14064">
-              </div>
+      <div class="uk-margin-large-bottom">
+        <div class="uk-flex uk-flex-column uk-flex-middle">
+          <img class="uk-width-auto uk-margin-small-bottom" src="img/iso/soc2.png" alt="SOC 2"
+            style="max-height: 150px;">
+          <a class="uk-button botao-azul" href="#modal-soc2" uk-toggle>
+            {{'saiba.mais' | translate}}
+          </a>
+        </div>
+
+        <div id="modal-soc2" class="uk-flex-top" uk-modal>
+          <div class="uk-modal-dialog uk-margin-auto-vertical uk-width-medium uk-position-relative"
+            style="background: transparent; box-shadow: none;">
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow>
+              <ul class="uk-slideshow-items" style="min-height: 85vh;">
+                <li><img src="img/iso/description/SOC-2_01.png" alt="" class="selo-iso"></li>
+                <li><img src="img/iso/description/SOC-2_02.png" alt="" class="selo-iso"></li>
+              </ul>
+              <a class="uk-position-center-left uk-position-small" href uk-slidenav-previous
+                uk-slideshow-item="previous"></a>
+              <a class="uk-position-center-right uk-position-small" href uk-slidenav-next uk-slideshow-item="next"></a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Seção ESG (Ambiental, Social e Governança) -->
-      <div>
-        <div class="uk-card  uk-card-body">
-          <h3 style="color: white;" class="uk-card-title"><b>{{ 'esg_titulo' | translate }}</b></h3>
-          <div class="uk-flex uk-flex-column uk-flex-middle">
-            <div class="uk-text-center uk-grid-small uk-flex-nowrap" uk-grid>
-              <div>
-                <img class="uk-width-1-1 uk-width-auto@m" src="img/iso/iso7.png" alt="Certificação ISO 26000">
-              </div>
-              <div>
-                <img class="uk-width-1-1 uk-width-auto@m" src="img/iso/typeii.png" alt="Certificação ISO 14064">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 
-  <!-- Seção de Certificações de Parceiros -->
+  <!-- Partners Certifications -->
   <div class="uk-container">
-    <h1 style="color: white;" class="uk-text-center"><b>{{ 'certificacoes_parceiros_titulo' | translate }}</b></h1>
-    <div class="uk-grid-column-small uk-grid-row-small uk-grid-match uk-text-center uk-child-width-1-2 uk-child-width-1-5@s" uk-grid>
+    <h1 style="color: white" class="uk-text-center">
+      <b>{{ 'certificacoes_parceiros_titulo' | translate }}</b>
+    </h1>
+    <div
+      class="uk-grid-column-small uk-grid-row-small uk-grid-match uk-text-center uk-child-width-1-2 uk-child-width-1-5@s"
+      uk-grid>
       <div>
-        <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
-          <img src="img/cert-parceiros/agence-numerique.png">
+        <div class="uk-card uk-card-default uk-card-body uk-border-rounded"><img
+            src="img/cert-parceiros/agence-numerique.png" alt=""></div>
+      </div>
+      <div>
+        <div class="uk-card uk-card-default uk-card-body uk-border-rounded"><img src="img/cert-parceiros/aicpa.png"
+            alt=""></div>
+      </div>
+      <div>
+        <div class="uk-card uk-card-default uk-card-body uk-border-rounded"><img src="img/cert-parceiros/aicpa1.png"
+            alt=""></div>
+      </div>
+      <div>
+        <div class="uk-card uk-card-default uk-card-body uk-border-rounded"><img
+            src="img/cert-parceiros/cloud-sercurity-alliance.png" alt=""></div>
+      </div>
+      <div>
+        <div class="uk-card uk-card-default uk-card-body uk-border-rounded"><img
+            src="img/cert-parceiros/cyber-essentials.png" alt=""></div>
+      </div>
+      <div>
+        <div class="uk-card uk-card-default uk-card-body uk-border-rounded"><img src="img/cert-parceiros/ens.png"
+            alt=""></div>
+      </div>
+      <div>
+        <div class="uk-card uk-card-default uk-card-body uk-border-rounded"><img src="img/cert-parceiros/eu-gdpr.png"
+            alt=""></div>
+      </div>
+      <div>
+        <div class="uk-card uk-card-default uk-card-body uk-border-rounded"><img src="img/cert-parceiros/hipaa.png"
+            alt=""></div>
+      </div>
+      <div>
+        <div class="uk-card uk-card-default uk-card-body uk-border-rounded"><img src="img/cert-parceiros/irap.png"
+            alt=""></div>
+      </div>
+      <div>
+        <div class="uk-card uk-card-default uk-card-body uk-border-rounded"><img src="img/cert-parceiros/it.png" alt="">
         </div>
       </div>
       <div>
-        <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
-          <img src="img/cert-parceiros/aicpa.png">
-        </div>
+        <div class="uk-card uk-card-default uk-card-body uk-border-rounded"><img src="img/cert-parceiros/nen-7510.png"
+            alt=""></div>
       </div>
       <div>
-        <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
-          <img src="img/cert-parceiros/aicpa1.png">
-        </div>
+        <div class="uk-card uk-card-default uk-card-body uk-border-rounded"><img src="img/cert-parceiros/part-iso2.png"
+            alt=""></div>
       </div>
       <div>
-        <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
-          <img src="img/cert-parceiros/cloud-sercurity-alliance.png">
-        </div>
+        <div class="uk-card uk-card-default uk-card-body uk-border-rounded"><img src="img/cert-parceiros/part-iso3.png"
+            alt=""></div>
       </div>
       <div>
-        <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
-          <img src="img/cert-parceiros/cyber-essentials.png">
-        </div>
+        <div class="uk-card uk-card-default uk-card-body uk-border-rounded"><img src="img/cert-parceiros/part-iso4.png"
+            alt=""></div>
       </div>
       <div>
-        <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
-          <img src="img/cert-parceiros/ens.png">
-        </div>
-      </div>
-      <div>
-        <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
-          <img src="img/cert-parceiros/eu-gdpr.png">
-        </div>
-      </div>
-      <div>
-        <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
-          <img src="img/cert-parceiros/hipaa.png">
-        </div>
-      </div>
-      <div>
-        <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
-          <img src="img/cert-parceiros/irap.png">
-        </div>
-      </div>
-      <div>
-        <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
-          <img src="img/cert-parceiros/it.png">
-        </div>
-      </div>
-      <div>
-        <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
-          <img src="img/cert-parceiros/nen-7510.png">
-        </div>
-      </div>
-      <div>
-        <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
-          <img src="img/cert-parceiros/part-iso2.png">
-        </div>
-      </div>
-      <div>
-        <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
-          <img src="img/cert-parceiros/part-iso3.png">
-        </div>
-      </div>
-      <div>
-        <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
-          <img src="img/cert-parceiros/part-iso4.png">
-        </div>
-      </div>
-      <div>
-        <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
-          <img src="img/cert-parceiros/partner-iso.png">
-        </div>
+        <div class="uk-card uk-card-default uk-card-body uk-border-rounded"><img
+            src="img/cert-parceiros/partner-iso.png" alt=""></div>
       </div>
     </div>
-</div></div>
+  </div>
+</div>
 
-<!-- Seção de Prêmios -->
+<!-- Awards Section -->
 <div class="fundo-premios uk-margin-large-top">
   <div class="uk-padding">
-    <!-- Título dos prêmios, dividido em duas partes para destaque -->
-    <h2 style="color:white" class="uk-text-center uk-margin-large-top">{{ 'premios_titulo_parte1' | translate }}<br><b
-        style="color: #28C1FD;"> {{ 'premios_titulo_parte2' | translate }}</b></h2>
+    <h2 style="color: white" class="uk-text-center uk-margin-large-top">
+      {{ 'premios_titulo_parte1' | translate }}<br>
+      <b style="color: #28C1FD;">{{ 'premios_titulo_parte2' | translate }}</b>
+    </h2>
   </div>
 
-  <!-- Slider/carrossel de imagens dos prêmios recebidos -->
   <div class="slider-container shadow-top uk-margin-small-top">
     <div class="slider uk-margin-medium-top uk-margin-medium-bottom">
       <div class="slider-inner">
-        <!-- Imagens dos prêmios, duplicadas via JS para efeito de carrossel infinito -->
         <img class="uk-border-rounded" src="img/premios/aicep.png" alt="">
         <img class="uk-border-rounded" src="img/premios/capacity-carrier.png" alt="">
         <img class="uk-border-rounded" src="img/premios/gmb.png" alt="">
@@ -206,8 +361,7 @@
       </div>
     </div>
   </div>
-  <div class="uk-container uk-text-center"></div>
 </div>
 
-<!-- Rodapé do site -->
+<!-- Footer -->
 <app-rodape></app-rodape>

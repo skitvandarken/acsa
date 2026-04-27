@@ -307,9 +307,10 @@
   "centro_confianca_titulo_pagina": "Trust Center",
   "centro_confianca_subtitulo_pagina": "High-performance connectivity solutions.",
   "qualidade_titulo": "Quality",
-  "seguranca_titulo": "Security",
+  "seguranca_titulo": "IT & Security",
   "infraestrutura_titulo": "Infrastructure",
-  "esg_titulo": "ESG",
+  "proteccao_dados": "Data Protection and Privacy",
+  "esg_titulo": "Anti-Bribery",
   "certificacoes_parceiros_titulo": "Partner Certifications",
   "premios_titulo_parte1": "WE DON'T SEEK AWARDS, BUT WE",
   "premios_titulo_parte2": "VALUE RECOGNITION",
@@ -620,22 +621,17 @@
   "policies_bcm_principles_intro": "Within the scope of Business Continuity Management, and in order to achieve the defined objectives, AC shall:",
   "policies_bcm_principles_a": "Analyze the internal and external context, ensuring an adequate understanding of the organization, the business, as well as its risks and opportunities.",
   "policies_bcm_lastUpdated": "Last updated:",
-
-
-
   "policies_bcm_principles_b": "Define a hierarchical structure with clearly assigned roles and responsibilities throughout the entire BCMS lifecycle, considering both pre- and post-disaster phases;",
-"policies_bcm_principles_c": "Ensure that the processes supporting operations and business activities are identified;",
-"policies_bcm_principles_d": "Analyze the impact of process disruptions over time and determine recovery priorities for these processes and their supporting resources (e.g., facilities, employees, applications, suppliers);",
-"policies_bcm_principles_e": "Assess the exposure of critical processes to risks and events that may compromise their continuity due to the unavailability of supporting resources and means;",
-"policies_bcm_principles_f": "Define and implement a Business Continuity (BC) strategy to reduce the likelihood of disruptive incidents and potential disasters and, if they occur, recover processes within defined timeframes, ensuring continuity at acceptable minimum levels through the implementation of prevention, response, and recovery plans, procedures, and measures (technical and organizational);",
-"policies_bcm_principles_g": "Include and integrate critical or relevant service providers into the aforementioned BC strategy, as well as monitor their resilience capabilities by assessing the measures they implement to respond to disruptive events;",
-"policies_bcm_principles_h": "Integrate the Incident Management process within the scope of the Business Continuity Management System;",
-"policies_bcm_principles_i": "Develop, implement, and monitor the effectiveness of plans and measures, ensuring continuous improvement through regular testing, performance indicators, audits, and periodic reviews by responsible teams and top management;",
-"policies_bcm_principles_j": "Embed a Business Continuity culture across the organization through regular training and awareness initiatives, ensuring all employees understand their responsibilities;",
-"policies_bcm_principles_k": "Establish, maintain, and continuously improve the Business Continuity Management System, ensuring periodic updates of all supporting documentation and the relevance and adequacy of the information contained therein;",
-"policies_bcm_principles_l": "Ensure, from the initial stage, that Business Continuity considerations are properly addressed in all relevant and impactful projects for AC;",
-"policies_bcm_principles_m": "Ensure that the BCMS addresses Information Security Continuity requirements;",
-"policies_bcm_principles_n": "Promote compliance with legal and regulatory requirements related to Business Continuity."
-
-
+  "policies_bcm_principles_c": "Ensure that the processes supporting operations and business activities are identified;",
+  "policies_bcm_principles_d": "Analyze the impact of process disruptions over time and determine recovery priorities for these processes and their supporting resources (e.g., facilities, employees, applications, suppliers);",
+  "policies_bcm_principles_e": "Assess the exposure of critical processes to risks and events that may compromise their continuity due to the unavailability of supporting resources and means;",
+  "policies_bcm_principles_f": "Define and implement a Business Continuity (BC) strategy to reduce the likelihood of disruptive incidents and potential disasters and, if they occur, recover processes within defined timeframes, ensuring continuity at acceptable minimum levels through the implementation of prevention, response, and recovery plans, procedures, and measures (technical and organizational);",
+  "policies_bcm_principles_g": "Include and integrate critical or relevant service providers into the aforementioned BC strategy, as well as monitor their resilience capabilities by assessing the measures they implement to respond to disruptive events;",
+  "policies_bcm_principles_h": "Integrate the Incident Management process within the scope of the Business Continuity Management System;",
+  "policies_bcm_principles_i": "Develop, implement, and monitor the effectiveness of plans and measures, ensuring continuous improvement through regular testing, performance indicators, audits, and periodic reviews by responsible teams and top management;",
+  "policies_bcm_principles_j": "Embed a Business Continuity culture across the organization through regular training and awareness initiatives, ensuring all employees understand their responsibilities;",
+  "policies_bcm_principles_k": "Establish, maintain, and continuously improve the Business Continuity Management System, ensuring periodic updates of all supporting documentation and the relevance and adequacy of the information contained therein;",
+  "policies_bcm_principles_l": "Ensure, from the initial stage, that Business Continuity considerations are properly addressed in all relevant and impactful projects for AC;",
+  "policies_bcm_principles_m": "Ensure that the BCMS addresses Information Security Continuity requirements;",
+  "policies_bcm_principles_n": "Promote compliance with legal and regulatory requirements related to Business Continuity."
 }
