@@ -53,7 +53,7 @@ export class ContactoComponent {
       {
         title: 'Sede',
         address:
-          'Edifício Cellwave, Via AL5 Zona, XR6B<br>Talatona, Luanda Sul, Angola',
+          'Condomínio Rosalinda, Edifício 11-A,<br> Estr. da Samba, Luanda, Angola.',
         phone: '+244 227 360 006',
       },
       {
