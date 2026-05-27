@@ -633,5 +633,74 @@
   "policies_bcm_principles_k": "Establish, maintain, and continuously improve the Business Continuity Management System, ensuring periodic updates of all supporting documentation and the relevance and adequacy of the information contained therein;",
   "policies_bcm_principles_l": "Ensure, from the initial stage, that Business Continuity considerations are properly addressed in all relevant and impactful projects for AC;",
   "policies_bcm_principles_m": "Ensure that the BCMS addresses Information Security Continuity requirements;",
-  "policies_bcm_principles_n": "Promote compliance with legal and regulatory requirements related to Business Continuity."
+  "policies_bcm_principles_n": "Promote compliance with legal and regulatory requirements related to Business Continuity.",
+
+
+
+  
+  "procurement.policy.title": "Procurement and Supplier Relationship Policy",
+  "procurement.objective.title": "1. Objective",
+  "procurement.objective.paragraph1": "This policy aims to establish the principles, guidelines, responsibilities and procedures applicable to the acquisition of goods and contracting of services, setting forth the regulations for its execution process while ensuring requirements of competitiveness, quality, safety, socio-environmental responsibility of acquired goods and the continuous improvement of the relationship with AC's suppliers and service providers.",
+  "procurement.objective.itemA": "Ensure the integrity, transparency and traceability of contracting processes;",
+  "procurement.objective.itemB": "Promote competition under equal conditions among suppliers;",
+  "procurement.objective.itemC": "Ensure selection based on objective, technical and economic criteria;",
+  "procurement.objective.itemD": "Guarantee segregation of duties in operational and decision-making phases;",
+  "procurement.objective.itemE": "Ensure compliance with applicable legal, regulatory and internal standards;",
+  "procurement.objective.itemF": "Promote ethical, responsible and sustainable practices in the supply chain;",
+  "procurement.objective.itemG": "Ensure adequate use and protection of supplier data;",
+  "procurement.objective.itemH": "Ensure compliance with contractual obligations;",
+  "procurement.objective.itemI": "Respect the principles of the Code of Ethics and Conduct, internal standards and comply with legislation applicable to its activities;",
+  "procurement.objective.itemJ": "Ensure timely payment of contracted goods and services.",
+  "procurement.scope.title": "2. Scope",
+  "procurement.scope.paragraph1": "This policy establishes the normative framework applicable to the processes of acquiring goods, contracting services and managing AC's suppliers and service providers, ensuring that they are conducted with integrity, transparency and aligned with best practices in governance, internal control and risk management.",
+  "procurement.scope.paragraph2": "The policy applies to all areas and organizational units of AC involved in contracting processes, as well as to all suppliers, service providers and partners who establish contractual or commercial relationships with AC.",
+  "procurement.supplierRelationship.title": "3. Relationship with Suppliers and Service Providers",
+  "procurement.supplierRelationship.paragraph1": "AC values a transparent, honest and partnership-based relationship with its suppliers, service providers and partners, and therefore establishes ethical professional relationships free from favoritism.",
+  "procurement.supplierRelationship.paragraph2": "Therefore, those who are currently AC suppliers, or wish to become one, must pay attention to the criteria to be followed and be aware that they may be evaluated throughout their supply cycle, and must provide information when requested.",
+  "procurement.supplierRelationship.paragraph3": "AC intends that its suppliers and third parties be more than providers of materials, services and equipment, but rather partners for sustainable development and a strong culture of integrity in the business environment. To this end, it has established a relationship model with its suppliers based on the commitment to follow good practices and internationally recognized principles. This model was inspired by recognizing the importance of the economic, environmental and social impacts produced by this stakeholder group, and is guided by two main axes:",
+  "procurement.supplierRelationship.eixo1": "• AC's Code of Ethics and Conduct, which determines, among other aspects, that the supplier evaluation and selection process is carried out rigorously and following the highest standards of transparency and ethics;",
+  "procurement.supplierRelationship.eixo2": "• A set of supplier relationship principles of AC, which describes the minimum requirements, for both suppliers and AC, regarding business practices, occupational health and safety, ethics and environmental management.",
+  "procurement.communicationChannel.title": "4. Communication Channel",
+  "procurement.communicationChannel.paragraph1": "In this context, it is essential that any person, whether employee, supplier or service provider, reports any acts or suspicions of non-compliance with this Policy, preventing acts of fraud and corruption and preserving AC's image.",
+  "procurement.communicationChannel.paragraph2": "Irregularities may be reported in writing and submitted through the following channel: https://portal-de-denuncias.vercel.app/ or by email denuncias@angolacables.com",
+
+  
+ 
+  "customer.dueDiligence.policy.title": "Policy on the Identification, Acceptance and Due Diligence of Customers and Partners",
+  "customer.dueDiligence.objective.title": "1. Objective",
+  "customer.dueDiligence.objective.paragraph1": "This policy forms part of Angola Cables' (AC) internal control and risk management system, aligning with the best practices of the Programme for the Prevention and Combating of Money Laundering, Terrorist Financing and the Proliferation of Weapons of Mass Destruction (PC-BC/FTP), as well as with the principles and rules established under the Anti-Bribery Policy.",
+  "customer.dueDiligence.objective.paragraph2": "Its purpose is to establish the rules, guidelines and criteria applicable to the process of identifying, understanding, accepting and monitoring customers and partners, as well as, where applicable, their legal representatives and beneficial owners, ensuring that all business relationships are established on the basis of adequate, verifiable information consistent with the required standards of integrity, transparency and compliance.",
+  "customer.dueDiligence.scope.title": "2. Scope",
+  "customer.dueDiligence.scope.paragraph1": "In the context of AC's activities, the application of this policy aims not only to mitigate the risks associated with money laundering and terrorist financing, but also to prevent exposure to risks of bribery, corruption, fraud, conflicts of interest and other practices that may compromise the legality, reputation and sustainability of the business relationships established.",
+  "customer.dueDiligence.scope.paragraph2": "To this end, risk-proportionate due diligence mechanisms are defined, which enable the assessment of customers' suitability, an understanding of the nature of their business, the origin of funds and the framework of commercial relationships, ensuring that these are compatible with the applicable legal, regulatory and internal requirements.",
+  "customer.dueDiligence.scope.paragraph3": "This policy applies to all employees, members of the governing bodies and all organisational units of AC, and is mandatory in the context of establishing, maintaining and reviewing any business relationships, regardless of the channel, geography or nature of the services provided.",
+
+
+
+  "infoSecurity.policy.title": "Information Security Policy for Suppliers and Service Providers",
+  "infoSecurity.objective.title": "1. Objective",
+  "infoSecurity.objective.paragraph1": "This Policy establishes the principles, rules and responsibilities applicable to Information Security within the scope of the relationship between AC and its suppliers and service providers, ensuring adequate protection of information assets, personal data and business information.",
+  "infoSecurity.objective.paragraph2": "Its objective is to ensure that all contractual and operational relationships with third parties guarantee adequate levels of:",
+  "infoSecurity.objective.confidentiality": "Confidentiality;",
+  "infoSecurity.objective.integrity": "Integrity;",
+  "infoSecurity.objective.availability": "Availability;",
+  "infoSecurity.objective.authenticity": "Authenticity and traceability of information.",
+  "infoSecurity.scope.title": "2. Scope",
+  "infoSecurity.scope.paragraph1": "This policy applies to:",
+  "infoSecurity.scope.item1": "All suppliers, service providers and partners of AC;",
+  "infoSecurity.scope.item2": "Employees, subcontractors and representatives of external entities;",
+  "infoSecurity.scope.item3": "All contracts, agreements and formal instruments, including:",
+  "infoSecurity.scope.paragraph2": "It also includes any situation involving access to:",
+  "infoSecurity.scope.item4": "Service provision contracts",
+  "infoSecurity.scope.item5": "Non-disclosure agreements (NDA)",
+  "infoSecurity.scope.item6": "Data processing agreements",
+  "infoSecurity.scope.item7": "Technological and operational partnerships",
+  "infoSecurity.scope.item8": "Services involving access, processing or storage of information.",
+  "infoSecurity.scope.paragraph3": "It also includes any situation involving access to:",
+  "infoSecurity.scope.item9": "Personal data;",
+  "infoSecurity.scope.item10": "Classified information;",
+  "infoSecurity.scope.item11": "Information systems;",
+  "infoSecurity.scope.item12": "Technology infrastructures."
+
+
 }

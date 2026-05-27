@@ -79,6 +79,35 @@ export const routes: Routes = [
       ),
   },
 
+
+    {
+    path: 'politicas-contrat',
+
+    loadComponent: () =>
+      import('./paginas/politicas-contrat/politicas-contrat.component').then(
+        (m) => m.PoliticasContratComponent,
+      ),
+  },
+
+  
+    {
+    path: 'politicas-id-dued',
+
+    loadComponent: () =>
+      import('./paginas/politicas-id-duediligence/politicas-id-duediligence.component').then(
+        (m) => m.PoliticasIdDuediligenceComponent,
+      ),
+  },
+
+    {
+    path: 'politicas-seginf',
+
+    loadComponent: () =>
+      import('./paginas/politicas-seginf/politicas-seginf.component').then(
+        (m) => m.PoliticasSeginfComponent,
+      ),
+  },
+
   {
     path: 'sgi',
     loadComponent: () =>

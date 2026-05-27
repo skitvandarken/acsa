@@ -638,5 +638,75 @@
   "policies_bcm_principles_k": "Estabelecer, manter e melhorar, de forma contínua, o Sistema de Gestão de Continuidade de Negócio, garantindo a actualização periódica de toda a documentação de suporte ao SGCN e a adequação e pertinência da informação nela contida;",
   "policies_bcm_principles_l": "Garantir, desde a fase inicial, que as preocupações com a Continuidade de Negócio são adequadamente endereçadas em todos os projectos relevantes e impactantes para a AC;",
   "policies_bcm_principles_m": "Garantir que o SGCN endereça os requisitos de Continuidade da Segurança da Informação;",
-  "policies_bcm_principles_n": "Promover o cumprimento dos requisitos legais e regulamentares em matéria de Continuidade de Negócio;"
+  "policies_bcm_principles_n": "Promover o cumprimento dos requisitos legais e regulamentares em matéria de Continuidade de Negócio;",
+
+
+  
+  "procurement.policy.title": "Política de Aquisição e Relacionamento com Fornecedores",
+  "procurement.objective.title": "1. Objectivo",
+  "procurement.objective.paragraph1": "A presente política tem como objectivo estabelecer os princípios, directrizes, responsabilidades e procedimentos aplicáveis à aquisição de bens, contratação de serviços, estabelecendo a regulamentação do seu processo de execução e assegurando, ao mesmo tempo, requisitos de competitividade, qualidade, segurança, responsabilidade socio-ambiental dos bens adquiridos e a melhoria contínua do relacionamento com os fornecedores e prestadores da AC.",
+  "procurement.objective.itemA": "Garantir a integridade, transparência e rastreabilidade dos processos de contratação;",
+  "procurement.objective.itemB": "Promover a concorrência em condições de igualdade entre fornecedores;",
+  "procurement.objective.itemC": "Assegurar a selecção baseada em critérios objectivos, técnicos e económicos;",
+  "procurement.objective.itemD": "Garantir a segregação de funções nas fases operacionais e decisórias;",
+  "procurement.objective.itemE": "Assegurar o cumprimento das normas legais, regulamentares e internas aplicáveis;",
+  "procurement.objective.itemF": "Promover práticas éticas, responsáveis e sustentáveis na cadeia de fornecimento;",
+  "procurement.objective.itemG": "Garantir a adequada utilização e protecção dos dados dos fornecedores;",
+  "procurement.objective.itemH": "Assegurar o cumprimento das obrigações contratuais;",
+  "procurement.objective.itemI": "Respeitar os princípios do Código de Ética e Conduta, normas internas e atender as legislações aplicáveis às suas actividades;",
+  "procurement.objective.itemJ": "Garantir o pagamento atempado dos bens e serviços contratados.",
+  "procurement.scope.title": "2. Âmbito",
+  "procurement.scope.paragraph1": "A presente política estabelece o enquadramento normativo aplicável aos processos de aquisição de bens, contratação de serviços e gestão de fornecedores e prestadores da AC, assegurando que os mesmos são conduzidos de forma íntegra, transparente e alinhada com as melhores práticas de governação, controlo interno e gestão de riscos.",
+  "procurement.scope.paragraph2": "A política aplica-se a todas as áreas e unidades orgânicas da AC envolvidas nos processos de contratação, bem como a todos os fornecedores, prestadores de serviços e parceiros que com esta estabeleçam relações contratuais ou comerciais.",
+  "procurement.supplierRelationship.title": "3. Relacionamento com Fornecedores e Prestadores",
+  "procurement.supplierRelationship.paragraph1": "A AC preza por uma relação transparente, íntegra e de parceria com seus fornecedores, prestadores de serviços e parceiros e, por isso estabelece relacionamentos profissionais éticos e isentos de favorecimentos.",
+  "procurement.supplierRelationship.paragraph2": "Dessa forma, aquele que actualmente é fornecedor da AC, ou que deseja ser, deverá estar atento aos critérios a serem seguidos e estar ciente de que poderá ser avaliado ao longo do seu ciclo de fornecimento, e que deverá fornecer informações quando solicitado.",
+  "procurement.supplierRelationship.paragraph3": "A AC pretende que os seus fornecedores e terceiros sejam mais que provedores de materiais, serviços e equipamentos, mas que sejam parceiros para o desenvolvimento sustentável e de uma forte cultura de integridade no ambiente empresarial. Para isso, instituiu um modelo de relacionamento com os seus fornecedores que se baseia no compromisso de seguir as boas práticas e princípios consagrados a nível internacional. Este modelo foi inspirado no reconhecimento da importância dos impactos económicos, ambientais e sociais produzidos por este grupo de stakeholders, sendo orientada por dois grandes eixos:",
+  "procurement.supplierRelationship.eixo1": "• O Código de Ética e Conduta da AC, que determina, entre outros aspectos, que o processo de avaliação e de selecção de fornecedores é realizado com rigor e seguindo os mais elevados padrões de transparência e ética;",
+  "procurement.supplierRelationship.eixo2": "• Conjunto de princípios de relacionamento com fornecedores da AC, que descreve os requisitos mínimos, não só dos fornecedores bem como da AC, no que diz respeito às práticas empresariais, saúde e segurança no trabalho, ética e gestão ambiental.",
+  "procurement.communicationChannel.title": "4. Canal de comunicação",
+  "procurement.communicationChannel.paragraph1": "Neste âmbito é essencial que qualquer pessoa, seja colaborador, fornecedor ou prestador, relate quaisquer actos ou suspeitas de não conformidade com esta Política, prevenindo actos de fraude, corrupção e preservando a imagem da AC.",
+  "procurement.communicationChannel.paragraph2": "A comunicação de irregularidades poderá ser realizada por escrito e apresentada através do seguinte canal: https://portal-de-denuncias.vercel.app/ ou correio electrónico denuncias@angolacables.com",
+
+
+
+
+  "customer.dueDiligence.policy.title": "Política de Identificação, Aceitação e Due Diligence de Clientes e Parceiros",
+  "customer.dueDiligence.objective.title": "1. Objectivo",
+  "customer.dueDiligence.objective.paragraph1": "A presente política integra o sistema de controlo interno e gestão de riscos da Angola Cables (AC), alinhando-se com as melhores práticas do Programa de Prevenção e Combate ao Branqueamento de Capitais, Financiamento do Terrorismo e Proliferação de Armas de Destruição Massiva (PC-BC/FTP), bem como com os princípios e regras estabelecidos no âmbito da Política Antissuborno.",
+  "customer.dueDiligence.objective.paragraph2": "O seu propósito é estabelecer as regras, directrizes e critérios aplicáveis ao processo de identificação, conhecimento, aceitação e monitorização de clientes e parceiros, bem como, quando aplicável, dos seus representantes legais e beneficiários efectivos, assegurando que todas as relações de negócio são estabelecidas com base em informação adequada, verificável e consentânea com os padrões exigidos de integridade, transparência e compliance.",
+  "customer.dueDiligence.scope.title": "2. Âmbito",
+  "customer.dueDiligence.scope.paragraph1": "No âmbito das actividades da AC, a aplicação desta política visa não só mitigar os riscos associados ao branqueamento de capitais e financiamento do terrorismo, mas também prevenir a exposição a riscos de suborno, corrupção, fraude, conflitos de interesses e outras práticas que possam comprometer a legalidade, reputação e sustentabilidade das relações de negócio estabelecidas.",
+  "customer.dueDiligence.scope.paragraph2": "Para o efeito, definem-se mecanismos de due diligence proporcionais ao risco, que permitem aferir a idoneidade dos clientes, compreender a natureza da sua actividade, a origem dos fundos e o enquadramento das relações comerciais, assegurando que estas são compatíveis com os requisitos legais, regulamentares e internos aplicáveis.",
+  "customer.dueDiligence.scope.paragraph3": "Esta política aplica-se a todos os colaboradores, membros dos órgãos de governação e todas as unidades orgânicas da AC, sendo de observância obrigatória no âmbito do estabelecimento, manutenção e revisão de quaisquer relações de negócio, independentemente do canal, geografia ou natureza dos serviços prestados.",
+
+
+  "infoSecurity.policy.title": "Política de Segurança da Informação para Fornecedores e Prestadores",
+  "infoSecurity.objective.title": "1. Objectivo",
+  "infoSecurity.objective.paragraph1": "A presente Política estabelece os princípios, regras e responsabilidades aplicáveis à Segurança da Informação no âmbito das relações entre a AC e os seus fornecedores e prestadores de serviços, assegurando a protecção adequada dos activos de informação, dados pessoais e informação de negócio.",
+  "infoSecurity.objective.paragraph2": "Tem como objectivo garantir que todas as relações contratuais e operacionais com terceiros asseguram níveis adequados de:",
+  "infoSecurity.objective.confidentiality": "Confidencialidade;",
+  "infoSecurity.objective.integrity": "Integridade;",
+  "infoSecurity.objective.availability": "Disponibilidade;",
+  "infoSecurity.objective.authenticity": "Autenticidade e rastreabilidade da informação.",
+  "infoSecurity.scope.title": "2. Âmbito",
+  "infoSecurity.scope.paragraph1": "Esta política aplica-se a:",
+  "infoSecurity.scope.item1": "Todos os fornecedores, prestadores de serviços e parceiros da AC;",
+  "infoSecurity.scope.item2": "Colaboradores, subcontratados e representantes das entidades externas;",
+  "infoSecurity.scope.item3": "Todos os contratos, acordos e instrumentos formais, incluindo:",
+  "infoSecurity.scope.paragraph2": "Inclui ainda qualquer situação onde haja acesso a:",
+  "infoSecurity.scope.item4": "Contratos de prestação de serviços",
+  "infoSecurity.scope.item5": "Acordos de confidencialidade (NDA)",
+  "infoSecurity.scope.item6": "Acordos de tratamento de dados",
+  "infoSecurity.scope.item7": "Parcerias tecnológicas e operacionais",
+  "infoSecurity.scope.item8": "Serviços que envolvam acesso, processamento ou armazenamento de informação.",
+  "infoSecurity.scope.paragraph3": "Inclui ainda qualquer situação onde haja acesso a:",
+  "infoSecurity.scope.item9": "Dados pessoais;",
+  "infoSecurity.scope.item10": "Informação classificada;",
+  "infoSecurity.scope.item11": "Sistemas de informação;",
+  "infoSecurity.scope.item12": "Infraestruturas tecnológicas."
+
+
+  
+
 }

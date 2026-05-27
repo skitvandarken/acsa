@@ -1,0 +1,58 @@
+<!-- privacy-policy.component.html -->
+<app-menu></app-menu>
+
+<div class="fundo-cabecalho">
+  <div class="gradiente-texto-cabecalho">
+    <div class="conteudo-cabecalho uk-margin-medium-top">
+      <div class="uk-container uk-margin-large-bottom">
+        <h4 style="color:white">{{ 'company.name' | translate }}</h4>
+        <h1 style="color:rgba(39, 200, 227, 1); font-weight: bolder;">{{ 'infoSecurity.policy.title' | translate }}</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="uk-container uk-margin-large-top uk-margin-large-bottom">
+    <section class="privacy-section">
+        <h2>{{ 'infoSecurity.objective.title' | translate }}</h2>
+        <p>{{ 'infoSecurity.objective.paragraph1' | translate }}</p>
+        <p>{{ 'infoSecurity.objective.paragraph2' | translate }}</p>
+        <ul>
+            <li>{{ 'infoSecurity.objective.confidentiality' | translate }}</li>
+            <li>{{ 'infoSecurity.objective.integrity' | translate }}</li>
+            <li>{{ 'infoSecurity.objective.availability' | translate }}</li>
+            <li>{{ 'infoSecurity.objective.authenticity' | translate }}</li>
+        </ul>
+    </section>
+
+    <section class="privacy-section">
+        <h2>{{ 'infoSecurity.scope.title' | translate }}</h2>
+        <p>{{ 'infoSecurity.scope.paragraph1' | translate }}</p>
+        <ul>
+            <li>{{ 'infoSecurity.scope.item1' | translate }}</li>
+            <li>{{ 'infoSecurity.scope.item2' | translate }}</li>
+            <li>{{ 'infoSecurity.scope.item3' | translate }}</li>
+        </ul>
+        <p>{{ 'infoSecurity.scope.paragraph2' | translate }}</p>
+        <ul>
+            <li>{{ 'infoSecurity.scope.item4' | translate }}</li>
+            <li>{{ 'infoSecurity.scope.item5' | translate }}</li>
+            <li>{{ 'infoSecurity.scope.item6' | translate }}</li>
+            <li>{{ 'infoSecurity.scope.item7' | translate }}</li>
+            <li>{{ 'infoSecurity.scope.item8' | translate }}</li>
+        </ul>
+        <p>{{ 'infoSecurity.scope.paragraph3' | translate }}</p>
+        <ul>
+            <li>{{ 'infoSecurity.scope.item9' | translate }}</li>
+            <li>{{ 'infoSecurity.scope.item10' | translate }}</li>
+            <li>{{ 'infoSecurity.scope.item11' | translate }}</li>
+            <li>{{ 'infoSecurity.scope.item12' | translate }}</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p class="last-updated">{{ 'company.name' | translate }} - {{ 'infoSecurity.policy.title' | translate }}</p>
+    </footer>
+</div>
+
+<app-rodape></app-rodape>
