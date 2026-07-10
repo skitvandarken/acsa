@@ -57,6 +57,7 @@
   "servicos": "Services",
   "empresa": "Entreprise",
   "conectividade": "Connectivité",
+  
   "ip": "IP",
   "datacenter": "Centre de Données",
   "tic": "TIC",
@@ -697,8 +698,9 @@
   "infoSecurity.scope.item9": "Données personnelles;",
   "infoSecurity.scope.item10": "Informations classifiées;",
   "infoSecurity.scope.item11": "Systèmes d'information;",
-  "infoSecurity.scope.item12": "Infrastructures technologiques."
-
+  "infoSecurity.scope.item12": "Infrastructures technologiques.",
+  "ai": "INTELIGENCE ARTIFICIELLE"
+  
 
 
 }

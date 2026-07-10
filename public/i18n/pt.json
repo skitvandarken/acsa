@@ -704,7 +704,31 @@
   "infoSecurity.scope.item9": "Dados pessoais;",
   "infoSecurity.scope.item10": "Informação classificada;",
   "infoSecurity.scope.item11": "Sistemas de informação;",
-  "infoSecurity.scope.item12": "Infraestruturas tecnológicas."
+  "infoSecurity.scope.item12": "Infraestruturas tecnológicas.",
+  "ai": "Inteligência Artificial",
+  "gpu.npu": "ON-DEMAND GPUs & NPUs",
+"international.connectivity": "  IP TRANSIT, IPLC, REMOTE PEERING ...",
+  "metro.connectivity": "DIRECT INTERNET ACCESS, MPLS, ...",
+  "corporate.solutions": "CORPORATE",
+  "data.center": "DATA CENTER",
+  "cloud.services": "CLOUD, STORAGE, BACKUP, KUBERNETES ...",
+  "digital.solutions": "ICT",
+  "wholesale.solutions": "WHOLESALE",
+  "ict.solutions": "ICT",
+  "ai.infra": "GPUs e NPUs sob Demanda para IA e ML.",
+  "ai.infra.desc": "Pague apenas pelas horas de uso ",
+  
+  "get.started": "Começar agora",
+  "go.ai": "Ir ao Go4AI",
+  "submarine.ai": "Dos Cabos submarinos aos Clusters de GPUs: ",
+  "cta.global": "Conectividade Global de Baixa Latência e Poder Computacional em Nuvem e para IA:",
+  "api.compatible": "API compatível OpenAI ",
+  "api.description": "Reduza seus custos de IA em até 125x. Sem precisar refatorar seu código.",
+  "dc": "Data Center",
+  "dc.services": "CO-LOCATION, POWER, SMART-HANDS ...",
+  "fale.especialista": "FALE COM UM ESPECIALISTA",
+  "featured.solutions": "SOLUÇÕES EM DESTAQUE"
+
 
 
   

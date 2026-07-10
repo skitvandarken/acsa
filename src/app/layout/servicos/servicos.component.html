@@ -1,98 +1,534 @@
 <div>
-  <div class="uk-container ">
-    <div class=" uk-text-center ">
+  <div class="tech-bg-single">
+    <div class=" uk-container">
 
 
-      <div class=" uk-margin-medium-top">
-        <h2 style="color: #020026 !important;" class="uk-text-left">{{'servicos.em' | translate}} <b>
-            {{'servicos.destaque' | translate}} </b></h2>
 
-      </div>
-
-
-      <div
-        class=" slider-container uk-position-relative uk-margin-large-top uk-margin-large-bottom uk-visible-toggle uk-light"
-        tabindex="-1" uk-slider="autoplay: true; autoplay-interval: 3000; pause-on-hover: false">
-
-
-        <div class="uk-slider-items uk-child-width-1-1 uk-child-width-1-3@m uk-grid uk-margin-large-botto">
-          <div>
-            <div
-              class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
-              data-src="img/banner-cloud.jpg" uk-img>
-              <div class="uk-padding gradiente-nome-equipa uk-border-rounded">
-                <b style="font-size: 18px; color: white; border-radius: 30px;">CLOUD</b>
-                <a routerLink="/cloud">
-                  <p style="color:#fff;  border-radius: 30px" class="uk-text-left ">
-                    {{'saber.mais' | translate}} </p>
-                </a>
-
-              </div>
+      <div class="uk-child-width-expand@s uk-text-left uk-margin-large-top uk-margin-large-bottom " uk-grid>
+        <!-- Texto principal -->
+        <div>
+          <div class="uk-card  ">
+            <p class=" angolacables-motto uk-margin-medium-top uk-text-left">
+              {{'submarine.ai' | translate}}
+            </p>
+            <p class="angola-cables-texto uk-margin-small-top ">
+              <b>Conectividade</b> Global e Poder Computacional em <b>Nuvem</b> para <b>IA</b>
+            </p>
+            <div class="uk-margin-medium-top">
+              <a routerLink="/contato" style="color:white"> <button class="botao-saiba ">{{"fale.especialista" |
+                  translate}} <span uk-icon="arrow-right"></span>{{""}}</button> </a>
 
             </div>
           </div>
-
-          <div>
-            <div
-              class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
-              data-src="img/banner-iptransit.jpg" uk-img>
-              <div class="uk-padding gradiente-nome-equipa uk-border-rounded">
-                <b style="font-size: 18px; color: white; border-radius: 30px;">IP TRANSIT</b>
-                <a routerLink="/conectividade">
-                  <p style="color:#fff;  border-radius: 30px" class="uk-text-left ">
-                    {{'saber.mais' | translate}}</p>
-                </a>
-
-              </div>
-
-            </div>
-          </div>
-          <!-- 
-          <div>
-            <div
-              class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
-              data-src="img/produtos/sap-seidor-banner.jpg" uk-img>
-              <div class="uk-padding gradiente-nome-equipa uk-border-rounded">
-                <b style="font-size: 18px; color: white; border-radius: 30px;">SAP BUSINESS ONE</b>
-                <a routerLink="/conectividade">
-                  <p style="color:#fff;  border-radius: 30px" class="uk-text-left ">
-                    {{'saber.mais' | translate}}</p>
-                </a>
-
-              </div>
-
-            </div>
-          </div>
--->
-          <div>
-            <div
-              class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
-              data-src="img/remotepeering.jpg" uk-img>
-              <div class="uk-padding gradiente-nome-equipa uk-border-rounded">
-                <b style="font-size: 18px; color: white; border-radius: 30px;">REMOTE PEERING</b>
-                <a routerLink="/conectividade" >
-                  <p href="#" style="color:#fff;  border-radius: 30px" class="uk-text-left ">{{'saber.mais' |
-                    translate}} </p>
-                </a>
-
-              </div>
-
-            </div>
-          </div>
-
-
-
-
         </div>
 
-        <a style="color: white !important;" class="uk-position-center-left-out uk-position-small uk-hidden-hover" href
-          uk-slidenav-previous uk-slider-item="previous"></a>
-        <a style="color: white !important;" class="uk-position-center-right-out uk-position-small uk-hidden-hover" href
-          uk-slidenav-next uk-slider-item="next"></a>
+        <!-- MRec Principal -->
+
+        <div>
+          <div class="uk-card">
+
+            <div class=" uk-padding">
+              <div class=" rounded-img  uk-visible-toggle uk-light" tabindex="-1"
+                uk-slideshow="animation: push; autoplay: true; autoplay-interval: 3000; min-height: 300; max-height: 300">
+
+                <div class=" fundo-slider rounded-img uk-margin-small-top uk-slideshow-items  ">
+                  <div>
+                    <div class="uk-position-cover" uk-slideshow-parallax="scale: 1.2,1.2,1">
+                      <img class="rounded-img" style="border-radius:20px" src="img/gpu-chip.png" alt="" uk-cover>
+                    </div>
+                    <div class="uk-position-cover" uk-slideshow-parallax="opacity: 0,0,0.2; backgroundColor: #000,#000">
+                    </div>
+                    <div class="uk-position-center-left uk-position-medium uk-text-left">
+                      <img height="150px" width="150px" src="img/go4aibrand-branco-assinatura.png" alt="Go4AI">
+
+                      <div class="uk-margin-small-top" uk-slideshow-parallax="scale: 1,1,0.8">
+                        <div style="max-width: 50%">
+                          <h2 class="ad-headline" uk-slideshow-parallax="x: 200,0,0"> <b> {{"ai.infra" | translate}}
+                            </b>
+                          </h2>
+                          <p class="cta-description" uk-slideshow-parallax="x: 400,0,0;"> {{'ai.infra.desc' |
+                            translate}}
+                          </p>
+                        </div>
+
+                        <div class="uk-margin-small-top">
+                          <a routerLink="/contacto" class="uk-text-decoration-none  ">
+                            <button class="cta-button ">
+                              {{ 'saiba.mais' | translate }}
+                            </button>
+                          </a>
+
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class=" rounded-img  uk-position-cover" uk-slideshow-parallax="scale: 1.2,1.2,1">
+                      <img class="rounded-img" style="border-radius:20px" src="img/ai-chip.png" alt="" uk-cover>
+                    </div>
+                    <div class="uk-position-cover" uk-slideshow-parallax="opacity: 0,0,0.2; backgroundColor: #000,#000">
+                    </div>
+                    <div class="uk-position-center-left uk-position-medium uk-text-left">
+                      <div class="uk-margin-small-top" uk-slideshow-parallax="scale: 1,1,0.8">
+                        <div style="max-width: 50%">
+                          <h2 class="ad-headline" uk-slideshow-parallax="x: 200,0,0"> <b> {{"api.compatible" |
+                              translate}}
+                            </b>
+                          </h2>
+                          <p class="cta-description" uk-slideshow-parallax="x: 400,0,0;"> {{"api.description" |
+                            translate}}
+                          </p>
+                        </div>
+
+                        <div class="uk-margin-small-top">
+                          <a routerLink="/contacto" class="uk-text-decoration-none  ">
+                            <button class="cta-button ">
+                              {{ 'saiba.mais' | translate }}
+                            </button>
+                          </a>
+
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class=" rounded-img  uk-position-cover" uk-slideshow-parallax="scale: 1.2,1.2,1">
+                      <img class="rounded-img" style="border-radius:20px" src="img/cyber.png" alt="" uk-cover>
+                    </div>
+                    <div class="uk-position-cover" uk-slideshow-parallax="opacity: 0,0,0.2; backgroundColor: #000,#000">
+                    </div>
+                    <div class="uk-position-center-left uk-position-medium uk-text-left">
+                      <div class="uk-margin-small-top" uk-slideshow-parallax="scale: 1,1,0.8">
+                        <div style="max-width: 50%">
+                          <h2 class="ad-headline" uk-slideshow-parallax="x: 200,0,0"> <b> Segurança Nativa de Ponta-a-Ponta
+                            </b>
+                          </h2>
+                          <p class="cta-description" uk-slideshow-parallax="x: 400,0,0;"> Origin Protection, DDoS Mitigation, WAF & Zero Trust Network Access
+                          </p>
+                        </div>
+
+                        <div class="uk-margin-small-top">
+                          <a routerLink="/contacto" class="uk-text-decoration-none  ">
+                            <button class="cta-button ">
+                              {{ 'saiba.mais' | translate }}
+                            </button>
+                          </a>
+
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous
+                  uk-slideshow-item="previous"></a>
+                <a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next
+                  uk-slideshow-item="next"></a>
+
+                <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
+
+
+              </div>
+            </div>
+
+
+          </div>
+        </div>
 
       </div>
 
+
+      <div>
+
+
+
+      </div>
+
+
     </div>
+
+  </div>
+
+
+  <div class=" uk-margin-large-bottom  uk-margin-medium-top uk-text-center ">
+    <div class="uk-container  ">
+
+
+
+      <div class=" uk-text-center ">
+
+
+        <!-- 1. The Styled Tab Navigation Controls -->
+        <div class="tab-nav-wrapper uk-margin-medium-top">
+          <ul class="custom-tech-tabs uk-flex-center"
+            uk-switcher="connect: #slider-switcher; animation: uk-animation-slide-left-medium, uk-animation-slide-right-medium">
+                        <li><a href="#">{{ 'featured.solutions' | translate }}</a></li>
+            <li><a href="#">{{ 'wholesale.solutions' | translate }}</a></li>
+           <li><a href="#">{{ 'corporate.solutions' | translate }}</a></li>
+            <li><a href="#">{{ 'ict.solutions' | translate }}</a></li> --> 
+          </ul>
+        </div>
+
+        <!-- 2. The Switcher Content Containers -->
+        <ul id="slider-switcher" class="uk-switcher uk-margin">
+
+          <!-- TAB 1: Contains your original slider -->
+          <li>
+            <div class="uk-text-center">
+              <div
+                class="slider-container uk-position-relative uk-margin-medium-top uk-margin-medium-bottom uk-visible-toggle uk-light"
+                tabindex="-1" uk-slider="autoplay: true; autoplay-interval: 3000; pause-on-hover: false">
+
+                <div class="uk-slider-items uk-child-width-1-2 uk-child-width-1-4@m uk-grid uk-margin-large-bottom">
+
+                  <!-- Item 1 -->
+                  <div>
+                    <div
+                      class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
+                      data-src="img/banner-iptransit-fix-2.jpg" uk-img>
+                      <div class="uk-padding gradiente-nome-equipa uk-border-rounded uk-text-left">
+                        <p class="uk-text-left service-badge uk-margin-small-bottom">
+                          {{'wholesale.solutions' | translate}}
+                        </p>
+                        <p class="service-title uk-margin-small-bottom">
+                          {{"international.connectivity" | translate }}
+                        </p>
+                        <a routerLink="/cloud">
+                          <p class="service-learn uk-margin">
+                            {{'saber.mais' | translate}} <span class="uk-margin-small-right"
+                              uk-icon="arrow-up-right"></span>
+                          </p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Item 2 -->
+                  <div>
+                    <div
+                      class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
+                      data-src="img/virtualizacao.jpeg" uk-img>
+                      <div class="uk-padding gradiente-nome-equipa uk-border-rounded uk-text-left">
+                        <p class="uk-text-left service-badge uk-margin-small-bottom">
+                          {{'corporate.solutions' | translate}}
+                        </p>
+                        <p class="service-title uk-margin-small-bottom">
+                          {{"metro.connectivity" | translate }}
+                        </p>
+                        <a routerLink="/cloud">
+                          <p class="service-learn uk-margin">
+                            {{'saber.mais' | translate}} <span class="uk-margin-small-right"
+                              uk-icon="arrow-up-right"></span>
+                          </p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Item 3 -->
+                  <div>
+                    <div
+                      class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
+                      data-src="img/banner-cloud-2.jpg" uk-img>
+                      <div class="uk-padding gradiente-nome-equipa uk-border-rounded uk-text-left">
+                        <p class="uk-text-left service-badge uk-margin-small-bottom">
+                          {{'ict.solutions' | translate}}
+                        </p>
+                        <p class="service-title uk-margin-small-bottom">
+                          {{"cloud.services" | translate }}
+                        </p>
+                        <a routerLink="/cloud">
+                          <p class="service-learn uk-margin">
+                            {{'saber.mais' | translate}} <span class="uk-margin-small-right"
+                              uk-icon="arrow-up-right"></span>
+                          </p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Item 4 -->
+                  <div>
+                    <div
+                      class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
+                      data-src="img/datacenter-1.png" uk-img>
+                      <div class="uk-padding gradiente-nome-equipa uk-border-rounded uk-text-left">
+                        <p class="uk-text-left service-badge uk-margin-small-bottom">
+                          {{'dc' | translate}}
+                        </p>
+                        <p class="service-title uk-margin-small-bottom">
+                          {{"dc.services" | translate }}
+                        </p>
+                        <a routerLink="/cloud">
+                          <p class="service-learn uk-margin">
+                            {{'saber.mais' | translate}} <span class="uk-margin-small-right"
+                              uk-icon="arrow-up-right"></span>
+                          </p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- Navigation Arrows -->
+                <a style="color: white !important;"
+                  class="uk-position-center-left-out uk-position-small uk-hidden-hover" href uk-slidenav-previous
+                  uk-slider-item="previous"></a>
+                <a style="color: white !important;"
+                  class="uk-position-center-right-out uk-position-small uk-hidden-hover" href uk-slidenav-next
+                  uk-slider-item="next"></a>
+
+              </div>
+            </div>
+          </li>
+
+          <!-- TAB 2: Left completely empty -->
+         
+          <li>
+            <div class="uk-text-center">
+              <div
+                class="slider-container uk-position-relative uk-margin-medium-top uk-margin-medium-bottom uk-visible-toggle uk-light"
+                tabindex="-1" uk-slider="autoplay: true; autoplay-interval: 3000; pause-on-hover: false">
+
+                <div class="uk-slider-items uk-child-width-1-2 uk-child-width-1-4@m uk-grid uk-margin-large-bottom">
+
+                  <!-- Item 1 -->
+                  <div>
+                    <div
+                      class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
+                      data-src="img/banner-iptransit-fix-2.jpg" uk-img>
+                      <div class="uk-padding gradiente-nome-equipa uk-border-rounded uk-text-left">
+                        <p class="uk-text-left service-badge uk-margin-small-bottom">
+                          {{'wholesale.solutions' | translate}}
+                        </p>
+                        <p class="service-title uk-margin-small-bottom">
+                          {{"international.connectivity" | translate }}
+                        </p>
+                        <a routerLink="/cloud">
+                          <p class="service-learn uk-margin">
+                            {{'saber.mais' | translate}} <span class="uk-margin-small-right"
+                              uk-icon="arrow-up-right"></span>
+                          </p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Item 2 -->
+                  <div>
+                    <div
+                      class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
+                      data-src="img/virtualizacao.jpeg" uk-img>
+                      <div class="uk-padding gradiente-nome-equipa uk-border-rounded uk-text-left">
+                        <p class="uk-text-left service-badge uk-margin-small-bottom">
+                          {{'corporate.solutions' | translate}}
+                        </p>
+                        <p class="service-title uk-margin-small-bottom">
+                          {{"metro.connectivity" | translate }}
+                        </p>
+                        <a routerLink="/cloud">
+                          <p class="service-learn uk-margin">
+                            {{'saber.mais' | translate}} <span class="uk-margin-small-right"
+                              uk-icon="arrow-up-right"></span>
+                          </p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Item 3 -->
+                  <div>
+                    <div
+                      class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
+                      data-src="img/banner-cloud-2.jpg" uk-img>
+                      <div class="uk-padding gradiente-nome-equipa uk-border-rounded uk-text-left">
+                        <p class="uk-text-left service-badge uk-margin-small-bottom">
+                          {{'ict.solutions' | translate}}
+                        </p>
+                        <p class="service-title uk-margin-small-bottom">
+                          {{"cloud.services" | translate }}
+                        </p>
+                        <a routerLink="/cloud">
+                          <p class="service-learn uk-margin">
+                            {{'saber.mais' | translate}} <span class="uk-margin-small-right"
+                              uk-icon="arrow-up-right"></span>
+                          </p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Item 4 -->
+                  <div>
+                    <div
+                      class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
+                      data-src="img/datacenter-1.png" uk-img>
+                      <div class="uk-padding gradiente-nome-equipa uk-border-rounded uk-text-left">
+                        <p class="uk-text-left service-badge uk-margin-small-bottom">
+                          {{'dc' | translate}}
+                        </p>
+                        <p class="service-title uk-margin-small-bottom">
+                          {{"dc.services" | translate }}
+                        </p>
+                        <a routerLink="/cloud">
+                          <p class="service-learn uk-margin">
+                            {{'saber.mais' | translate}} <span class="uk-margin-small-right"
+                              uk-icon="arrow-up-right"></span>
+                          </p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- Navigation Arrows -->
+                <a style="color: white !important;"
+                  class="uk-position-center-left-out uk-position-small uk-hidden-hover" href uk-slidenav-previous
+                  uk-slider-item="previous"></a>
+                <a style="color: white !important;"
+                  class="uk-position-center-right-out uk-position-small uk-hidden-hover" href uk-slidenav-next
+                  uk-slider-item="next"></a>
+
+              </div>
+            </div>
+
+          </li>
+
+
+
+          <li>
+            <div class="uk-text-center">
+              <div
+                class="slider-container uk-position-relative uk-margin-medium-top uk-margin-medium-bottom uk-visible-toggle uk-light"
+                tabindex="-1" uk-slider="autoplay: true; autoplay-interval: 3000; pause-on-hover: false">
+
+                <div class="uk-slider-items uk-child-width-1-2 uk-child-width-1-4@m uk-grid uk-margin-large-bottom">
+
+                  <!-- Item 1 -->
+                  <div>
+                    <div
+                      class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
+                      data-src="img/banner-iptransit-fix-2.jpg" uk-img>
+                      <div class="uk-padding gradiente-nome-equipa uk-border-rounded uk-text-left">
+                        <p class="uk-text-left service-badge uk-margin-small-bottom">
+                          {{'wholesale.solutions' | translate}}
+                        </p>
+                        <p class="service-title uk-margin-small-bottom">
+                          {{"international.connectivity" | translate }}
+                        </p>
+                        <a routerLink="/cloud">
+                          <p class="service-learn uk-margin">
+                            {{'saber.mais' | translate}} <span class="uk-margin-small-right"
+                              uk-icon="arrow-up-right"></span>
+                          </p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Item 2 -->
+                  <div>
+                    <div
+                      class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
+                      data-src="img/virtualizacao.jpeg" uk-img>
+                      <div class="uk-padding gradiente-nome-equipa uk-border-rounded uk-text-left">
+                        <p class="uk-text-left service-badge uk-margin-small-bottom">
+                          {{'corporate.solutions' | translate}}
+                        </p>
+                        <p class="service-title uk-margin-small-bottom">
+                          {{"metro.connectivity" | translate }}
+                        </p>
+                        <a routerLink="/cloud">
+                          <p class="service-learn uk-margin">
+                            {{'saber.mais' | translate}} <span class="uk-margin-small-right"
+                              uk-icon="arrow-up-right"></span>
+                          </p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Item 3 -->
+                  <div>
+                    <div
+                      class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
+                      data-src="img/banner-cloud-2.jpg" uk-img>
+                      <div class="uk-padding gradiente-nome-equipa uk-border-rounded uk-text-left">
+                        <p class="uk-text-left service-badge uk-margin-small-bottom">
+                          {{'ict.solutions' | translate}}
+                        </p>
+                        <p class="service-title uk-margin-small-bottom">
+                          {{"cloud.services" | translate }}
+                        </p>
+                        <a routerLink="/cloud">
+                          <p class="service-learn uk-margin">
+                            {{'saber.mais' | translate}} <span class="uk-margin-small-right"
+                              uk-icon="arrow-up-right"></span>
+                          </p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Item 4 -->
+                  <div>
+                    <div
+                      class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
+                      data-src="img/datacenter-1.png" uk-img>
+                      <div class="uk-padding gradiente-nome-equipa uk-border-rounded uk-text-left">
+                        <p class="uk-text-left service-badge uk-margin-small-bottom">
+                          {{'dc' | translate}}
+                        </p>
+                        <p class="service-title uk-margin-small-bottom">
+                          {{"dc.services" | translate }}
+                        </p>
+                        <a routerLink="/cloud">
+                          <p class="service-learn uk-margin">
+                            {{'saber.mais' | translate}} <span class="uk-margin-small-right"
+                              uk-icon="arrow-up-right"></span>
+                          </p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- Navigation Arrows -->
+                <a style="color: white !important;"
+                  class="uk-position-center-left-out uk-position-small uk-hidden-hover" href uk-slidenav-previous
+                  uk-slider-item="previous"></a>
+                <a style="color: white !important;"
+                  class="uk-position-center-right-out uk-position-small uk-hidden-hover" href uk-slidenav-next
+                  uk-slider-item="next"></a>
+
+              </div>
+            </div>
+          </li>
+
+
+        </ul>
+        <!-- 
+        <div class="">
+          <div class="uk-container uk-margin-large-top uk-margin-large-bottom ">
+            <p class="uk-text-center uk-container angola-cables-texto "><span class="angola-cables-titulo "
+                style="color:#28C1FD ; font-size: 1.55rem;  ">Angola Cables</span> {{ 'ac.descricao' | translate
+              }}</p>
+          </div>
+        </div>
+
+-->
+
+      </div>
+    </div>
+
   </div>
 
 </div>

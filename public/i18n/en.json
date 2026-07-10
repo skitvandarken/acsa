@@ -700,7 +700,9 @@
   "infoSecurity.scope.item9": "Personal data;",
   "infoSecurity.scope.item10": "Classified information;",
   "infoSecurity.scope.item11": "Information systems;",
-  "infoSecurity.scope.item12": "Technology infrastructures."
+  "infoSecurity.scope.item12": "Technology infrastructures.",
+
+  "ai": "ARTIFICIAL INTELLIGENCE"
 
 
 }
