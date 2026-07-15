@@ -11,7 +11,7 @@
 
 .ad-headline {
     color: #7cdaff;
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-shadow: #000000 2px 0 20px;
 }
 
@@ -27,13 +27,20 @@
 
 .service-badge {
     display: inline-block;
-    padding: 5px 10px;
-    border-radius: 20px;
+    padding: 10px 10px;
+    border-radius: 25px;
     background-color: #28C1FD;
-    color: rgba(5, 0, 100, 0.788);
-    font-size: 12px;
+    color: rgba(2, 37, 97, 1);
+    font-size: 1rem;
     font-weight: bold;
     text-transform: uppercase;
+}
+
+.service-badge:hover {
+    background-color: rgba(40, 193, 253, 0.8);
+    color: rgba(2, 37, 97, 1);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
 .cta-button {
@@ -61,9 +68,10 @@
 }
 
 .service-title {
-    font-size: 18px;
+    font-size: 24px;
     color: white;
     font-weight: bold;
+    text-shadow: #131313 2px 0 20px;
 }
 
 .uk-button-secondary {
@@ -427,7 +435,7 @@
     border-radius: 30px;
     margin: 0;
     /* This creates horizontal space between the <li> items */
-    gap: 12px; 
+    gap: 12px;
 }
 
 .custom-tech-tabs li a {
@@ -435,7 +443,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     padding: 12px 28px;
     color: rgba(255, 255, 255, 0.7) !important;
     font-size: 1rem;
@@ -456,6 +464,16 @@
     background: rgb(0, 195, 255);
     color: rgba(1, 0, 28, 0.9) !important;
     box-shadow: 0px 0px 12px 0px rgba(0, 195, 255, 0.4);
+}
+
+
+.featured-service-logo {
+    height: 250px;
+    width: 250px;
+}
+
+.service-desc {
+    font-size: 1rem !important;
 }
 
 @keyframes techMove {
@@ -575,3 +593,188 @@
         box-shadow: 0px 0px 5px 0px rgba(0, 195, 255, 0.387);
     }
 }
+
+
+
+
+
+/* Responsive Media Queries */
+/* Large screens (desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+    .ad-headline {
+        font-size: 1.5rem !important;
+    }
+
+    .featured-service-logo {
+        height: 100px;
+        width: auto;
+    }
+
+
+}
+
+/* Medium screens (tablets, 768px to 1199px) */
+@media (max-width: 1199px) and (min-width: 768px) {
+
+    .ad-headline {
+        font-size: 1.2rem !important;
+    }
+
+    .featured-service-logo {
+        height: 100px;
+        width: auto;
+    }
+
+
+
+}
+
+
+/* Small screens (phones, 767px and below) */
+@media (max-width: 767px) {
+    .featured-service-logo {
+        height: 100px;
+        width: auto;
+    }
+
+    .ad-headline {
+        font-size: 1.2rem !important;
+    }
+
+
+    .tab-nav-wrapper {
+        /* Allows the container to scroll horizontally if tabs overflow 400px */
+        overflow-x: auto;
+        justify-content: center;
+        /* Aligns to left so scrolling feels natural */
+        padding: 0 0;
+        /* Hides scrollbars for a cleaner look on mobile */
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    .tab-nav-wrapper::-webkit-scrollbar {
+        display: none;
+        /* Safari and Chrome */
+    }
+
+    .custom-tech-tabs {
+        gap: 6px;
+        /* Halved the spacing between tabs */
+        padding: 4px;
+        /* Shrunk the outer wrapper padding */
+        border-radius: 20px;
+        /* Adjusted radius for smaller scale */
+        display: inline-flex;
+        margin: 0 auto;
+        /* Keeps it centered if it doesn't overflow */
+    }
+
+    .custom-tech-tabs li a {
+        padding: 8px 16px;
+        /* Significantly reduced padding for tighter fit */
+        font-size: 0.85rem;
+        /* Slightly smaller text for readability on mobile */
+        border-radius: 16px;
+        /* Adjusted radius */
+    }
+
+}
+
+/* Extra small screens (phones, 480px and below) */
+@media (max-width: 480px) {
+
+
+    .ad-headline {
+        font-size: 1.2rem !important;
+    }
+
+
+
+
+}
+
+/* Specific adjustments for the language dropdown */
+@media (max-width: 400px) {
+    .tab-nav-wrapper {
+        /* Allows the container to scroll horizontally if tabs overflow 400px */
+        overflow-x: auto;
+        justify-content: center;
+        /* Aligns to left so scrolling feels natural */
+        padding: 0 0;
+        /* Hides scrollbars for a cleaner look on mobile */
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    .tab-nav-wrapper::-webkit-scrollbar {
+        display: none;
+        /* Safari and Chrome */
+    }
+
+    .custom-tech-tabs {
+        gap: 3px;
+        /* Halved the spacing between tabs */
+        padding: 4px 4px;
+        /* Shrunk the outer wrapper padding */
+        border-radius: 20px;
+        /* Adjusted radius for smaller scale */
+        display: inline-flex;
+        margin: 0 auto;
+        /* Keeps it centered if it doesn't overflow */
+    }
+
+    .custom-tech-tabs li a {
+        padding: 8px 16px;
+        /* Significantly reduced padding for tighter fit */
+        font-size: 0.85rem;
+        /* Slightly smaller text for readability on mobile */
+        border-radius: 16px;
+        /* Adjusted radius */
+    }
+}
+
+
+@media (max-width: 350px) {
+    .ad-headline {
+        font-size: 1.2rem !important;
+    }
+
+
+    .custom-tech-tabs {
+        gap: 1px;
+        /* Halved the spacing between tabs */
+        border-radius: 20px;
+        /* Adjusted radius for smaller scale */
+        display: inline-flex;
+        margin: 0 0;
+        /* Keeps it centered if it doesn't overflow */
+    }
+
+    .tab-nav-wrapper {
+        /* Allows the container to scroll horizontally if tabs overflow 400px */
+        overflow-x: auto;
+        justify-content: center;
+        /* Aligns to left so scrolling feels natural */
+        padding: 0 0;
+        /* Hides scrollbars for a cleaner look on mobile */
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+}
+
+
+/* Landscape orientation adjustments */
+@media screen and (max-width: 767px) and (orientation: landscape) {}
+
+/* High DPI screens adjustments */
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {}
+
+/* Custom Breakpoint Override: Force Mobile Nav until 1200px */
+@media (max-width: 1199px) {}
