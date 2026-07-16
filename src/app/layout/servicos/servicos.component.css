@@ -622,7 +622,7 @@
     }
 
     .featured-service-logo {
-        height: 100px;
+        height: auto;
         width: auto;
     }
 
@@ -634,8 +634,9 @@
 /* Small screens (phones, 767px and below) */
 @media (max-width: 767px) {
     .featured-service-logo {
-        height: 100px;
+        height: auto;
         width: auto;
+        object-fit: contain;
     }
 
     .ad-headline {
@@ -673,7 +674,7 @@
     }
 
     .custom-tech-tabs li a {
-        padding: 8px 16px;
+        padding: 8px 8px;
         /* Significantly reduced padding for tighter fit */
         font-size: 0.85rem;
         /* Slightly smaller text for readability on mobile */
@@ -685,7 +686,11 @@
 
 /* Extra small screens (phones, 480px and below) */
 @media (max-width: 480px) {
-
+.featured-service-logo {
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+}
 
     .ad-headline {
         font-size: 1.2rem !important;
@@ -698,6 +703,12 @@
 
 /* Specific adjustments for the language dropdown */
 @media (max-width: 400px) {
+.featured-service-logo {
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+}
+
     .tab-nav-wrapper {
         /* Allows the container to scroll horizontally if tabs overflow 400px */
         overflow-x: auto;
@@ -743,18 +754,7 @@
         font-size: 1.2rem !important;
     }
 
-
-    .custom-tech-tabs {
-        gap: 1px;
-        /* Halved the spacing between tabs */
-        border-radius: 20px;
-        /* Adjusted radius for smaller scale */
-        display: inline-flex;
-        margin: 0 0;
-        /* Keeps it centered if it doesn't overflow */
-    }
-
-    .tab-nav-wrapper {
+.tab-nav-wrapper {
         /* Allows the container to scroll horizontally if tabs overflow 400px */
         overflow-x: auto;
         justify-content: center;
@@ -766,8 +766,127 @@
         /* Firefox */
     }
 
+    .tab-nav-wrapper::-webkit-scrollbar {
+        display: none;
+        /* Safari and Chrome */
+    }
+
+    .custom-tech-tabs {
+        gap: 3px;
+        /* Halved the spacing between tabs */
+        padding: 4px 4px;
+        /* Shrunk the outer wrapper padding */
+        border-radius: 20px;
+        /* Adjusted radius for smaller scale */
+        display: inline-flex;
+        margin: 0 auto;
+        /* Keeps it centered if it doesn't overflow */
+    }
+
+    .custom-tech-tabs li a {
+        padding: 8px 16px;
+        /* Significantly reduced padding for tighter fit */
+        font-size: 0.85rem;
+        /* Slightly smaller text for readability on mobile */
+        border-radius: 16px;
+        /* Adjusted radius */
+    }
+
 }
 
+
+@media (max-width: 360px) {
+    .ad-headline {
+        font-size: 1.2rem !important;
+    }
+
+.tab-nav-wrapper {
+        /* Allows the container to scroll horizontally if tabs overflow 400px */
+        overflow-x: auto;
+        justify-content: center;
+        /* Aligns to left so scrolling feels natural */
+        padding: 0 0;
+        /* Hides scrollbars for a cleaner look on mobile */
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    .tab-nav-wrapper::-webkit-scrollbar {
+        display: none;
+        /* Safari and Chrome */
+    }
+
+    .custom-tech-tabs {
+        gap: 4px;
+        /* Halved the spacing between tabs */
+        padding: 4px ;
+        /* Shrunk the outer wrapper padding */
+        border-radius: 20px;
+        /* Adjusted radius for smaller scale */
+        display: inline-flex;
+        /* Keeps it centered if it doesn't overflow */
+
+    }
+
+    .custom-tech-tabs li a {
+        padding: 8px 16px;
+        /* Significantly reduced padding for tighter fit */
+        font-size: 0.85rem;
+        /* Slightly smaller text for readability on mobile */
+        border-radius: 16px;
+        /* Adjusted radius */
+    }
+
+}
+
+
+
+
+@media (max-width: 344px) {
+    .ad-headline {
+        font-size: 1.2rem !important;
+    }
+
+.tab-nav-wrapper {
+        /* Allows the container to scroll horizontally if tabs overflow 400px */
+        overflow-x: auto;
+        justify-content: center;
+        /* Aligns to left so scrolling feels natural */
+        padding: 0 0;
+        /* Hides scrollbars for a cleaner look on mobile */
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    .tab-nav-wrapper::-webkit-scrollbar {
+        display: none;
+        /* Safari and Chrome */
+    }
+
+    .custom-tech-tabs {
+        gap: 3px;
+        /* Halved the spacing between tabs */
+        padding: 4px 4px;
+        /* Shrunk the outer wrapper padding */
+        border-radius: 20px;
+        /* Adjusted radius for smaller scale */
+        display: inline-flex;
+        margin: 0 auto;
+        /* Keeps it centered if it doesn't overflow */
+    }
+
+    .custom-tech-tabs li a {
+        padding:2px 8px;
+        /* Significantly reduced padding for tighter fit */
+        font-size: 0.85rem;
+        /* Slightly smaller text for readability on mobile */
+        border-radius: 16px;
+        /* Adjusted radius */
+    }
+
+}
 
 /* Landscape orientation adjustments */
 @media screen and (max-width: 767px) and (orientation: landscape) {}
