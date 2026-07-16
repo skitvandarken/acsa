@@ -9,6 +9,70 @@
 
 }
 
+.ad-headline {
+    color: #7cdaff;
+    font-size: 2rem;
+    text-shadow: #000000 2px 0 20px;
+}
+
+.rounded-img {
+    border-radius: 20px 20px;
+}
+
+
+.fundo-grey {
+    background-image: url('/img/bg.webp');
+
+}
+
+.service-badge {
+    display: inline-block;
+    padding: 10px 10px;
+    border-radius: 25px;
+    background-color: #28C1FD;
+    color: rgba(2, 37, 97, 1);
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.service-badge:hover {
+    background-color: rgba(40, 193, 253, 0.8);
+    color: rgba(2, 37, 97, 1);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.cta-button {
+    background-color: rgba(40, 193, 253, 1);
+    color: rgba(2, 37, 97, 1);
+    border-radius: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+
+}
+
+.cta-button:hover {
+    background-color: rgba(40, 193, 253, 0.8);
+    color: rgba(2, 37, 97, 1);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.cta-description {
+    color: white
+}
+
+.service-learn {
+    color: white
+}
+
+.service-title {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    text-shadow: #131313 2px 0 20px;
+}
 
 .uk-button-secondary {
     border-color: black;
@@ -267,7 +331,7 @@
 .fundo-dc5,
 .fundo-dc6,
 .fundo-dc7 {
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .fundo-connectivity:hover,
@@ -281,15 +345,18 @@
 .fundo-dc5:hover,
 .fundo-dc6:hover,
 .fundo-dc7:hover {
-  transform: scale(1.05);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 
 .gradiente-nome-equipa {
-    width: 100%; /* Ensures the gradient spans the entire width */
-    padding: 20px; /* Adjust padding as needed */
-    background: linear-gradient(to top, rgba(0, 0, 78, 0.918), rgba(0, 0, 78, 0.918), rgba(0, 0, 255, 0)); /* Blue to transparent */
+    width: 100%;
+    /* Ensures the gradient spans the entire width */
+    padding: 20px;
+    /* Adjust padding as needed */
+    background: linear-gradient(to top, rgba(0, 0, 78, 0.918), rgba(0, 0, 78, 0.918), rgba(0, 0, 255, 0));
+    /* Blue to transparent */
     /* Adjust opacity and colors to your preference */
     display: flex;
     flex-direction: column;
@@ -310,6 +377,523 @@
     text-align: left;
 }
 
-.uk-border-rounded{
-border-radius: 20px;
+.uk-border-rounded {
+    border-radius: 20px;
 }
+
+
+.angola-cables-texto {
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: clamp(48px, 10.416vw, 68px);
+    font-size: clamp(42px, 6.640625vw, 60px);
+    color: #000026;
+    font-weight: 500;
+    letter-spacing: -0.21px;
+    color: #fff;
+
+
+
+}
+
+.angolacables-motto {
+
+    font-size: 1.2rem;
+    color: #fff;
+
+}
+
+.bg-pattern {
+
+    /* background-image: url('/img/bg-pattern.jpg'); */
+    background: linear-gradient(-190deg, #ffffff, #fffbfb, #ffffff);
+    background-size: cover;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-position: top;
+    background-repeat: no-repeat;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    margin-top: -20px;
+
+}
+
+
+.tab-nav-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.custom-tech-tabs {
+    display: inline-flex;
+    list-style: none;
+    padding: 6px;
+    background: rgba(0, 5, 29, 0.6);
+    border: 1px solid rgba(225, 225, 225, 0.15);
+    border-radius: 30px;
+    margin: 0;
+    /* This creates horizontal space between the <li> items */
+    gap: 12px;
+}
+
+.custom-tech-tabs li a {
+    /* CHANGED HERE: Using flex instead of block */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 28px;
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none !important;
+    border-radius: 25px;
+    transition: all 0.4s ease;
+}
+
+/* Hover effect on tabs */
+.custom-tech-tabs li a:hover {
+    color: #fff !important;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Active Tab Styling - matches your bright blue theme color */
+.custom-tech-tabs li.uk-active a {
+    background: rgb(0, 195, 255);
+    color: rgba(1, 0, 28, 0.9) !important;
+    box-shadow: 0px 0px 12px 0px rgba(0, 195, 255, 0.4);
+}
+
+
+.featured-service-logo {
+    height: 250px;
+    width: 250px;
+}
+
+.service-desc {
+    font-size: 1rem !important;
+}
+
+@keyframes techMove {
+    0% {
+        background-position: 0 0, 0 0, 0 0;
+    }
+
+    100% {
+        background-position: 40px 40px, 30px -30px, 0 0;
+    }
+}
+
+/* 1. The parent container holds your content */
+.tech-bg-single {
+    position: relative;
+    overflow: hidden;
+    /* Keeps the zooming image contained so it doesn't cause scrollbars */
+}
+
+/* 2. The pseudo-element handles ONLY the background image and animation */
+.tech-bg-single::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    /* Pushes the image safely behind your text/buttons */
+
+    background-image: url('/img/bg-acsa.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    /* 12-second smooth, infinite breathing effect */
+    animation: breathScale 12s ease-in-out infinite alternate;
+    will-change: transform;
+    /* Optimizes browser performance */
+}
+
+/* 3. The animation that only touches the background layer */
+@keyframes breathScale {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.06);
+        /* A gentle 6% zoom in */
+    }
+}
+
+.fundo-slider {
+    box-shadow: 8px 8px 30px 0px rgba(156, 221, 254, 0.466);
+    border-color: rgba(255, 255, 255, 0.697);
+    border-width: 0.75px;
+    border-style: solid;
+    background-color: rgba(5, 0, 100, 0.788);
+    background-blend-mode: darken;
+
+}
+
+.slider-featured-logo {
+
+    width: 50px;
+    height: 10px !important;
+}
+
+/* 1. Base button styles */
+.botao-saiba {
+    border: 1.50px solid rgba(225, 225, 225, 1);
+    border-radius: 40px;
+    padding: 15px 15px;
+    width: 80%;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+
+    /* Added box-shadow to the transition so it smoothly fades into the pulse */
+    transition: background-position 0.5s ease, color 0.5s ease, box-shadow 0.3s ease;
+
+    background: linear-gradient(45deg, rgb(0, 195, 255) 50%, transparent 50%);
+    background-image: linear-gradient(to right, rgb(0, 195, 255) 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+
+    /* Your original static shadow */
+    box-shadow: 0px 0px 5px 0px rgba(222, 222, 222, 0.5);
+    animation: shadowPulse 1.5s infinite ease-in-out;
+
+}
+
+/* 2. Hover state */
+.botao-saiba:hover {
+    background-position: left bottom;
+    color: rgba(1, 0, 28, 0.788);
+
+    /* Triggers the shadow pulse animation on hover */
+}
+
+/* 3. The Shadow Pulse Animation */
+@keyframes shadowPulse {
+    0% {
+        /* Starts tight and soft */
+        box-shadow: 0px 0px 5px 0px rgba(0, 195, 255, 0.374);
+    }
+
+    50% {
+        /* Explodes outward and grows brighter using your bright blue theme color */
+        box-shadow: 0px 0px 10px 6px rgba(0, 195, 255, 0.392);
+    }
+
+    100% {
+        /* Returns back to the tight starting point */
+        box-shadow: 0px 0px 5px 0px rgba(0, 195, 255, 0.387);
+    }
+}
+
+
+
+
+
+/* Responsive Media Queries */
+/* Large screens (desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+    .ad-headline {
+        font-size: 1.5rem !important;
+    }
+
+    .featured-service-logo {
+        height: 100px;
+        width: auto;
+    }
+
+
+}
+
+/* Medium screens (tablets, 768px to 1199px) */
+@media (max-width: 1199px) and (min-width: 768px) {
+
+    .ad-headline {
+        font-size: 1.2rem !important;
+    }
+
+    .featured-service-logo {
+        height: auto;
+        width: auto;
+    }
+
+
+
+}
+
+
+/* Small screens (phones, 767px and below) */
+@media (max-width: 767px) {
+    .featured-service-logo {
+        height: auto;
+        width: auto;
+        object-fit: contain;
+    }
+
+    .ad-headline {
+        font-size: 1.2rem !important;
+    }
+
+
+    .tab-nav-wrapper {
+        /* Allows the container to scroll horizontally if tabs overflow 400px */
+        overflow-x: auto;
+        justify-content: center;
+        /* Aligns to left so scrolling feels natural */
+        padding: 0 0;
+        /* Hides scrollbars for a cleaner look on mobile */
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    .tab-nav-wrapper::-webkit-scrollbar {
+        display: none;
+        /* Safari and Chrome */
+    }
+
+    .custom-tech-tabs {
+        gap: 6px;
+        /* Halved the spacing between tabs */
+        padding: 4px;
+        /* Shrunk the outer wrapper padding */
+        border-radius: 20px;
+        /* Adjusted radius for smaller scale */
+        display: inline-flex;
+        margin: 0 auto;
+        /* Keeps it centered if it doesn't overflow */
+    }
+
+    .custom-tech-tabs li a {
+        padding: 8px 8px;
+        /* Significantly reduced padding for tighter fit */
+        font-size: 0.85rem;
+        /* Slightly smaller text for readability on mobile */
+        border-radius: 16px;
+        /* Adjusted radius */
+    }
+
+}
+
+/* Extra small screens (phones, 480px and below) */
+@media (max-width: 480px) {
+.featured-service-logo {
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+}
+
+    .ad-headline {
+        font-size: 1.2rem !important;
+    }
+
+
+
+
+}
+
+/* Specific adjustments for the language dropdown */
+@media (max-width: 400px) {
+.featured-service-logo {
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+}
+
+    .tab-nav-wrapper {
+        /* Allows the container to scroll horizontally if tabs overflow 400px */
+        overflow-x: auto;
+        justify-content: center;
+        /* Aligns to left so scrolling feels natural */
+        padding: 0 0;
+        /* Hides scrollbars for a cleaner look on mobile */
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    .tab-nav-wrapper::-webkit-scrollbar {
+        display: none;
+        /* Safari and Chrome */
+    }
+
+    .custom-tech-tabs {
+        gap: 3px;
+        /* Halved the spacing between tabs */
+        padding: 4px 4px;
+        /* Shrunk the outer wrapper padding */
+        border-radius: 20px;
+        /* Adjusted radius for smaller scale */
+        display: inline-flex;
+        margin: 0 auto;
+        /* Keeps it centered if it doesn't overflow */
+    }
+
+    .custom-tech-tabs li a {
+        padding: 8px 16px;
+        /* Significantly reduced padding for tighter fit */
+        font-size: 0.85rem;
+        /* Slightly smaller text for readability on mobile */
+        border-radius: 16px;
+        /* Adjusted radius */
+    }
+}
+
+
+@media (max-width: 350px) {
+    .ad-headline {
+        font-size: 1.2rem !important;
+    }
+
+.tab-nav-wrapper {
+        /* Allows the container to scroll horizontally if tabs overflow 400px */
+        overflow-x: auto;
+        justify-content: center;
+        /* Aligns to left so scrolling feels natural */
+        padding: 0 0;
+        /* Hides scrollbars for a cleaner look on mobile */
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    .tab-nav-wrapper::-webkit-scrollbar {
+        display: none;
+        /* Safari and Chrome */
+    }
+
+    .custom-tech-tabs {
+        gap: 3px;
+        /* Halved the spacing between tabs */
+        padding: 4px 4px;
+        /* Shrunk the outer wrapper padding */
+        border-radius: 20px;
+        /* Adjusted radius for smaller scale */
+        display: inline-flex;
+        margin: 0 auto;
+        /* Keeps it centered if it doesn't overflow */
+    }
+
+    .custom-tech-tabs li a {
+        padding: 8px 16px;
+        /* Significantly reduced padding for tighter fit */
+        font-size: 0.85rem;
+        /* Slightly smaller text for readability on mobile */
+        border-radius: 16px;
+        /* Adjusted radius */
+    }
+
+}
+
+
+@media (max-width: 360px) {
+    .ad-headline {
+        font-size: 1.2rem !important;
+    }
+
+.tab-nav-wrapper {
+        /* Allows the container to scroll horizontally if tabs overflow 400px */
+        overflow-x: auto;
+        justify-content: center;
+        /* Aligns to left so scrolling feels natural */
+        padding: 0 0;
+        /* Hides scrollbars for a cleaner look on mobile */
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    .tab-nav-wrapper::-webkit-scrollbar {
+        display: none;
+        /* Safari and Chrome */
+    }
+
+    .custom-tech-tabs {
+        gap: 4px;
+        /* Halved the spacing between tabs */
+        padding: 4px ;
+        /* Shrunk the outer wrapper padding */
+        border-radius: 20px;
+        /* Adjusted radius for smaller scale */
+        display: inline-flex;
+        /* Keeps it centered if it doesn't overflow */
+
+    }
+
+    .custom-tech-tabs li a {
+        padding: 8px 16px;
+        /* Significantly reduced padding for tighter fit */
+        font-size: 0.85rem;
+        /* Slightly smaller text for readability on mobile */
+        border-radius: 16px;
+        /* Adjusted radius */
+    }
+
+}
+
+
+
+
+@media (max-width: 344px) {
+    .ad-headline {
+        font-size: 1.2rem !important;
+    }
+
+.tab-nav-wrapper {
+        /* Allows the container to scroll horizontally if tabs overflow 400px */
+        overflow-x: auto;
+        justify-content: center;
+        /* Aligns to left so scrolling feels natural */
+        padding: 0 0;
+        /* Hides scrollbars for a cleaner look on mobile */
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    .tab-nav-wrapper::-webkit-scrollbar {
+        display: none;
+        /* Safari and Chrome */
+    }
+
+    .custom-tech-tabs {
+        gap: 3px;
+        /* Halved the spacing between tabs */
+        padding: 4px 4px;
+        /* Shrunk the outer wrapper padding */
+        border-radius: 20px;
+        /* Adjusted radius for smaller scale */
+        display: inline-flex;
+        margin: 0 auto;
+        /* Keeps it centered if it doesn't overflow */
+    }
+
+    .custom-tech-tabs li a {
+        padding:2px 8px;
+        /* Significantly reduced padding for tighter fit */
+        font-size: 0.85rem;
+        /* Slightly smaller text for readability on mobile */
+        border-radius: 16px;
+        /* Adjusted radius */
+    }
+
+}
+
+/* Landscape orientation adjustments */
+@media screen and (max-width: 767px) and (orientation: landscape) {}
+
+/* High DPI screens adjustments */
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {}
+
+/* Custom Breakpoint Override: Force Mobile Nav until 1200px */
+@media (max-width: 1199px) {}

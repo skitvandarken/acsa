@@ -312,7 +312,7 @@
   "qualidade_titulo": "Qualidade | Antissuborno",
   "seguranca_titulo": "TI & Segurança",
   "infraestrutura_titulo": "Infraestrutura",
-    "proteccao_dados": "Privacidade e Proteção de Dados",
+  "proteccao_dados": "Privacidade e Proteção de Dados",
   "esg_titulo": "Antissuborno",
   "certificacoes_parceiros_titulo": "Certificações dos Parceiros",
   "premios_titulo_parte1": "NÃO BUSCAMOS PREMIOS, MAS",
@@ -639,9 +639,6 @@
   "policies_bcm_principles_l": "Garantir, desde a fase inicial, que as preocupações com a Continuidade de Negócio são adequadamente endereçadas em todos os projectos relevantes e impactantes para a AC;",
   "policies_bcm_principles_m": "Garantir que o SGCN endereça os requisitos de Continuidade da Segurança da Informação;",
   "policies_bcm_principles_n": "Promover o cumprimento dos requisitos legais e regulamentares em matéria de Continuidade de Negócio;",
-
-
-  
   "procurement.policy.title": "Política de Aquisição e Relacionamento com Fornecedores",
   "procurement.objective.title": "1. Objectivo",
   "procurement.objective.paragraph1": "A presente política tem como objectivo estabelecer os princípios, directrizes, responsabilidades e procedimentos aplicáveis à aquisição de bens, contratação de serviços, estabelecendo a regulamentação do seu processo de execução e assegurando, ao mesmo tempo, requisitos de competitividade, qualidade, segurança, responsabilidade socio-ambiental dos bens adquiridos e a melhoria contínua do relacionamento com os fornecedores e prestadores da AC.",
@@ -667,10 +664,6 @@
   "procurement.communicationChannel.title": "4. Canal de comunicação",
   "procurement.communicationChannel.paragraph1": "Neste âmbito é essencial que qualquer pessoa, seja colaborador, fornecedor ou prestador, relate quaisquer actos ou suspeitas de não conformidade com esta Política, prevenindo actos de fraude, corrupção e preservando a imagem da AC.",
   "procurement.communicationChannel.paragraph2": "A comunicação de irregularidades poderá ser realizada por escrito e apresentada através do seguinte canal: https://portal-de-denuncias.vercel.app/ ou correio electrónico denuncias@angolacables.com",
-
-
-
-
   "customer.dueDiligence.policy.title": "Política de Identificação, Aceitação e Due Diligence de Clientes e Parceiros",
   "customer.dueDiligence.objective.title": "1. Objectivo",
   "customer.dueDiligence.objective.paragraph1": "A presente política integra o sistema de controlo interno e gestão de riscos da Angola Cables (AC), alinhando-se com as melhores práticas do Programa de Prevenção e Combate ao Branqueamento de Capitais, Financiamento do Terrorismo e Proliferação de Armas de Destruição Massiva (PC-BC/FTP), bem como com os princípios e regras estabelecidos no âmbito da Política Antissuborno.",
@@ -679,8 +672,6 @@
   "customer.dueDiligence.scope.paragraph1": "No âmbito das actividades da AC, a aplicação desta política visa não só mitigar os riscos associados ao branqueamento de capitais e financiamento do terrorismo, mas também prevenir a exposição a riscos de suborno, corrupção, fraude, conflitos de interesses e outras práticas que possam comprometer a legalidade, reputação e sustentabilidade das relações de negócio estabelecidas.",
   "customer.dueDiligence.scope.paragraph2": "Para o efeito, definem-se mecanismos de due diligence proporcionais ao risco, que permitem aferir a idoneidade dos clientes, compreender a natureza da sua actividade, a origem dos fundos e o enquadramento das relações comerciais, assegurando que estas são compatíveis com os requisitos legais, regulamentares e internos aplicáveis.",
   "customer.dueDiligence.scope.paragraph3": "Esta política aplica-se a todos os colaboradores, membros dos órgãos de governação e todas as unidades orgânicas da AC, sendo de observância obrigatória no âmbito do estabelecimento, manutenção e revisão de quaisquer relações de negócio, independentemente do canal, geografia ou natureza dos serviços prestados.",
-
-
   "infoSecurity.policy.title": "Política de Segurança da Informação para Fornecedores e Prestadores",
   "infoSecurity.objective.title": "1. Objectivo",
   "infoSecurity.objective.paragraph1": "A presente Política estabelece os princípios, regras e responsabilidades aplicáveis à Segurança da Informação no âmbito das relações entre a AC e os seus fornecedores e prestadores de serviços, assegurando a protecção adequada dos activos de informação, dados pessoais e informação de negócio.",
@@ -704,9 +695,51 @@
   "infoSecurity.scope.item9": "Dados pessoais;",
   "infoSecurity.scope.item10": "Informação classificada;",
   "infoSecurity.scope.item11": "Sistemas de informação;",
-  "infoSecurity.scope.item12": "Infraestruturas tecnológicas."
-
-
-  
+  "infoSecurity.scope.item12": "Infraestruturas tecnológicas.",
+  "ai": "IA",
+  "gpu.npu": "ON-DEMAND GPUs & NPUs",
+  "international.connectivity": "  IP TRANSIT, IPLC, REMOTE PEERING ...",
+  "metro.connectivity": "DIRECT INTERNET ACCESS, MPLS, ...",
+  "corporate.solutions": "CORPORATE",
+  "data.center": "DATA CENTER",
+  "cloud": "CLOUD",
+  "digital.solutions": "DIGITAL",
+  "wholesale.solutions": "WHOLESALE",
+  "ict.solutions": "DIGITAL",
+  "ai.infra": "GPUs e NPUs sob Demanda para IA e ML",
+  "ai.desc": "GPUs e NPUs sob Demanda para IA e ML. Pague apenas pelas horas de uso e acelere suas soluções de IA.",
+  "get.started": "Começar agora",
+  "go.ai": "Ir ao Go4AI",
+  "submarine.ai": "Dos Cabos submarinos aos Clusters de GPUs: ",
+  "cta.global": "Conectividade Global de Baixa Latência e Poder Computacional em Nuvem e para IA:",
+  "api.compatible": "API compatível OpenAI ",
+  "api.description": "Reduza seus custos de IA em até 125x. Sem precisar refatorar seu código.",
+  "dc": "Data Center",
+  "dc.services": "CO-LOCATION, POWER, SMART-HANDS ...",
+  "fale.especialista": "FALE COM UM ESPECIALISTA",
+  "featured.solutions": "SOLUÇÕES EM DESTAQUE",
+  "infra2.title": "Infraestrutura Premium sem CAPEX",
+  "infra2.desc": "A sua Cloud, O seu País. A sua soberania",
+  "infra.nodes": "Nós disponíveis: LUANDA 1, LUANDA 2 e LUANDA 3",
+  "ipt": "IP TRANSIT",
+  "ipt.desc": "Acesso lacal e internacional seguro a provedores de conteúdo e IXPs para operadoras de tecnologia.",
+  "iplc": "IPLC",
+  "iplc.desc": "Conexões ponto a ponto de baixa latência e alta banda na África, na Europa, no Brasil e nos Estados Unidos.",
+  "remote.peering": "REMOTE PEERING",
+  "remote-peering.desc": "Multiple connection possibilities at major international IXP. No need for a physical presence.",
+  "gdi": "GDI",
+  "gdi.desc": "Liga-te aos principais Data Centers e garante a sincronização e a troca eficiente de dados.",
+  "dia": "DIA",
+  "dia.desc": "Acesso dedicado à internet com alta velocidade, estabilidade e garantia de banda para a sua empresa crescer.",
+ "mpls": "MPLS",
+  "mpls.desc": "Interligue filiais de sua empresa em rede privada com alta performance com tráfego de dados priorizado e veloz.",
+"acloud": "ACLOUD CONNECT",
+"acloud.desc": "Ligação directa e privada às principais plataformas de cloud (como AWS, Azure e Google Cloud), com maior segurança.",
+"data-center": "DATA CENTER",
+"data-center.desc": "Co-location de equipamento, Power, Smart-Hands,  Remote Hands, Outdoor Services em Infraestruturas Certificada ",
+"web-hosting": "ALOJAMENTO WEB",
+"web-hosting.desc": "Alojamento Web com alta disponibilidade e escalabilidade. Aloje seus projectos web, e-mails com máxima segurança",
+"kubernetes": "KUBERNETES",
+"kubernetes.desc": "Gerencie seus cluster Kubernetes usando um painer rico e intuitivo aproveitando nassa infraestrutura distribuída."
 
 }

@@ -1,22 +1,19 @@
-<div class=" fundo-cta uk-container uk-margin-large-top uk-margin-large-bottom uk-text-center">
-
-    <h1 style="color: white;" class=" uk-margin-small-top uk-padding"> {{'ad.entre' | translate }} <b>
-            {{'ad.contacto' | translate }} </b></h1>
-    <div class=" ">
-        <div class="margem-texto" >
-            <h2 style="width: 100%; color: white; font-size:1.55rem; width: 100%;" class="uk-margin"> {{'ad.descricao'
-                | translate }} </h2>
-
-        </div>
-
+<div class="fundo-cta uk-container uk-margin-large-top uk-margin-large-bottom uk-text-center">
+    <h1 class="cta-title">
+        {{'ad.entre' | translate }} <b>{{'ad.contacto' | translate }}</b>
+    </h1>
+    
+    <div class="margem-texto">
+        <h2 class="cta-description">
+            {{'ad.descricao' | translate }}
+        </h2>
     </div>
 
-    <div style="margin-top: 20px;" class="uk-text-center uk-margin-large-bottom">
-
-        <a style="color: rgba(2, 37, 97, 1); " routerLink="/contacto" class="uk-text-decoration-none">
-            <button style="background-color:rgba(40, 193, 253, 1) "
-                class=" uk-button   uk-button-medium uk-border-pill"><span style="margin: 5px">
-                    {{ 'mais.sobre' |
-                    translate }}</span></button>
+    <div class="cta-button-container uk-margin-medium-bottom">
+        <a routerLink="/contacto" class="uk-text-decoration-none">
+            <button class="uk-button uk-button-medium uk-border-pill cta-button">
+                <span>{{ 'mais.sobre' | translate }}</span>
+            </button>
         </a>
     </div>
+</div>
