@@ -722,13 +722,13 @@
   "infra2.desc": "A sua Cloud, O seu País. A sua soberania",
   "infra.nodes": "Nós disponíveis: LUANDA 1, LUANDA 2 e LUANDA 3",
   "ipt": "IP TRANSIT",
-  "ipt.desc": "Acesso lacal e internacional seguro a provedores de conteúdo e IXPs para operadoras de tecnologia.",
+  "ipt.desc": "Acesso local e internacional seguro a provedores de conteúdo e IXPs para operadoras de tecnologia.",
   "iplc": "IPLC",
-  "iplc.desc": "Conexões ponto a ponto de baixa latência e alta banda na África, na Europa, no Brasil e nos Estados Unidos.",
+  "iplc.desc": "Conexões ponto a ponto de baixa latência e banda larga em África, na Europa, Brasil e Estados Unidos da América.",
   "remote.peering": "REMOTE PEERING",
-  "remote-peering.desc": "Multiple connection possibilities at major international IXP. No need for a physical presence.",
+  "remote-peering.desc": "Múltiplas possibilidades de conexão nos principais IXPs internacionais. Sem necessidade de presença física.",
   "gdi": "GDI",
-  "gdi.desc": "Liga-te aos principais Data Centers e garante a sincronização e a troca eficiente de dados.",
+  "gdi.desc": "Liga-te aos principais Data Centers e garanta a sincronização e a troca eficiente de dados.",
   "dia": "DIA",
   "dia.desc": "Acesso dedicado à internet com alta velocidade, estabilidade e garantia de banda para a sua empresa crescer.",
  "mpls": "MPLS",
@@ -740,6 +740,6 @@
 "web-hosting": "ALOJAMENTO WEB",
 "web-hosting.desc": "Alojamento Web com alta disponibilidade e escalabilidade. Aloje seus projectos web, e-mails com máxima segurança",
 "kubernetes": "KUBERNETES",
-"kubernetes.desc": "Gerencie seus cluster Kubernetes usando um painer rico e intuitivo aproveitando nassa infraestrutura distribuída."
+"kubernetes.desc": "Gerencie seus cluster Kubernetes usando um painel rico e intuitivo aproveitando nossa infraestrutura distribuída."
 
 }
