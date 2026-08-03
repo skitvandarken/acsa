@@ -1,0 +1,95 @@
+<div class="uk-container" >
+  @if (produtos$ | async; as produtos) {
+    @if (produtos.length > 0) {
+
+      <!-- LISTA DE ELIMINAÇÃO (UIkit List with Divider) -->
+      <div class=" uk-border-rounded uk-margin-large-bottom uk-margin-medium-top">
+        <h3 class="uk-card-title uk-margin-small-bottom">Delete Products</h3>
+        <p class="uk-text-meta uk-margin-small-bottom"></p>
+
+        <ul class="uk-list uk-list-divider uk-list-large">
+          @for (produto of produtos; track produto.id) {
+            <li class="uk-flex uk-flex-between uk-flex-middle">
+              
+              <!-- Info do Produto -->
+              <div class="uk-flex uk-flex-middle">
+                @if (produto.coverUrl || produto.featuredImageUrl) {
+                  <img 
+                    [src]="produto.coverUrl || produto.featuredImageUrl" 
+                    [alt]="produto.name" 
+                    class="uk-border-rounded uk-margin-small-right"
+                    style="width: 40px; height: 40px; object-fit: cover;" 
+                  />
+                }
+                <div>
+                  <span class="uk-text-bold uk-text-emphasis">{{ produto.name }}</span>
+             
+                </div>
+              </div>
+
+              <!-- Botão Eliminar -->
+              <button 
+                type="button" 
+                class="uk-button uk-button-danger uk-button-small uk-border-rounded"
+                [disabled]="deletingId === produto.id"
+                (click)="confirmarEliminacao(produto)">
+                @if (deletingId === produto.id) {
+                  <span uk-spinner="ratio: 0.5"></span>
+                } @else {
+                  <span uk-icon="icon: trash; ratio: 0.8"></span> 
+                }
+              </button>
+
+            </li>
+          }
+        </ul>
+      </div>
+
+      
+
+    } @else {
+      <!-- Estado quando não há produtos cadastrados -->
+      <div class="uk-text-center uk-margin-large-top">
+        <p class="uk-text-muted">No product found.</p>
+      </div>
+    }
+  } @else {
+    <!-- Loading Spinner -->
+    <div class="uk-flex uk-flex-center uk-margin-large-top">
+      <div uk-spinner></div>
+    </div>
+  }
+</div>
+
+<!-- Modal de Confirmação UIkit -->
+@if (selectedProductToDelete) {
+ <!-- Modal de Confirmação UIkit (Centralizado) -->
+@if (selectedProductToDelete) {
+  <div 
+    class="uk-flex-top uk-flex uk-flex-middle uk-modal uk-open" 
+    style="display: flex; background: rgba(0, 0, 0, 0.6); position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 1000;"
+  >
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical uk-border-rounded uk-box-shadow-large">
+      <h2 class="uk-modal-title uk-text-danger">Confirm</h2>
+      <p>Are you sure you want to delete <strong>"{{ selectedProductToDelete.name }}"</strong>?</p>
+      
+      <p class="uk-text-right uk-margin-medium-top">
+        <button 
+          class="uk-button uk-button-default uk-margin-small-right uk-border-rounded" 
+          type="button" 
+          (click)="cancelarEliminacao()"
+        >
+          Cancel
+        </button>
+        <button 
+          class="uk-button uk-button-danger uk-border-rounded" 
+          type="button" 
+          (click)="executarEliminacao()"
+        >
+          Yes, Delete
+        </button>
+      </p>
+    </div>
+  </div>
+}
+}

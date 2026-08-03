@@ -25,6 +25,12 @@ import { CibersecComponent } from './dummy/artigos/cibersec/cibersec.component';
 import { Cloud2MontagemComponent } from './dummy/artigos/cloud2-montagem/cloud2-montagem.component';
 import { DashboardComponent } from './paginas/dashboard/dashboard.component';
 import { VagasCriarComponent } from './layout/vagas-criar/vagas-criar.component';
+import { ProductDetailComponent } from './layout/product-detail/product-detail.component';
+import { productResolver } from './resolvers/produtc-resolver';
+
+import { LoginComponent } from './paginas/login/login.component';
+
+import { AuthGuard } from './guards/auth.guards';
 
 export const routes: Routes = [
   { path: '', component: InicioComponent },
@@ -56,6 +62,31 @@ export const routes: Routes = [
   { path: 'artigos/cloud2-como-montar', component: Cloud2MontagemComponent },
 
   { path: 'mkt-proibido', component: DashboardComponent },
+
+
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+    title: "Dashboard - AngolaCables",
+    canActivate: [AuthGuard.canActivate]
+    // ✅ Rota protegida
+  },
+    { path: 'login', component: LoginComponent },
+
+
+    {
+    path: 'product/:id',
+    component: ProductDetailComponent,
+
+    resolve: {
+      productName: productResolver
+    },
+
+    title: 'Produtos - TelCables South Africa'
+  
+
+
+  },
   {
     path: 'privacy-policies',
     loadComponent: () =>

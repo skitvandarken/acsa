@@ -1,11 +1,14 @@
 export const environment = {
-    production: false,
-    firebase: {
-        apiKey: process.env['FIREBASE_API_KEY'] || 'DEV_KEY_ONLY_WORKS_LOCALLY',
-        authDomain: "dev-project.firebaseapp.com",
-        projectId: "dev-project-id",
-        storageBucket: "dev-project.appspot.com",
-        messagingSenderId: "123456789",
-        appId: "1:123456789:web:abc123def456"
-    }
+  firebase: {
+    apiKey: 'AIzaSyBMBs9qU1vDwl4hYYFgd1tJk3rYSZ2qdnE',
+    authDomain: 'acsa-458213.firebaseapp.com',
+    projectId: 'acsa-458213',
+    storageBucket: 'acsa-458213.firebasestorage.app',
+    messagingSenderId: '363516187651',
+    appId: '1:363516187651:web:a5241923f5ecd265dbaa36'
+  },
+  auth0: {
+    domain: '',
+    clientId: ''
+  }
 };

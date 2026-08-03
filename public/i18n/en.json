@@ -747,7 +747,29 @@
   "web-hosting": "WEB HOSTING",
   "web-hosting.desc": "Web hosting with high availability and scalability. Host your web projects and emails with maximum security.",
   "kubernetes": "KUBERNETES",
-  "kubernetes.desc": "Manage your Kubernetes clusters using a rich and intuitive dashboard, leveraging our distributed infrastructure."
+  "kubernetes.desc": "Manage your Kubernetes clusters using a rich and intuitive dashboard, leveraging our distributed infrastructure.",
+
+  "hero_bg_aria_label": "Background image for product",
+  "loading_text": "Loading product details...",
+  "error_title_message": "Oops! Something went wrong.",
+  "try_again": "Try again.",
+  "service_description_title": "Service Description",
+  "featured_img_alt": "Featured Product Image",
+  "featured_img_aria_label": "Featured Product Image",
+  "big_numbers_title": "Big Numbers",
+  "value_of": "Value of",
+  "metric_of": "Metric of",
+  "main_features_title": "Main Features",
+  "cta_title": "Ready to take your business to the next level?",
+  "cta_subtitle": "Get started with",
+  "download_guide": "Download Product Guide",
+  "related_products_title": "Related Products",
+  "view_details_of": "View details of",
+  "learn_more": "Learn More",
+  "help_title": "Do you need Help?",
+  "help_description": "Talk to our Business Solution Architects. And find out how we can help you and your business.",
+  "call_us": "Call Us",
+  "mail_us": "Mail Us"
 
 
 

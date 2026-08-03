@@ -11,9 +11,50 @@
 </header>
 
 <main class="uk-background-muted">
-  <section id="servicos" class="uk-container uk-padding-large">
+
+
+  <section id="servicos" class="uk-container">
+    <div class="uk-container uk-margin-small-top">
+      @if (authService.currentUser(); as user) {
+      <div class="uk-flex uk-flex-middle uk-flex-right uk-margin-small-bottom">
+
+        <!-- User Info Container -->
+        <div class="uk-flex uk-card-default  uk-padding-small uk-border-pill uk-flex-middle uk-margin-small-right">
+          <!-- Profile Picture / Fallback Avatar -->
+          @if (user.photoURL) {
+          <img [src]="user.photoURL" alt="Profile picture" class="uk-border-circle uk-margin-small-right"
+            style="width: 32px; height: 32px; object-fit: cover;" />
+          } @else {
+          <!-- Fallback icon if no photoURL exists -->
+          <span uk-icon="icon: user"
+            class="uk-border-circle uk-background-muted uk-padding-small-subtle uk-margin-small-right"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px;"></span>
+          }
+
+          <!-- Email Address -->
+          <span class="uk-text-meta uk-text-emphasis uk-text-bold">
+            {{ user.email }}
+          </span>
+        </div>
+
+        <!-- Divider -->
+        <span class="uk-text-muted uk-margin-small-left uk-margin-small-right">|</span>
+
+        <!-- Logout Button -->
+        <button class="uk-button uk-button-text uk-text-danger" (click)="authService.logout()">
+          <span uk-icon="icon: sign-out; ratio: 0.8"></span> Logout
+        </button>
+
+      </div>
+      }
+    </div>
+
+
     <div class="uk-card uk-card-body uk-margin-bottom">
       <ul class="uk-subnav uk-subnav-pill uk-flex-center">
+        <li [class.uk-active]="isTabActive('products')">
+          <a (click)="setActiveTab('products')">Products</a>
+        </li>
         <li [class.uk-active]="isTabActive('blog')">
           <a (click)="setActiveTab('blog')">{{ 'dashboard-blog' | translate }}</a>
         </li>
@@ -29,22 +70,58 @@
         <li [class.uk-active]="isTabActive('paineis')">
           <a (click)="setActiveTab('paineis')">{{ 'dashboard-paineis' | translate }}</a>
         </li>
+        <li [class.uk-active]="isTabActive('paineis')">
+          <a (click)="setActiveTab('layout')">{{ 'dashboard-layout' | translate }}</a>
+        </li>
       </ul>
     </div>
 
     <!-- Blog Section -->
-    <div *ngIf="isTabActive('blog')" class="uk-animation-fade">
-      <div class="uk-card uk-card-body">
-        <app-artigo-postar></app-artigo-postar>
-        <h3 class="uk-heading-line uk-text-center uk-margin-medium-top">
-          <span>Artigos publicados</span>
-        </h3>
-        <app-artigo-lista></app-artigo-lista>
+
+    @if (isTabActive('products')) {
+    <div class=" uk-animation-fade">
+      <div class="uk-margin-medium-top uk-margin-medium-bottom  ">
+    
+        <div class="uk-grid uk-child-width-1-2@m">
+
+          <div class=" uk-margin-auto">
+            <app-produto-criar></app-produto-criar>
+          </div>
+          <div class="">
+            <app-product-list></app-product-list>
+          </div>
+        </div>
+
       </div>
     </div>
+    }
+
+    @if (isTabActive('blog')) {
+    <div class="uk-animation-fade">
+      <div class="uk-card uk-card-body  ">
+        <div class="uk-container">
+        <div class="uk-grid  uk-child-width-1-2@m">
+
+          <div>
+            <app-artigo-postar></app-artigo-postar>
+
+          </div>
+          <div>
+
+            <app-artigo-lista></app-artigo-lista>
+          </div>
+        </div>
+
+        </div>
+
+
+      </div>
+    </div>
+    }
 
     <!-- Notícias Section -->
-    <div *ngIf="isTabActive('noticias')" class="uk-animation-fade">
+    @if (isTabActive('noticias')) {
+    <div class="uk-animation-fade">
       <div class="uk-card uk-card-body">
         <app-noticias-postar></app-noticias-postar>
         <h3 class="uk-heading-line uk-text-center uk-margin-medium-top">
@@ -53,9 +130,11 @@
         <app-noticias-listar></app-noticias-listar>
       </div>
     </div>
+    }
 
     <!-- Empregos Section -->
-    <div *ngIf="isTabActive('empregos')" class="uk-animation-fade">
+    @if (isTabActive('empregos')) {
+    <div class="uk-animation-fade">
       <div class="uk-card uk-card-body">
         <app-vagas-criar></app-vagas-criar>
         <h3 class="uk-heading-line uk-text-center uk-margin-medium-top">
@@ -64,9 +143,11 @@
         <app-vagas-listar></app-vagas-listar>
       </div>
     </div>
+    }
 
     <!-- Eventos Section -->
-    <div *ngIf="isTabActive('eventos')" class="uk-animation-fade">
+    @if (isTabActive('eventos')) {
+    <div class="uk-animation-fade">
       <div class="uk-card uk-card-body">
         <app-eventos-postar></app-eventos-postar>
         <h3 class="uk-heading-line uk-text-center uk-margin-medium-top">
@@ -75,9 +156,11 @@
         <app-eventos-listar></app-eventos-listar>
       </div>
     </div>
+    }
 
     <!-- Painéis Section -->
-    <div *ngIf="isTabActive('paineis')" class="uk-animation-fade">
+    @if (isTabActive('paineis')) {
+    <div class="uk-animation-fade">
       <div class="uk-card uk-card-body">
         <app-paineis-postar></app-paineis-postar>
         <h3 class="uk-heading-line uk-text-center uk-margin-medium-top">
@@ -86,6 +169,18 @@
         <app-paineis-listar></app-paineis-listar>
       </div>
     </div>
+    }
+
+    <!-- Painéis Section -->
+    @if (isTabActive('layout')) {
+    <div class="uk-animation-fade">
+      <div class="uk-card uk-card-body">
+        <app-layout-items></app-layout-items>
+        <h3 class="uk-heading-line uk-text-center uk-margin-medium-top">
+        </h3>
+      </div>
+    </div>
+    }
   </section>
 </main>
 

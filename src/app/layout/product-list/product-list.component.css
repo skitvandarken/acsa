@@ -1,0 +1,16 @@
+.thumbnail{
+    width: 80px ;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+      background-size: contain;
+      border-radius: 20px
+
+}
+
+.title-product{
+
+    font-size:  0.7rem !important;
+    color: #000;
+
+}

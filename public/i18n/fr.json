@@ -744,7 +744,29 @@
   "web-hosting": "HÉBERGEMENT WEB",
   "web-hosting.desc": "Hébergement Web avec haute disponibilité et évolutivité. Hébergez vos projets web et vos e-mails en toute sécurité.",
   "kubernetes": "KUBERNETES",
-  "kubernetes.desc": "Gérez vos clusters Kubernetes à l'aide d'un tableau de bord riche et intuitif, en tirant parti de notre infrastructure distribuée."
+  "kubernetes.desc": "Gérez vos clusters Kubernetes à l'aide d'un tableau de bord riche et intuitif, en tirant parti de notre infrastructure distribuée.",
+
+  "hero_bg_aria_label": "Image de fond du produit",
+  "loading_text": "Chargement des détails du produit...",
+  "error_title_message": "Oups ! Un problema est survenu.",
+  "try_again": "Réessayer.",
+  "service_description_title": "Description du Service",
+  "featured_img_alt": "Image en vedette du produit",
+  "featured_img_aria_label": "Image en vedette du produit",
+  "big_numbers_title": "Chiffres Clés",
+  "value_of": "Valeur de",
+  "metric_of": "Métrique de",
+  "main_features_title": "Caractéristiques Principales",
+  "cta_title": "Prêt à faire passer votre entreprise au niveau supérieur ?",
+  "cta_subtitle": "Commencez dès maintenant avec",
+  "download_guide": "Télécharger le Guide du Produit",
+  "related_products_title": "Produits Similaires",
+  "view_details_of": "Voir les détails de",
+  "learn_more": "En Savoir Plus",
+  "help_title": "Avez-vous besoin d'aide ?",
+  "help_description": "Parlez à nos architectes de solutions d'entreprise et découvrez comment nous pouvons vous aider.",
+  "call_us": "Appelez-nous",
+  "mail_us": "Envoyez-nous un E-mail"
 
   
 

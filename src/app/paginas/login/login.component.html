@@ -1,0 +1,77 @@
+<div class="uk-container uk-flex uk-flex-center uk-flex-middle" style="min-height: 80vh;">
+  <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-width-1-1 uk-width-1-3@m uk-box-shadow-large">
+    
+    <h3 class="uk-card-title uk-text-center uk-margin-small-bottom">Sign In</h3>
+    <p class="uk-text-meta uk-text-center uk-margin-medium-bottom">Access your management console</p>
+
+    <!-- Error Alert -->
+    @if (errorMessage) {
+      <div class="uk-alert-danger uk-border-rounded" uk-alert>
+        <p class="uk-margin-remove">{{ errorMessage }}</p>
+      </div>
+    }
+
+    <form (ngSubmit)="onLogin()">
+      <!-- Email -->
+      <div class="uk-margin">
+        <label class="uk-form-label" for="email">Email</label>
+        <div class="uk-inline uk-width-1-1">
+          <span class="uk-form-icon" uk-icon="icon: mail"></span>
+          <input 
+            class="uk-input uk-border-rounded" 
+            type="email" 
+            id="email" 
+            [(ngModel)]="email" 
+            name="email" 
+            placeholder="admin@example.com" 
+            required 
+          />
+        </div>
+      </div>
+
+      <!-- Password -->
+      <div class="uk-margin">
+        <label class="uk-form-label" for="password">Password</label>
+        <div class="uk-inline uk-width-1-1">
+          <span class="uk-form-icon" uk-icon="icon: lock"></span>
+          <input 
+            class="uk-input uk-border-rounded" 
+            type="password" 
+            id="password" 
+            [(ngModel)]="password" 
+            name="password" 
+            placeholder="••••••••" 
+            required 
+          />
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="uk-margin-medium-top">
+        <button 
+          type="submit" 
+          class="uk-button uk-button-primary uk-border-rounded uk-width-1-1"
+          [disabled]="isLoading">
+          @if (isLoading) {
+            <span uk-spinner="ratio: 0.6"></span>
+          } @else {
+            Login
+          }
+        </button>
+      </div>
+    </form>
+
+    <div class="uk-text-center uk-margin-small-top uk-margin-small-bottom uk-text-meta">
+      or
+    </div>
+
+    <!-- Google Login -->
+    <button 
+      type="button" 
+      class="uk-button uk-button-default uk-border-rounded uk-width-1-1"
+      (click)="onGoogleLogin()">
+      <span uk-icon="icon: google" class="uk-margin-small-right"></span> Continue with Google
+    </button>
+
+  </div>
+</div>

@@ -1,0 +1,220 @@
+<div class="uk-padding-small  uk-border-rounded uk-card-body uk-card-default ">
+  <div class="uk-padding-small">
+    <h2 class="uk-text-left">Add a Product</h2>
+
+    <!-- LOADING -->
+    @if (loading) {
+    <div class="uk-alert-primary uk-margin" uk-alert>
+      Creating product...
+    </div>
+    }
+
+    <form [formGroup]="form" (ngSubmit)="submit()">
+
+
+      <div class="uk-grid uk-child-width-1-2@m uk-grid-match-height " uk-grid>
+
+
+        <!-- PRODUCT NAME -->
+        <div class="uk-margin-top uk-text-left">
+          <label class="uk-form-label"></label>
+          <div class="uk-form-controls">
+            <input type="text" formControlName="name" class="uk-input uk-border-rounded " placeholder="Product name" />
+          </div>
+
+          <!-- CTA TEXT -->
+          <div class="uk-margin-top uk-text-left">
+            <label class="uk-form-label"></label>
+            <div class="uk-form-controls">
+              <input type="text" formControlName="ctaText" class="uk-input uk-border-rounded "
+                placeholder="Call-to-action" />
+            </div>
+          </div>
+
+          <!-- CTA URL -->
+          <div class="uk-margin-top uk-text-left">
+            <label class="uk-form-label"></label>
+            <div class="uk-form-controls">
+              <input type="url" formControlName="ctaUrl" class="uk-input uk-border-rounded " placeholder="CTA URL" />
+            </div>
+          </div>
+        </div>
+
+        <!-- DESCRIPTION -->
+        <div class="uk-margin-top uk-text-left">
+          <label class="uk-form-label"></label>
+          <div class="uk-form-controls">
+            <textarea formControlName="description" class="uk-textarea  uk-border-rounded " rows="6"
+              placeholder="Product Description">
+        </textarea>
+          </div>
+        </div>
+
+
+      </div>
+
+      <hr>
+
+
+      <div class="uk-grid uk-child-width-1-2@m ">
+        <!-- METRICS -->
+        <div class="uk-margin-small-top">
+          <div class="uk-flex uk-flex-between uk-flex-middle uk-margin-bottom">
+            <p class="uk-margin-remove"><b>Product Metrics</b></p>
+
+            <a class="btn-add" type="button" (click)="addMetric()">
+              <span uk-icon="plus-circle"></span>
+
+            </a>
+          </div>
+
+          <div formArrayName="metrics">
+
+
+            <div class="uk-grid uk-child-width-1-3@m ">
+
+
+            </div>
+            @for (metric of metrics.controls; track $index) {
+            <div class=" uk-margin-medium-bottom uk-border-rounded" [formGroupName]="$index">
+              <div class="uk-grid-small" uk-grid>
+                <!-- TITLE -->
+                <div class="uk-width-1-3@m">
+                  <input type="text" class="uk-input uk-border-rounded " formControlName="title" placeholder="Title">
+                </div>
+
+                <!-- VALUE -->
+                <div class="uk-width-1-3@m">
+                  <input type="text" class="uk-input uk-border-rounded " formControlName="value" placeholder="Value" />
+                </div>
+
+                <!-- REMOVE BUTTON -->
+                <div class="uk-width-1-3@m uk-text-right">
+                  <a type="button" class="uk-button btn-delete uk-button-small" (click)="removeMetric($index)">
+                    <span uk-icon="icon: trash; ratio: 0.8"></span>
+
+                  </a>
+                </div>
+              </div>
+            </div>
+            }
+          </div>
+        </div>
+        <!-- FEATURES -->
+        <div class="uk-margin-small-top">
+          <div class="  uk-flex uk-flex-between uk-flex-middle uk-margin-bottom">
+            <p class="uk-margin-remove"><b>Features</b></p>
+
+            <a class="btn-add" type="button" (click)="addFeature()">
+              <span class="uk-margin-small-right" uk-icon="plus-circle"></span>
+
+            </a>
+          </div>
+
+          <div class="">
+
+            <div class="uk-grid uk-child-width-1-2@m " formArrayName="features">
+              @for (feature of features.controls; track $index) {
+              <div class="uk-margin-medium-bottom uk-flex uk-flex-middle uk-margin-bottom">
+                <input type="text" class="uk-input uk-border-rounded " [formControlName]="$index"
+                  placeholder="Ex: Infraestrutura escalável" />
+
+              </div>
+              <div class="uk-width-1-3@m uk-text-right ">
+                <a type="button" class="uk-button btn-delete uk-button-small" (click)="removeFeature($index)">
+                  <span uk-icon="icon: trash; ratio: 0.8"></span>
+
+                </a>
+              </div>
+              }
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <hr>
+      <div class="uk-grid uk-child-width-1-3@m ">
+
+        <!-- COVER IMAGE -->
+        <div class="uk-margin-small-top uk-text-left">
+          <label class="uk-form-label">Header Image URL</label>
+          <div class="uk-form-controls">
+            <input type="url" formControlName="coverUrl" class="uk-border-rounded uk-input" placeholder="https://..." />
+          </div>
+
+          @if (form.get('coverUrl')?.value) {
+          <div class="uk-margin-top">
+            <p>Preview:</p>
+            <img   [src]="form.get('coverUrl')?.value" style="max-width: 100px; border-radius: 12px;" />
+          </div>
+          }
+        </div>
+
+        <!-- COVER IMAGE -->
+        <div class="uk-margin-small-top uk-text-left">
+          <label class="uk-form-label"></label>
+          <div class="uk-form-controls">
+            <label class="uk-form-label">Featured Image URL</label>
+
+            <input type="url" formControlName="featuredImageUrl" class="uk-border-rounded uk-input"
+              placeholder="https://..." />
+          </div>
+
+          @if (form.get('featuredImageUrl')?.value) {
+          <div class="uk-margin-top">
+            <p>Preview:</p>
+            <img [src]="form.get('featuredImageUrl')?.value" style="max-width: 100px; border-radius: 12px;" />
+          </div>
+          }
+        </div>
+
+
+
+        <!-- PRODUCT GUIDE URL -->
+        <div class="uk-margin-small-top uk-margin-small-bottom uk-text-left">
+          <label class="uk-form-label">Product Guide URL</label>
+          <div class="uk-form-controls">
+            <input type="url" formControlName="productGuideUrl" class=" uk-border-rounded uk-input"
+              placeholder="https://..." />
+          </div>
+        </div>
+
+
+      </div>
+
+      <hr>
+
+      <div class="uk-grid uk-child-width-1-2@m ">
+
+        <div class="uk-margin-top uk-text-left">
+          <label class="uk-form-label">Sector</label>
+          <div class="uk-form-controls">
+            <input type="text" formControlName="productSector" class="uk-input uk-border-rounded "
+              placeholder="Sector" />
+          </div>
+        </div>
+
+        <!-- PRODUCT CATEGORY -->
+        <div class="uk-margin-top uk-text-left">
+          <label class="uk-form-label">Category</label>
+          <div class="uk-form-controls">
+            <input type="text" formControlName="productCategory" class="uk-input uk-border-rounded "
+              placeholder="Category" />
+          </div>
+        </div>
+
+
+      </div> <!-- PRODUCT SECTOR -->
+
+
+
+      <!-- SUBMIT -->
+      <div class="uk-text-left">
+        <button class="uk-margin-large-top botao-azul uk-button uk-button-large uk-border-rounded" type="submit"
+          [disabled]="loading || form.invalid">
+          {{ loading ? 'Creating...' : 'Add Product' }}
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

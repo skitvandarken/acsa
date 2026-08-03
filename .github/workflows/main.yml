@@ -19,8 +19,10 @@ jobs:
 
       - name: 🔐 Inject Firebase Secrets
         run: |
-          # Create production environment file
+         # Ensure environments directory exists
           mkdir -p src/environments
+
+          # Create production environment file dynamically
           cat > src/environments/environment.prod.ts <<EOF
           export const environment = {
             production: true,
@@ -31,12 +33,17 @@ jobs:
               storageBucket: '${{ secrets.FIREBASE_STORAGE_BUCKET }}',
               messagingSenderId: '${{ secrets.FIREBASE_MESSAGING_SENDER_ID }}',
               appId: '${{ secrets.FIREBASE_APP_ID }}'
+            },
+            auth0: {
+              domain: '${{ secrets.AUTH0_DOMAIN }}',
+              clientId: '${{ secrets.AUTH0_CLIENT_ID }}'
             }
           };
           EOF
-          
-          # Verify file was created (without exposing secrets)
+
+          # Verify file structure was created (without printing sensitive credentials)
           grep "production:" src/environments/environment.prod.ts
+
 
       - name: 📌 Install Dependencies
         run: npm ci
