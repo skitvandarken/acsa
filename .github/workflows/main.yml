@@ -19,11 +19,30 @@ jobs:
 
       - name: 🔐 Inject Firebase Secrets
         run: |
-         # Ensure environments directory exists
+          # Ensure environments directory exists
           mkdir -p src/environments
 
-          # Create production environment file dynamically
-          cat > src/environments/environment.prod.ts <<EOF
+          # 1. Create default environment.ts
+          cat << 'EOF' > src/environments/environment.ts
+          export const environment = {
+            production: false,
+            firebase: {
+              apiKey: '',
+              authDomain: '',
+              projectId: '',
+              storageBucket: '',
+              messagingSenderId: '',
+              appId: ''
+            },
+            auth0: {
+              domain: '',
+              clientId: ''
+            }
+          };
+          EOF
+
+          # 2. Create production environment.prod.ts with secrets substituted
+          cat << EOF > src/environments/environment.prod.ts
           export const environment = {
             production: true,
             firebase: {
@@ -40,10 +59,6 @@ jobs:
             }
           };
           EOF
-
-          # Verify file structure was created (without printing sensitive credentials)
-          grep "production:" src/environments/environment.prod.ts
-
 
       - name: 📌 Install Dependencies
         run: npm ci
