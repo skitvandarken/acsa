@@ -123,8 +123,8 @@
                 <p class="cta-q">{{ 'cta_subtitle' | translate }} {{ product.name }}</p>
               </div>
               <div class="cta-buttons">
-                <a class="btn-primary btn-large" routerLink="/contact">
-                  {{ product.ctaText }}
+                <a class="btn-primary btn-large" routerLink="/contacto">
+                  {{ 'get_started' |translate}}
                   <span class="btn-arrow">→</span>
                 </a>
 
@@ -176,7 +176,7 @@
           </p>
           <div class="contact-options uk-margin-small-top">
             <a class="btn-primary" href="tel:+244227360006">{{ 'call_us' | translate }}</a>
-            <a class="btn-primary" href="mailto:contactoa@angolacables.co.ao">{{ 'mail_us' | translate }}</a>
+            <a class="btn-primary" routerLink="/contacto">{{ 'mail_us' | translate }}</a>
           </div>
         </div>
       </aside>
